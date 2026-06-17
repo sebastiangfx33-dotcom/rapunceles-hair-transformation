@@ -96,56 +96,52 @@ function Hero() {
       {/* Luxury dark velvet panel behind text */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 left-0 z-[5] w-[44%]"
+        className="pointer-events-none absolute inset-y-0 left-0 z-[5] w-[42%]"
         style={{
           background:
-            "linear-gradient(90deg, rgba(20,8,38,0.97) 0%, rgba(20,8,38,0.96) 70%, rgba(20,8,38,0.85) 88%, rgba(20,8,38,0) 100%)",
-          boxShadow:
-            "inset 0 0 120px rgba(0,0,0,0.55)",
+            "linear-gradient(90deg, rgba(20,8,38,0.97) 0%, rgba(20,8,38,0.96) 70%, rgba(20,8,38,0.85) 92%, rgba(20,8,38,0) 100%)",
+          boxShadow: "inset 0 0 120px rgba(0,0,0,0.55)",
+        }}
+      />
+
+      {/* Left content panel — pixel-perfect replica of reference */}
+      <div
+        className="absolute inset-y-0 left-0 z-10 flex w-[38%] flex-col items-start justify-center text-left"
+        style={{
+          paddingLeft: "34px",
+          paddingRight: "12px",
+          paddingTop: "32px",
+          paddingBottom: "40px",
+          color: "#D8B06A",
         }}
       >
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(120% 70% at 0% 50%, rgba(76,32,110,0.30) 0%, transparent 70%)",
-            mixBlendMode: "screen",
-          }}
-        />
-      </div>
-
-      {/* Left content panel */}
-      <div className="absolute inset-y-0 left-0 z-10 flex w-[40%] flex-col items-center justify-center px-[3.5%] text-center">
-
         {/* Crown logo */}
-        <svg viewBox="0 0 100 50" className="h-[7%] w-auto text-[var(--gold)]" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-          <path d="M10 42 L18 18 L32 32 L50 10 L68 32 L82 18 L90 42 Z" fill="currentColor" fillOpacity="0.95" />
-          <circle cx="50" cy="8" r="2.5" fill="currentColor" />
-          <circle cx="18" cy="16" r="2" fill="currentColor" />
-          <circle cx="82" cy="16" r="2" fill="currentColor" />
-        </svg>
-
-        {/* Brand name */}
-        <h2
-          className="-mt-1 text-[var(--gold)]"
-          style={{
-            fontFamily: "'Great Vibes', cursive",
-            fontSize: "clamp(34px, 9vw, 80px)",
-            lineHeight: 1,
-          }}
+        <svg
+          viewBox="0 0 100 50"
+          className="w-auto"
+          style={{ height: "56px", color: "#D8B06A" }}
+          fill="currentColor"
+          aria-hidden="true"
         >
-          Rapunceles
-        </h2>
+          <path d="M10 42 L18 18 L32 32 L50 10 L68 32 L82 18 L90 42 Z" />
+          <circle cx="50" cy="6" r="3" />
+          <circle cx="18" cy="14" r="2.5" />
+          <circle cx="82" cy="14" r="2.5" />
+        </svg>
 
         {/* Headline */}
         <h1
-          className="mt-[14%] text-[var(--gold)]"
           style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 500,
-            fontSize: "clamp(14px, 3.7vw, 32px)",
-            lineHeight: 1.55,
-            letterSpacing: "0.015em",
+            fontSize: "42px",
+            lineHeight: 1.06,
+            letterSpacing: "0.3px",
+            textTransform: "uppercase",
+            color: "#D8B06A",
+            marginTop: "38px",
+            marginBottom: "32px",
+            maxWidth: "90%",
           }}
         >
           RECUPERA<br />
@@ -154,38 +150,45 @@ function Hero() {
           DE TU CABELLO
         </h1>
 
-        {/* Divider ornament */}
-        <div className="mt-[7%] flex items-center gap-2">
-          <span className="h-px flex-1 bg-[var(--gold)]/60" />
-          <svg viewBox="0 0 16 8" className="h-2 w-4 text-[var(--gold)]" fill="currentColor">
-            <path d="M0 4 L4 0 L8 4 L12 0 L16 4 L12 8 L8 4 L4 8 Z" />
-          </svg>
-          <span className="h-px flex-1 bg-[var(--gold)]/60" />
-        </div>
+        {/* Ornament */}
+        <div
+          style={{
+            width: "140px",
+            height: "1px",
+            background: "#D8B06A",
+            marginTop: 0,
+            marginBottom: "28px",
+          }}
+        />
 
         {/* Description */}
         <p
-          className="mt-[6%] text-[var(--ivory)]/95"
           style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 400,
-            fontSize: "clamp(10px, 2.5vw, 19px)",
-            lineHeight: 1.55,
+            fontSize: "17px",
+            lineHeight: 1.65,
+            color: "#D8B06A",
+            width: "88%",
+            marginBottom: "32px",
           }}
         >
           Rutina capilar inspirada en ingredientes naturales diseñada para fortalecer la raíz, estimular el crecimiento y reducir la caída.
         </p>
 
-        {/* Stars + rating */}
-        <div className="mt-[7%] flex items-center gap-2">
+        {/* Rating */}
+        <div className="flex items-center" style={{ gap: "12px", marginBottom: "18px" }}>
           <span className="flex" aria-label="4.9 de 5 estrellas">
             {[0, 1, 2, 3, 4].map((i) => (
-              <Star key={i} className="size-[3.5vw] max-h-6 max-w-6 fill-[var(--gold)] text-[var(--gold)]" />
+              <Star key={i} style={{ width: 22, height: 22, color: "#D8B06A", fill: "#D8B06A" }} />
             ))}
           </span>
           <span
-            className="text-[var(--ivory)]"
-            style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(11px, 2.5vw, 20px)" }}
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontSize: "18px",
+              color: "#D8B06A",
+            }}
           >
             4.9/5
           </span>
@@ -193,52 +196,59 @@ function Hero() {
 
         {/* Social proof */}
         <p
-          className="mt-[3%] text-[var(--ivory)]/95"
           style={{
-            fontFamily: "'Playfair Display', serif",
-            fontSize: "clamp(10px, 2.3vw, 18px)",
-            lineHeight: 1.4,
+            fontFamily: "'Cormorant Garamond', serif",
+            fontSize: "16px",
+            lineHeight: 1.5,
+            color: "#D8B06A",
+            width: "85%",
+            marginBottom: "34px",
           }}
         >
-          +1.247 mujeres ya transformaron<br />su cabello
+          +1.247 mujeres ya transformaron su cabello
         </p>
 
         {/* CTA */}
         <a
           href="#options"
-          className="mt-[5%] inline-flex items-center justify-between gap-2 rounded-full px-[6%] py-[3.5%] text-[var(--purple-deep)] shadow-[0_8px_24px_-8px_rgba(0,0,0,0.6)]"
+          className="inline-flex items-center justify-between"
           style={{
-            background:
-              "linear-gradient(180deg, #f4d98a 0%, #d4a94a 50%, #b88a35 100%)",
-            border: "1px solid rgba(255,255,255,0.25)",
-            fontFamily: "'Inter', sans-serif",
-            fontWeight: 600,
-            fontSize: "clamp(10px, 2.3vw, 18px)",
-            letterSpacing: "0.08em",
+            height: "62px",
+            width: "280px",
+            maxWidth: "100%",
+            borderRadius: "999px",
+            background: "linear-gradient(180deg, #F6D87A 0%, #D9A73E 100%)",
+            color: "#1A0F2E",
+            fontFamily: "'Cormorant Garamond', serif",
+            fontWeight: 700,
+            fontSize: "18px",
+            paddingLeft: "28px",
+            paddingRight: "22px",
+            marginBottom: "36px",
+            boxShadow: "0 10px 28px -10px rgba(0,0,0,0.6)",
           }}
         >
           <span>COMPRAR AHORA</span>
-          <ArrowRight className="size-[3.2vw] max-h-5 max-w-5" />
+          <ArrowRight style={{ width: 20, height: 20 }} />
         </a>
 
         {/* Benefits */}
-        <div className="mt-[6%] grid grid-cols-3 gap-[3%] text-center">
+        <div className="grid w-full grid-cols-3" style={{ gap: "10px" }}>
           {[
             { Icon: Leaf, label: "FÓRMULA\nNATURAL" },
             { Icon: Truck, label: "ENVÍO\nGRATIS" },
             { Icon: HandCoins, label: "PAGO CONTRA\nENTREGA" },
           ].map(({ Icon, label }) => (
-            <div key={label} className="flex flex-col items-center gap-1">
-              <span className="grid size-[8vw] max-h-12 max-w-12 place-items-center rounded-full border border-[var(--gold)]/60 text-[var(--gold)]">
-                <Icon className="size-[4vw] max-h-6 max-w-6" />
-              </span>
+            <div key={label} className="flex flex-col items-center text-center" style={{ gap: "6px" }}>
+              <Icon style={{ width: 24, height: 24, color: "#D8B06A" }} strokeWidth={1.25} />
               <span
-                className="whitespace-pre-line text-[var(--ivory)]"
+                className="whitespace-pre-line"
                 style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "clamp(7px, 1.5vw, 12px)",
-                  letterSpacing: "0.08em",
-                  lineHeight: 1.2,
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  lineHeight: 1.15,
+                  color: "#D8B06A",
                 }}
               >
                 {label}
