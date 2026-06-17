@@ -12,6 +12,8 @@ import {
   Flower2,
   Clock,
   ArrowRight,
+  Truck,
+  Banknote,
 } from "lucide-react";
 
 import heroBannerMobile from "@/assets/hero-banner-mobile.webp";
