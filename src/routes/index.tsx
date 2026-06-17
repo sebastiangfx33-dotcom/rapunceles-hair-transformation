@@ -107,7 +107,6 @@ function Hero() {
         className="absolute inset-0 z-10 flex flex-col items-start pl-5 pr-4 pt-5 md:pl-10 md:pt-8"
         style={{ color: IVORY }}
       >
-
         {/* Script wordmark */}
         <h2
           className="mt-1 text-[40px] leading-none md:text-[56px]"
