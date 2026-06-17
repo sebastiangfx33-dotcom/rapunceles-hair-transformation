@@ -93,8 +93,6 @@ function Hero() {
       </picture>
 
 
-      <div className="relative z-20 mx-auto flex w-full max-w-md flex-1 flex-col px-6 pb-12 pt-24 md:max-w-7xl md:justify-center md:pb-0 md:pl-16 md:pr-0 md:pt-0" />
-
     </section>
   );
 }
