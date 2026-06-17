@@ -204,7 +204,97 @@ function Hero() {
           </span>
         </a>
       </div>
+
+      {/* Premium conversion strip below the hero banner */}
+      <div className="relative z-20 w-full bg-background px-4 pb-6 pt-4">
+        {/* Benefits bar */}
+        <div
+          className="mx-auto w-full max-w-4xl rounded-[22px] px-3 py-4 md:px-6 md:py-5"
+          style={{ backgroundColor: "#2A143D" }}
+        >
+          <div className="grid grid-cols-3 divide-x divide-[#D4A14A]/40">
+            <div className="flex flex-col items-center justify-center gap-1 px-2 py-1 text-center">
+              <Users className="h-5 w-5 md:h-6 md:w-6" style={{ color: "#D4A14A" }} />
+              <span
+                className="text-[13px] font-semibold leading-tight text-white md:text-[15px]"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                +68 clientas
+              </span>
+              <span
+                className="text-[11px] leading-tight text-[#D4A14A]/90 md:text-[13px]"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                satisfechas
+              </span>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-1 px-2 py-1 text-center">
+              <Truck className="h-5 w-5 md:h-6 md:w-6" style={{ color: "#D4A14A" }} />
+              <span
+                className="text-[13px] font-semibold leading-tight text-white md:text-[15px]"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Envío gratis
+              </span>
+              <span
+                className="text-[11px] leading-tight text-[#D4A14A]/90 md:text-[13px]"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Envío express
+              </span>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-1 px-2 py-1 text-center">
+              <HandCoins className="h-5 w-5 md:h-6 md:w-6" style={{ color: "#D4A14A" }} />
+              <span
+                className="text-[13px] font-semibold leading-tight text-white md:text-[15px]"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Pago contra
+              </span>
+              <span
+                className="text-[11px] leading-tight text-[#D4A14A]/90 md:text-[13px]"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                entrega
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA button */}
+        <div className="mx-auto mt-4 w-full max-w-4xl text-center">
+          <a
+            href="#options"
+            className="mx-auto inline-flex h-[62px] w-[90%] items-center justify-center rounded-full md:h-[68px]"
+            style={{
+              background: "linear-gradient(180deg, #F6D87A 0%, #D9A73E 100%)",
+              boxShadow: "0 8px 24px -8px rgba(212, 161, 74, 0.35)",
+            }}
+          >
+            <span
+              className="text-[17px] font-semibold uppercase tracking-wide md:text-[20px]"
+              style={{ fontFamily: "'Cormorant Garamond', serif", color: "#2A143D" }}
+            >
+              QUIERO MI TRATAMIENTO
+            </span>
+          </a>
+        </div>
+
+        {/* Trust line */}
+        <div className="mx-auto mt-4 flex max-w-4xl flex-wrap items-center justify-center gap-x-3 gap-y-1 text-center text-[13px] md:text-[15px]" style={{ color: "#D4A14A" }}>
+          <span className="inline-flex items-center gap-1">
+            <Leaf className="h-4 w-4 md:h-5 md:w-5" /> Ingredientes naturales
+          </span>
+          <span className="hidden text-[#D4A14A]/60 sm:inline">•</span>
+          <span>Sin parabenos</span>
+          <span className="hidden text-[#D4A14A]/60 sm:inline">•</span>
+          <span className="inline-flex items-center gap-1">
+            <Heart className="h-4 w-4 md:h-5 md:w-5" /> Hecho con amor
+          </span>
+        </div>
+      </div>
     </section>
+
   );
 }
 
