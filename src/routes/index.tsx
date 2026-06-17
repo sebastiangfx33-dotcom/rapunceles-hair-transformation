@@ -79,8 +79,12 @@ function Landing() {
 
 /* ------------------------------ HERO ------------------------------ */
 function Hero() {
+  const GOLD = "#D4AF7A";
+  const GOLD_SOFT = "#E8C99B";
+  const PURPLE = "#2A1538";
+
   return (
-    <section className="relative isolate flex min-h-[92vh] flex-col overflow-hidden">
+    <section className="relative isolate flex min-h-[92vh] w-full overflow-hidden">
       <picture className="absolute inset-0 z-0">
         <source media="(min-width: 768px)" srcSet={heroBannerDesktop} />
         <img
@@ -92,9 +96,133 @@ function Hero() {
         />
       </picture>
 
+      {/* Luxury royal purple panel — left side */}
+      <div
+        className="relative z-20 flex w-full flex-col justify-between px-6 py-8 sm:py-10 md:w-[38%] md:px-12 md:py-14"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(42,21,56,0.96) 0%, rgba(42,21,56,0.92) 60%, rgba(42,21,56,0.88) 100%)",
+          backdropFilter: "blur(2px)",
+        }}
+      >
+        {/* TOP: logo + brand */}
+        <div className="flex flex-col items-center text-center">
+          <svg
+            viewBox="0 0 64 40"
+            className="h-9 w-14"
+            fill="none"
+            stroke={GOLD}
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden
+          >
+            <path d="M6 32 L14 14 L22 26 L32 8 L42 26 L50 14 L58 32 Z" />
+            <circle cx="14" cy="11" r="1.6" fill={GOLD} stroke="none" />
+            <circle cx="32" cy="5" r="1.8" fill={GOLD} stroke="none" />
+            <circle cx="50" cy="11" r="1.6" fill={GOLD} stroke="none" />
+            <line x1="6" y1="36" x2="58" y2="36" />
+          </svg>
+          <p
+            className="mt-3 font-display text-2xl italic md:text-3xl"
+            style={{ color: GOLD_SOFT, letterSpacing: "0.02em" }}
+          >
+            Rapunceles
+          </p>
+        </div>
 
-      <div className="relative z-20 mx-auto flex w-full max-w-md flex-1 flex-col px-6 pb-12 pt-24 md:max-w-7xl md:justify-center md:pb-0 md:pl-16 md:pr-0 md:pt-0" />
+        {/* MAIN HEADLINE */}
+        <div className="mt-6 text-center md:mt-8">
+          <h1
+            className="font-display text-[1.7rem] leading-[1.05] tracking-tight md:text-[2.4rem]"
+            style={{
+              background: `linear-gradient(180deg, ${GOLD_SOFT} 0%, ${GOLD} 55%, #B8935A 100%)`,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            RECUPERA
+            <br />
+            EL CRECIMIENTO
+            <br />
+            NATURAL
+            <br />
+            DE TU CABELLO
+          </h1>
 
+          {/* Gold divider ornament */}
+          <div className="mx-auto mt-5 flex items-center justify-center gap-2">
+            <span className="h-px w-10" style={{ background: `linear-gradient(90deg, transparent, ${GOLD})` }} />
+            <span className="h-1.5 w-1.5 rotate-45" style={{ background: GOLD }} />
+            <span className="h-px w-10" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
+          </div>
+
+          <p
+            className="mx-auto mt-5 max-w-sm font-display text-[0.92rem] italic leading-relaxed md:text-base"
+            style={{ color: "#E8C99B", opacity: 0.92 }}
+          >
+            Rutina capilar inspirada en ingredientes naturales diseñada para fortalecer la raíz,
+            estimular el crecimiento y reducir la caída.
+          </p>
+        </div>
+
+        {/* SOCIAL PROOF */}
+        <div className="mt-6 flex flex-col items-center gap-1 md:mt-8">
+          <div className="flex items-center gap-2">
+            <span className="flex">
+              {[0, 1, 2, 3, 4].map((i) => (
+                <Star key={i} className="size-4" style={{ fill: GOLD, color: GOLD }} />
+              ))}
+            </span>
+            <span className="font-display text-sm" style={{ color: GOLD_SOFT }}>
+              4.9/5
+            </span>
+          </div>
+          <p className="text-xs tracking-wide md:text-sm" style={{ color: GOLD_SOFT, opacity: 0.9 }}>
+            +1.247 mujeres ya transformaron su cabello
+          </p>
+        </div>
+
+        {/* CTA BUTTON */}
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center justify-between gap-3 self-stretch rounded-full px-6 py-4 font-display text-sm tracking-[0.18em] shadow-[0_10px_30px_-10px_rgba(212,175,122,0.6)] transition-transform hover:-translate-y-0.5 md:mt-8 md:text-base"
+          style={{
+            background: `linear-gradient(135deg, ${GOLD_SOFT} 0%, ${GOLD} 50%, #B8935A 100%)`,
+            color: PURPLE,
+          }}
+        >
+          <span className="mx-auto font-semibold">COMPRAR AHORA</span>
+          <span
+            className="grid size-8 place-items-center rounded-full"
+            style={{ background: PURPLE, color: GOLD }}
+          >
+            <ArrowRight className="size-4" />
+          </span>
+        </a>
+
+        {/* BOTTOM ICONS */}
+        <div className="mt-7 grid grid-cols-3 gap-2 border-t pt-5" style={{ borderColor: `${GOLD}33` }}>
+          {[
+            { Icon: Leaf, label: "FÓRMULA NATURAL" },
+            { Icon: Truck, label: "ENVÍO GRATIS" },
+            { Icon: Banknote, label: "PAGO CONTRA ENTREGA" },
+          ].map(({ Icon, label }) => (
+            <div key={label} className="flex flex-col items-center gap-2 text-center">
+              <Icon className="size-5" style={{ color: GOLD }} strokeWidth={1.4} />
+              <span
+                className="text-[0.6rem] leading-tight tracking-[0.12em] md:text-[0.65rem]"
+                style={{ color: GOLD_SOFT }}
+              >
+                {label}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
