@@ -102,6 +102,21 @@ function Hero() {
         }}
       />
 
+      <style>{`
+        @keyframes hero-star-shimmer {
+          0%, 100% {
+            opacity: 0.85;
+            filter: drop-shadow(0 0 1px rgba(212,162,74,0.25));
+            transform: translateY(0) scale(1);
+          }
+          50% {
+            opacity: 1;
+            filter: drop-shadow(0 0 4px rgba(212,162,74,0.9));
+            transform: translateY(-2px) scale(1.14);
+          }
+        }
+      `}</style>
+
       {/* Content over panel */}
       <div className="absolute inset-y-0 left-0 w-[38%] flex flex-col items-center text-center px-[3%] py-[4%]">
         {/* Crown */}
