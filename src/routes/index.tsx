@@ -97,35 +97,27 @@ function Hero() {
       {/* Luxury dark velvet panel behind text */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 left-0 z-[5] w-[38%]"
+        className="pointer-events-none absolute inset-y-0 left-0 z-[5] w-[44%]"
         style={{
           background:
-            "linear-gradient(90deg, rgba(26,11,46,0.92) 0%, rgba(26,11,46,0.88) 55%, rgba(26,11,46,0.6) 80%, rgba(26,11,46,0) 100%)",
+            "linear-gradient(90deg, rgba(20,8,38,0.97) 0%, rgba(20,8,38,0.96) 70%, rgba(20,8,38,0.85) 88%, rgba(20,8,38,0) 100%)",
           boxShadow:
-            "inset 0 0 80px rgba(0,0,0,0.55), inset 1px 0 0 rgba(212,169,74,0.18), inset 0 1px 0 rgba(212,169,74,0.22), inset 0 -1px 0 rgba(212,169,74,0.18)",
+            "inset 0 0 120px rgba(0,0,0,0.55)",
         }}
       >
-        {/* Subtle velvet texture + gold edge glow on the right */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(120% 60% at 0% 50%, rgba(76,32,110,0.35) 0%, transparent 70%)",
+              "radial-gradient(120% 70% at 0% 50%, rgba(76,32,110,0.30) 0%, transparent 70%)",
             mixBlendMode: "screen",
-          }}
-        />
-        <div
-          className="absolute inset-y-0 right-0 w-[2px]"
-          style={{
-            background:
-              "linear-gradient(180deg, transparent 0%, rgba(212,169,74,0.55) 20%, rgba(244,217,138,0.7) 50%, rgba(212,169,74,0.55) 80%, transparent 100%)",
-            filter: "blur(0.5px)",
           }}
         />
       </div>
 
       {/* Left content panel — sits over the dark purple area of the photo */}
-      <div className="absolute inset-y-0 left-0 z-10 flex w-[38%] flex-col justify-start px-[4%] pt-[5%]">
+      <div className="absolute inset-y-0 left-0 z-10 flex w-[40%] flex-col items-center justify-center px-[3.5%] text-center">
+
         {/* Crown logo */}
         <svg viewBox="0 0 100 50" className="h-[7%] w-auto text-[var(--gold)]" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
           <path d="M10 42 L18 18 L32 32 L50 10 L68 32 L82 18 L90 42 Z" fill="currentColor" fillOpacity="0.95" />
