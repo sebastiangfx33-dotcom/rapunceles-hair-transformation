@@ -107,19 +107,6 @@ function Hero() {
         className="absolute inset-0 z-10 flex flex-col items-start pl-5 pr-4 pt-5 md:pl-10 md:pt-8"
         style={{ color: IVORY }}
       >
-        {/* Crown */}
-        <svg
-          viewBox="0 0 100 50"
-          className="h-5 w-auto md:h-7"
-          style={{ color: GOLD }}
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path d="M10 42 L18 18 L32 32 L50 10 L68 32 L82 18 L90 42 Z" />
-          <circle cx="50" cy="6" r="3" />
-          <circle cx="18" cy="14" r="2.5" />
-          <circle cx="82" cy="14" r="2.5" />
-        </svg>
 
         {/* Script wordmark */}
         <h2
