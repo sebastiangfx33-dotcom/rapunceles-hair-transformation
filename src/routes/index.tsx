@@ -98,23 +98,23 @@ function Hero() {
         />
       </picture>
 
-      {/* Left luxury purple overlay panel */}
+      {/* Luxury full-bleed purple overlay */}
       <div
-        className="relative z-20 flex w-[80%] flex-col justify-center px-4 py-10 sm:w-[70%] md:w-[38%] md:px-12 md:py-14"
+        className="relative z-20 flex min-h-full w-full items-center justify-center px-5 py-12 sm:px-8"
         style={{
           background:
-            "linear-gradient(90deg, rgba(42,21,56,0.70) 0%, rgba(42,21,56,0.68) 75%, rgba(42,21,56,0.55) 100%)",
+            "linear-gradient(180deg, rgba(42,21,56,0.72) 0%, rgba(42,21,56,0.66) 50%, rgba(42,21,56,0.70) 100%)",
         }}
       >
-        <div className="flex w-full max-w-[16rem] flex-col items-center gap-5 text-center md:max-w-sm md:gap-6">
+        <div className="flex w-full max-w-[22rem] flex-col items-center gap-6 text-center sm:max-w-md">
           {/* Logo + brand */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center gap-2">
             <svg
               viewBox="0 0 64 40"
-              className="h-9 w-14"
+              className="h-10 w-16"
               fill="none"
               stroke={GOLD}
-              strokeWidth="1.6"
+              strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
               aria-hidden="true"
@@ -126,7 +126,7 @@ function Hero() {
               <line x1="6" y1="36" x2="58" y2="36" />
             </svg>
             <p
-              className="mt-2 font-display text-lg italic tracking-[0.08em] md:text-2xl"
+              className="font-display text-base tracking-[0.12em] sm:text-lg"
               style={{ color: GOLD_SOFT }}
             >
               Rapunceles
@@ -134,52 +134,26 @@ function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-display text-[1.45rem] leading-[1.08] tracking-tight md:text-[2.25rem]">
-            <span
-              className="block"
-              style={{
-                background: `linear-gradient(180deg, ${GOLD_SOFT} 0%, ${GOLD} 60%, #B8935A 100%)`,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              RECUPERA EL
-            </span>
-            <span
-              className="block"
-              style={{
-                background: `linear-gradient(180deg, ${GOLD_SOFT} 0%, ${GOLD} 60%, #B8935A 100%)`,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              CRECIMIENTO NATURAL
-            </span>
-            <span
-              className="block"
-              style={{
-                background: `linear-gradient(180deg, ${GOLD_SOFT} 0%, ${GOLD} 60%, #B8935A 100%)`,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              DE TU CABELLO
-            </span>
+          <h1 className="font-display text-[1.75rem] leading-[1.05] tracking-tight sm:text-[2.25rem]">
+            {["RECUPERA EL", "CRECIMIENTO NATURAL", "DE TU CABELLO"].map((line) => (
+              <span
+                key={line}
+                className="block"
+                style={{
+                  background: `linear-gradient(180deg, ${GOLD_SOFT} 0%, ${GOLD} 55%, #B8935A 100%)`,
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                {line}
+              </span>
+            ))}
           </h1>
-
-          {/* Gold divider */}
-          <div className="flex items-center justify-center gap-2">
-            <span className="h-px w-8" style={{ background: `linear-gradient(90deg, transparent, ${GOLD})` }} />
-            <span className="h-1.5 w-1.5 rotate-45" style={{ background: GOLD }} />
-            <span className="h-px w-8" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
-          </div>
 
           {/* Subheadline */}
           <p
-            className="max-w-[14rem] font-display text-[0.85rem] italic leading-relaxed md:text-base"
+            className="max-w-[18rem] font-body text-[0.95rem] leading-relaxed sm:max-w-xs sm:text-base"
             style={{ color: GOLD_SOFT, opacity: 0.95 }}
           >
             Fortalece la raíz, estimula el crecimiento y ayuda a reducir la caída.
@@ -207,7 +181,7 @@ function Hero() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-1 inline-flex w-full max-w-[14rem] items-center justify-center gap-2 rounded-full px-5 py-4 font-display text-xs font-semibold tracking-[0.16em] shadow-[0_10px_30px_-10px_rgba(212,175,122,0.55)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_36px_-10px_rgba(212,175,122,0.65)] md:w-auto md:px-8 md:text-sm"
+            className="inline-flex w-full max-w-[16rem] items-center justify-center gap-3 rounded-full px-6 py-4 font-display text-sm font-semibold tracking-[0.14em] shadow-[0_12px_40px_-8px_rgba(212,175,122,0.65)] transition-all hover:-translate-y-0.5 hover:shadow-[0_18px_48px_-8px_rgba(212,175,122,0.75)] sm:max-w-[18rem] sm:px-8 sm:text-base"
             style={{
               background: `linear-gradient(135deg, ${GOLD_SOFT} 0%, ${GOLD} 50%, #B8935A 100%)`,
               color: PURPLE,
@@ -215,24 +189,27 @@ function Hero() {
           >
             <span>COMPRAR AHORA</span>
             <span
-              className="grid size-7 place-items-center rounded-full"
+              className="grid size-8 place-items-center rounded-full"
               style={{ background: PURPLE, color: GOLD }}
             >
-              <ArrowRight className="size-3.5" />
+              <ArrowRight className="size-4" />
             </span>
           </a>
 
           {/* Benefits */}
-          <div className="grid w-full max-w-[14rem] grid-cols-3 gap-1 border-t pt-5 md:max-w-[16rem]" style={{ borderColor: `${GOLD}33` }}>
+          <div
+            className="grid w-full grid-cols-3 gap-2 border-t pt-5"
+            style={{ borderColor: `${GOLD}33` }}
+          >
             {[
               { Icon: Leaf, label: "Fórmula Natural" },
               { Icon: Truck, label: "Envío Gratis" },
               { Icon: Banknote, label: "Pago Contra Entrega" },
             ].map(({ Icon, label }) => (
               <div key={label} className="flex flex-col items-center gap-1.5 text-center">
-                <Icon className="size-4" style={{ color: GOLD }} strokeWidth={1.4} />
+                <Icon className="size-5" style={{ color: GOLD }} strokeWidth={1.4} />
                 <span
-                  className="text-[0.6rem] leading-tight tracking-wide md:text-[0.65rem]"
+                  className="text-[0.65rem] leading-tight tracking-wide sm:text-[0.7rem]"
                   style={{ color: GOLD_SOFT }}
                 >
                   {label}
