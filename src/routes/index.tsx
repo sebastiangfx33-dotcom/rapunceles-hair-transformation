@@ -134,7 +134,7 @@ function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-display text-[1.4rem] leading-[1.08] tracking-tight md:text-[2.25rem]">
+          <h1 className="font-display text-[1.45rem] leading-[1.08] tracking-tight md:text-[2.25rem]">
             <span
               className="block"
               style={{
