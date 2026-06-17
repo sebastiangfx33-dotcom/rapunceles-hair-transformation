@@ -12,7 +12,10 @@ import {
   Flower2,
   Clock,
   ArrowRight,
+  Crown,
 } from "lucide-react";
+import probSlowGrowth from "@/assets/problem-slow-growth.jpg";
+import probBreakage from "@/assets/problem-breakage.jpg";
 
 
 import heroBanner from "@/assets/hero-banner.png.asset.json";
@@ -226,40 +229,164 @@ function Stars({ size = "size-4" }: { size?: string }) {
 
 /* ----------------------------- PROBLEMS ----------------------------- */
 function Problems() {
+  const DEEP = "#4A2D4F";
+  const GOLD = "#D4B06A";
   const items = [
-    { img: probRoots, title: "Raíces débiles", desc: "Sientes el cabello frágil desde la raíz." },
-    { img: probFall, title: "Caída constante", desc: "Más hebras de las normales cada día." },
-    { img: probVolume, title: "Falta de volumen", desc: "El cabello se ve plano y sin cuerpo." },
-    { img: probWeak, title: "Crecimiento lento", desc: "Crece poco y no recupera fuerza." },
+    { img: probFall, title: "Caída excesiva", desc: "Pierdes más cabello de lo normal al peinarte o bañarte." },
+    { img: probSlowGrowth, title: "Crecimiento lento", desc: "Tu cabello tarda demasiado en crecer o parece estancado." },
+    { img: probVolume, title: "Falta de volumen", desc: "Tu cabello luce fino, débil y sin densidad natural." },
+    { img: probBreakage, title: "Quiebre constante", desc: "Las fibras capilares se rompen fácilmente y pierden fuerza." },
+    { img: probRoots, title: "Raíces débiles", desc: "Tu raíz no tiene suficiente fuerza para sostener el crecimiento." },
+    { img: probWeak, title: "Cuero cabelludo sin nutrición", desc: "La falta de nutrientes afecta directamente la salud capilar." },
   ];
   return (
-    <section className="section-pad bg-[color-mix(in_oklab,var(--beige)_60%,var(--ivory))]">
-      <div className="mx-auto max-w-md px-6">
-        <Header eyebrow="El problema" title="¿Te suena familiar?" />
-        <div className="mt-8 grid grid-cols-1 gap-4">
-          {items.map((it) => (
-            <article key={it.title} className="luxe-card overflow-hidden">
-              <div className="grid grid-cols-[7.5rem_minmax(0,1fr)] items-stretch">
+    <section className="relative overflow-hidden section-pad bg-[#F4EEF8]">
+      {/* Soft gold sparkles */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-[0.35]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 12% 18%, rgba(212,176,106,0.35) 0, transparent 1.5px), radial-gradient(circle at 82% 32%, rgba(212,176,106,0.28) 0, transparent 1.5px), radial-gradient(circle at 30% 70%, rgba(212,176,106,0.3) 0, transparent 1.5px), radial-gradient(circle at 75% 88%, rgba(212,176,106,0.25) 0, transparent 1.5px)",
+          backgroundSize: "260px 260px",
+        }}
+      />
+      {/* Botanical corners */}
+      <Leaf
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-3 top-4 size-20 rotate-[-25deg] text-[#B89A6E] opacity-25"
+      />
+      <Flower2
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-2 top-10 size-16 rotate-[18deg] text-[#9B6BA3] opacity-25"
+      />
+
+      <div className="relative mx-auto max-w-md px-6">
+        {/* Crown + Title */}
+        <div className="flex flex-col items-center text-center">
+          <Crown className="size-6" style={{ color: GOLD }} />
+          <div
+            className="mt-3 flex items-center gap-2"
+            style={{ color: GOLD }}
+          >
+            <span className="h-px w-8" style={{ background: GOLD }} />
+            <span
+              className="text-[11px] uppercase tracking-[0.32em]"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              El diagnóstico
+            </span>
+            <span className="h-px w-8" style={{ background: GOLD }} />
+          </div>
+          <h2
+            className="mt-4 text-[28px] leading-[1.15] md:text-[36px]"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              color: DEEP,
+              fontWeight: 500,
+            }}
+          >
+            ¿Tu cabello te está{" "}
+            <span style={{ color: GOLD, fontStyle: "italic" }}>
+              enviando estas señales
+            </span>
+            ?
+          </h2>
+          <p className="mt-4 max-w-[34ch] text-[14px] leading-relaxed text-[#6B6470]">
+            Estos problemas son más comunes de lo que imaginas y pueden estar
+            afectando el crecimiento natural de tu cabello todos los días.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="mt-10 grid grid-cols-1 gap-5">
+          {items.map((it, idx) => (
+            <article
+              key={it.title}
+              className="relative overflow-hidden rounded-3xl bg-[#FBF8F2]"
+              style={{
+                boxShadow:
+                  "0 18px 40px -22px rgba(74,45,79,0.28), 0 2px 6px -2px rgba(74,45,79,0.08)",
+                border: "1px solid rgba(212,176,106,0.18)",
+              }}
+            >
+              <div className="relative">
                 <img
                   src={it.img}
                   alt={it.title}
-                  width={400}
-                  height={400}
+                  width={1024}
+                  height={700}
                   loading="lazy"
-                  className="h-full w-full object-cover"
+                  className="h-44 w-full object-cover"
                 />
-                <div className="min-w-0 p-5">
-                  <h3 className="text-xl">{it.title}</h3>
-                  <p className="mt-1.5 text-sm text-muted-foreground">{it.desc}</p>
-                </div>
+                {/* Number badge */}
+                <span
+                  className="absolute left-4 top-4 grid size-9 place-items-center rounded-full text-[13px] font-medium"
+                  style={{
+                    background: DEEP,
+                    color: "#F4EEF8",
+                    fontFamily: "'Cormorant Garamond', serif",
+                    boxShadow: "0 4px 10px -3px rgba(74,45,79,0.45)",
+                  }}
+                >
+                  {String(idx + 1).padStart(2, "0")}
+                </span>
+              </div>
+              <div className="px-6 py-5">
+                <h3
+                  className="text-[20px] leading-tight"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    color: DEEP,
+                    fontWeight: 500,
+                  }}
+                >
+                  {it.title}
+                </h3>
+                <p className="mt-1.5 text-[13.5px] leading-relaxed text-[#6B6470]">
+                  {it.desc}
+                </p>
               </div>
             </article>
           ))}
         </div>
-        <p className="mt-8 text-center text-sm italic text-muted-foreground">
-          Tu cabello merece una rutina diseñada para cuidarlo desde la raíz.
-        </p>
+
+        {/* Closing */}
+        <div className="relative mt-12 text-center">
+          <p
+            className="text-[22px] leading-[1.3] md:text-[26px]"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              color: DEEP,
+              fontWeight: 500,
+            }}
+          >
+            Tu cabello necesita un{" "}
+            <span style={{ color: GOLD, fontStyle: "italic" }}>
+              tratamiento profundo
+            </span>{" "}
+            desde la raíz.
+          </p>
+          <div className="mt-5 flex items-center justify-center">
+            <span className="h-px w-10" style={{ background: GOLD }} />
+            <span
+              className="mx-2 inline-block rotate-45"
+              style={{ width: 6, height: 6, background: GOLD }}
+            />
+            <span className="h-px w-10" style={{ background: GOLD }} />
+          </div>
+        </div>
       </div>
+
+      {/* Botanical bottom corners */}
+      <Leaf
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-2 bottom-6 size-20 rotate-[150deg] text-[#B89A6E] opacity-25"
+      />
+      <Flower2
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-3 bottom-4 size-20 rotate-[-20deg] text-[#9B6BA3] opacity-25"
+      />
     </section>
   );
 }
