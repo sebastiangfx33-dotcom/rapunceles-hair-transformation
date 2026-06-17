@@ -12,9 +12,6 @@ import {
   Flower2,
   Clock,
   ArrowRight,
-  Truck,
-  HandCoins,
-  Users,
 } from "lucide-react";
 
 
