@@ -207,56 +207,42 @@ function Hero() {
 
       {/* Premium conversion strip below the hero banner */}
       <div className="relative z-20 w-full bg-background px-4 pb-6 pt-4">
-        {/* Benefits bar */}
+        {/* Benefits card */}
         <div
-          className="mx-auto w-full max-w-4xl rounded-[22px] px-3 py-4 md:px-6 md:py-5"
-          style={{ backgroundColor: "#2A143D" }}
+          className="mx-auto w-full max-w-4xl rounded-3xl border p-6 shadow-2xl md:p-7"
+          style={{
+            backgroundColor: "#2A143D",
+            borderColor: "rgba(212, 161, 74, 0.20)",
+            boxShadow: "0 25px 50px -12px rgba(42, 20, 61, 0.25)",
+          }}
         >
-          <div className="grid grid-cols-3 divide-x divide-[#D4A14A]/40">
-            <div className="flex flex-col items-center justify-center gap-1 px-2 py-1 text-center">
-              <Users className="h-5 w-5 md:h-6 md:w-6" style={{ color: "#D4A14A" }} />
-              <span
-                className="text-[13px] font-semibold leading-tight text-white md:text-[15px]"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
-              >
-                +68 clientas
+          <div className="grid grid-cols-3 items-start">
+            <div className="flex flex-col items-center px-1 text-center" style={{ borderRight: "1px solid rgba(212, 161, 74, 0.20)" }}>
+              <Users className="mb-2 h-6 w-6 md:h-7 md:w-7" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
+              <span className="text-xs font-medium uppercase tracking-wider text-[#D4A14A]" style={{ fontFamily: "'Inter', sans-serif" }}>
+                +68
               </span>
-              <span
-                className="text-[11px] leading-tight text-[#D4A14A]/90 md:text-[13px]"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
-              >
-                satisfechas
-              </span>
+              <p className="mt-0.5 text-[10px] leading-tight text-[#FDF8F1]/90 md:text-[11px]" style={{ fontFamily: "'Inter', sans-serif" }}>
+                clientas satisfechas
+              </p>
             </div>
-            <div className="flex flex-col items-center justify-center gap-1 px-2 py-1 text-center">
-              <Truck className="h-5 w-5 md:h-6 md:w-6" style={{ color: "#D4A14A" }} />
-              <span
-                className="text-[13px] font-semibold leading-tight text-white md:text-[15px]"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
-              >
-                Envío gratis
+            <div className="flex flex-col items-center px-1 text-center" style={{ borderRight: "1px solid rgba(212, 161, 74, 0.20)" }}>
+              <Truck className="mb-2 h-6 w-6 md:h-7 md:w-7" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
+              <span className="text-xs font-medium uppercase tracking-wider text-[#D4A14A]" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Gratis
               </span>
-              <span
-                className="text-[11px] leading-tight text-[#D4A14A]/90 md:text-[13px]"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
-              >
-                Envío express
-              </span>
+              <p className="mt-0.5 text-[10px] leading-tight text-[#FDF8F1]/90 md:text-[11px]" style={{ fontFamily: "'Inter', sans-serif" }}>
+                envío express
+              </p>
             </div>
-            <div className="flex flex-col items-center justify-center gap-1 px-2 py-1 text-center">
-              <HandCoins className="h-5 w-5 md:h-6 md:w-6" style={{ color: "#D4A14A" }} />
-              <span
-                className="text-[13px] font-semibold leading-tight text-white md:text-[15px]"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
-              >
-                Pago contra
+            <div className="flex flex-col items-center px-1 text-center">
+              <HandCoins className="mb-2 h-6 w-6 md:h-7 md:w-7" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
+              <span className="text-xs font-medium uppercase tracking-wider text-[#D4A14A]" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Pago
               </span>
-              <span
-                className="text-[11px] leading-tight text-[#D4A14A]/90 md:text-[13px]"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
-              >
-                entrega
-              </span>
+              <p className="mt-0.5 text-[10px] leading-tight text-[#FDF8F1]/90 md:text-[11px]" style={{ fontFamily: "'Inter', sans-serif" }}>
+                contra entrega
+              </p>
             </div>
           </div>
         </div>
@@ -265,14 +251,15 @@ function Hero() {
         <div className="mx-auto mt-4 w-full max-w-4xl text-center">
           <a
             href="#options"
-            className="mx-auto inline-flex h-[62px] w-[90%] items-center justify-center rounded-full md:h-[68px]"
+            className="mx-auto inline-flex h-[62px] w-[90%] items-center justify-center rounded-full transition-transform active:scale-[0.98] md:h-[68px]"
             style={{
-              background: "linear-gradient(180deg, #F6D87A 0%, #D9A73E 100%)",
-              boxShadow: "0 8px 24px -8px rgba(212, 161, 74, 0.35)",
+              background: "linear-gradient(90deg, #D4A14A 0%, #E9C485 50%, #D4A14A 100%)",
+              border: "1px solid #B8862D",
+              boxShadow: "0 12px 28px -8px rgba(212, 161, 74, 0.35)",
             }}
           >
             <span
-              className="text-[17px] font-semibold uppercase tracking-wide md:text-[20px]"
+              className="text-[17px] font-bold uppercase tracking-widest md:text-[20px]"
               style={{ fontFamily: "'Cormorant Garamond', serif", color: "#2A143D" }}
             >
               QUIERO MI TRATAMIENTO
@@ -281,19 +268,22 @@ function Hero() {
         </div>
 
         {/* Trust line */}
-        <div className="mx-auto mt-4 flex max-w-4xl flex-wrap items-center justify-center gap-x-3 gap-y-1 text-center text-[13px] md:text-[15px]" style={{ color: "#D4A14A" }}>
-          <span className="inline-flex items-center gap-1">
-            <Leaf className="h-4 w-4 md:h-5 md:w-5" /> Ingredientes naturales
-          </span>
-          <span className="hidden text-[#D4A14A]/60 sm:inline">•</span>
-          <span>Sin parabenos</span>
-          <span className="hidden text-[#D4A14A]/60 sm:inline">•</span>
-          <span className="inline-flex items-center gap-1">
-            <Heart className="h-4 w-4 md:h-5 md:w-5" /> Hecho con amor
-          </span>
+        <div className="mx-auto mt-4 flex max-w-4xl flex-col items-center gap-3 text-center">
+          <div className="flex flex-wrap items-center justify-center gap-3 text-[#2A143D]/70" style={{ fontFamily: "'Inter', sans-serif" }}>
+            <span className="inline-flex items-center gap-1.5 text-[11px] md:text-[12px]">
+              <Leaf className="h-3.5 w-3.5 text-[#D4A14A]" /> Ingredientes naturales
+            </span>
+            <span className="inline-block h-1 w-1 rounded-full bg-[#D4A14A]/40" />
+            <span className="text-[11px] md:text-[12px]">Sin parabenos</span>
+          </div>
+          <div className="flex items-center gap-2 text-[#D4A14A]" style={{ fontFamily: "'Inter', sans-serif" }}>
+            <Heart className="h-3 w-3 fill-current" />
+            <span className="text-[10px] font-medium uppercase tracking-widest md:text-[11px]">Hecho con amor</span>
+          </div>
         </div>
       </div>
     </section>
+
 
   );
 }
