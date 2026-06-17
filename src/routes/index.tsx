@@ -15,15 +15,12 @@ import {
   Crown,
 } from "lucide-react";
 import probSlowGrowth from "@/assets/problem-slow-growth.jpg";
-import probBreakage from "@/assets/problem-breakage.jpg";
-
+import probFall from "@/assets/problem-fall.jpg";
+import probRoots from "@/assets/problem-roots.jpg";
+import probWeak from "@/assets/problem-weak.jpg";
 
 import heroBanner from "@/assets/hero-banner.png.asset.json";
 import heroKit from "@/assets/hero-kit.jpg";
-import probRoots from "@/assets/problem-roots.jpg";
-import probFall from "@/assets/problem-fall.jpg";
-import probVolume from "@/assets/problem-volume.jpg";
-import probWeak from "@/assets/problem-weak.jpg";
 import prodShampoo from "@/assets/product-shampoo.jpg";
 import prodConditioner from "@/assets/product-conditioner.jpg";
 import prodTonic from "@/assets/product-tonic.jpg";
@@ -234,11 +231,28 @@ function Problems() {
   const GOLD = "#C9A15D";
   const GOLD_SOFT = "#E0C089";
   const IVORY = "#F7F1E8";
+  const BEIGE = "#E7D8C6";
   const items = [
-    { img: probFall, title: "Caída excesiva", desc: "Pierdes cabello diariamente." },
-    { img: probVolume, title: "Menos abundancia", desc: "Tu cabello pierde volumen natural." },
-    { img: probBreakage, title: "Fragilidad capilar", desc: "Las fibras comienzan a romperse." },
-    { img: probRoots, title: "Raíces sin nutrición", desc: "La base del crecimiento pierde fuerza." },
+    {
+      img: probFall,
+      title: "Caída constante",
+      desc: "Cada día pierdes más cabello de lo normal.",
+    },
+    {
+      img: probWeak,
+      title: "Cabello debilitado",
+      desc: "Tu fibra capilar pierde fuerza progresivamente.",
+    },
+    {
+      img: probSlowGrowth,
+      title: "Crecimiento lento",
+      desc: "Tu cabello parece no avanzar.",
+    },
+    {
+      img: probRoots,
+      title: "Raíces debilitadas",
+      desc: "La raíz pierde capacidad de sostener cabello fuerte.",
+    },
   ];
   return (
     <section
@@ -292,32 +306,18 @@ function Problems() {
         {/* Header */}
         <div className="flex flex-col items-center text-center">
           <Crown className="size-7" style={{ color: GOLD }} strokeWidth={1.4} />
-          <div className="mt-4 flex items-center gap-3" style={{ color: GOLD }}>
-            <span className="h-px w-10" style={{ background: GOLD }} />
-            <span
-              className="text-[10px] uppercase tracking-[0.42em]"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}
-            >
-              Las señales
-            </span>
-            <span className="h-px w-10" style={{ background: GOLD }} />
-          </div>
           <h2
-            className="mt-5 text-[26px] leading-[1.2] md:text-[34px]"
+            className="mt-5 text-[26px] leading-[1.25] md:text-[32px]"
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               color: IVORY,
               fontWeight: 400,
             }}
           >
-            Tu cabello está{" "}
-            <span style={{ color: GOLD_SOFT, fontStyle: "italic" }}>
-              perdiendo fuerza
-            </span>
-            …
+            Tu cabello te está enviando señales…
             <br />
-            <span className="text-[20px] md:text-[26px] opacity-90">
-              y probablemente aún no lo notas.
+            <span style={{ color: GOLD, fontStyle: "italic" }}>
+              y no deberías ignorarlas.
             </span>
           </h2>
           <div className="mt-5 flex items-center">
@@ -330,9 +330,9 @@ function Problems() {
           </div>
         </div>
 
-        {/* Editorial horizontal blocks */}
+        {/* Vertical luxury cards */}
         <div className="mt-10 space-y-5">
-          {items.map((it, idx) => (
+          {items.map((it) => (
             <article
               key={it.title}
               className="relative overflow-hidden rounded-2xl"
@@ -344,58 +344,51 @@ function Problems() {
                   "0 18px 36px -20px rgba(0,0,0,0.8), inset 0 1px 0 rgba(224,192,137,0.08)",
               }}
             >
-              <div className="grid grid-cols-[9rem_minmax(0,1fr)] items-stretch">
-                {/* Image left */}
-                <div className="relative">
-                  <img
-                    src={it.img}
-                    alt={it.title}
-                    width={600}
-                    height={600}
-                    loading="lazy"
-                    className="h-full w-full object-cover"
-                  />
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-0"
-                    style={{
-                      background:
-                        "linear-gradient(90deg, rgba(45,19,47,0) 55%, rgba(45,19,47,0.85) 100%)",
-                    }}
-                  />
-                </div>
-                {/* Text right */}
-                <div className="flex min-w-0 flex-col justify-center px-4 py-4">
+              {/* Image top */}
+              <div className="relative h-44 w-full overflow-hidden">
+                <img
+                  src={it.img}
+                  alt={it.title}
+                  width={600}
+                  height={400}
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, rgba(45,19,47,0) 60%, rgba(45,19,47,0.85) 100%)",
+                  }}
+                />
+              </div>
+              {/* Text body */}
+              <div className="px-5 pb-6 pt-4 text-center">
+                <h3
+                  className="text-[20px] leading-tight md:text-[22px]"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    color: IVORY,
+                    fontWeight: 500,
+                  }}
+                >
+                  {it.title}
+                </h3>
+                <div className="mx-auto mt-3 flex items-center justify-center">
+                  <span className="h-px w-10" style={{ background: GOLD, opacity: 0.7 }} />
                   <span
-                    className="text-[10px] tracking-[0.32em]"
-                    style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      color: GOLD,
-                    }}
-                  >
-                    0{idx + 1}
-                  </span>
-                  <h3
-                    className="mt-1 text-[18px] leading-tight md:text-[20px]"
-                    style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      color: IVORY,
-                      fontWeight: 500,
-                    }}
-                  >
-                    {it.title}
-                  </h3>
-                  <span
-                    className="mt-2 h-px w-8"
-                    style={{ background: GOLD, opacity: 0.7 }}
+                    className="mx-2 inline-block rotate-45"
+                    style={{ width: 4, height: 4, background: GOLD, opacity: 0.8 }}
                   />
-                  <p
-                    className="mt-2 text-[12.5px] leading-relaxed"
-                    style={{ color: "rgba(247,241,232,0.78)" }}
-                  >
-                    {it.desc}
-                  </p>
+                  <span className="h-px w-10" style={{ background: GOLD, opacity: 0.7 }} />
                 </div>
+                <p
+                  className="mt-3 text-[13.5px] leading-relaxed"
+                  style={{ color: BEIGE, opacity: 0.9 }}
+                >
+                  {it.desc}
+                </p>
               </div>
             </article>
           ))}
@@ -404,14 +397,14 @@ function Problems() {
         {/* Bottom text */}
         <div className="relative mt-12 text-center">
           <p
-            className="text-[16px] leading-relaxed"
+            className="text-[18px] leading-relaxed"
             style={{
               fontFamily: "'Cormorant Garamond', serif",
-              color: "rgba(247,241,232,0.85)",
+              color: IVORY,
               fontWeight: 400,
             }}
           >
-            No ignores las señales.
+            No esperes a que el daño avance.
           </p>
           <p
             className="mt-2 text-[22px] leading-[1.35] md:text-[26px]"
@@ -423,7 +416,7 @@ function Problems() {
           >
             Tu cabello necesita{" "}
             <span style={{ color: GOLD_SOFT, fontStyle: "italic" }}>
-              recuperación profunda
+              recuperación desde la raíz
             </span>
             .
           </p>
