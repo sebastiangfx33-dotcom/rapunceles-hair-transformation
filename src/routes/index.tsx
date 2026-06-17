@@ -96,7 +96,7 @@ function Hero() {
       {/* Luxury dark velvet panel behind text */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 left-0 z-[5] w-[42%]"
+        className="pointer-events-none absolute inset-y-0 left-0 z-[5] w-[64%] md:w-[42%]"
         style={{
           background:
             "linear-gradient(90deg, rgba(20,8,38,0.97) 0%, rgba(20,8,38,0.96) 70%, rgba(20,8,38,0.85) 92%, rgba(20,8,38,0) 100%)",
@@ -106,20 +106,14 @@ function Hero() {
 
       {/* Left content panel — pixel-perfect replica of reference */}
       <div
-        className="relative z-10 flex w-[38%] flex-col items-start justify-center text-left"
-        style={{
-          paddingLeft: "34px",
-          paddingRight: "12px",
-          paddingTop: "32px",
-          paddingBottom: "40px",
-          color: "#D8B06A",
-        }}
+        className="relative z-10 flex w-[60%] flex-col items-start justify-center pl-5 pr-2 pt-6 pb-8 text-left md:w-[38%] md:pl-[34px] md:pr-3 md:pt-8 md:pb-10"
+        style={{ color: "#D8B06A" }}
       >
         {/* Crown logo */}
         <svg
           viewBox="0 0 100 50"
-          className="w-auto"
-          style={{ height: "56px", color: "#D8B06A" }}
+          className="h-10 w-auto md:h-14"
+          style={{ color: "#D8B06A" }}
           fill="currentColor"
           aria-hidden="true"
         >
@@ -131,17 +125,14 @@ function Hero() {
 
         {/* Headline */}
         <h1
+          className="mt-6 mb-5 text-[26px] leading-[1.06] md:mt-[38px] md:mb-8 md:text-[42px]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 500,
-            fontSize: "42px",
-            lineHeight: 1.06,
             letterSpacing: "0.3px",
             textTransform: "uppercase",
             color: "#D8B06A",
-            marginTop: "38px",
-            marginBottom: "32px",
-            maxWidth: "90%",
+            maxWidth: "100%",
           }}
         >
           RECUPERA<br />
@@ -152,43 +143,33 @@ function Hero() {
 
         {/* Ornament */}
         <div
-          style={{
-            width: "140px",
-            height: "1px",
-            background: "#D8B06A",
-            marginTop: 0,
-            marginBottom: "28px",
-          }}
+          className="mb-5 h-px w-[90px] md:mb-7 md:w-[140px]"
+          style={{ background: "#D8B06A" }}
         />
 
         {/* Description */}
         <p
+          className="mb-5 text-[13px] leading-[1.5] md:mb-8 md:text-[17px] md:leading-[1.65]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 400,
-            fontSize: "17px",
-            lineHeight: 1.65,
             color: "#D8B06A",
-            width: "88%",
-            marginBottom: "32px",
+            width: "95%",
           }}
         >
           Rutina capilar inspirada en ingredientes naturales diseñada para fortalecer la raíz, estimular el crecimiento y reducir la caída.
         </p>
 
         {/* Rating */}
-        <div className="flex items-center" style={{ gap: "12px", marginBottom: "18px" }}>
+        <div className="mb-3 flex items-center gap-2 md:mb-[18px] md:gap-3">
           <span className="flex" aria-label="4.9 de 5 estrellas">
             {[0, 1, 2, 3, 4].map((i) => (
-              <Star key={i} style={{ width: 22, height: 22, color: "#D8B06A", fill: "#D8B06A" }} />
+              <Star key={i} className="size-4 md:size-[22px]" style={{ color: "#D8B06A", fill: "#D8B06A" }} />
             ))}
           </span>
           <span
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "18px",
-              color: "#D8B06A",
-            }}
+            className="text-[13px] md:text-[18px]"
+            style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D8B06A" }}
           >
             4.9/5
           </span>
@@ -196,13 +177,11 @@ function Hero() {
 
         {/* Social proof */}
         <p
+          className="mb-5 text-[12px] leading-[1.4] md:mb-[34px] md:text-[16px] md:leading-[1.5]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "16px",
-            lineHeight: 1.5,
             color: "#D8B06A",
-            width: "85%",
-            marginBottom: "34px",
+            width: "95%",
           }}
         >
           +1.247 mujeres ya transformaron su cabello
@@ -211,43 +190,34 @@ function Hero() {
         {/* CTA */}
         <a
           href="#options"
-          className="inline-flex items-center justify-between"
+          className="mb-6 inline-flex h-[46px] w-full max-w-[240px] items-center justify-between rounded-full px-4 text-[13px] md:mb-9 md:h-[62px] md:max-w-[280px] md:px-7 md:text-[18px]"
           style={{
-            height: "62px",
-            width: "280px",
-            maxWidth: "100%",
-            borderRadius: "999px",
             background: "linear-gradient(180deg, #F6D87A 0%, #D9A73E 100%)",
             color: "#1A0F2E",
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 700,
-            fontSize: "18px",
-            paddingLeft: "28px",
-            paddingRight: "22px",
-            marginBottom: "36px",
+            letterSpacing: "0.04em",
             boxShadow: "0 10px 28px -10px rgba(0,0,0,0.6)",
           }}
         >
           <span>COMPRAR AHORA</span>
-          <ArrowRight style={{ width: 20, height: 20 }} />
+          <ArrowRight className="size-4 md:size-5" />
         </a>
 
         {/* Benefits */}
-        <div className="grid w-full grid-cols-3" style={{ gap: "10px" }}>
+        <div className="grid w-full max-w-[280px] grid-cols-3 gap-2 md:max-w-none md:gap-3">
           {[
             { Icon: Leaf, label: "FÓRMULA\nNATURAL" },
             { Icon: Truck, label: "ENVÍO\nGRATIS" },
             { Icon: HandCoins, label: "PAGO CONTRA\nENTREGA" },
           ].map(({ Icon, label }) => (
-            <div key={label} className="flex flex-col items-center text-center" style={{ gap: "6px" }}>
-              <Icon style={{ width: 24, height: 24, color: "#D8B06A" }} strokeWidth={1.25} />
+            <div key={label} className="flex flex-col items-center gap-1 text-center md:gap-1.5">
+              <Icon className="size-5 md:size-6" style={{ color: "#D8B06A" }} strokeWidth={1.25} />
               <span
-                className="whitespace-pre-line"
+                className="whitespace-pre-line text-[10px] leading-[1.15] md:text-[13px]"
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: "14px",
                   fontWeight: 500,
-                  lineHeight: 1.15,
                   color: "#D8B06A",
                 }}
               >
