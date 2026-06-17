@@ -181,7 +181,7 @@ function Hero() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full max-w-[16rem] items-center justify-center gap-3 rounded-full px-6 py-4 font-display text-sm font-semibold tracking-[0.14em] shadow-[0_12px_40px_-8px_rgba(212,175,122,0.65)] transition-all hover:-translate-y-0.5 hover:shadow-[0_18px_48px_-8px_rgba(212,175,122,0.75)] sm:max-w-[18rem] sm:px-8 sm:text-base"
+            className="inline-flex w-full max-w-[17rem] items-center justify-center gap-3 rounded-full px-7 py-5 font-display text-base font-semibold tracking-[0.13em] shadow-[0_14px_44px_-8px_rgba(212,175,122,0.72)] transition-all hover:-translate-y-0.5 hover:shadow-[0_20px_52px_-8px_rgba(212,175,122,0.82)] sm:max-w-[19rem] sm:px-9 sm:text-lg"
             style={{
               background: `linear-gradient(135deg, ${GOLD_SOFT} 0%, ${GOLD} 50%, #B8935A 100%)`,
               color: PURPLE,
