@@ -83,138 +83,48 @@ function Landing() {
 function Hero() {
   return (
     <section
-      className="relative w-full overflow-hidden text-[var(--ivory)]"
-      style={{
-        aspectRatio: "390 / 624",
-        background:
-          "linear-gradient(135deg, #2D1B4E 0%, #1A0B2E 55%, #0F051A 100%)",
-      }}
+      className="relative w-full overflow-hidden bg-[#2a1438] text-[var(--ivory)]"
+      style={{ aspectRatio: "958 / 1280" }}
     >
-      {/* Ambient luxury glows */}
-      <div
-        className="pointer-events-none absolute right-0 top-1/4 z-0 h-[40%] w-[40%] rounded-full blur-[100px]"
-        style={{ background: "rgba(212,175,55,0.10)" }}
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute bottom-1/4 left-0 z-0 h-[30%] w-[30%] rounded-full blur-[80px]"
-        style={{ background: "rgba(76,29,149,0.20)" }}
-        aria-hidden
+      {/* Background photo */}
+      <img
+        src={heroBgAsset.url}
+        alt="Modelo con cabello largo y kit Rapunceles"
+        className="absolute inset-0 h-full w-full object-cover"
+        fetchPriority="high"
       />
 
-      {/* Right column: model + products (60%) */}
-      <div className="absolute inset-y-0 right-0 z-0 w-[60%]">
-        <img
-          src={heroBgAsset.url}
-          alt="Modelo con cabello largo y sedoso — campaña Rapunceles"
-          className="h-full w-full object-cover object-[30%_center]"
-          fetchPriority="high"
-        />
-        {/* Fade into purple */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to left, transparent 55%, #1A0B2E 100%)",
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to top, rgba(26,11,46,0.85) 0%, transparent 40%)",
-          }}
-        />
+      {/* Left content panel — sits over the dark purple area of the photo */}
+      <div className="absolute inset-y-0 left-0 z-10 flex w-[50%] flex-col justify-start px-[4%] pt-[5%]">
+        {/* Crown logo */}
+        <svg viewBox="0 0 100 50" className="h-[7%] w-auto text-[var(--gold)]" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+          <path d="M10 42 L18 18 L32 32 L50 10 L68 32 L82 18 L90 42 Z" fill="currentColor" fillOpacity="0.95" />
+          <circle cx="50" cy="8" r="2.5" fill="currentColor" />
+          <circle cx="18" cy="16" r="2" fill="currentColor" />
+          <circle cx="82" cy="16" r="2" fill="currentColor" />
+        </svg>
 
-        {/* Products in front of model */}
-        <div className="absolute bottom-[16%] left-1/2 z-20 flex -translate-x-1/2 items-end gap-[3%]">
-          <div className="flex flex-col items-center">
-            <img
-              src={prodShampoo}
-              alt="Rapunceles Shampoo"
-              className="h-[14vh] w-auto rounded-md border border-white/10 object-cover shadow-2xl"
-            />
-            <span
-              className="mt-1.5 bg-black/40 px-1 text-[var(--ivory)] backdrop-blur-sm"
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                fontSize: "clamp(7px, 1.4vw, 11px)",
-                fontWeight: 700,
-                letterSpacing: "0.18em",
-              }}
-            >
-              SHAMPOO
-            </span>
-          </div>
-          <div className="-mb-[2%] flex scale-110 flex-col items-center">
-            <img
-              src={prodConditioner}
-              alt="Rapunceles Mascarilla Premium"
-              className="h-[16vh] w-auto rounded-md border border-white/20 object-cover shadow-[0_20px_40px_-10px_rgba(0,0,0,0.7)]"
-            />
-            <span
-              className="mt-2 border px-1.5 py-0.5 text-[var(--gold)] shadow-lg"
-              style={{
-                background: "#1A0B2E",
-                borderColor: "rgba(212,175,55,0.30)",
-                fontFamily: "'Inter', sans-serif",
-                fontSize: "clamp(7px, 1.4vw, 11px)",
-                fontWeight: 700,
-                letterSpacing: "0.18em",
-              }}
-            >
-              PREMIUM
-            </span>
-          </div>
-          <div className="flex flex-col items-center">
-            <img
-              src={prodTonic}
-              alt="Rapunceles Sérum capilar"
-              className="h-[12vh] w-auto rounded-md border border-white/10 object-cover shadow-2xl"
-            />
-            <span
-              className="mt-1.5 bg-black/40 px-1 text-[var(--ivory)] backdrop-blur-sm"
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                fontSize: "clamp(7px, 1.4vw, 11px)",
-                fontWeight: 700,
-                letterSpacing: "0.18em",
-              }}
-            >
-              SERUM
-            </span>
-          </div>
-        </div>
-      </div>
-
-      {/* Left column: typography (40%) */}
-      <div className="relative z-10 flex h-full w-[42%] flex-col px-[5%] pt-[7%]">
-        {/* Crown + brand */}
-        <div className="mb-[6%]">
-          <svg viewBox="0 0 24 24" className="h-[5%] w-auto text-[var(--gold)]" fill="currentColor" aria-hidden>
-            <path d="M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5M19 19C19 19.6 18.6 20 18 20H6C5.4 20 5 19.6 5 19V18H19V19Z" />
-          </svg>
-          <h2
-            className="mt-1 leading-none text-[var(--gold)]"
-            style={{
-              fontFamily: "'Great Vibes', cursive",
-              fontSize: "clamp(22px, 6.5vw, 56px)",
-              letterSpacing: "0.02em",
-            }}
-          >
-            Rapunceles
-          </h2>
-        </div>
+        {/* Brand name */}
+        <h2
+          className="-mt-1 text-[var(--gold)]"
+          style={{
+            fontFamily: "'Great Vibes', cursive",
+            fontSize: "clamp(34px, 9vw, 80px)",
+            lineHeight: 1,
+          }}
+        >
+          Rapunceles
+        </h2>
 
         {/* Headline */}
         <h1
-          className="text-[var(--gold)]"
+          className="mt-[14%] text-[var(--gold)]"
           style={{
-            fontFamily: "'Cinzel', 'Playfair Display', serif",
-            fontWeight: 700,
-            fontSize: "clamp(15px, 4.2vw, 36px)",
-            lineHeight: 1.1,
-            letterSpacing: "-0.005em",
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 500,
+            fontSize: "clamp(14px, 3.7vw, 32px)",
+            lineHeight: 1.55,
+            letterSpacing: "0.015em",
           }}
         >
           RECUPERA<br />
@@ -223,91 +133,99 @@ function Hero() {
           DE TU CABELLO
         </h1>
 
-        {/* Ratings */}
-        <div className="mt-[6%]">
-          <div className="flex items-center gap-1.5">
-            <span className="flex" aria-label="4.9 de 5 estrellas">
-              {[0, 1, 2, 3, 4].map((i) => (
-                <Star key={i} className="size-[2.6vw] max-h-3.5 max-w-3.5 fill-[var(--gold)] text-[var(--gold)]" />
-              ))}
-            </span>
-            <span
-              className="text-white/90"
-              style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "clamp(9px, 2vw, 14px)" }}
-            >
-              4.9/5
-            </span>
-          </div>
-          <p
-            className="mt-1 italic text-white/55"
-            style={{
-              fontFamily: "'Montserrat', 'Inter', sans-serif",
-              fontWeight: 300,
-              fontSize: "clamp(8px, 1.8vw, 13px)",
-              lineHeight: 1.3,
-            }}
-          >
-            +1.247 mujeres ya<br />transformaron su cabello
-          </p>
+        {/* Divider ornament */}
+        <div className="mt-[7%] flex items-center gap-2">
+          <span className="h-px flex-1 bg-[var(--gold)]/60" />
+          <svg viewBox="0 0 16 8" className="h-2 w-4 text-[var(--gold)]" fill="currentColor">
+            <path d="M0 4 L4 0 L8 4 L12 0 L16 4 L12 8 L8 4 L4 8 Z" />
+          </svg>
+          <span className="h-px flex-1 bg-[var(--gold)]/60" />
         </div>
 
-        {/* Body */}
+        {/* Description */}
         <p
-          className="mt-[6%] text-white/80"
+          className="mt-[6%] text-[var(--ivory)]/95"
           style={{
-            fontFamily: "'Montserrat', 'Inter', sans-serif",
-            fontWeight: 300,
-            fontSize: "clamp(9px, 2vw, 14px)",
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 400,
+            fontSize: "clamp(10px, 2.5vw, 19px)",
             lineHeight: 1.55,
           }}
         >
           Rutina capilar inspirada en ingredientes naturales diseñada para fortalecer la raíz, estimular el crecimiento y reducir la caída.
         </p>
 
+        {/* Stars + rating */}
+        <div className="mt-[7%] flex items-center gap-2">
+          <span className="flex" aria-label="4.9 de 5 estrellas">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <Star key={i} className="size-[3.5vw] max-h-6 max-w-6 fill-[var(--gold)] text-[var(--gold)]" />
+            ))}
+          </span>
+          <span
+            className="text-[var(--ivory)]"
+            style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(11px, 2.5vw, 20px)" }}
+          >
+            4.9/5
+          </span>
+        </div>
+
+        {/* Social proof */}
+        <p
+          className="mt-[3%] text-[var(--ivory)]/95"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            fontSize: "clamp(10px, 2.3vw, 18px)",
+            lineHeight: 1.4,
+          }}
+        >
+          +1.247 mujeres ya transformaron<br />su cabello
+        </p>
+
+
         {/* CTA */}
         <a
           href="#options"
-          className="mt-[8%] inline-flex items-center justify-center rounded-sm px-[6%] py-[3.5%] text-[#1A0B2E] active:scale-95 transition-transform"
+          className="mt-[5%] inline-flex items-center justify-between gap-2 rounded-full px-[6%] py-[3.5%] text-[var(--purple-deep)] shadow-[0_8px_24px_-8px_rgba(0,0,0,0.6)]"
           style={{
-            background: "linear-gradient(90deg, #D4AF37 0%, #B8860B 100%)",
-            boxShadow: "0 4px 20px rgba(212,175,55,0.25)",
+            background:
+              "linear-gradient(180deg, #f4d98a 0%, #d4a94a 50%, #b88a35 100%)",
+            border: "1px solid rgba(255,255,255,0.25)",
             fontFamily: "'Inter', sans-serif",
-            fontWeight: 700,
-            fontSize: "clamp(9px, 2vw, 14px)",
-            letterSpacing: "0.18em",
+            fontWeight: 600,
+            fontSize: "clamp(10px, 2.3vw, 18px)",
+            letterSpacing: "0.08em",
           }}
         >
-          COMPRAR AHORA
+          <span>COMPRAR AHORA</span>
+          <ArrowRight className="size-[3.2vw] max-h-5 max-w-5" />
         </a>
-      </div>
 
-      {/* Benefits row pinned at bottom */}
-      <div className="absolute bottom-[3%] left-0 right-0 z-30 flex items-center justify-between px-[5%]">
-        {[
-          { Icon: Leaf, label: "NATURAL" },
-          { Icon: Truck, label: "ENVÍO GRATIS" },
-          { Icon: HandCoins, label: "GARANTÍA" },
-        ].map(({ Icon, label }) => (
-          <div key={label} className="flex flex-col items-center gap-1">
-            <span
-              className="grid place-items-center rounded-full border border-white/10 p-1.5 text-[var(--gold)]"
-              style={{ background: "rgba(255,255,255,0.05)" }}
-            >
-              <Icon className="size-[3.2vw] max-h-4 max-w-4" />
-            </span>
-            <span
-              className="text-white/60"
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                fontWeight: 500,
-                fontSize: "clamp(7px, 1.5vw, 11px)",
-                letterSpacing: "0.22em",
-              }}
-            >
-              {label}
-            </span>
-          </div>
-        ))}
+        {/* Benefits */}
+        <div className="mt-[6%] grid grid-cols-3 gap-[3%] text-center">
+          {[
+            { Icon: Leaf, label: "FÓRMULA\nNATURAL" },
+            { Icon: Truck, label: "ENVÍO\nGRATIS" },
+            { Icon: HandCoins, label: "PAGO CONTRA\nENTREGA" },
+          ].map(({ Icon, label }) => (
+            <div key={label} className="flex flex-col items-center gap-1">
+              <span className="grid size-[8vw] max-h-12 max-w-12 place-items-center rounded-full border border-[var(--gold)]/60 text-[var(--gold)]">
+                <Icon className="size-[4vw] max-h-6 max-w-6" />
+              </span>
+              <span
+                className="whitespace-pre-line text-[var(--ivory)]"
+                style={{
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: "clamp(7px, 1.5vw, 12px)",
+                  letterSpacing: "0.08em",
+                  lineHeight: 1.2,
+                }}
+              >
+                {label}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
