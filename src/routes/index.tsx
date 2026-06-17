@@ -206,30 +206,30 @@ function Hero() {
       </div>
 
       {/* Premium benefits bar — directly below the hero products and above the main CTA */}
-      <div className="relative z-20 w-full bg-background px-4 pb-2 pt-2">
+      <div className="relative z-20 w-full bg-background px-4 pb-2 pt-1">
         <div
-          className="mx-auto w-full max-w-4xl rounded-xl p-2 md:p-3"
+          className="mx-auto w-full max-w-4xl rounded-lg p-1.5 md:p-2"
           style={{
             backgroundColor: "#2A143D",
             border: "1px solid rgba(212, 161, 74, 0.25)",
-            boxShadow: "0 14px 28px -8px rgba(42, 20, 61, 0.26)",
+            boxShadow: "0 10px 20px -6px rgba(42, 20, 61, 0.24)",
           }}
         >
           <div className="grid grid-cols-3 items-center">
             {/* Column 1 */}
             <div
-              className="flex flex-col items-center justify-center px-1 py-0.5 text-center"
+              className="flex flex-col items-center justify-center px-0.5 py-0.5 text-center"
               style={{ borderRight: "1px solid #D4A14A" }}
             >
-              <Users className="mb-0.5 h-4 w-4 md:h-5 md:w-5" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
+              <Users className="mb-0 h-3.5 w-3.5 md:h-4 md:w-4" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
               <span
-                className="text-[11px] font-medium uppercase tracking-wider md:text-[12px]"
+                className="text-[10px] font-medium uppercase tracking-wider md:text-[11px]"
                 style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A14A" }}
               >
                 +68
               </span>
               <p
-                className="mt-0 text-[9px] leading-tight md:text-[10px]"
+                className="mt-0 text-[8px] leading-tight md:text-[9px]"
                 style={{ fontFamily: "'Cormorant Garamond', serif", color: "#F4ECDC" }}
               >
                 clientas satisfechas
@@ -238,18 +238,18 @@ function Hero() {
 
             {/* Column 2 */}
             <div
-              className="flex flex-col items-center justify-center px-1 py-0.5 text-center"
+              className="flex flex-col items-center justify-center px-0.5 py-0.5 text-center"
               style={{ borderRight: "1px solid #D4A14A" }}
             >
-              <Truck className="mb-0.5 h-4 w-4 md:h-5 md:w-5" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
+              <Truck className="mb-0 h-3.5 w-3.5 md:h-4 md:w-4" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
               <span
-                className="text-[11px] font-medium uppercase tracking-wider md:text-[12px]"
+                className="text-[10px] font-medium uppercase tracking-wider md:text-[11px]"
                 style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A14A" }}
               >
                 Envío gratis
               </span>
               <p
-                className="mt-0 text-[9px] leading-tight md:text-[10px]"
+                className="mt-0 text-[8px] leading-tight md:text-[9px]"
                 style={{ fontFamily: "'Cormorant Garamond', serif", color: "#F4ECDC" }}
               >
                 Envío express disponible
@@ -257,10 +257,10 @@ function Hero() {
             </div>
 
             {/* Column 3 */}
-            <div className="flex flex-col items-center justify-center px-1 py-0.5 text-center">
-              <HandCoins className="mb-0.5 h-4 w-4 md:h-5 md:w-5" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
+            <div className="flex flex-col items-center justify-center px-0.5 py-0.5 text-center">
+              <HandCoins className="mb-0 h-3.5 w-3.5 md:h-4 md:w-4" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
               <span
-                className="text-[11px] font-medium uppercase tracking-wider md:text-[12px]"
+                className="text-[10px] font-medium uppercase tracking-wider md:text-[11px]"
                 style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A14A" }}
               >
                 Pago contra entrega
