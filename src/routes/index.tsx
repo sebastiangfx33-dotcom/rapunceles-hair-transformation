@@ -211,7 +211,7 @@ function Hero() {
           className="mx-auto w-full max-w-4xl rounded-2xl p-3 md:p-4"
           style={{
             backgroundColor: "#2A143D",
-            border: "1px solid rgba(216, 176, 106, 0.25)",
+            border: "1px solid rgba(212, 161, 74, 0.25)",
             boxShadow: "0 18px 36px -10px rgba(42, 20, 61, 0.28)",
           }}
         >
@@ -219,12 +219,12 @@ function Hero() {
             {/* Column 1 */}
             <div
               className="flex flex-col items-center justify-center px-2 py-1 text-center"
-              style={{ borderRight: "1px solid #D8B06A" }}
+              style={{ borderRight: "1px solid #D4A14A" }}
             >
-              <Users className="mb-1 h-5 w-5 md:h-6 md:w-6" style={{ color: "#D8B06A" }} strokeWidth={1.2} />
+              <Users className="mb-1 h-5 w-5 md:h-6 md:w-6" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
               <span
                 className="text-[12px] font-medium uppercase tracking-wider md:text-[13px]"
-                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D8B06A" }}
+                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A14A" }}
               >
                 +68
               </span>
@@ -239,12 +239,12 @@ function Hero() {
             {/* Column 2 */}
             <div
               className="flex flex-col items-center justify-center px-2 py-1 text-center"
-              style={{ borderRight: "1px solid #D8B06A" }}
+              style={{ borderRight: "1px solid #D4A14A" }}
             >
-              <Truck className="mb-1 h-5 w-5 md:h-6 md:w-6" style={{ color: "#D8B06A" }} strokeWidth={1.2} />
+              <Truck className="mb-1 h-5 w-5 md:h-6 md:w-6" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
               <span
                 className="text-[12px] font-medium uppercase tracking-wider md:text-[13px]"
-                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D8B06A" }}
+                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A14A" }}
               >
                 Envío gratis
               </span>
@@ -258,10 +258,10 @@ function Hero() {
 
             {/* Column 3 */}
             <div className="flex flex-col items-center justify-center px-2 py-1 text-center">
-              <HandCoins className="mb-1 h-5 w-5 md:h-6 md:w-6" style={{ color: "#D8B06A" }} strokeWidth={1.2} />
+              <HandCoins className="mb-1 h-5 w-5 md:h-6 md:w-6" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
               <span
                 className="text-[12px] font-medium uppercase tracking-wider md:text-[13px]"
-                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D8B06A" }}
+                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A14A" }}
               >
                 Pago contra entrega
               </span>
@@ -304,6 +304,7 @@ function Hero() {
           </div>
         </div>
       </div>
+
 
 
     </section>
