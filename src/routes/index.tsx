@@ -151,29 +151,6 @@ function Hero() {
           </span>
         </h1>
 
-        {/* Divider with diamond */}
-        <div className="mt-4 flex items-center md:mt-6" style={{ width: "38%" }}>
-          <span className="h-px flex-1" style={{ background: GOLD }} />
-          <span
-            className="mx-1 inline-block rotate-45"
-            style={{ width: 5, height: 5, background: GOLD }}
-          />
-          <span className="h-px flex-1" style={{ background: GOLD }} />
-        </div>
-
-        {/* Description */}
-        <p
-          className="mt-3 text-[12px] leading-[1.45] md:mt-4 md:text-[15px] md:leading-[1.55]"
-          style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontWeight: 400,
-            color: IVORY,
-            maxWidth: "46%",
-          }}
-        >
-          Rutina capilar inspirada en ingredientes naturales diseñada para fortalecer la raíz, estimular el crecimiento y ayudar a reducir la caída.
-        </p>
-
         {/* Rating */}
         <div className="mt-3 flex items-center gap-2 md:mt-4">
           <span className="flex" aria-label="4.9 de 5 estrellas">
@@ -205,7 +182,31 @@ function Hero() {
           68 clientas satisfechas
         </p>
 
+        {/* Divider with diamond */}
+        <div className="mt-4 flex items-center md:mt-6" style={{ width: "38%" }}>
+          <span className="h-px flex-1" style={{ background: GOLD }} />
+          <span
+            className="mx-1 inline-block rotate-45"
+            style={{ width: 5, height: 5, background: GOLD }}
+          />
+          <span className="h-px flex-1" style={{ background: GOLD }} />
+        </div>
+
+        {/* Description */}
+        <p
+          className="mt-3 text-[12px] leading-[1.45] md:mt-4 md:text-[15px] md:leading-[1.55]"
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            fontWeight: 400,
+            color: IVORY,
+            maxWidth: "46%",
+          }}
+        >
+          Rutina capilar inspirada en ingredientes naturales diseñada para fortalecer la raíz, estimular el crecimiento y ayudar a reducir la caída.
+        </p>
+
         {/* CTA */}
+
         <a
           href="#options"
           className="mt-3 inline-flex items-center gap-2 rounded-full px-4 py-2 md:mt-5 md:px-5 md:py-3"
