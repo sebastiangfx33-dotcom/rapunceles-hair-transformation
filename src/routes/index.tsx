@@ -12,9 +12,6 @@ import {
   Flower2,
   Clock,
   ArrowRight,
-  Truck,
-  HandCoins,
-  Users,
 } from "lucide-react";
 
 
@@ -205,105 +202,6 @@ function Hero() {
         </a>
       </div>
 
-      {/* Premium benefits bar — directly below the hero products and above the main CTA */}
-      <div className="relative z-20 w-full bg-background px-4 pb-2 pt-1">
-        <div
-          className="mx-auto w-full max-w-4xl rounded-lg p-1.5 md:p-2"
-          style={{
-            backgroundColor: "#2A143D",
-            border: "1px solid rgba(212, 161, 74, 0.25)",
-            boxShadow: "0 10px 20px -6px rgba(42, 20, 61, 0.24)",
-          }}
-        >
-          <div className="grid grid-cols-3 items-center">
-            {/* Column 1 */}
-            <div
-              className="flex flex-col items-center justify-center px-0.5 py-0.5 text-center"
-              style={{ borderRight: "1px solid #D4A14A" }}
-            >
-              <Users className="mb-0 h-3.5 w-3.5 md:h-4 md:w-4" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
-              <span
-                className="text-[10px] font-medium uppercase tracking-wider md:text-[11px]"
-                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A14A" }}
-              >
-                +68
-              </span>
-              <p
-                className="mt-0 text-[8px] leading-tight md:text-[9px]"
-                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#F4ECDC" }}
-              >
-                clientas satisfechas
-              </p>
-            </div>
-
-            {/* Column 2 */}
-            <div
-              className="flex flex-col items-center justify-center px-0.5 py-0.5 text-center"
-              style={{ borderRight: "1px solid #D4A14A" }}
-            >
-              <Truck className="mb-0 h-3.5 w-3.5 md:h-4 md:w-4" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
-              <span
-                className="text-[10px] font-medium uppercase tracking-wider md:text-[11px]"
-                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A14A" }}
-              >
-                Envío gratis
-              </span>
-              <p
-                className="mt-0 text-[8px] leading-tight md:text-[9px]"
-                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#F4ECDC" }}
-              >
-                Envío express disponible
-              </p>
-            </div>
-
-            {/* Column 3 */}
-            <div className="flex flex-col items-center justify-center px-0.5 py-0.5 text-center">
-              <HandCoins className="mb-0 h-3.5 w-3.5 md:h-4 md:w-4" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
-              <span
-                className="text-[10px] font-medium uppercase tracking-wider md:text-[11px]"
-                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A14A" }}
-              >
-                Pago contra entrega
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Main CTA button */}
-        <div className="mx-auto mt-2 w-full max-w-4xl text-center">
-          <a
-            href="#options"
-            className="mx-auto inline-flex h-[48px] w-[90%] items-center justify-center rounded-full transition-transform active:scale-[0.98] md:h-[56px]"
-            style={{
-              background: "linear-gradient(90deg, #D4A14A 0%, #E9C485 50%, #D4A14A 100%)",
-              border: "1px solid #B8862D",
-              boxShadow: "0 10px 24px -8px rgba(212, 161, 74, 0.35)",
-            }}
-          >
-            <span
-              className="text-[15px] font-bold uppercase tracking-widest md:text-[17px]"
-              style={{ fontFamily: "'Cormorant Garamond', serif", color: "#2A143D" }}
-            >
-              QUIERO MI TRATAMIENTO
-            </span>
-          </a>
-        </div>
-
-        {/* Trust line */}
-        <div className="mx-auto mt-2 flex max-w-4xl flex-col items-center gap-1.5 text-center">
-          <div className="flex flex-wrap items-center justify-center gap-2 text-[#2A143D]/70" style={{ fontFamily: "'Inter', sans-serif" }}>
-            <span className="inline-flex items-center gap-1 text-[10px] md:text-[11px]">
-              <Leaf className="h-3 w-3 text-[#D4A14A]" /> Ingredientes naturales
-            </span>
-            <span className="inline-block h-1 w-1 rounded-full bg-[#D4A14A]/40" />
-            <span className="text-[10px] md:text-[11px]">Sin parabenos</span>
-          </div>
-          <div className="flex items-center gap-1.5 text-[#D4A14A]" style={{ fontFamily: "'Inter', sans-serif" }}>
-            <Heart className="h-2.5 w-2.5 fill-current" />
-            <span className="text-[9px] font-medium uppercase tracking-widest md:text-[10px]">Hecho con amor</span>
-          </div>
-        </div>
-      </div>
 
 
 
