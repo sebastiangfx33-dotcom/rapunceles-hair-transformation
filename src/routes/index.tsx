@@ -330,8 +330,8 @@ function Problems() {
           </div>
         </div>
 
-        {/* Vertical luxury cards */}
-        <div className="mt-10 space-y-5">
+        {/* Vertical luxury cards — 2 columns on mobile */}
+        <div className="mt-10 grid grid-cols-2 gap-4">
           {items.map((it) => (
             <article
               key={it.title}
@@ -345,7 +345,7 @@ function Problems() {
               }}
             >
               {/* Image top */}
-              <div className="relative h-44 w-full overflow-hidden">
+              <div className="relative h-28 w-full overflow-hidden md:h-36">
                 <img
                   src={it.img}
                   alt={it.title}
@@ -364,9 +364,9 @@ function Problems() {
                 />
               </div>
               {/* Text body */}
-              <div className="px-5 pb-6 pt-4 text-center">
+              <div className="px-3 pb-4 pt-3 text-center md:px-4 md:pb-6 md:pt-4">
                 <h3
-                  className="text-[20px] leading-tight md:text-[22px]"
+                  className="text-[15px] leading-tight md:text-[18px]"
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
                     color: IVORY,
@@ -375,16 +375,16 @@ function Problems() {
                 >
                   {it.title}
                 </h3>
-                <div className="mx-auto mt-3 flex items-center justify-center">
-                  <span className="h-px w-10" style={{ background: GOLD, opacity: 0.7 }} />
+                <div className="mx-auto mt-2 flex items-center justify-center">
+                  <span className="h-px w-6" style={{ background: GOLD, opacity: 0.7 }} />
                   <span
-                    className="mx-2 inline-block rotate-45"
-                    style={{ width: 4, height: 4, background: GOLD, opacity: 0.8 }}
+                    className="mx-1 inline-block rotate-45"
+                    style={{ width: 3, height: 3, background: GOLD, opacity: 0.8 }}
                   />
-                  <span className="h-px w-10" style={{ background: GOLD, opacity: 0.7 }} />
+                  <span className="h-px w-6" style={{ background: GOLD, opacity: 0.7 }} />
                 </div>
                 <p
-                  className="mt-3 text-[13.5px] leading-relaxed"
+                  className="mt-2 text-[11px] leading-relaxed md:text-[12.5px]"
                   style={{ color: BEIGE, opacity: 0.9 }}
                 >
                   {it.desc}
