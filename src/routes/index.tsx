@@ -18,6 +18,9 @@ import probSlowGrowth from "@/assets/problem-slow-growth.jpg";
 import probFall from "@/assets/problem-fall.jpg";
 import probRoots from "@/assets/problem-roots.jpg";
 import probWeak from "@/assets/problem-weak.jpg";
+
+import heroBanner from "@/assets/hero-banner.png.asset.json";
+import heroKit from "@/assets/hero-kit.jpg";
 import prodShampoo from "@/assets/product-shampoo.jpg";
 import prodConditioner from "@/assets/product-conditioner.jpg";
 import prodTonic from "@/assets/product-tonic.jpg";
