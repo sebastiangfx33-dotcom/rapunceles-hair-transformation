@@ -83,7 +83,7 @@ function Landing() {
 function Hero() {
   return (
     <section
-      className="relative w-full overflow-hidden bg-[#2a1438] text-[var(--ivory)]"
+      className="relative w-full overflow-hidden bg-[#1a0b2e] text-[var(--ivory)]"
       style={{ aspectRatio: "958 / 1280" }}
     >
       {/* Background photo */}
