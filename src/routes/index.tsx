@@ -100,13 +100,13 @@ function Hero() {
 
       {/* Luxury full-bleed purple overlay */}
       <div
-        className="relative z-20 flex min-h-full w-full items-center justify-center px-5 py-12 sm:px-8"
+        className="relative z-20 flex min-h-full w-full items-center justify-center px-5 py-10 sm:px-8"
         style={{
           background:
-            "linear-gradient(180deg, rgba(42,21,56,0.72) 0%, rgba(42,21,56,0.66) 50%, rgba(42,21,56,0.70) 100%)",
+            "linear-gradient(180deg, rgba(42,21,56,0.70) 0%, rgba(42,21,56,0.66) 50%, rgba(42,21,56,0.70) 100%)",
         }}
       >
-        <div className="flex w-full max-w-[22rem] flex-col items-center gap-6 text-center sm:max-w-md">
+        <div className="flex w-full max-w-[22rem] flex-col items-center gap-7 text-center sm:max-w-md">
           {/* Logo + brand */}
           <div className="flex flex-col items-center gap-2">
             <svg
