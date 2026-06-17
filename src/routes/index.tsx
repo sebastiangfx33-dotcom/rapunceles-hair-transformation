@@ -96,14 +96,14 @@ function Hero() {
         className="absolute inset-0 -z-10 md:hidden"
         style={{
           background:
-            "linear-gradient(180deg, color-mix(in oklab, var(--purple-deep) 92%, transparent) 0%, color-mix(in oklab, var(--purple-deep) 45%, transparent) 40%, transparent 65%, color-mix(in oklab, var(--purple-deep) 55%, transparent) 100%)",
+            "linear-gradient(180deg, color-mix(in oklab, var(--purple-deep) 55%, transparent) 0%, transparent 35%, transparent 60%, color-mix(in oklab, var(--purple-deep) 75%, transparent) 100%)",
         }}
       />
       <div
         className="absolute inset-0 -z-10 hidden md:block"
         style={{
           background:
-            "linear-gradient(90deg, color-mix(in oklab, var(--purple-deep) 88%, transparent) 0%, transparent 45%)",
+            "linear-gradient(90deg, color-mix(in oklab, var(--purple-deep) 70%, transparent) 0%, transparent 50%)",
         }}
       />
 
