@@ -97,10 +97,10 @@ function Hero() {
       {/* Luxury dark velvet panel behind text */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 left-0 z-[5] w-[50%]"
+        className="pointer-events-none absolute inset-y-0 left-0 z-[5] w-[38%]"
         style={{
           background:
-            "linear-gradient(90deg, rgba(26,11,46,0.92) 0%, rgba(26,11,46,0.9) 60%, rgba(26,11,46,0.7) 85%, rgba(26,11,46,0) 100%)",
+            "linear-gradient(90deg, rgba(26,11,46,0.92) 0%, rgba(26,11,46,0.88) 55%, rgba(26,11,46,0.6) 80%, rgba(26,11,46,0) 100%)",
           boxShadow:
             "inset 0 0 80px rgba(0,0,0,0.55), inset 1px 0 0 rgba(212,169,74,0.18), inset 0 1px 0 rgba(212,169,74,0.22), inset 0 -1px 0 rgba(212,169,74,0.18)",
         }}
@@ -125,7 +125,7 @@ function Hero() {
       </div>
 
       {/* Left content panel — sits over the dark purple area of the photo */}
-      <div className="absolute inset-y-0 left-0 z-10 flex w-[50%] flex-col justify-start px-[4%] pt-[5%]">
+      <div className="absolute inset-y-0 left-0 z-10 flex w-[38%] flex-col justify-start px-[4%] pt-[5%]">
         {/* Crown logo */}
         <svg viewBox="0 0 100 50" className="h-[7%] w-auto text-[var(--gold)]" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
           <path d="M10 42 L18 18 L32 32 L50 10 L68 32 L82 18 L90 42 Z" fill="currentColor" fillOpacity="0.95" />
