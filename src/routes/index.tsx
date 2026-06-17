@@ -80,40 +80,38 @@ function Landing() {
 }
 /* ------------------------------ HERO ------------------------------ */
 function Hero() {
+  const GOLD = "#D8B06A";
+  const IVORY = "#F4ECDC";
   return (
-    <section
-      className="relative w-full overflow-hidden bg-[#1a0b2e] text-[var(--ivory)]"
-      style={{ minHeight: "min(140vw, 720px)" }}
-    >
-      {/* Background photo */}
+    <section className="relative w-full overflow-hidden bg-[#1a0b2e] text-[var(--ivory)]">
+      {/* Background photo (model + products + decoration) */}
       <img
         src={heroBanner.url}
         alt="Modelo con cabello largo y kit Rapunceles"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="block h-auto w-full object-cover"
         fetchPriority="high"
       />
 
-      {/* Luxury dark velvet panel behind text */}
+      {/* Soft left vignette so text stays legible without covering the model */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 left-0 z-[5] w-[55%] md:w-[34%]"
+        className="pointer-events-none absolute inset-y-0 left-0 z-[5] w-[58%] md:w-[40%]"
         style={{
           background:
-            "linear-gradient(90deg, rgba(20,8,38,0.97) 0%, rgba(20,8,38,0.96) 70%, rgba(20,8,38,0.85) 88%, rgba(20,8,38,0) 100%)",
-          boxShadow: "inset 0 0 120px rgba(0,0,0,0.55)",
+            "linear-gradient(90deg, rgba(20,8,38,0.55) 0%, rgba(20,8,38,0.35) 55%, rgba(20,8,38,0) 100%)",
         }}
       />
 
-      {/* Left content panel — pixel-perfect replica of reference */}
+      {/* Overlay text content — absolutely positioned over background */}
       <div
-        className="relative z-10 flex w-[52%] flex-col items-start justify-center pl-5 pr-2 pt-6 pb-8 text-left md:w-[32%] md:pl-[34px] md:pr-3 md:pt-8 md:pb-10"
-        style={{ color: "#D8B06A" }}
+        className="absolute inset-0 z-10 flex flex-col items-start pl-5 pr-4 pt-5 md:pl-10 md:pt-8"
+        style={{ color: IVORY }}
       >
-        {/* Crown logo */}
+        {/* Crown */}
         <svg
           viewBox="0 0 100 50"
-          className="h-10 w-auto md:h-14"
-          style={{ color: "#D8B06A" }}
+          className="h-5 w-auto md:h-7"
+          style={{ color: GOLD }}
           fill="currentColor"
           aria-hidden="true"
         >
@@ -123,53 +121,73 @@ function Hero() {
           <circle cx="82" cy="14" r="2.5" />
         </svg>
 
+        {/* Script wordmark */}
+        <h2
+          className="mt-1 text-[40px] leading-none md:text-[56px]"
+          style={{
+            fontFamily: "'Great Vibes', cursive",
+            color: GOLD,
+            fontWeight: 400,
+          }}
+        >
+          Rapunceles
+        </h2>
+
         {/* Headline */}
         <h1
-          className="mt-6 mb-5 text-[26px] leading-[1.06] md:mt-[38px] md:mb-8 md:text-[42px]"
+          className="mt-4 text-[26px] leading-[1.08] md:mt-6 md:text-[40px]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 500,
-            letterSpacing: "0.3px",
-            textTransform: "uppercase",
-            color: "#D8B06A",
-            maxWidth: "100%",
+            color: IVORY,
+            maxWidth: "62%",
           }}
         >
-          RECUPERA<br />
-          EL CRECIMIENTO<br />
-          NATURAL<br />
-          DE TU CABELLO
+          Tu cabello<br />
+          puede volver<br />
+          a crecer fuerte,{" "}
+          <span style={{ color: GOLD, fontStyle: "italic", fontWeight: 500 }}>
+            abundante y saludable.
+          </span>
         </h1>
 
-        {/* Ornament */}
-        <div
-          className="mb-5 h-px w-[90px] md:mb-7 md:w-[140px]"
-          style={{ background: "#D8B06A" }}
-        />
+        {/* Divider with diamond */}
+        <div className="mt-4 flex items-center md:mt-6" style={{ width: "38%" }}>
+          <span className="h-px flex-1" style={{ background: GOLD }} />
+          <span
+            className="mx-1 inline-block rotate-45"
+            style={{ width: 5, height: 5, background: GOLD }}
+          />
+          <span className="h-px flex-1" style={{ background: GOLD }} />
+        </div>
 
         {/* Description */}
         <p
-          className="mb-5 text-[13px] leading-[1.5] md:mb-8 md:text-[17px] md:leading-[1.65]"
+          className="mt-3 text-[12px] leading-[1.45] md:mt-4 md:text-[15px] md:leading-[1.55]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 400,
-            color: "#D8B06A",
-            width: "95%",
+            color: IVORY,
+            maxWidth: "46%",
           }}
         >
-          Rutina capilar inspirada en ingredientes naturales diseñada para fortalecer la raíz, estimular el crecimiento y reducir la caída.
+          Rutina capilar inspirada en ingredientes naturales diseñada para fortalecer la raíz, estimular el crecimiento y ayudar a reducir la caída.
         </p>
 
         {/* Rating */}
-        <div className="mb-3 flex items-center gap-2 md:mb-[18px] md:gap-3">
+        <div className="mt-3 flex items-center gap-2 md:mt-4">
           <span className="flex" aria-label="4.9 de 5 estrellas">
             {[0, 1, 2, 3, 4].map((i) => (
-              <Star key={i} className="size-4 md:size-[22px]" style={{ color: "#D8B06A", fill: "#D8B06A" }} />
+              <Star
+                key={i}
+                className="size-3.5 md:size-[18px]"
+                style={{ color: GOLD, fill: GOLD }}
+              />
             ))}
           </span>
           <span
-            className="text-[13px] md:text-[18px]"
-            style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D8B06A" }}
+            className="text-[13px] md:text-[16px]"
+            style={{ fontFamily: "'Cormorant Garamond', serif", color: GOLD, fontWeight: 500 }}
           >
             4.9/5
           </span>
@@ -177,59 +195,42 @@ function Hero() {
 
         {/* Social proof */}
         <p
-          className="mb-5 text-[12px] leading-[1.4] md:mb-[34px] md:text-[16px] md:leading-[1.5]"
+          className="mt-1 text-[12px] md:text-[15px]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
-            color: "#D8B06A",
-            width: "95%",
+            color: GOLD,
+            fontStyle: "italic",
           }}
         >
-          +1.247 mujeres ya transformaron su cabello
+          68 clientas satisfechas
         </p>
 
         {/* CTA */}
         <a
           href="#options"
-          className="mb-6 inline-flex h-[46px] w-full max-w-[240px] items-center justify-between rounded-full px-4 text-[13px] md:mb-9 md:h-[62px] md:max-w-[280px] md:px-7 md:text-[18px]"
+          className="mt-3 inline-flex items-center gap-2 rounded-full px-4 py-2 md:mt-5 md:px-5 md:py-3"
           style={{
             background: "linear-gradient(180deg, #F6D87A 0%, #D9A73E 100%)",
             color: "#1A0F2E",
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 700,
-            letterSpacing: "0.04em",
-            boxShadow: "0 10px 28px -10px rgba(0,0,0,0.6)",
+            letterSpacing: "0.02em",
+            boxShadow: "0 8px 20px -8px rgba(0,0,0,0.6)",
           }}
         >
-          <span>COMPRAR AHORA</span>
-          <ArrowRight className="size-4 md:size-5" />
+          <svg viewBox="0 0 100 50" className="h-3 w-auto md:h-4" fill="currentColor" aria-hidden="true">
+            <path d="M10 42 L18 18 L32 32 L50 10 L68 32 L82 18 L90 42 Z" />
+            <circle cx="50" cy="6" r="3" />
+          </svg>
+          <span className="text-[11px] leading-tight md:text-[13px]">
+            Comienza tu<br />transformación
+          </span>
         </a>
-
-        {/* Benefits */}
-        <div className="grid w-full max-w-[280px] grid-cols-3 gap-2 md:max-w-none md:gap-3">
-          {[
-            { Icon: Leaf, label: "FÓRMULA\nNATURAL" },
-            { Icon: Truck, label: "ENVÍO\nGRATIS" },
-            { Icon: HandCoins, label: "PAGO CONTRA\nENTREGA" },
-          ].map(({ Icon, label }) => (
-            <div key={label} className="flex flex-col items-center gap-1 text-center md:gap-1.5">
-              <Icon className="size-5 md:size-6" style={{ color: "#D8B06A" }} strokeWidth={1.25} />
-              <span
-                className="whitespace-pre-line text-[10px] leading-[1.15] md:text-[13px]"
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontWeight: 500,
-                  color: "#D8B06A",
-                }}
-              >
-                {label}
-              </span>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
 }
+
 
 
 /* ----------------------------- PROBLEMS ----------------------------- */
