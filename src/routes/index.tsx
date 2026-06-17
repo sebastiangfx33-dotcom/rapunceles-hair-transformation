@@ -175,7 +175,7 @@ function Hero() {
 
 
         {/* Stars */}
-        <div className="mt-[6%] flex items-center gap-2">
+        <div className="mt-[6%] flex items-center gap-2" style={{ textShadow: "0 1px 3px rgba(0,0,0,0.35)" }}>
           <span className="flex" aria-label="4.9 de 5 estrellas">
             {[0, 1, 2, 3, 4].map((i) => (
               <Star
@@ -197,10 +197,11 @@ function Hero() {
         {/* Social proof */}
         <p
           className="mt-[2%]"
-          style={{ color: "#E9D9C0", fontSize: "clamp(0.6rem,2vw,0.95rem)", lineHeight: 1.4 }}
+          style={{ color: "#E9D9C0", fontSize: "clamp(0.6rem,2vw,0.95rem)", lineHeight: 1.4, textShadow: "0 1px 3px rgba(0,0,0,0.35)" }}
         >
           +1.247 mujeres ya transformaron su cabello
         </p>
+
 
         {/* CTA */}
         <a
