@@ -205,49 +205,71 @@ function Hero() {
         </a>
       </div>
 
-      {/* Premium conversion strip below the hero banner */}
-      <div className="relative z-20 w-full bg-background px-4 pb-3 pt-2">
-        {/* Benefits card */}
+      {/* Premium benefits bar — directly below the hero products and above the main CTA */}
+      <div className="relative z-20 w-full bg-background px-4 pb-2 pt-3">
         <div
-          className="mx-auto w-full max-w-4xl rounded-2xl border p-3 shadow-xl md:p-4"
+          className="mx-auto w-full max-w-4xl rounded-2xl p-3 md:p-4"
           style={{
             backgroundColor: "#2A143D",
-            borderColor: "rgba(212, 161, 74, 0.20)",
-            boxShadow: "0 20px 40px -12px rgba(42, 20, 61, 0.22)",
+            border: "1px solid rgba(216, 176, 106, 0.25)",
+            boxShadow: "0 18px 36px -10px rgba(42, 20, 61, 0.28)",
           }}
         >
-          <div className="grid grid-cols-3 items-start">
-            <div className="flex flex-col items-center px-1 text-center" style={{ borderRight: "1px solid rgba(212, 161, 74, 0.20)" }}>
-              <Users className="mb-1 h-5 w-5 md:h-6 md:w-6" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
-              <span className="text-[10px] font-medium uppercase tracking-wider text-[#D4A14A]" style={{ fontFamily: "'Inter', sans-serif" }}>
+          <div className="grid grid-cols-3 items-center">
+            {/* Column 1 */}
+            <div
+              className="flex flex-col items-center justify-center px-2 py-1 text-center"
+              style={{ borderRight: "1px solid #D8B06A" }}
+            >
+              <Users className="mb-1 h-5 w-5 md:h-6 md:w-6" style={{ color: "#D8B06A" }} strokeWidth={1.2} />
+              <span
+                className="text-[12px] font-medium uppercase tracking-wider md:text-[13px]"
+                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D8B06A" }}
+              >
                 +68
               </span>
-              <p className="mt-0.5 text-[9px] leading-tight text-[#FDF8F1]/90 md:text-[10px]" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <p
+                className="mt-0.5 text-[10px] leading-tight md:text-[11px]"
+                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#F4ECDC" }}
+              >
                 clientas satisfechas
               </p>
             </div>
-            <div className="flex flex-col items-center px-1 text-center" style={{ borderRight: "1px solid rgba(212, 161, 74, 0.20)" }}>
-              <Truck className="mb-1 h-5 w-5 md:h-6 md:w-6" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
-              <span className="text-[10px] font-medium uppercase tracking-wider text-[#D4A14A]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                Gratis
+
+            {/* Column 2 */}
+            <div
+              className="flex flex-col items-center justify-center px-2 py-1 text-center"
+              style={{ borderRight: "1px solid #D8B06A" }}
+            >
+              <Truck className="mb-1 h-5 w-5 md:h-6 md:w-6" style={{ color: "#D8B06A" }} strokeWidth={1.2} />
+              <span
+                className="text-[12px] font-medium uppercase tracking-wider md:text-[13px]"
+                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D8B06A" }}
+              >
+                Envío gratis
               </span>
-              <p className="mt-0.5 text-[9px] leading-tight text-[#FDF8F1]/90 md:text-[10px]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                envío express
+              <p
+                className="mt-0.5 text-[10px] leading-tight md:text-[11px]"
+                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#F4ECDC" }}
+              >
+                Envío express disponible
               </p>
             </div>
-            <div className="flex flex-col items-center px-1 text-center">
-              <HandCoins className="mb-1 h-5 w-5 md:h-6 md:w-6" style={{ color: "#D4A14A" }} strokeWidth={1.2} />
-              <span className="text-[10px] font-medium uppercase tracking-wider text-[#D4A14A]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                Pago
+
+            {/* Column 3 */}
+            <div className="flex flex-col items-center justify-center px-2 py-1 text-center">
+              <HandCoins className="mb-1 h-5 w-5 md:h-6 md:w-6" style={{ color: "#D8B06A" }} strokeWidth={1.2} />
+              <span
+                className="text-[12px] font-medium uppercase tracking-wider md:text-[13px]"
+                style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D8B06A" }}
+              >
+                Pago contra entrega
               </span>
-              <p className="mt-0.5 text-[9px] leading-tight text-[#FDF8F1]/90 md:text-[10px]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                contra entrega
-              </p>
             </div>
           </div>
         </div>
 
-        {/* CTA button */}
+        {/* Main CTA button */}
         <div className="mx-auto mt-2 w-full max-w-4xl text-center">
           <a
             href="#options"
@@ -282,6 +304,7 @@ function Hero() {
           </div>
         </div>
       </div>
+
 
     </section>
 
