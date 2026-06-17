@@ -86,7 +86,7 @@ function Hero() {
   const PURPLE = "#2A1538";
 
   return (
-    <section className="relative isolate flex min-h-[92vh] w-full flex-col overflow-hidden">
+    <section className="relative isolate flex min-h-[92vh] w-full overflow-hidden">
       <picture className="absolute inset-0 z-0">
         <source media="(min-width: 768px)" srcSet={heroBannerDesktop} />
         <img
@@ -98,24 +98,20 @@ function Hero() {
         />
       </picture>
 
-      {/* Luxury semi-transparent royal purple overlay */}
+      {/* Left luxury purple overlay panel */}
       <div
-        className="absolute inset-0 z-10"
-        aria-hidden="true"
+        className="relative z-20 flex w-[72%] flex-col justify-center px-4 py-10 sm:w-[62%] md:w-[38%] md:px-12 md:py-14"
         style={{
           background:
-            "linear-gradient(180deg, rgba(42,21,56,0.64) 0%, rgba(42,21,56,0.70) 45%, rgba(42,21,56,0.66) 100%)",
+            "linear-gradient(90deg, rgba(42,21,56,0.70) 0%, rgba(42,21,56,0.68) 75%, rgba(42,21,56,0.55) 100%)",
         }}
-      />
-
-      {/* Content */}
-      <div className="relative z-20 flex flex-1 flex-col items-center justify-center px-6 py-12 md:px-10">
-        <div className="flex w-full max-w-md flex-col items-center gap-6 text-center md:max-w-2xl md:gap-7">
+      >
+        <div className="flex w-full max-w-[16rem] flex-col items-center gap-5 text-center md:max-w-sm md:gap-6">
           {/* Logo + brand */}
           <div className="flex flex-col items-center">
             <svg
               viewBox="0 0 64 40"
-              className="h-10 w-16"
+              className="h-9 w-14"
               fill="none"
               stroke={GOLD}
               strokeWidth="1.6"
@@ -130,7 +126,7 @@ function Hero() {
               <line x1="6" y1="36" x2="58" y2="36" />
             </svg>
             <p
-              className="mt-2 font-display text-xl italic tracking-[0.08em] md:text-2xl"
+              className="mt-2 font-display text-lg italic tracking-[0.08em] md:text-2xl"
               style={{ color: GOLD_SOFT }}
             >
               Rapunceles
@@ -138,7 +134,7 @@ function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-display text-[2.1rem] leading-[1.08] tracking-tight md:text-[3.5rem]">
+          <h1 className="font-display text-[1.4rem] leading-[1.08] tracking-tight md:text-[2.25rem]">
             <span
               className="block"
               style={{
@@ -176,14 +172,14 @@ function Hero() {
 
           {/* Gold divider */}
           <div className="flex items-center justify-center gap-2">
-            <span className="h-px w-10" style={{ background: `linear-gradient(90deg, transparent, ${GOLD})` }} />
+            <span className="h-px w-8" style={{ background: `linear-gradient(90deg, transparent, ${GOLD})` }} />
             <span className="h-1.5 w-1.5 rotate-45" style={{ background: GOLD }} />
-            <span className="h-px w-10" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
+            <span className="h-px w-8" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
           </div>
 
           {/* Subheadline */}
           <p
-            className="max-w-xs font-display text-[0.95rem] italic leading-relaxed md:max-w-sm md:text-base"
+            className="max-w-[14rem] font-display text-[0.85rem] italic leading-relaxed md:text-base"
             style={{ color: GOLD_SOFT, opacity: 0.95 }}
           >
             Fortalece la raíz, estimula el crecimiento y ayuda a reducir la caída.
@@ -201,7 +197,7 @@ function Hero() {
                 4.9/5
               </span>
             </div>
-            <p className="text-xs tracking-wide md:text-sm" style={{ color: GOLD_SOFT, opacity: 0.9 }}>
+            <p className="text-xs tracking-wide" style={{ color: GOLD_SOFT, opacity: 0.9 }}>
               +1.247 mujeres transformaron su cabello
             </p>
           </div>
@@ -211,7 +207,7 @@ function Hero() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-1 inline-flex w-full max-w-xs items-center justify-center gap-3 rounded-full px-7 py-4 font-display text-sm font-semibold tracking-[0.18em] shadow-[0_10px_30px_-10px_rgba(212,175,122,0.55)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_36px_-10px_rgba(212,175,122,0.65)] md:w-auto md:px-10 md:text-base"
+            className="mt-1 inline-flex w-full max-w-[14rem] items-center justify-center gap-2 rounded-full px-5 py-4 font-display text-xs font-semibold tracking-[0.16em] shadow-[0_10px_30px_-10px_rgba(212,175,122,0.55)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_36px_-10px_rgba(212,175,122,0.65)] md:w-auto md:px-8 md:text-sm"
             style={{
               background: `linear-gradient(135deg, ${GOLD_SOFT} 0%, ${GOLD} 50%, #B8935A 100%)`,
               color: PURPLE,
@@ -219,24 +215,24 @@ function Hero() {
           >
             <span>COMPRAR AHORA</span>
             <span
-              className="grid size-8 place-items-center rounded-full"
+              className="grid size-7 place-items-center rounded-full"
               style={{ background: PURPLE, color: GOLD }}
             >
-              <ArrowRight className="size-4" />
+              <ArrowRight className="size-3.5" />
             </span>
           </a>
 
           {/* Benefits */}
-          <div className="grid w-full max-w-xs grid-cols-3 gap-2 border-t pt-6 md:max-w-sm" style={{ borderColor: `${GOLD}33` }}>
+          <div className="grid w-full max-w-[14rem] grid-cols-3 gap-1 border-t pt-5 md:max-w-[16rem]" style={{ borderColor: `${GOLD}33` }}>
             {[
               { Icon: Leaf, label: "Fórmula Natural" },
               { Icon: Truck, label: "Envío Gratis" },
               { Icon: Banknote, label: "Pago Contra Entrega" },
             ].map(({ Icon, label }) => (
-              <div key={label} className="flex flex-col items-center gap-2 text-center">
-                <Icon className="size-5" style={{ color: GOLD }} strokeWidth={1.4} />
+              <div key={label} className="flex flex-col items-center gap-1.5 text-center">
+                <Icon className="size-4" style={{ color: GOLD }} strokeWidth={1.4} />
                 <span
-                  className="text-[0.6rem] leading-tight tracking-[0.12em] md:text-[0.65rem]"
+                  className="text-[0.6rem] leading-tight tracking-wide md:text-[0.65rem]"
                   style={{ color: GOLD_SOFT }}
                 >
                   {label}
@@ -249,6 +245,7 @@ function Hero() {
     </section>
   );
 }
+
 
 
 function Stars({ size = "size-4" }: { size?: string }) {
