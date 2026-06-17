@@ -14,6 +14,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+import heroBannerMobile from "@/assets/hero-banner-mobile.jpg";
+import heroBannerDesktop from "@/assets/hero-banner-desktop.jpg";
 import heroKit from "@/assets/hero-kit.jpg";
 import probRoots from "@/assets/problem-roots.jpg";
 import probFall from "@/assets/problem-fall.jpg";
