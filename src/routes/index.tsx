@@ -109,8 +109,8 @@ function Hero() {
         }
       `}</style>
 
-      {/* Content over panel */}
-      <div className="absolute inset-y-0 left-0 w-[38%] flex flex-col items-center text-center px-[3%] py-[4%]">
+      {/* Content over image */}
+      <div className="absolute inset-y-0 left-0 w-[38%] z-10 flex flex-col items-center text-center px-[3%] py-[4%]">
         {/* Crown */}
         <svg viewBox="0 0 64 40" className="w-[34%] h-auto" aria-hidden>
           <g fill="none" stroke={GOLD} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -144,6 +144,7 @@ function Hero() {
             fontSize: "clamp(1.25rem, 4.2vw, 2.425rem)",
             lineHeight: 1.2,
             letterSpacing: "0.02em",
+            textShadow: "0 2px 6px rgba(0,0,0,0.45)",
           }}
         >
           RECUPERA<br />EL CRECIMIENTO<br />NATURAL<br />DE TU CABELLO
@@ -166,10 +167,12 @@ function Hero() {
             color: "#E9D9C0",
             fontSize: "clamp(0.62rem, 2.1vw, 1rem)",
             lineHeight: 1.55,
+            textShadow: "0 1px 3px rgba(0,0,0,0.35)",
           }}
         >
           Rutina capilar inspirada en ingredientes naturales diseñada para fortalecer la raíz, estimular el crecimiento y reducir la caída.
         </p>
+
 
         {/* Stars */}
         <div className="mt-[6%] flex items-center gap-2">
