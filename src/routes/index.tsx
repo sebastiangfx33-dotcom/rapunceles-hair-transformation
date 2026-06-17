@@ -96,17 +96,17 @@ function Hero() {
       {/* Luxury dark velvet panel behind text */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 left-0 z-[5] w-[64%] md:w-[42%]"
+        className="pointer-events-none absolute inset-y-0 left-0 z-[5] w-[55%] md:w-[34%]"
         style={{
           background:
-            "linear-gradient(90deg, rgba(20,8,38,0.97) 0%, rgba(20,8,38,0.96) 70%, rgba(20,8,38,0.85) 92%, rgba(20,8,38,0) 100%)",
+            "linear-gradient(90deg, rgba(20,8,38,0.97) 0%, rgba(20,8,38,0.96) 70%, rgba(20,8,38,0.85) 88%, rgba(20,8,38,0) 100%)",
           boxShadow: "inset 0 0 120px rgba(0,0,0,0.55)",
         }}
       />
 
       {/* Left content panel — pixel-perfect replica of reference */}
       <div
-        className="relative z-10 flex w-[60%] flex-col items-start justify-center pl-5 pr-2 pt-6 pb-8 text-left md:w-[38%] md:pl-[34px] md:pr-3 md:pt-8 md:pb-10"
+        className="relative z-10 flex w-[52%] flex-col items-start justify-center pl-5 pr-2 pt-6 pb-8 text-left md:w-[32%] md:pl-[34px] md:pr-3 md:pt-8 md:pb-10"
         style={{ color: "#D8B06A" }}
       >
         {/* Crown logo */}
