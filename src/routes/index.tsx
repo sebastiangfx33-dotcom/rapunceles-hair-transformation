@@ -109,7 +109,7 @@ function Hero() {
           className="-mt-1 text-[var(--gold)]"
           style={{
             fontFamily: "'Great Vibes', cursive",
-            fontSize: "clamp(28px, 7.5vw, 64px)",
+            fontSize: "clamp(34px, 9vw, 80px)",
             lineHeight: 1,
           }}
         >
@@ -118,13 +118,13 @@ function Hero() {
 
         {/* Headline */}
         <h1
-          className="mt-[12%] text-[var(--gold)]"
+          className="mt-[14%] text-[var(--gold)]"
           style={{
             fontFamily: "'Playfair Display', serif",
             fontWeight: 500,
-            fontSize: "clamp(14px, 3.6vw, 30px)",
-            lineHeight: 1.15,
-            letterSpacing: "0.02em",
+            fontSize: "clamp(15px, 4vw, 34px)",
+            lineHeight: 1.55,
+            letterSpacing: "0.015em",
           }}
         >
           RECUPERA<br />
@@ -134,7 +134,7 @@ function Hero() {
         </h1>
 
         {/* Divider ornament */}
-        <div className="mt-[6%] flex items-center gap-2">
+        <div className="mt-[7%] flex items-center gap-2">
           <span className="h-px flex-1 bg-[var(--gold)]/60" />
           <svg viewBox="0 0 16 8" className="h-2 w-4 text-[var(--gold)]" fill="currentColor">
             <path d="M0 4 L4 0 L8 4 L12 0 L16 4 L12 8 L8 4 L4 8 Z" />
@@ -144,27 +144,27 @@ function Hero() {
 
         {/* Description */}
         <p
-          className="mt-[5%] text-[var(--ivory)]/95"
+          className="mt-[6%] text-[var(--ivory)]/95"
           style={{
             fontFamily: "'Playfair Display', serif",
             fontWeight: 400,
-            fontSize: "clamp(9px, 2.1vw, 17px)",
-            lineHeight: 1.45,
+            fontSize: "clamp(10px, 2.5vw, 19px)",
+            lineHeight: 1.55,
           }}
         >
           Rutina capilar inspirada en ingredientes naturales diseñada para fortalecer la raíz, estimular el crecimiento y reducir la caída.
         </p>
 
         {/* Stars + rating */}
-        <div className="mt-[6%] flex items-center gap-2">
+        <div className="mt-[7%] flex items-center gap-2">
           <span className="flex" aria-label="4.9 de 5 estrellas">
             {[0, 1, 2, 3, 4].map((i) => (
-              <Star key={i} className="size-[3vw] max-h-5 max-w-5 fill-[var(--gold)] text-[var(--gold)]" />
+              <Star key={i} className="size-[3.5vw] max-h-6 max-w-6 fill-[var(--gold)] text-[var(--gold)]" />
             ))}
           </span>
           <span
             className="text-[var(--ivory)]"
-            style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(10px, 2.2vw, 18px)" }}
+            style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(11px, 2.5vw, 20px)" }}
           >
             4.9/5
           </span>
@@ -172,15 +172,16 @@ function Hero() {
 
         {/* Social proof */}
         <p
-          className="mt-[2%] text-[var(--ivory)]/95"
+          className="mt-[3%] text-[var(--ivory)]/95"
           style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: "clamp(9px, 2vw, 16px)",
-            lineHeight: 1.35,
+            fontSize: "clamp(10px, 2.3vw, 18px)",
+            lineHeight: 1.4,
           }}
         >
           +1.247 mujeres ya transformaron<br />su cabello
         </p>
+
 
         {/* CTA */}
         <a
