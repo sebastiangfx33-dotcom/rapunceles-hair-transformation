@@ -94,6 +94,36 @@ function Hero() {
         fetchPriority="high"
       />
 
+      {/* Luxury dark velvet panel behind text */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 left-0 z-[5] w-[50%]"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(26,11,46,0.92) 0%, rgba(26,11,46,0.9) 60%, rgba(26,11,46,0.7) 85%, rgba(26,11,46,0) 100%)",
+          boxShadow:
+            "inset 0 0 80px rgba(0,0,0,0.55), inset 1px 0 0 rgba(212,169,74,0.18), inset 0 1px 0 rgba(212,169,74,0.22), inset 0 -1px 0 rgba(212,169,74,0.18)",
+        }}
+      >
+        {/* Subtle velvet texture + gold edge glow on the right */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(120% 60% at 0% 50%, rgba(76,32,110,0.35) 0%, transparent 70%)",
+            mixBlendMode: "screen",
+          }}
+        />
+        <div
+          className="absolute inset-y-0 right-0 w-[2px]"
+          style={{
+            background:
+              "linear-gradient(180deg, transparent 0%, rgba(212,169,74,0.55) 20%, rgba(244,217,138,0.7) 50%, rgba(212,169,74,0.55) 80%, transparent 100%)",
+            filter: "blur(0.5px)",
+          }}
+        />
+      </div>
+
       {/* Left content panel — sits over the dark purple area of the photo */}
       <div className="absolute inset-y-0 left-0 z-10 flex w-[50%] flex-col justify-start px-[4%] pt-[5%]">
         {/* Crown logo */}
