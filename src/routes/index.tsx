@@ -192,18 +192,6 @@ function Hero() {
           <span className="h-px flex-1" style={{ background: GOLD }} />
         </div>
 
-        {/* Description */}
-        <p
-          className="mt-3 text-[12px] leading-[1.45] md:mt-4 md:text-[15px] md:leading-[1.55]"
-          style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontWeight: 400,
-            color: IVORY,
-            maxWidth: "46%",
-          }}
-        >
-          Rutina capilar inspirada en ingredientes naturales diseñada para fortalecer la raíz, estimular el crecimiento y ayudar a reducir la caída.
-        </p>
 
         {/* CTA */}
 
