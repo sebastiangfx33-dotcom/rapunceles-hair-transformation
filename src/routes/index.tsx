@@ -145,10 +145,11 @@ function Hero() {
 
         {/* Headline */}
         <h2
-          className="mt-[8%] font-display tracking-wide"
+          className="mt-[8%] tracking-wide"
           style={{
+            fontFamily: "'Playfair Display', serif",
             color: GOLD_SOFT,
-            fontSize: "clamp(0.85rem, 3.2vw, 1.6rem)",
+            fontSize: "clamp(1.25rem, 4.2vw, 2.425rem)",
             lineHeight: 1.2,
             letterSpacing: "0.02em",
           }}
