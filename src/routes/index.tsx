@@ -82,24 +82,16 @@ function Landing() {
 function Hero() {
   return (
     <section className="relative w-full bg-[#1A0A26]">
-      <a
-        href={WHATSAPP_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block w-full"
-        aria-label="Comprar el Kit de Crecimiento Capilar Rapuncelés"
-      >
-        <img
-          src={bannerStore.url}
-          alt="Rapuncelés Kit de Crecimiento Capilar. Fortalece la raíz, estimula el crecimiento y ayuda a reducir la caída. Fórmula natural, envío gratis, pago contra entrega."
-          width={958}
-          height={1280}
-          className="mx-auto h-auto w-full object-contain md:max-h-[90vh]"
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-        />
-      </a>
+      <img
+        src={bannerStore.url}
+        alt="Rapuncelés Kit de Crecimiento Capilar. Fortalece la raíz, estimula el crecimiento y ayuda a reducir la caída. Fórmula natural, envío gratis, pago contra entrega."
+        width={958}
+        height={1280}
+        className="mx-auto h-auto w-full object-contain md:max-h-[90vh]"
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
+      />
     </section>
   );
 }
