@@ -12,8 +12,11 @@ import {
   Flower2,
   Clock,
   ArrowRight,
+  Truck,
+  HandCoins,
 } from "lucide-react";
 
+import heroBgAsset from "@/assets/hero-bg.png.asset.json";
 import heroKit from "@/assets/hero-kit.jpg";
 import probRoots from "@/assets/problem-roots.jpg";
 import probFall from "@/assets/problem-fall.jpg";
@@ -29,6 +32,7 @@ import ingBotanical from "@/assets/ing-botanical.jpg";
 import result1 from "@/assets/result-1.jpg";
 import result2 from "@/assets/result-2.jpg";
 import result3 from "@/assets/result-3.jpg";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -60,6 +64,7 @@ const WHATSAPP_URL =
 function Landing() {
   return (
     <main className="overflow-x-hidden bg-background text-foreground">
+      <Hero />
       <Problems />
       <Solution />
       <KitIncludes />
@@ -73,6 +78,158 @@ function Landing() {
     </main>
   );
 }
+
+/* ------------------------------ HERO ------------------------------ */
+function Hero() {
+  return (
+    <section
+      className="relative w-full overflow-hidden bg-[#2a1438] text-[var(--ivory)]"
+      style={{ aspectRatio: "958 / 1280" }}
+    >
+      {/* Background photo */}
+      <img
+        src={heroBgAsset.url}
+        alt="Modelo con cabello largo y kit Rapunceles"
+        className="absolute inset-0 h-full w-full object-cover"
+        fetchPriority="high"
+      />
+
+      {/* Left content panel — sits over the dark purple area of the photo */}
+      <div className="absolute inset-y-0 left-0 z-10 flex w-[42%] flex-col justify-start px-[4%] pt-[5%]">
+        {/* Crown logo */}
+        <svg viewBox="0 0 100 50" className="h-[7%] w-auto text-[var(--gold)]" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+          <path d="M10 42 L18 18 L32 32 L50 10 L68 32 L82 18 L90 42 Z" fill="currentColor" fillOpacity="0.95" />
+          <circle cx="50" cy="8" r="2.5" fill="currentColor" />
+          <circle cx="18" cy="16" r="2" fill="currentColor" />
+          <circle cx="82" cy="16" r="2" fill="currentColor" />
+        </svg>
+
+        {/* Brand name */}
+        <h2
+          className="-mt-1 text-[var(--gold)]"
+          style={{
+            fontFamily: "'Great Vibes', cursive",
+            fontSize: "clamp(28px, 7.5vw, 64px)",
+            lineHeight: 1,
+          }}
+        >
+          Rapunceles
+        </h2>
+
+        {/* Headline */}
+        <h1
+          className="mt-[12%] text-[var(--gold)]"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 500,
+            fontSize: "clamp(14px, 3.6vw, 30px)",
+            lineHeight: 1.15,
+            letterSpacing: "0.02em",
+          }}
+        >
+          RECUPERA<br />
+          EL CRECIMIENTO<br />
+          NATURAL<br />
+          DE TU CABELLO
+        </h1>
+
+        {/* Divider ornament */}
+        <div className="mt-[6%] flex items-center gap-2">
+          <span className="h-px flex-1 bg-[var(--gold)]/60" />
+          <svg viewBox="0 0 16 8" className="h-2 w-4 text-[var(--gold)]" fill="currentColor">
+            <path d="M0 4 L4 0 L8 4 L12 0 L16 4 L12 8 L8 4 L4 8 Z" />
+          </svg>
+          <span className="h-px flex-1 bg-[var(--gold)]/60" />
+        </div>
+
+        {/* Description */}
+        <p
+          className="mt-[5%] text-[var(--ivory)]/95"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 400,
+            fontSize: "clamp(9px, 2.1vw, 17px)",
+            lineHeight: 1.45,
+          }}
+        >
+          Rutina capilar inspirada en ingredientes naturales diseñada para fortalecer la raíz, estimular el crecimiento y reducir la caída.
+        </p>
+
+        {/* Stars + rating */}
+        <div className="mt-[6%] flex items-center gap-2">
+          <span className="flex" aria-label="4.9 de 5 estrellas">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <Star key={i} className="size-[3vw] max-h-5 max-w-5 fill-[var(--gold)] text-[var(--gold)]" />
+            ))}
+          </span>
+          <span
+            className="text-[var(--ivory)]"
+            style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(10px, 2.2vw, 18px)" }}
+          >
+            4.9/5
+          </span>
+        </div>
+
+        {/* Social proof */}
+        <p
+          className="mt-[2%] text-[var(--ivory)]/95"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            fontSize: "clamp(9px, 2vw, 16px)",
+            lineHeight: 1.35,
+          }}
+        >
+          +1.247 mujeres ya transformaron<br />su cabello
+        </p>
+
+        {/* CTA */}
+        <a
+          href="#options"
+          className="mt-[5%] inline-flex items-center justify-between gap-2 rounded-full px-[6%] py-[3.5%] text-[var(--purple-deep)] shadow-[0_8px_24px_-8px_rgba(0,0,0,0.6)]"
+          style={{
+            background:
+              "linear-gradient(180deg, #f4d98a 0%, #d4a94a 50%, #b88a35 100%)",
+            border: "1px solid rgba(255,255,255,0.25)",
+            fontFamily: "'Inter', sans-serif",
+            fontWeight: 600,
+            fontSize: "clamp(10px, 2.3vw, 18px)",
+            letterSpacing: "0.08em",
+          }}
+        >
+          <span>COMPRAR AHORA</span>
+          <ArrowRight className="size-[3.2vw] max-h-5 max-w-5" />
+        </a>
+
+        {/* Benefits */}
+        <div className="mt-[6%] grid grid-cols-3 gap-[3%] text-center">
+          {[
+            { Icon: Leaf, label: "FÓRMULA\nNATURAL" },
+            { Icon: Truck, label: "ENVÍO\nGRATIS" },
+            { Icon: HandCoins, label: "PAGO CONTRA\nENTREGA" },
+          ].map(({ Icon, label }) => (
+            <div key={label} className="flex flex-col items-center gap-1">
+              <span className="grid size-[8vw] max-h-12 max-w-12 place-items-center rounded-full border border-[var(--gold)]/60 text-[var(--gold)]">
+                <Icon className="size-[4vw] max-h-6 max-w-6" />
+              </span>
+              <span
+                className="whitespace-pre-line text-[var(--ivory)]"
+                style={{
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: "clamp(7px, 1.5vw, 12px)",
+                  letterSpacing: "0.08em",
+                  lineHeight: 1.2,
+                }}
+              >
+                {label}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 /* ----------------------------- PROBLEMS ----------------------------- */
 function Stars({ size = "size-4" }: { size?: string }) {
