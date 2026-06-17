@@ -11,13 +11,9 @@ import {
   Droplets,
   Flower2,
   Clock,
-  ArrowRight,
-  Truck,
-  HandCoins,
 } from "lucide-react";
 
 import heroKit from "@/assets/hero-kit.jpg";
-import heroBgAsset from "@/assets/hero-bg.png.asset.json";
 import probRoots from "@/assets/problem-roots.jpg";
 import probFall from "@/assets/problem-fall.jpg";
 import probVolume from "@/assets/problem-volume.jpg";
