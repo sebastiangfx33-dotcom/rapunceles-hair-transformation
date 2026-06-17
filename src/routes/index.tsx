@@ -16,8 +16,7 @@ import {
   Banknote,
 } from "lucide-react";
 
-import heroBannerMobile from "@/assets/hero-banner-mobile.webp";
-import heroBannerDesktop from "@/assets/hero-banner-desktop.webp";
+import bannerStore from "@/assets/banner-store.png.asset.json";
 import heroKit from "@/assets/hero-kit.jpg";
 import probRoots from "@/assets/problem-roots.jpg";
 import probFall from "@/assets/problem-fall.jpg";
@@ -81,239 +80,26 @@ function Landing() {
 
 /* ------------------------------ HERO ------------------------------ */
 function Hero() {
-  const GOLD = "#D4AF7A";
-  const GOLD_SOFT = "#E8C99B";
-  const GOLD_DEEP = "#B8935A";
-  const PURPLE = "#2A1538";
-
-  // Deterministic particle positions (avoid SSR hydration mismatch)
-  const particles = useMemo(
-    () =>
-      Array.from({ length: 18 }).map((_, i) => {
-        const seed = (i * 9301 + 49297) % 233280;
-        const r = seed / 233280;
-        return {
-          left: `${(r * 100).toFixed(2)}%`,
-          top: `${((r * 53 + i * 7) % 100).toFixed(2)}%`,
-          size: 2 + ((i * 3) % 5),
-          delay: `${(i * 0.35).toFixed(2)}s`,
-          duration: `${6 + (i % 5)}s`,
-        };
-      }),
-    [],
-  );
-
   return (
-    <section
-      className="relative isolate flex min-h-[92vh] w-full overflow-hidden"
-      style={{
-        background:
-          "radial-gradient(120% 80% at 50% 0%, #4A2566 0%, #2A1538 55%, #1A0A26 100%)",
-      }}
-    >
-      {/* Soft golden glows */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-32 left-1/2 z-0 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full opacity-40 blur-3xl"
-        style={{ background: `radial-gradient(closest-side, ${GOLD}66, transparent)` }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-24 right-[-6rem] z-0 h-[22rem] w-[22rem] rounded-full opacity-30 blur-3xl"
-        style={{ background: `radial-gradient(closest-side, ${GOLD_SOFT}55, transparent)` }}
-      />
-
-      {/* Floating golden particles */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 z-10 overflow-hidden">
-        {particles.map((p, i) => (
-          <span
-            key={i}
-            className="absolute rounded-full"
-            style={{
-              left: p.left,
-              top: p.top,
-              width: p.size,
-              height: p.size,
-              background: GOLD_SOFT,
-              boxShadow: `0 0 ${p.size * 3}px ${GOLD}`,
-              opacity: 0.7,
-              animation: `hero-float ${p.duration} ease-in-out ${p.delay} infinite`,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Local keyframes */}
-      <style>{`
-        @keyframes hero-float {
-          0%,100% { transform: translateY(0); opacity:.35; }
-          50%     { transform: translateY(-22px); opacity:.9; }
-        }
-        @keyframes hero-rise {
-          0%   { opacity: 0; transform: translateY(14px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes hero-star-glow {
-          0%,100% { filter: drop-shadow(0 0 2px ${GOLD}); }
-          50%     { filter: drop-shadow(0 0 8px ${GOLD_SOFT}); }
-        }
-      `}</style>
-
-      {/* Glassmorphism content card */}
-      <div className="relative z-20 mx-auto flex w-full items-center justify-center px-5 py-14 sm:px-8">
-        <div
-          className="flex w-full max-w-[24rem] flex-col items-center gap-7 rounded-3xl border px-6 py-9 text-center backdrop-blur-xl sm:max-w-md sm:px-9 sm:py-11"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(42,21,56,0.55) 0%, rgba(42,21,56,0.35) 100%)",
-            borderColor: `${GOLD}40`,
-            boxShadow: `0 30px 80px -30px rgba(0,0,0,0.6), inset 0 1px 0 ${GOLD}22`,
-          }}
-        >
-          {/* Logo + brand */}
-          <div
-            className="flex flex-col items-center gap-2"
-            style={{ animation: "hero-rise .6s ease-out both" }}
-          >
-            <svg
-              viewBox="0 0 64 40"
-              className="h-10 w-16"
-              fill="none"
-              stroke={GOLD}
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M6 32 L14 14 L22 26 L32 8 L42 26 L50 14 L58 32 Z" />
-              <circle cx="14" cy="11" r="1.6" fill={GOLD} stroke="none" />
-              <circle cx="32" cy="5" r="1.8" fill={GOLD} stroke="none" />
-              <circle cx="50" cy="11" r="1.6" fill={GOLD} stroke="none" />
-              <line x1="6" y1="36" x2="58" y2="36" />
-            </svg>
-            <p
-              className="font-display text-base italic tracking-[0.14em] sm:text-lg"
-              style={{ color: GOLD_SOFT }}
-            >
-              Rapunceles
-            </p>
-          </div>
-
-          {/* Headline */}
-          <h1
-            className="font-display text-[1.65rem] leading-[1.05] tracking-tight sm:text-[2.35rem]"
-            style={{ animation: "hero-rise .7s ease-out .1s both" }}
-          >
-            {["RECUPERA EL", "CRECIMIENTO NATURAL", "DE TU CABELLO"].map((line) => (
-              <span
-                key={line}
-                className="block"
-                style={{
-                  background: `linear-gradient(180deg, ${GOLD_SOFT} 0%, ${GOLD} 55%, ${GOLD_DEEP} 100%)`,
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                {line}
-              </span>
-            ))}
-          </h1>
-
-          {/* Gold divider */}
-          <div
-            aria-hidden
-            className="h-px w-24"
-            style={{
-              background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)`,
-              animation: "hero-rise .7s ease-out .2s both",
-            }}
-          />
-
-          {/* Subheadline */}
-          <p
-            className="max-w-[20rem] text-[0.95rem] leading-relaxed sm:max-w-sm sm:text-base"
-            style={{ color: GOLD_SOFT, opacity: 0.95, animation: "hero-rise .7s ease-out .25s both" }}
-          >
-            Fortalece la raíz, estimula el crecimiento y ayuda a reducir la caída.
-          </p>
-
-          {/* Social proof */}
-          <div
-            className="flex flex-col items-center gap-1.5"
-            style={{ animation: "hero-rise .7s ease-out .35s both" }}
-          >
-            <div className="flex items-center gap-2">
-              <span className="flex" aria-label="4.9 de 5 estrellas">
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <Star
-                    key={i}
-                    className="size-4"
-                    style={{
-                      fill: GOLD,
-                      color: GOLD,
-                      animation: `hero-star-glow 2.4s ease-in-out ${i * 0.2}s infinite`,
-                    }}
-                  />
-                ))}
-              </span>
-              <span className="font-display text-sm" style={{ color: GOLD_SOFT }}>
-                4.9/5
-              </span>
-            </div>
-            <p className="text-xs tracking-wide" style={{ color: GOLD_SOFT, opacity: 0.9 }}>
-              +1.247 mujeres transformaron su cabello
-            </p>
-          </div>
-
-          {/* CTA */}
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex w-full max-w-[17rem] items-center justify-center gap-3 rounded-full px-7 py-5 font-display text-base font-semibold tracking-[0.13em] shadow-[0_14px_44px_-8px_rgba(212,175,122,0.72)] transition-all hover:-translate-y-0.5 hover:shadow-[0_22px_56px_-8px_rgba(212,175,122,0.9)] sm:max-w-[19rem] sm:px-9 sm:text-lg"
-            style={{
-              background: `linear-gradient(135deg, ${GOLD_SOFT} 0%, ${GOLD} 50%, ${GOLD_DEEP} 100%)`,
-              color: PURPLE,
-              animation: "hero-rise .7s ease-out .45s both",
-            }}
-          >
-            <span>COMPRAR AHORA</span>
-            <span
-              className="grid size-8 place-items-center rounded-full transition-transform group-hover:translate-x-1"
-              style={{ background: PURPLE, color: GOLD }}
-            >
-              <ArrowRight className="size-4" />
-            </span>
-          </a>
-
-          {/* Benefits */}
-          <div
-            className="grid w-full grid-cols-3 gap-2 border-t pt-5"
-            style={{ borderColor: `${GOLD}33` }}
-          >
-            {[
-              { Icon: Leaf, label: "Fórmula Natural" },
-              { Icon: Truck, label: "Envío Gratis" },
-              { Icon: Banknote, label: "Pago Contra Entrega" },
-            ].map(({ Icon, label }, idx) => (
-              <div
-                key={label}
-                className="flex flex-col items-center gap-1.5 text-center"
-                style={{ animation: `hero-rise .6s ease-out ${0.55 + idx * 0.12}s both` }}
-              >
-                <Icon className="size-5" style={{ color: GOLD }} strokeWidth={1.4} />
-                <span
-                  className="text-[0.65rem] leading-tight tracking-wide sm:text-[0.72rem]"
-                  style={{ color: GOLD_SOFT }}
-                >
-                  {label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+    <section className="relative w-full bg-[#1A0A26]">
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full"
+        aria-label="Comprar el Kit de Crecimiento Capilar Rapuncelés"
+      >
+        <img
+          src={bannerStore.url}
+          alt="Rapuncelés Kit de Crecimiento Capilar. Fortalece la raíz, estimula el crecimiento y ayuda a reducir la caída. Fórmula natural, envío gratis, pago contra entrega."
+          width={958}
+          height={1280}
+          className="mx-auto h-auto w-full object-contain md:max-h-[90vh]"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+        />
+      </a>
     </section>
   );
 }
