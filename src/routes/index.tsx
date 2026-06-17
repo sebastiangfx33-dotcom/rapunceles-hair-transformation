@@ -16,8 +16,7 @@ import {
   Banknote,
 } from "lucide-react";
 
-import heroBannerMobile from "@/assets/hero-banner-mobile.webp";
-import heroBannerDesktop from "@/assets/hero-banner-desktop.webp";
+import bannerStore from "@/assets/banner-store.png.asset.json";
 import heroKit from "@/assets/hero-kit.jpg";
 import probRoots from "@/assets/problem-roots.jpg";
 import probFall from "@/assets/problem-fall.jpg";
