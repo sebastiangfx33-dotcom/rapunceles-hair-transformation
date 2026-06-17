@@ -107,61 +107,8 @@ function Hero() {
         }}
       />
 
-      <div className="relative z-20 mx-auto flex w-full max-w-md flex-1 flex-col justify-start px-6 pb-12 pt-24 md:max-w-7xl md:justify-center md:pb-0 md:pl-16 md:pr-0 md:pt-0">
-        <div className="flex items-center justify-center gap-2 animate-fade-up md:justify-start">
-          <span className="gold-divider" />
-          <span className="eyebrow">Rapuncelés · Haircare</span>
-          <span className="gold-divider hidden md:inline-block" />
-        </div>
+      <div className="relative z-20 mx-auto flex w-full max-w-md flex-1 flex-col px-6 pb-12 pt-24 md:max-w-7xl md:justify-center md:pb-0 md:pl-16 md:pr-0 md:pt-0" />
 
-        <h1 className="mt-6 text-balance text-center text-[2.35rem] leading-[1.05] text-[var(--ivory)] animate-fade-up md:text-left md:text-5xl lg:text-6xl">
-          Tu cabello puede crecer{" "}
-          <em className="not-italic shimmer font-display">fuerte, sano</em> y abundante de nuevo.
-        </h1>
-
-        <p className="mt-5 text-center text-[0.98rem] leading-relaxed text-[var(--ivory)]/80 animate-fade-up md:max-w-md md:text-left">
-          Una rutina premium inspirada en ingredientes naturales — diseñada para fortalecer el
-          cuero cabelludo, apoyar el crecimiento sano y ayudar a reducir la caída.
-        </p>
-
-        <div className="mt-7 flex items-center justify-center gap-2 text-[var(--ivory)] animate-fade-up md:justify-start">
-          <Stars />
-          <span className="text-sm font-medium">4.9/5</span>
-          <span className="text-sm text-[var(--ivory)]/70">· 68 reseñas verificadas</span>
-        </div>
-
-        <div className="mt-8 space-y-3 md:max-w-sm animate-fade-up">
-          <a href="#options" className="btn-primary">
-            <Sparkles className="size-4" /> Empezar mi transformación
-          </a>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="btn-whatsapp border-[var(--ivory)]/20 text-[var(--ivory)] hover:bg-[var(--ivory)]/10"
-          >
-            <MessageCircle className="size-4" /> Consulta por WhatsApp
-          </a>
-        </div>
-
-        <ul className="mt-8 grid grid-cols-1 gap-2.5 text-sm md:max-w-md">
-          {[
-            { icon: Leaf, text: "Inspirado en ingredientes naturales" },
-            { icon: ShieldCheck, text: "Fórmula premium de cuidado capilar" },
-            { icon: Heart, text: "Mujeres en toda Colombia confían en Rapuncelés" },
-          ].map(({ icon: Icon, text }) => (
-            <li
-              key={text}
-              className="flex items-center gap-3 rounded-full bg-[var(--purple-deep)]/30 px-4 py-2.5 border border-[var(--gold)]/20 text-[var(--ivory)]"
-            >
-              <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[var(--gold)]/20 text-[var(--gold)]">
-                <Icon className="size-3.5" />
-              </span>
-              <span className="min-w-0 truncate">{text}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
     </section>
   );
 }
