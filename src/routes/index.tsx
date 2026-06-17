@@ -12,8 +12,11 @@ import {
   Flower2,
   Clock,
   ArrowRight,
+  Truck,
+  HandCoins,
 } from "lucide-react";
 
+import heroBanner from "@/assets/hero-banner.png.asset.json";
 import heroKit from "@/assets/hero-kit.jpg";
 import probRoots from "@/assets/problem-roots.jpg";
 import probFall from "@/assets/problem-fall.jpg";
