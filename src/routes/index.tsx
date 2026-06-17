@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Sparkles,
   Leaf,
@@ -12,11 +12,8 @@ import {
   Flower2,
   Clock,
   ArrowRight,
-  Truck,
-  Banknote,
 } from "lucide-react";
 
-import bannerStore from "@/assets/banner-store.png.asset.json";
 import heroKit from "@/assets/hero-kit.jpg";
 import probRoots from "@/assets/problem-roots.jpg";
 import probFall from "@/assets/problem-fall.jpg";
