@@ -229,163 +229,225 @@ function Stars({ size = "size-4" }: { size?: string }) {
 
 /* ----------------------------- PROBLEMS ----------------------------- */
 function Problems() {
-  const DEEP = "#4A2D4F";
-  const GOLD = "#D4B06A";
+  const PURPLE_TOP = "#2D132F";
+  const PURPLE_MID = "#3B1B43";
+  const GOLD = "#C9A15D";
+  const GOLD_SOFT = "#E0C089";
+  const IVORY = "#F7F1E8";
   const items = [
-    { img: probFall, title: "Caída excesiva", desc: "Pierdes más cabello de lo normal al peinarte o bañarte." },
-    { img: probSlowGrowth, title: "Crecimiento lento", desc: "Tu cabello tarda demasiado en crecer o parece estancado." },
-    { img: probVolume, title: "Falta de volumen", desc: "Tu cabello luce fino, débil y sin densidad natural." },
-    { img: probBreakage, title: "Quiebre constante", desc: "Las fibras capilares se rompen fácilmente y pierden fuerza." },
-    { img: probRoots, title: "Raíces débiles", desc: "Tu raíz no tiene suficiente fuerza para sostener el crecimiento." },
-    { img: probWeak, title: "Cuero cabelludo sin nutrición", desc: "La falta de nutrientes afecta directamente la salud capilar." },
+    { img: probFall, title: "Caída excesiva", desc: "Pierdes cabello diariamente." },
+    { img: probVolume, title: "Menos abundancia", desc: "Tu cabello pierde volumen natural." },
+    { img: probBreakage, title: "Fragilidad capilar", desc: "Las fibras comienzan a romperse." },
+    { img: probRoots, title: "Raíces sin nutrición", desc: "La base del crecimiento pierde fuerza." },
   ];
   return (
-    <section className="relative overflow-hidden section-pad bg-[#F4EEF8]">
-      {/* Soft gold sparkles */}
+    <section
+      className="relative overflow-hidden px-5 pb-16 pt-14 md:px-8 md:pt-20"
+      style={{
+        background: `linear-gradient(180deg, ${PURPLE_TOP} 0%, ${PURPLE_MID} 55%, ${PURPLE_TOP} 100%)`,
+        color: IVORY,
+      }}
+    >
+      {/* Warm cinematic light */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.35]"
+        className="pointer-events-none absolute inset-0"
         style={{
-          backgroundImage:
-            "radial-gradient(circle at 12% 18%, rgba(212,176,106,0.35) 0, transparent 1.5px), radial-gradient(circle at 82% 32%, rgba(212,176,106,0.28) 0, transparent 1.5px), radial-gradient(circle at 30% 70%, rgba(212,176,106,0.3) 0, transparent 1.5px), radial-gradient(circle at 75% 88%, rgba(212,176,106,0.25) 0, transparent 1.5px)",
-          backgroundSize: "260px 260px",
+          background:
+            "radial-gradient(60% 40% at 50% 0%, rgba(201,161,93,0.18) 0%, transparent 70%), radial-gradient(45% 35% at 50% 100%, rgba(201,161,93,0.12) 0%, transparent 70%)",
         }}
       />
-      {/* Botanical corners */}
-      <Leaf
+      {/* Golden floating particles */}
+      <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-3 top-4 size-20 rotate-[-25deg] text-[#B89A6E] opacity-25"
+        className="pointer-events-none absolute inset-0 opacity-60"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 12% 18%, rgba(224,192,137,0.55) 0, transparent 1.4px), radial-gradient(circle at 82% 32%, rgba(224,192,137,0.45) 0, transparent 1.2px), radial-gradient(circle at 30% 70%, rgba(224,192,137,0.5) 0, transparent 1.3px), radial-gradient(circle at 75% 88%, rgba(224,192,137,0.4) 0, transparent 1.2px), radial-gradient(circle at 55% 50%, rgba(224,192,137,0.35) 0, transparent 1px)",
+          backgroundSize: "240px 240px, 300px 300px, 280px 280px, 320px 320px, 200px 200px",
+        }}
+      />
+      {/* Blurred lavender corners */}
+      <Flower2
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-8 -top-6 size-40 rotate-[-20deg] text-[#8C5BA0] opacity-25 blur-[6px]"
       />
       <Flower2
         aria-hidden="true"
-        className="pointer-events-none absolute -right-2 top-10 size-16 rotate-[18deg] text-[#9B6BA3] opacity-25"
+        className="pointer-events-none absolute -right-10 top-24 size-44 rotate-[18deg] text-[#8C5BA0] opacity-20 blur-[8px]"
+      />
+      {/* Golden vertical decorative lines */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute left-3 top-12 bottom-12 w-px opacity-40"
+        style={{ background: `linear-gradient(180deg, transparent, ${GOLD} 50%, transparent)` }}
+      />
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute right-3 top-12 bottom-12 w-px opacity-40"
+        style={{ background: `linear-gradient(180deg, transparent, ${GOLD} 50%, transparent)` }}
       />
 
-      <div className="relative mx-auto max-w-md px-6">
-        {/* Crown + Title */}
+      <div className="relative mx-auto max-w-md">
+        {/* Header */}
         <div className="flex flex-col items-center text-center">
-          <Crown className="size-6" style={{ color: GOLD }} />
-          <div
-            className="mt-3 flex items-center gap-2"
-            style={{ color: GOLD }}
-          >
-            <span className="h-px w-8" style={{ background: GOLD }} />
+          <Crown className="size-7" style={{ color: GOLD }} strokeWidth={1.4} />
+          <div className="mt-4 flex items-center gap-3" style={{ color: GOLD }}>
+            <span className="h-px w-10" style={{ background: GOLD }} />
             <span
-              className="text-[11px] uppercase tracking-[0.32em]"
+              className="text-[10px] uppercase tracking-[0.42em]"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
-              El diagnóstico
+              Las señales
             </span>
-            <span className="h-px w-8" style={{ background: GOLD }} />
+            <span className="h-px w-10" style={{ background: GOLD }} />
           </div>
           <h2
-            className="mt-4 text-[28px] leading-[1.15] md:text-[36px]"
+            className="mt-5 text-[26px] leading-[1.2] md:text-[34px]"
             style={{
               fontFamily: "'Cormorant Garamond', serif",
-              color: DEEP,
-              fontWeight: 500,
+              color: IVORY,
+              fontWeight: 400,
             }}
           >
-            ¿Tu cabello te está{" "}
-            <span style={{ color: GOLD, fontStyle: "italic" }}>
-              enviando estas señales
+            Tu cabello está{" "}
+            <span style={{ color: GOLD_SOFT, fontStyle: "italic" }}>
+              perdiendo fuerza
             </span>
-            ?
+            …
+            <br />
+            <span className="text-[20px] md:text-[26px] opacity-90">
+              y probablemente aún no lo notas.
+            </span>
           </h2>
-          <p className="mt-4 max-w-[34ch] text-[14px] leading-relaxed text-[#6B6470]">
-            Estos problemas son más comunes de lo que imaginas y pueden estar
-            afectando el crecimiento natural de tu cabello todos los días.
-          </p>
+          <div className="mt-5 flex items-center">
+            <span className="h-px w-12" style={{ background: GOLD }} />
+            <span
+              className="mx-2 inline-block rotate-45"
+              style={{ width: 5, height: 5, background: GOLD }}
+            />
+            <span className="h-px w-12" style={{ background: GOLD }} />
+          </div>
         </div>
 
-        {/* Cards */}
-        <div className="mt-10 grid grid-cols-1 gap-5">
+        {/* Editorial horizontal blocks */}
+        <div className="mt-10 space-y-5">
           {items.map((it, idx) => (
             <article
               key={it.title}
-              className="relative overflow-hidden rounded-3xl bg-[#FBF8F2]"
+              className="relative overflow-hidden rounded-2xl"
               style={{
+                background:
+                  "linear-gradient(135deg, rgba(59,27,67,0.85) 0%, rgba(45,19,47,0.92) 100%)",
+                border: "1px solid rgba(201,161,93,0.35)",
                 boxShadow:
-                  "0 18px 40px -22px rgba(74,45,79,0.28), 0 2px 6px -2px rgba(74,45,79,0.08)",
-                border: "1px solid rgba(212,176,106,0.18)",
+                  "0 18px 36px -20px rgba(0,0,0,0.8), inset 0 1px 0 rgba(224,192,137,0.08)",
               }}
             >
-              <div className="relative">
-                <img
-                  src={it.img}
-                  alt={it.title}
-                  width={1024}
-                  height={700}
-                  loading="lazy"
-                  className="h-44 w-full object-cover"
-                />
-                {/* Number badge */}
-                <span
-                  className="absolute left-4 top-4 grid size-9 place-items-center rounded-full text-[13px] font-medium"
-                  style={{
-                    background: DEEP,
-                    color: "#F4EEF8",
-                    fontFamily: "'Cormorant Garamond', serif",
-                    boxShadow: "0 4px 10px -3px rgba(74,45,79,0.45)",
-                  }}
-                >
-                  {String(idx + 1).padStart(2, "0")}
-                </span>
-              </div>
-              <div className="px-6 py-5">
-                <h3
-                  className="text-[20px] leading-tight"
-                  style={{
-                    fontFamily: "'Cormorant Garamond', serif",
-                    color: DEEP,
-                    fontWeight: 500,
-                  }}
-                >
-                  {it.title}
-                </h3>
-                <p className="mt-1.5 text-[13.5px] leading-relaxed text-[#6B6470]">
-                  {it.desc}
-                </p>
+              <div className="grid grid-cols-[9rem_minmax(0,1fr)] items-stretch">
+                {/* Image left */}
+                <div className="relative">
+                  <img
+                    src={it.img}
+                    alt={it.title}
+                    width={600}
+                    height={600}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0"
+                    style={{
+                      background:
+                        "linear-gradient(90deg, rgba(45,19,47,0) 55%, rgba(45,19,47,0.85) 100%)",
+                    }}
+                  />
+                </div>
+                {/* Text right */}
+                <div className="flex min-w-0 flex-col justify-center px-4 py-4">
+                  <span
+                    className="text-[10px] tracking-[0.32em]"
+                    style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      color: GOLD,
+                    }}
+                  >
+                    0{idx + 1}
+                  </span>
+                  <h3
+                    className="mt-1 text-[18px] leading-tight md:text-[20px]"
+                    style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      color: IVORY,
+                      fontWeight: 500,
+                    }}
+                  >
+                    {it.title}
+                  </h3>
+                  <span
+                    className="mt-2 h-px w-8"
+                    style={{ background: GOLD, opacity: 0.7 }}
+                  />
+                  <p
+                    className="mt-2 text-[12.5px] leading-relaxed"
+                    style={{ color: "rgba(247,241,232,0.78)" }}
+                  >
+                    {it.desc}
+                  </p>
+                </div>
               </div>
             </article>
           ))}
         </div>
 
-        {/* Closing */}
+        {/* Bottom text */}
         <div className="relative mt-12 text-center">
           <p
-            className="text-[22px] leading-[1.3] md:text-[26px]"
+            className="text-[16px] leading-relaxed"
             style={{
               fontFamily: "'Cormorant Garamond', serif",
-              color: DEEP,
+              color: "rgba(247,241,232,0.85)",
+              fontWeight: 400,
+            }}
+          >
+            No ignores las señales.
+          </p>
+          <p
+            className="mt-2 text-[22px] leading-[1.35] md:text-[26px]"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              color: IVORY,
               fontWeight: 500,
             }}
           >
-            Tu cabello necesita un{" "}
-            <span style={{ color: GOLD, fontStyle: "italic" }}>
-              tratamiento profundo
-            </span>{" "}
-            desde la raíz.
+            Tu cabello necesita{" "}
+            <span style={{ color: GOLD_SOFT, fontStyle: "italic" }}>
+              recuperación profunda
+            </span>
+            .
           </p>
-          <div className="mt-5 flex items-center justify-center">
-            <span className="h-px w-10" style={{ background: GOLD }} />
+          <div className="mt-6 flex items-center justify-center">
+            <span className="h-px w-14" style={{ background: GOLD }} />
             <span
               className="mx-2 inline-block rotate-45"
               style={{ width: 6, height: 6, background: GOLD }}
             />
-            <span className="h-px w-10" style={{ background: GOLD }} />
+            <span className="h-px w-14" style={{ background: GOLD }} />
           </div>
         </div>
       </div>
 
-      {/* Botanical bottom corners */}
+      {/* Rosemary / botanical bottom corners */}
       <Leaf
         aria-hidden="true"
-        className="pointer-events-none absolute -left-2 bottom-6 size-20 rotate-[150deg] text-[#B89A6E] opacity-25"
+        className="pointer-events-none absolute -left-3 bottom-3 size-24 rotate-[150deg] opacity-25 blur-[1px]"
+        style={{ color: GOLD }}
       />
-      <Flower2
+      <Leaf
         aria-hidden="true"
-        className="pointer-events-none absolute -right-3 bottom-4 size-20 rotate-[-20deg] text-[#9B6BA3] opacity-25"
+        className="pointer-events-none absolute -right-3 bottom-6 size-24 rotate-[-30deg] opacity-25 blur-[1px]"
+        style={{ color: GOLD }}
       />
     </section>
   );
