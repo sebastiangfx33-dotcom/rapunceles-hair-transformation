@@ -185,7 +185,13 @@ function Hero() {
               <Star
                 key={i}
                 className="w-[1.1em] h-[1.1em]"
-                style={{ fill: GOLD, color: GOLD, fontSize: "clamp(0.7rem,2.6vw,1.2rem)" }}
+                style={{
+                  fill: GOLD,
+                  color: GOLD,
+                  fontSize: "clamp(0.7rem,2.6vw,1.2rem)",
+                  animation: "hero-star-shimmer 2.2s ease-in-out infinite",
+                  animationDelay: `${i * 0.15}s`,
+                }}
               />
             ))}
           </span>
