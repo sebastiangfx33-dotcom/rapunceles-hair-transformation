@@ -134,7 +134,7 @@ function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-display text-[1.75rem] leading-[1.05] tracking-tight sm:text-[2.25rem]">
+          <h1 className="font-display text-[1.55rem] leading-[1.05] tracking-tight whitespace-nowrap sm:text-[2.25rem]">
             {["RECUPERA EL", "CRECIMIENTO NATURAL", "DE TU CABELLO"].map((line) => (
               <span
                 key={line}
