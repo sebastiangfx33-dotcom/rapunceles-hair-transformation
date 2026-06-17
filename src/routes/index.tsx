@@ -83,7 +83,7 @@ function Hero() {
   return (
     <section
       className="relative w-full overflow-hidden bg-[#1a0b2e] text-[var(--ivory)]"
-      style={{ aspectRatio: "958 / 1280" }}
+      style={{ minHeight: "min(140vw, 720px)" }}
     >
       {/* Background photo */}
       <img
@@ -106,7 +106,7 @@ function Hero() {
 
       {/* Left content panel — pixel-perfect replica of reference */}
       <div
-        className="absolute inset-y-0 left-0 z-10 flex w-[38%] flex-col items-start justify-center text-left"
+        className="relative z-10 flex w-[38%] flex-col items-start justify-center text-left"
         style={{
           paddingLeft: "34px",
           paddingRight: "12px",
