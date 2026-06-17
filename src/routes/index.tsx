@@ -102,6 +102,21 @@ function Hero() {
         }}
       />
 
+      <style>{`
+        @keyframes hero-star-shimmer {
+          0%, 100% {
+            opacity: 0.85;
+            filter: drop-shadow(0 0 1px rgba(212,162,74,0.25));
+            transform: translateY(0) scale(1);
+          }
+          50% {
+            opacity: 1;
+            filter: drop-shadow(0 0 4px rgba(212,162,74,0.9));
+            transform: translateY(-2px) scale(1.14);
+          }
+        }
+      `}</style>
+
       {/* Content over panel */}
       <div className="absolute inset-y-0 left-0 w-[38%] flex flex-col items-center text-center px-[3%] py-[4%]">
         {/* Crown */}
@@ -170,7 +185,13 @@ function Hero() {
               <Star
                 key={i}
                 className="w-[1.1em] h-[1.1em]"
-                style={{ fill: GOLD, color: GOLD, fontSize: "clamp(0.7rem,2.6vw,1.2rem)" }}
+                style={{
+                  fill: GOLD,
+                  color: GOLD,
+                  fontSize: "clamp(0.7rem,2.6vw,1.2rem)",
+                  animation: "hero-star-shimmer 2.2s ease-in-out infinite",
+                  animationDelay: `${i * 0.15}s`,
+                }}
               />
             ))}
           </span>
