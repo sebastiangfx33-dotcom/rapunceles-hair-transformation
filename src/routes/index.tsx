@@ -11,6 +11,7 @@ import {
   Droplets,
   Flower2,
   Clock,
+  ArrowRight,
 } from "lucide-react";
 
 import heroKit from "@/assets/hero-kit.jpg";
