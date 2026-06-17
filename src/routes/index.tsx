@@ -14,6 +14,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+import heroBannerMobile from "@/assets/hero-banner-mobile.webp";
+import heroBannerDesktop from "@/assets/hero-banner-desktop.webp";
 import heroKit from "@/assets/hero-kit.jpg";
 import probRoots from "@/assets/problem-roots.jpg";
 import probFall from "@/assets/problem-fall.jpg";
@@ -78,66 +80,71 @@ function Landing() {
 /* ------------------------------ HERO ------------------------------ */
 function Hero() {
   return (
-    <section className="relative">
+    <section className="relative flex min-h-[92vh] flex-col">
+      <picture className="absolute inset-0 -z-20">
+        <source media="(min-width: 768px)" srcSet={heroBannerDesktop} />
+        <img
+          src={heroBannerMobile}
+          alt="Mujer con cabello largo y saludable mostrando el kit Rapuncelés"
+          className="h-full w-full object-cover"
+          width={1080}
+          height={1920}
+        />
+      </picture>
+
       <div
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0 -z-10 md:hidden"
         style={{
           background:
-            "radial-gradient(120% 80% at 50% 0%, color-mix(in oklab, var(--lavender) 70%, transparent), transparent 60%), linear-gradient(180deg, var(--ivory), var(--beige))",
+            "linear-gradient(180deg, color-mix(in oklab, var(--purple-deep) 92%, transparent) 0%, color-mix(in oklab, var(--purple-deep) 45%, transparent) 40%, transparent 65%, color-mix(in oklab, var(--purple-deep) 55%, transparent) 100%)",
         }}
       />
-      <div className="mx-auto max-w-md px-6 pt-10 pb-12">
-        <div className="flex items-center justify-center gap-2 animate-fade-up">
+      <div
+        className="absolute inset-0 -z-10 hidden md:block"
+        style={{
+          background:
+            "linear-gradient(90deg, color-mix(in oklab, var(--purple-deep) 88%, transparent) 0%, transparent 45%)",
+        }}
+      />
+
+      <div className="relative mx-auto flex w-full max-w-md flex-1 flex-col justify-start px-6 pb-12 pt-24 md:max-w-7xl md:justify-center md:pb-0 md:pl-16 md:pr-0 md:pt-0">
+        <div className="flex items-center justify-center gap-2 animate-fade-up md:justify-start">
           <span className="gold-divider" />
           <span className="eyebrow">Rapuncelés · Haircare</span>
-          <span className="gold-divider" />
+          <span className="gold-divider hidden md:inline-block" />
         </div>
 
-        <h1 className="mt-6 text-balance text-center text-[2.35rem] leading-[1.05] sm:text-5xl animate-fade-up">
+        <h1 className="mt-6 text-balance text-center text-[2.35rem] leading-[1.05] text-[var(--ivory)] animate-fade-up md:text-left md:text-5xl lg:text-6xl">
           Tu cabello puede crecer{" "}
           <em className="not-italic shimmer font-display">fuerte, sano</em> y abundante de nuevo.
         </h1>
 
-        <p className="mt-5 text-center text-[0.98rem] leading-relaxed text-muted-foreground animate-fade-up">
+        <p className="mt-5 text-center text-[0.98rem] leading-relaxed text-[var(--ivory)]/80 animate-fade-up md:max-w-md md:text-left">
           Una rutina premium inspirada en ingredientes naturales — diseñada para fortalecer el
           cuero cabelludo, apoyar el crecimiento sano y ayudar a reducir la caída.
         </p>
 
-        <div className="mt-7 flex items-center justify-center gap-2">
+        <div className="mt-7 flex items-center justify-center gap-2 text-[var(--ivory)] animate-fade-up md:justify-start">
           <Stars />
           <span className="text-sm font-medium">4.9/5</span>
-          <span className="text-sm text-muted-foreground">· 68 reseñas verificadas</span>
+          <span className="text-sm text-[var(--ivory)]/70">· 68 reseñas verificadas</span>
         </div>
 
-        <div className="mt-8 relative">
-          <div
-            className="absolute inset-x-6 top-6 bottom-6 -z-10 rounded-[3rem] blur-2xl opacity-70"
-            style={{
-              background:
-                "radial-gradient(60% 60% at 50% 50%, color-mix(in oklab, var(--gold) 35%, transparent), transparent)",
-            }}
-          />
-          <div className="luxe-card overflow-hidden">
-            <img
-              src={heroKit}
-              alt="Kit Crecimiento Capilar Rapuncelés - shampoo, acondicionador y tónico"
-              width={1024}
-              height={1280}
-              className="w-full object-cover"
-            />
-          </div>
-        </div>
-
-        <div className="mt-8 space-y-3">
+        <div className="mt-8 space-y-3 md:max-w-sm animate-fade-up">
           <a href="#options" className="btn-primary">
             <Sparkles className="size-4" /> Empezar mi transformación
           </a>
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-whatsapp">
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-whatsapp border-[var(--ivory)]/20 text-[var(--ivory)] hover:bg-[var(--ivory)]/10"
+          >
             <MessageCircle className="size-4" /> Consulta por WhatsApp
           </a>
         </div>
 
-        <ul className="mt-8 grid grid-cols-1 gap-2.5 text-sm">
+        <ul className="mt-8 grid grid-cols-1 gap-2.5 text-sm md:max-w-md">
           {[
             { icon: Leaf, text: "Inspirado en ingredientes naturales" },
             { icon: ShieldCheck, text: "Fórmula premium de cuidado capilar" },
@@ -145,9 +152,9 @@ function Hero() {
           ].map(({ icon: Icon, text }) => (
             <li
               key={text}
-              className="flex items-center gap-3 rounded-full bg-card/70 px-4 py-2.5 border border-border/60"
+              className="flex items-center gap-3 rounded-full bg-[var(--purple-deep)]/30 px-4 py-2.5 border border-[var(--gold)]/20 text-[var(--ivory)]"
             >
-              <span className="grid size-7 shrink-0 place-items-center rounded-full bg-secondary text-primary">
+              <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[var(--gold)]/20 text-[var(--gold)]">
                 <Icon className="size-3.5" />
               </span>
               <span className="min-w-0 truncate">{text}</span>
@@ -455,13 +462,14 @@ function useCountdown(targetMs: number) {
 }
 
 function Scarcity() {
-  // Target: end of current week (Sunday 23:59)
+  // Target: end of current week (Sunday 23:59) in UTC so server and client render the same
+  // timestamp and avoid a hydration mismatch from timezone differences.
   const target = useMemo(() => {
     const d = new Date();
-    const day = d.getDay();
+    const day = d.getUTCDay();
     const daysToSunday = (7 - day) % 7 || 7;
-    d.setDate(d.getDate() + daysToSunday);
-    d.setHours(23, 59, 59, 0);
+    d.setUTCDate(d.getUTCDate() + daysToSunday);
+    d.setUTCHours(23, 59, 59, 0);
     return d.getTime();
   }, []);
   const { h, m, s } = useCountdown(target);
