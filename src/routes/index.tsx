@@ -14,7 +14,9 @@ import {
   ArrowRight,
   Truck,
   HandCoins,
+  Users,
 } from "lucide-react";
+
 
 import heroBanner from "@/assets/hero-banner.png.asset.json";
 import heroKit from "@/assets/hero-kit.jpg";
