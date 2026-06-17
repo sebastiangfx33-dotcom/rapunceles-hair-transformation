@@ -80,8 +80,8 @@ function Landing() {
 /* ------------------------------ HERO ------------------------------ */
 function Hero() {
   return (
-    <section className="relative flex min-h-[92vh] flex-col">
-      <picture className="absolute inset-0 -z-20">
+    <section className="relative isolate flex min-h-[92vh] flex-col overflow-hidden">
+      <picture className="absolute inset-0 z-0">
         <source media="(min-width: 768px)" srcSet={heroBannerDesktop} />
         <img
           src={heroBannerMobile}
@@ -93,21 +93,21 @@ function Hero() {
       </picture>
 
       <div
-        className="absolute inset-0 -z-10 md:hidden"
+        className="absolute inset-0 z-10 md:hidden"
         style={{
           background:
             "linear-gradient(180deg, color-mix(in oklab, var(--purple-deep) 55%, transparent) 0%, transparent 35%, transparent 60%, color-mix(in oklab, var(--purple-deep) 75%, transparent) 100%)",
         }}
       />
       <div
-        className="absolute inset-0 -z-10 hidden md:block"
+        className="absolute inset-0 z-10 hidden md:block"
         style={{
           background:
             "linear-gradient(90deg, color-mix(in oklab, var(--purple-deep) 70%, transparent) 0%, transparent 50%)",
         }}
       />
 
-      <div className="relative mx-auto flex w-full max-w-md flex-1 flex-col justify-start px-6 pb-12 pt-24 md:max-w-7xl md:justify-center md:pb-0 md:pl-16 md:pr-0 md:pt-0">
+      <div className="relative z-20 mx-auto flex w-full max-w-md flex-1 flex-col justify-start px-6 pb-12 pt-24 md:max-w-7xl md:justify-center md:pb-0 md:pl-16 md:pr-0 md:pt-0">
         <div className="flex items-center justify-center gap-2 animate-fade-up md:justify-start">
           <span className="gold-divider" />
           <span className="eyebrow">Rapuncelés · Haircare</span>
