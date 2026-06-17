@@ -462,13 +462,14 @@ function useCountdown(targetMs: number) {
 }
 
 function Scarcity() {
-  // Target: end of current week (Sunday 23:59)
+  // Target: end of current week (Sunday 23:59) in UTC so server and client render the same
+  // timestamp and avoid a hydration mismatch from timezone differences.
   const target = useMemo(() => {
     const d = new Date();
-    const day = d.getDay();
+    const day = d.getUTCDay();
     const daysToSunday = (7 - day) % 7 || 7;
-    d.setDate(d.getDate() + daysToSunday);
-    d.setHours(23, 59, 59, 0);
+    d.setUTCDate(d.getUTCDate() + daysToSunday);
+    d.setUTCHours(23, 59, 59, 0);
     return d.getTime();
   }, []);
   const { h, m, s } = useCountdown(target);
