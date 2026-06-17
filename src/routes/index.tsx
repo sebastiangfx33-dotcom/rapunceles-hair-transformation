@@ -95,7 +95,7 @@ function Hero() {
       />
 
       {/* Left content panel — sits over the dark purple area of the photo */}
-      <div className="absolute inset-y-0 left-0 z-10 flex w-[42%] flex-col justify-start px-[4%] pt-[5%]">
+      <div className="absolute inset-y-0 left-0 z-10 flex w-[50%] flex-col justify-start px-[4%] pt-[5%]">
         {/* Crown logo */}
         <svg viewBox="0 0 100 50" className="h-[7%] w-auto text-[var(--gold)]" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
           <path d="M10 42 L18 18 L32 32 L50 10 L68 32 L82 18 L90 42 Z" fill="currentColor" fillOpacity="0.95" />
@@ -122,7 +122,7 @@ function Hero() {
           style={{
             fontFamily: "'Playfair Display', serif",
             fontWeight: 500,
-            fontSize: "clamp(15px, 4vw, 34px)",
+            fontSize: "clamp(14px, 3.7vw, 32px)",
             lineHeight: 1.55,
             letterSpacing: "0.015em",
           }}
