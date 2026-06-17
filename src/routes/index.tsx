@@ -93,14 +93,6 @@ function Hero() {
         backgroundPosition: "center right",
       }}
     >
-      {/* Left dark purple panel */}
-      <div
-        className="absolute inset-y-0 left-0 w-[38%]"
-        style={{
-          background:
-            "linear-gradient(90deg, #1E0A2C 0%, #220E32 70%, rgba(34,14,50,0.92) 100%)",
-        }}
-      />
 
       <style>{`
         @keyframes hero-star-shimmer {
