@@ -100,7 +100,7 @@ function Hero() {
 
       {/* Left luxury purple overlay panel */}
       <div
-        className="relative z-20 flex w-[72%] flex-col justify-center px-4 py-10 sm:w-[62%] md:w-[38%] md:px-12 md:py-14"
+        className="relative z-20 flex w-[80%] flex-col justify-center px-4 py-10 sm:w-[70%] md:w-[38%] md:px-12 md:py-14"
         style={{
           background:
             "linear-gradient(90deg, rgba(42,21,56,0.70) 0%, rgba(42,21,56,0.68) 75%, rgba(42,21,56,0.55) 100%)",
