@@ -93,14 +93,6 @@ function Hero() {
         backgroundPosition: "center right",
       }}
     >
-      {/* Left dark purple panel */}
-      <div
-        className="absolute inset-y-0 left-0 w-[38%]"
-        style={{
-          background:
-            "linear-gradient(90deg, #1E0A2C 0%, #220E32 70%, rgba(34,14,50,0.92) 100%)",
-        }}
-      />
 
       <style>{`
         @keyframes hero-star-shimmer {
@@ -117,8 +109,8 @@ function Hero() {
         }
       `}</style>
 
-      {/* Content over panel */}
-      <div className="absolute inset-y-0 left-0 w-[38%] flex flex-col items-center text-center px-[3%] py-[4%]">
+      {/* Content over image */}
+      <div className="absolute inset-y-0 left-0 w-[38%] z-10 flex flex-col items-center text-center px-[3%] py-[4%]">
         {/* Crown */}
         <svg viewBox="0 0 64 40" className="w-[34%] h-auto" aria-hidden>
           <g fill="none" stroke={GOLD} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -152,6 +144,7 @@ function Hero() {
             fontSize: "clamp(1.25rem, 4.2vw, 2.425rem)",
             lineHeight: 1.2,
             letterSpacing: "0.02em",
+            textShadow: "0 2px 6px rgba(0,0,0,0.45)",
           }}
         >
           RECUPERA<br />EL CRECIMIENTO<br />NATURAL<br />DE TU CABELLO
@@ -174,13 +167,15 @@ function Hero() {
             color: "#E9D9C0",
             fontSize: "clamp(0.62rem, 2.1vw, 1rem)",
             lineHeight: 1.55,
+            textShadow: "0 1px 3px rgba(0,0,0,0.35)",
           }}
         >
           Rutina capilar inspirada en ingredientes naturales diseñada para fortalecer la raíz, estimular el crecimiento y reducir la caída.
         </p>
 
+
         {/* Stars */}
-        <div className="mt-[6%] flex items-center gap-2">
+        <div className="mt-[6%] flex items-center gap-2" style={{ textShadow: "0 1px 3px rgba(0,0,0,0.35)" }}>
           <span className="flex" aria-label="4.9 de 5 estrellas">
             {[0, 1, 2, 3, 4].map((i) => (
               <Star
@@ -202,10 +197,11 @@ function Hero() {
         {/* Social proof */}
         <p
           className="mt-[2%]"
-          style={{ color: "#E9D9C0", fontSize: "clamp(0.6rem,2vw,0.95rem)", lineHeight: 1.4 }}
+          style={{ color: "#E9D9C0", fontSize: "clamp(0.6rem,2vw,0.95rem)", lineHeight: 1.4, textShadow: "0 1px 3px rgba(0,0,0,0.35)" }}
         >
           +1.247 mujeres ya transformaron su cabello
         </p>
+
 
         {/* CTA */}
         <a
