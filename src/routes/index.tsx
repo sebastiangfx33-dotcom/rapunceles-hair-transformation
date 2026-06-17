@@ -153,7 +153,7 @@ function Hero() {
 
           {/* Subheadline */}
           <p
-            className="max-w-[18rem] font-body text-[0.95rem] leading-relaxed sm:max-w-xs sm:text-base"
+            className="max-w-[18rem] text-[0.95rem] leading-relaxed sm:max-w-xs sm:text-base"
             style={{ color: GOLD_SOFT, opacity: 0.95 }}
           >
             Fortalece la raíz, estimula el crecimiento y ayuda a reducir la caída.
