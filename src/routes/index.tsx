@@ -439,8 +439,11 @@ function Testimonials() {
 
 /* ----------------------------- SCARCITY ----------------------------- */
 function useCountdown(targetMs: number) {
-  const [now, setNow] = useState(() => Date.now());
+  // Initialize to target so server and client render identical "00" on first paint,
+  // avoiding a hydration mismatch from different Date.now() values.
+  const [now, setNow] = useState(() => targetMs);
   useEffect(() => {
+    setNow(Date.now());
     const id = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(id);
   }, []);
