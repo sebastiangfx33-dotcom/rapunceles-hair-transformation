@@ -17,7 +17,7 @@ import {
 import probSlowGrowth from "@/assets/problem-slow-growth.jpg";
 import probFall from "@/assets/problem-fall.jpg";
 import probRoots from "@/assets/problem-roots.jpg";
-import probWeak from "@/assets/problem-weak.jpg";
+import probVolume from "@/assets/problem-volume.jpg";
 
 import heroBanner from "@/assets/hero-banner.png.asset.json";
 import afterBannerBg from "@/assets/after-banner-bg.png.asset.json";
@@ -67,7 +67,7 @@ function Landing() {
     <main className="overflow-x-hidden bg-background text-foreground">
       <Hero />
       <AfterBanner />
-      <Problems />
+      <Solution />
       <Solution />
       <KitIncludes />
       <Ingredients />
@@ -217,191 +217,145 @@ function Hero() {
 
 /* ------------------------- AFTER BANNER -------------------------- */
 function AfterBanner() {
-  return (
-    <section className="relative w-full overflow-hidden">
-      <img
-        src={afterBannerBg.url}
-        alt="Continuación de la experiencia Rapuncelés"
-        className="block h-auto w-full object-cover"
-        loading="lazy"
-      />
-    </section>
-  );
-}
-
-/* ----------------------------- PROBLEMS ----------------------------- */
-function Stars({ size = "size-4" }: { size?: string }) {
-  return (
-    <span className="flex" aria-label="5 estrellas">
-      {[0, 1, 2, 3, 4].map((i) => (
-        <Star key={i} className={`${size} fill-[var(--gold)] text-[var(--gold)]`} />
-      ))}
-    </span>
-  );
-}
-
-/* ----------------------------- PROBLEMS ----------------------------- */
-function Problems() {
-  const PURPLE_TOP = "#2D132F";
-  const PURPLE_MID = "#3B1B43";
   const GOLD = "#C9A15D";
-  const GOLD_SOFT = "#E0C089";
   const IVORY = "#F7F1E8";
   const BEIGE = "#E7D8C6";
+  const CARD_BG = "rgba(45, 19, 47, 0.78)";
+  const CARD_BORDER = "rgba(201, 161, 93, 0.32)";
+
   const items = [
     {
       img: probFall,
-      title: "Caída constante",
-      desc: "Cada día pierdes más cabello de lo normal.",
-    },
-    {
-      img: probWeak,
-      title: "Cabello debilitado",
-      desc: "Tu fibra capilar pierde fuerza progresivamente.",
+      title: "Caída excesiva",
+      desc: "Cada día pierdes más cabello del que deberías.",
     },
     {
       img: probSlowGrowth,
       title: "Crecimiento lento",
-      desc: "Tu cabello parece no avanzar.",
+      desc: "Tu cabello tarda demasiado en crecer o parece detenido.",
     },
     {
       img: probRoots,
       title: "Raíces debilitadas",
-      desc: "La raíz pierde capacidad de sostener cabello fuerte.",
+      desc: "Cuando la raíz pierde fuerza, el cabello comienza a caer.",
+    },
+    {
+      img: probVolume,
+      title: "Pérdida de abundancia",
+      desc: "Tu cabello pierde volumen, densidad y vitalidad natural.",
     },
   ];
+
   return (
-    <section
-      className="relative overflow-hidden px-5 pb-16 pt-14 md:px-8 md:pt-20"
-      style={{
-        background: `linear-gradient(180deg, ${PURPLE_TOP} 0%, ${PURPLE_MID} 55%, ${PURPLE_TOP} 100%)`,
-        color: IVORY,
-      }}
-    >
-      {/* Warm cinematic light */}
+    <section className="relative w-full overflow-hidden">
+      {/* Background image — untouched */}
+      <img
+        src={afterBannerBg.url}
+        alt="Fondo de la experiencia Rapuncelés"
+        className="absolute inset-0 h-full w-full object-cover"
+        loading="lazy"
+      />
+      {/* Subtle tonal overlay for legibility without altering the image */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(60% 40% at 50% 0%, rgba(201,161,93,0.18) 0%, transparent 70%), radial-gradient(45% 35% at 50% 100%, rgba(201,161,93,0.12) 0%, transparent 70%)",
+            "linear-gradient(180deg, rgba(20,8,38,0.52) 0%, rgba(20,8,38,0.42) 40%, rgba(20,8,38,0.55) 100%)",
         }}
-      />
-      {/* Golden floating particles */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-60"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 12% 18%, rgba(224,192,137,0.55) 0, transparent 1.4px), radial-gradient(circle at 82% 32%, rgba(224,192,137,0.45) 0, transparent 1.2px), radial-gradient(circle at 30% 70%, rgba(224,192,137,0.5) 0, transparent 1.3px), radial-gradient(circle at 75% 88%, rgba(224,192,137,0.4) 0, transparent 1.2px), radial-gradient(circle at 55% 50%, rgba(224,192,137,0.35) 0, transparent 1px)",
-          backgroundSize: "240px 240px, 300px 300px, 280px 280px, 320px 320px, 200px 200px",
-        }}
-      />
-      {/* Blurred lavender corners */}
-      <Flower2
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-8 -top-6 size-40 rotate-[-20deg] text-[#8C5BA0] opacity-25 blur-[6px]"
-      />
-      <Flower2
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-10 top-24 size-44 rotate-[18deg] text-[#8C5BA0] opacity-20 blur-[8px]"
-      />
-      {/* Golden vertical decorative lines */}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute left-3 top-12 bottom-12 w-px opacity-40"
-        style={{ background: `linear-gradient(180deg, transparent, ${GOLD} 50%, transparent)` }}
-      />
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute right-3 top-12 bottom-12 w-px opacity-40"
-        style={{ background: `linear-gradient(180deg, transparent, ${GOLD} 50%, transparent)` }}
       />
 
-      <div className="relative mx-auto max-w-md">
-        {/* Header */}
-        <div className="flex flex-col items-center text-center">
-          <Crown className="size-7" style={{ color: GOLD }} strokeWidth={1.4} />
-          <h2
-            className="mt-5 text-[26px] leading-[1.25] md:text-[32px]"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              color: IVORY,
-              fontWeight: 400,
-            }}
-          >
-            Tu cabello te está enviando señales…
-            <br />
-            <span style={{ color: GOLD, fontStyle: "italic" }}>
-              y no deberías ignorarlas.
-            </span>
-          </h2>
-          <div className="mt-5 flex items-center">
-            <span className="h-px w-12" style={{ background: GOLD }} />
-            <span
-              className="mx-2 inline-block rotate-45"
-              style={{ width: 5, height: 5, background: GOLD }}
-            />
-            <span className="h-px w-12" style={{ background: GOLD }} />
-          </div>
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center px-5 py-16 md:py-20">
+        {/* Crown icon */}
+        <Crown
+          aria-hidden="true"
+          className="size-5"
+          style={{ color: GOLD }}
+          strokeWidth={1.2}
+        />
+
+        {/* Title */}
+        <h2
+          className="mt-5 text-center text-[28px] leading-[1.15] md:text-[36px]"
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            fontWeight: 400,
+            color: IVORY,
+          }}
+        >
+          Tu cabello te está enviando señales…
+        </h2>
+
+        {/* Subtitle */}
+        <p
+          className="mt-3 max-w-xs text-center text-[15px] leading-relaxed"
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            color: BEIGE,
+          }}
+        >
+          Estas son algunas señales de que tu cabello necesita recuperar su fuerza natural.
+        </p>
+
+        {/* Gold divider */}
+        <div className="mt-6 flex items-center justify-center">
+          <span className="h-px w-16" style={{ background: GOLD }} />
+          <span
+            className="mx-2 inline-block rotate-45"
+            style={{ width: 5, height: 5, background: GOLD }}
+          />
+          <span className="h-px w-16" style={{ background: GOLD }} />
         </div>
 
-        {/* Vertical luxury cards — 2 columns on mobile */}
-        <div className="mt-10 grid grid-cols-2 gap-4">
+        {/* Problem cards — vertical stack, mobile-first */}
+        <div className="mt-10 w-full max-w-sm space-y-6">
           {items.map((it) => (
             <article
               key={it.title}
-              className="relative overflow-hidden rounded-2xl"
+              className="flex items-center gap-4 rounded-2xl p-4"
               style={{
-                background:
-                  "linear-gradient(135deg, rgba(59,27,67,0.85) 0%, rgba(45,19,47,0.92) 100%)",
-                border: "1px solid rgba(201,161,93,0.35)",
-                boxShadow:
-                  "0 18px 36px -20px rgba(0,0,0,0.8), inset 0 1px 0 rgba(224,192,137,0.08)",
+                background: CARD_BG,
+                border: `1px solid ${CARD_BORDER}`,
+                backdropFilter: "blur(10px)",
+                WebkitBackdropFilter: "blur(10px)",
+                boxShadow: "0 18px 36px -20px rgba(0,0,0,0.55)",
               }}
             >
-              {/* Image top */}
-              <div className="relative h-28 w-full overflow-hidden md:h-36">
+              {/* Image — square, ~35% width */}
+              <div
+                className="shrink-0 overflow-hidden rounded-xl"
+                style={{ width: "35%", aspectRatio: "1 / 1" }}
+              >
                 <img
                   src={it.img}
                   alt={it.title}
-                  width={600}
-                  height={400}
+                  width={300}
+                  height={300}
                   loading="lazy"
                   className="h-full w-full object-cover"
                 />
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, rgba(45,19,47,0) 60%, rgba(45,19,47,0.85) 100%)",
-                  }}
-                />
               </div>
-              {/* Text body */}
-              <div className="px-3 pb-4 pt-3 text-center md:px-4 md:pb-6 md:pt-4">
+
+              {/* Text */}
+              <div className="flex min-w-0 flex-1 flex-col justify-center">
                 <h3
-                  className="text-[15px] leading-tight md:text-[18px]"
+                  className="text-[18px] leading-tight"
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
-                    color: IVORY,
                     fontWeight: 500,
+                    color: GOLD,
                   }}
                 >
                   {it.title}
                 </h3>
-                <div className="mx-auto mt-2 flex items-center justify-center">
-                  <span className="h-px w-6" style={{ background: GOLD, opacity: 0.7 }} />
-                  <span
-                    className="mx-1 inline-block rotate-45"
-                    style={{ width: 3, height: 3, background: GOLD, opacity: 0.8 }}
-                  />
-                  <span className="h-px w-6" style={{ background: GOLD, opacity: 0.7 }} />
-                </div>
                 <p
-                  className="mt-2 text-[11px] leading-relaxed md:text-[12.5px]"
-                  style={{ color: BEIGE, opacity: 0.9 }}
+                  className="mt-1 text-[13px] leading-relaxed"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    color: IVORY,
+                    opacity: 0.9,
+                  }}
                 >
                   {it.desc}
                 </p>
@@ -411,54 +365,52 @@ function Problems() {
         </div>
 
         {/* Bottom text */}
-        <div className="relative mt-12 text-center">
+        <div className="mt-12 flex flex-col items-center text-center">
           <p
-            className="text-[18px] leading-relaxed"
+            className="text-[20px] leading-relaxed"
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               color: IVORY,
-              fontWeight: 400,
             }}
           >
-            No esperes a que el daño avance.
+            No ignores las señales.
           </p>
           <p
-            className="mt-2 text-[22px] leading-[1.35] md:text-[26px]"
+            className="mt-1 text-[22px] leading-[1.3]"
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               color: IVORY,
-              fontWeight: 500,
             }}
           >
-            Tu cabello necesita{" "}
-            <span style={{ color: GOLD_SOFT, fontStyle: "italic" }}>
-              recuperación desde la raíz
+            Tu cabello merece{" "}
+            <span style={{ color: GOLD, fontStyle: "italic" }}>
+              recuperarse desde la raíz
             </span>
             .
           </p>
-          <div className="mt-6 flex items-center justify-center">
+
+          <div className="mt-5 flex items-center">
             <span className="h-px w-14" style={{ background: GOLD }} />
             <span
               className="mx-2 inline-block rotate-45"
-              style={{ width: 6, height: 6, background: GOLD }}
+              style={{ width: 5, height: 5, background: GOLD }}
             />
             <span className="h-px w-14" style={{ background: GOLD }} />
           </div>
         </div>
       </div>
-
-      {/* Rosemary / botanical bottom corners */}
-      <Leaf
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-3 bottom-3 size-24 rotate-[150deg] opacity-25 blur-[1px]"
-        style={{ color: GOLD }}
-      />
-      <Leaf
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-3 bottom-6 size-24 rotate-[-30deg] opacity-25 blur-[1px]"
-        style={{ color: GOLD }}
-      />
     </section>
+  );
+}
+
+/* ----------------------------- SOLUTION ----------------------------- */
+function Stars({ size = "size-4" }: { size?: string }) {
+  return (
+    <span className="flex" aria-label="5 estrellas">
+      {[0, 1, 2, 3, 4].map((i) => (
+        <Star key={i} className={`${size} fill-[var(--gold)] text-[var(--gold)]`} />
+      ))}
+    </span>
   );
 }
 
