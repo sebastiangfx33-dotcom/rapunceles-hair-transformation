@@ -70,7 +70,6 @@ function Landing() {
       <Hero />
       <AfterBanner />
       <Solution />
-      <Solution />
       <KitIncludes />
       <Ingredients />
       <Results />
