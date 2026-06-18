@@ -25,6 +25,7 @@ import routineBg from "@/assets/routine-bg.png.asset.json";
 
 
 import heroKit from "@/assets/hero-kit.jpg";
+import heroKitNew from "@/assets/hero-kit-new.png.asset.json";
 import prodShampoo from "@/assets/product-shampoo.jpg";
 import prodConditioner from "@/assets/product-conditioner.jpg";
 import prodTonic from "@/assets/product-tonic.jpg";
@@ -457,7 +458,7 @@ function Solution() {
           />
           <div className="luxe-card overflow-hidden">
             <img
-              src={heroKit}
+              src={heroKitNew.url}
               alt="Rutina completa Rapuncelés"
               width={1024}
               height={1024}
