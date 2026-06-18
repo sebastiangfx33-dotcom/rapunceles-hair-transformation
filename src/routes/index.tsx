@@ -20,6 +20,7 @@ import probRoots from "@/assets/problem-roots.jpg";
 import probVolume from "@/assets/problem-volume.jpg";
 
 import heroBanner from "@/assets/hero-banner.png.asset.json";
+import afterBannerBg from "@/assets/after-banner-bg.png.asset.json";
 
 import heroKit from "@/assets/hero-kit.jpg";
 import prodShampoo from "@/assets/product-shampoo.jpg";
@@ -247,9 +248,9 @@ function AfterBanner() {
 
   return (
     <section className="relative w-full overflow-hidden">
-      {/* Background image — replaced with the image from the Caída excesiva card */}
+      {/* Background image — untouched */}
       <img
-        src={probFall}
+        src={afterBannerBg.url}
         alt="Fondo de la experiencia Rapuncelés"
         className="absolute inset-0 h-full w-full object-cover"
         loading="lazy"
