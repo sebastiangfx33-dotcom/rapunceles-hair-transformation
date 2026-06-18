@@ -20,6 +20,7 @@ import probRoots from "@/assets/problem-roots.jpg";
 import probWeak from "@/assets/problem-weak.jpg";
 
 import heroBanner from "@/assets/hero-banner.png.asset.json";
+import afterBanner from "@/assets/after-banner.png.asset.json";
 import heroKit from "@/assets/hero-kit.jpg";
 import prodShampoo from "@/assets/product-shampoo.jpg";
 import prodConditioner from "@/assets/product-conditioner.jpg";
@@ -64,6 +65,7 @@ function Landing() {
   return (
     <main className="overflow-x-hidden bg-background text-foreground">
       <Hero />
+      <AfterBanner />
       <Problems />
       <Solution />
       <KitIncludes />
@@ -78,6 +80,20 @@ function Landing() {
   );
 }
 /* ------------------------------ HERO ------------------------------ */
+
+function AfterBanner() {
+  return (
+    <section className="relative w-full overflow-hidden bg-[#2D132F]">
+      <img
+        src={afterBanner.url}
+        alt="Rapuncelés"
+        className="block w-full h-auto"
+        loading="lazy"
+      />
+    </section>
+  );
+}
+
 function Hero() {
   const GOLD = "#D8B06A";
   const IVORY = "#F4ECDC";
