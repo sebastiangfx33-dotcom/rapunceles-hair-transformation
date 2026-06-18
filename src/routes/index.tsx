@@ -79,20 +79,112 @@ function Landing() {
     </main>
   );
 }
-/* ------------------------------ HERO ------------------------------ */
+/* ------------------------------ AFTER-BANNER ------------------------------ */
+const AFTER_BANNER_TEXT = {
+  wordmark: "Rapunceles",
+  headline: "Tu cabello puede volver a",
+  highlight: "crecer fuerte y abundante",
+  subheadline:
+    "Rutina premium de cuidado capilar inspirada en ingredientes naturales.",
+  cta: "Comienza tu transformación",
+};
+
 
 function AfterBanner() {
+  const GOLD = "#D8B06A";
+  const IVORY = "#F4ECDC";
+  const DARK = "#1a0b2e";
   return (
     <section className="relative w-full overflow-hidden bg-[#2D132F]">
       <img
         src={afterBanner.url}
-        alt="Rapuncelés"
+        alt="Rapunceles"
         className="block w-full h-auto"
         loading="lazy"
       />
+
+      {/* Bottom gradient for legibility */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-[55%]"
+        style={{
+          background: `linear-gradient(0deg, rgba(26,11,46,0.82) 0%, rgba(26,11,46,0.45) 55%, transparent 100%)`,
+        }}
+      />
+
+      {/* Editable text overlay */}
+      <div
+        className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-center px-6 pb-8 pt-24 text-center md:pb-10 md:px-10"
+        style={{ color: IVORY }}
+      >
+        <span
+          className="text-[34px] leading-none md:text-[48px]"
+          style={{
+            fontFamily: "'Great Vibes', cursive",
+            color: GOLD,
+            fontWeight: 400,
+          }}
+        >
+          {AFTER_BANNER_TEXT.wordmark}
+        </span>
+
+        <h2
+          className="mt-3 text-[22px] leading-[1.15] md:text-[32px]"
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            fontWeight: 500,
+            color: IVORY,
+          }}
+        >
+          {AFTER_BANNER_TEXT.headline}{" "}
+          <span style={{ color: GOLD, fontStyle: "italic", fontWeight: 500 }}>
+            {AFTER_BANNER_TEXT.highlight}
+          </span>
+        </h2>
+
+        <p
+          className="mt-2 max-w-xs text-[13px] md:max-w-md md:text-[15px]"
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            color: IVORY,
+            opacity: 0.9,
+          }}
+        >
+          {AFTER_BANNER_TEXT.subheadline}
+        </p>
+
+        <div className="mt-4 flex items-center">
+          <span className="h-px w-10" style={{ background: GOLD }} />
+          <span
+            className="mx-1.5 inline-block rotate-45"
+            style={{ width: 5, height: 5, background: GOLD }}
+          />
+          <span className="h-px w-10" style={{ background: GOLD }} />
+        </div>
+
+        <a
+          href="#options"
+          className="mt-4 inline-flex items-center gap-2 rounded-full px-5 py-2.5 md:mt-5 md:px-6 md:py-3"
+          style={{
+            background: "linear-gradient(180deg, #F6D87A 0%, #D9A73E 100%)",
+            color: DARK,
+            fontFamily: "'Cormorant Garamond', serif",
+            fontWeight: 700,
+            letterSpacing: "0.02em",
+            boxShadow: "0 8px 20px -8px rgba(0,0,0,0.6)",
+          }}
+        >
+          <span className="text-[12px] md:text-[14px]">
+            {AFTER_BANNER_TEXT.cta}
+          </span>
+          <ArrowRight className="size-3.5 md:size-4" strokeWidth={2.5} />
+        </a>
+      </div>
     </section>
   );
 }
+
+/* ------------------------------ HERO ------------------------------ */
 
 function Hero() {
   const GOLD = "#D8B06A";
