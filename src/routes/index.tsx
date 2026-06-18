@@ -20,6 +20,7 @@ import probRoots from "@/assets/problem-roots.jpg";
 import probWeak from "@/assets/problem-weak.jpg";
 
 import heroBanner from "@/assets/hero-banner.png.asset.json";
+import afterBanner from "@/assets/after-banner.png.asset.json";
 import heroKit from "@/assets/hero-kit.jpg";
 import prodShampoo from "@/assets/product-shampoo.jpg";
 import prodConditioner from "@/assets/product-conditioner.jpg";
@@ -64,6 +65,7 @@ function Landing() {
   return (
     <main className="overflow-x-hidden bg-background text-foreground">
       <Hero />
+      <AfterBanner />
       <Problems />
       <Solution />
       <KitIncludes />
