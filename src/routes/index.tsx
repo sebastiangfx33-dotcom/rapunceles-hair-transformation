@@ -12,15 +12,10 @@ import {
   Flower2,
   Clock,
   ArrowRight,
-  Crown,
 } from "lucide-react";
-import probSlowGrowth from "@/assets/problem-slow-growth.jpg";
-import probFall from "@/assets/problem-fall.jpg";
-import probRoots from "@/assets/problem-roots.jpg";
-import probVolume from "@/assets/problem-volume.jpg";
 
 import heroBanner from "@/assets/hero-banner.png.asset.json";
-import afterBannerBg from "@/assets/after-banner-bg.png.asset.json";
+
 
 import heroKit from "@/assets/hero-kit.jpg";
 import prodShampoo from "@/assets/product-shampoo.jpg";
@@ -66,7 +61,6 @@ function Landing() {
   return (
     <main className="overflow-x-hidden bg-background text-foreground">
       <Hero />
-      <AfterBanner />
       <Solution />
       <Solution />
       <KitIncludes />
@@ -215,193 +209,7 @@ function Hero() {
   );
 }
 
-/* ------------------------- AFTER BANNER -------------------------- */
-function AfterBanner() {
-  const GOLD = "#C9A15D";
-  const IVORY = "#F7F1E8";
-  const BEIGE = "#E7D8C6";
-  const CARD_BG = "rgba(45, 19, 47, 0.78)";
-  const CARD_BORDER = "rgba(201, 161, 93, 0.32)";
-
-  const items = [
-    {
-      img: probFall,
-      title: "Caída excesiva",
-      desc: "Cada día pierdes más cabello del que deberías.",
-    },
-    {
-      img: probSlowGrowth,
-      title: "Crecimiento lento",
-      desc: "Tu cabello tarda demasiado en crecer o parece detenido.",
-    },
-    {
-      img: probRoots,
-      title: "Raíces debilitadas",
-      desc: "Cuando la raíz pierde fuerza, el cabello comienza a caer.",
-    },
-    {
-      img: probVolume,
-      title: "Pérdida de abundancia",
-      desc: "Tu cabello pierde volumen, densidad y vitalidad natural.",
-    },
-  ];
-
-  return (
-    <section className="relative w-full overflow-hidden">
-      {/* Background image — untouched */}
-      <img
-        src={afterBannerBg.url}
-        alt="Fondo de la experiencia Rapuncelés"
-        className="absolute inset-0 h-full w-full object-cover"
-        loading="lazy"
-      />
-      {/* Subtle tonal overlay for legibility without altering the image */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(20,8,38,0.52) 0%, rgba(20,8,38,0.42) 40%, rgba(20,8,38,0.55) 100%)",
-        }}
-      />
-
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center px-5 py-16 md:py-20">
-        {/* Crown icon */}
-        <Crown
-          aria-hidden="true"
-          className="size-5"
-          style={{ color: GOLD }}
-          strokeWidth={1.2}
-        />
-
-        {/* Title */}
-        <h2
-          className="mt-5 text-center text-[28px] leading-[1.15] md:text-[36px]"
-          style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontWeight: 400,
-            color: IVORY,
-          }}
-        >
-          Tu cabello te está enviando señales…
-        </h2>
-
-        {/* Subtitle */}
-        <p
-          className="mt-3 max-w-xs text-center text-[15px] leading-relaxed"
-          style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            color: BEIGE,
-          }}
-        >
-          Estas son algunas señales de que tu cabello necesita recuperar su fuerza natural.
-        </p>
-
-        {/* Gold divider */}
-        <div className="mt-6 flex items-center justify-center">
-          <span className="h-px w-16" style={{ background: GOLD }} />
-          <span
-            className="mx-2 inline-block rotate-45"
-            style={{ width: 5, height: 5, background: GOLD }}
-          />
-          <span className="h-px w-16" style={{ background: GOLD }} />
-        </div>
-
-        {/* Problem cards — 2 per row, mobile-first luxury grid */}
-        <div className="mt-10 grid w-full max-w-sm grid-cols-2 gap-4">
-          {items.map((it) => (
-            <article
-              key={it.title}
-              className="flex flex-col overflow-hidden rounded-2xl"
-              style={{
-                background: CARD_BG,
-                border: `1px solid ${CARD_BORDER}`,
-                backdropFilter: "blur(10px)",
-                WebkitBackdropFilter: "blur(10px)",
-                boxShadow: "0 18px 36px -20px rgba(0,0,0,0.55)",
-              }}
-            >
-              {/* Image — square, full width */}
-              <div
-                className="w-full overflow-hidden"
-                style={{ aspectRatio: "1 / 1" }}
-              >
-                <img
-                  src={it.img}
-                  alt={it.title}
-                  width={300}
-                  height={300}
-                  loading="lazy"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-
-              {/* Text */}
-              <div className="flex min-w-0 flex-1 flex-col justify-center p-3">
-                <h3
-                  className="text-[15px] leading-tight"
-                  style={{
-                    fontFamily: "'Cormorant Garamond', serif",
-                    fontWeight: 500,
-                    color: GOLD,
-                  }}
-                >
-                  {it.title}
-                </h3>
-                <p
-                  className="mt-1 text-[11px] leading-relaxed"
-                  style={{
-                    fontFamily: "'Cormorant Garamond', serif",
-                    color: IVORY,
-                    opacity: 0.9,
-                  }}
-                >
-                  {it.desc}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        {/* Bottom text */}
-        <div className="mt-12 flex flex-col items-center text-center">
-          <p
-            className="text-[20px] leading-relaxed"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              color: IVORY,
-            }}
-          >
-            No ignores las señales.
-          </p>
-          <p
-            className="mt-1 text-[22px] leading-[1.3]"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              color: IVORY,
-            }}
-          >
-            Tu cabello merece{" "}
-            <span style={{ color: GOLD, fontStyle: "italic" }}>
-              recuperarse desde la raíz
-            </span>
-            .
-          </p>
-
-          <div className="mt-5 flex items-center">
-            <span className="h-px w-14" style={{ background: GOLD }} />
-            <span
-              className="mx-2 inline-block rotate-45"
-              style={{ width: 5, height: 5, background: GOLD }}
-            />
-            <span className="h-px w-14" style={{ background: GOLD }} />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+/* ----------------------------- SOLUTION ----------------------------- */
 
 /* ----------------------------- SOLUTION ----------------------------- */
 function Stars({ size = "size-4" }: { size?: string }) {
