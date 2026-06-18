@@ -14,10 +14,10 @@ import {
   ArrowRight,
   Crown,
 } from "lucide-react";
-import probSlowGrowth from "@/assets/problem-slow-growth.jpg";
-import probFall from "@/assets/problem-fall.jpg";
-import probRoots from "@/assets/problem-roots.jpg";
-import probVolume from "@/assets/problem-volume.jpg";
+import probFallAsset from "@/assets/card-problem-fall.png.asset.json";
+import probSlowGrowthAsset from "@/assets/card-problem-slow-growth.png.asset.json";
+import probRootsAsset from "@/assets/card-problem-roots.png.asset.json";
+import probVolumeAsset from "@/assets/card-problem-volume.png.asset.json";
 
 import heroBanner from "@/assets/hero-banner.png.asset.json";
 import afterBannerBg from "@/assets/after-banner-bg.png.asset.json";
@@ -225,22 +225,22 @@ function AfterBanner() {
 
   const items = [
     {
-      img: probFall,
+      img: probFallAsset.url,
       title: "Caída excesiva",
       desc: "Cada día pierdes más cabello del que deberías.",
     },
     {
-      img: probSlowGrowth,
+      img: probSlowGrowthAsset.url,
       title: "Crecimiento lento",
       desc: "Tu cabello tarda demasiado en crecer o parece detenido.",
     },
     {
-      img: probRoots,
+      img: probRootsAsset.url,
       title: "Raíces debilitadas",
       desc: "Cuando la raíz pierde fuerza, el cabello comienza a caer.",
     },
     {
-      img: probVolume,
+      img: probVolumeAsset.url,
       title: "Pérdida de abundancia",
       desc: "Tu cabello pierde volumen, densidad y vitalidad natural.",
     },
