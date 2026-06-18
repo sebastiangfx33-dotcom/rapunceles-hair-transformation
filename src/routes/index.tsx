@@ -21,6 +21,8 @@ import probVolumeAsset from "@/assets/card-problem-volume.png.asset.json";
 
 import heroBanner from "@/assets/hero-banner.png.asset.json";
 import afterBannerBg from "@/assets/after-banner-bg.png.asset.json";
+import routineBg from "@/assets/routine-bg.png.asset.json";
+
 
 import heroKit from "@/assets/hero-kit.jpg";
 import prodShampoo from "@/assets/product-shampoo.jpg";
@@ -424,8 +426,26 @@ function Solution() {
     { icon: Heart, text: "Cabello con apariencia más llena" },
   ];
   return (
-    <section className="section-pad">
-      <div className="mx-auto max-w-md px-6">
+    <section className="section-pad relative overflow-hidden">
+      {/* Background image */}
+      <img
+        src={routineBg.url}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover"
+        loading="lazy"
+      />
+      {/* Dark overlay for text legibility */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(20,8,38,0.68) 0%, rgba(20,8,38,0.55) 50%, rgba(20,8,38,0.68) 100%)",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto max-w-md px-6">
         <Header eyebrow="La solución" title="Creamos una rutina para cuidar tu cabello desde la raíz." />
 
         <div className="mt-8 relative">
