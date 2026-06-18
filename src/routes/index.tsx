@@ -308,12 +308,12 @@ function AfterBanner() {
           <span className="h-px w-16" style={{ background: GOLD }} />
         </div>
 
-        {/* Problem cards — vertical stack, mobile-first */}
-        <div className="mt-10 w-full max-w-sm space-y-6">
+        {/* Problem cards — 2 per row, mobile-first luxury grid */}
+        <div className="mt-10 grid w-full max-w-sm grid-cols-2 gap-4">
           {items.map((it) => (
             <article
               key={it.title}
-              className="flex items-center gap-4 rounded-2xl p-4"
+              className="flex flex-col overflow-hidden rounded-2xl"
               style={{
                 background: CARD_BG,
                 border: `1px solid ${CARD_BORDER}`,
@@ -322,10 +322,10 @@ function AfterBanner() {
                 boxShadow: "0 18px 36px -20px rgba(0,0,0,0.55)",
               }}
             >
-              {/* Image — square, ~35% width */}
+              {/* Image — square, full width */}
               <div
-                className="shrink-0 overflow-hidden rounded-xl"
-                style={{ width: "35%", aspectRatio: "1 / 1" }}
+                className="w-full overflow-hidden"
+                style={{ aspectRatio: "1 / 1" }}
               >
                 <img
                   src={it.img}
@@ -338,9 +338,9 @@ function AfterBanner() {
               </div>
 
               {/* Text */}
-              <div className="flex min-w-0 flex-1 flex-col justify-center">
+              <div className="flex min-w-0 flex-1 flex-col justify-center p-3">
                 <h3
-                  className="text-[18px] leading-tight"
+                  className="text-[15px] leading-tight"
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
                     fontWeight: 500,
@@ -350,7 +350,7 @@ function AfterBanner() {
                   {it.title}
                 </h3>
                 <p
-                  className="mt-1 text-[13px] leading-relaxed"
+                  className="mt-1 text-[11px] leading-relaxed"
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
                     color: IVORY,
