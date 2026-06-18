@@ -80,6 +80,20 @@ function Landing() {
   );
 }
 /* ------------------------------ HERO ------------------------------ */
+
+function AfterBanner() {
+  return (
+    <section className="relative w-full overflow-hidden bg-[#2D132F]">
+      <img
+        src={afterBanner.url}
+        alt="Rapuncelés"
+        className="block w-full h-auto"
+        loading="lazy"
+      />
+    </section>
+  );
+}
+
 function Hero() {
   const GOLD = "#D8B06A";
   const IVORY = "#F4ECDC";
