@@ -20,6 +20,7 @@ import probRoots from "@/assets/problem-roots.jpg";
 import probWeak from "@/assets/problem-weak.jpg";
 
 import heroBanner from "@/assets/hero-banner.png.asset.json";
+import afterBannerBg from "@/assets/after-banner-bg.png.asset.json";
 
 import heroKit from "@/assets/hero-kit.jpg";
 import prodShampoo from "@/assets/product-shampoo.jpg";
