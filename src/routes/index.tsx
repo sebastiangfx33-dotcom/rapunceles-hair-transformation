@@ -248,9 +248,9 @@ function AfterBanner() {
 
   return (
     <section className="relative w-full overflow-hidden">
-      {/* Background image — untouched */}
+      {/* Background image — replaced with the image from the Caída excesiva card */}
       <img
-        src={afterBannerBg.url}
+        src={probFall}
         alt="Fondo de la experiencia Rapuncelés"
         className="absolute inset-0 h-full w-full object-cover"
         loading="lazy"
