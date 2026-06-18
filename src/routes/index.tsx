@@ -79,7 +79,16 @@ function Landing() {
     </main>
   );
 }
-/* ------------------------------ HERO ------------------------------ */
+/* ------------------------------ AFTER-BANNER ------------------------------ */
+const AFTER_BANNER_TEXT = {
+  wordmark: "Rapunceles",
+  headline: "Tu cabello puede volver a",
+  highlight: "crecer fuerte y abundante",
+  subheadline:
+    "Rutina premium de cuidado capilar inspirada en ingredientes naturales.",
+  cta: "Comienza tu transformación",
+};
+
 
 function AfterBanner() {
   return (
