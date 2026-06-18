@@ -20,6 +20,7 @@ import probRoots from "@/assets/problem-roots.jpg";
 import probWeak from "@/assets/problem-weak.jpg";
 
 import heroBanner from "@/assets/hero-banner.png.asset.json";
+import afterBannerBg from "@/assets/after-banner-bg.png.asset.json";
 
 import heroKit from "@/assets/hero-kit.jpg";
 import prodShampoo from "@/assets/product-shampoo.jpg";
@@ -65,6 +66,7 @@ function Landing() {
   return (
     <main className="overflow-x-hidden bg-background text-foreground">
       <Hero />
+      <AfterBanner />
       <Problems />
       <Solution />
       <KitIncludes />
@@ -213,7 +215,56 @@ function Hero() {
   );
 }
 
-
+/* ------------------------- AFTER BANNER -------------------------- */
+function AfterBanner() {
+  const GOLD = "#D8B06A";
+  const IVORY = "#F4ECDC";
+  return (
+    <section className="relative w-full overflow-hidden">
+      {/* Background image */}
+      <img
+        src={afterBannerBg.url}
+        alt="Fondo elegante Rapuncelés"
+        className="block h-auto w-full object-cover"
+        loading="lazy"
+      />
+      {/* Gradient overlay for legibility */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(20,8,38,0.72) 0%, rgba(20,8,38,0.45) 55%, rgba(20,8,38,0.15) 100%)",
+        }}
+      />
+      {/* Text content */}
+      <div className="absolute inset-0 z-10 flex flex-col items-start justify-center px-5 py-12 md:px-10">
+        <h2
+          className="text-[26px] leading-[1.1] md:text-[40px]"
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            fontWeight: 500,
+            color: IVORY,
+            maxWidth: "70%",
+          }}
+        >
+          Tu cabello puede volver a crecer{" "}
+          <span style={{ color: GOLD, fontStyle: "italic" }}>fuerte y abundante.</span>
+        </h2>
+        <p
+          className="mt-4 max-w-md text-[14px] leading-relaxed md:text-[17px]"
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            color: IVORY,
+            opacity: 0.9,
+          }}
+        >
+          Rutina premium de cuidado capilar para fortalecer el cuero cabelludo, nutrir la raíz y revelar un cabello con más vida.
+        </p>
+      </div>
+    </section>
+  );
+}
 
 /* ----------------------------- PROBLEMS ----------------------------- */
 function Stars({ size = "size-4" }: { size?: string }) {
