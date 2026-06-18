@@ -67,7 +67,7 @@ function Landing() {
     <main className="overflow-x-hidden bg-background text-foreground">
       <Hero />
       <AfterBanner />
-      <Problems />
+      <Solution />
       <Solution />
       <KitIncludes />
       <Ingredients />
