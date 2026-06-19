@@ -426,7 +426,7 @@ function Solution() {
     { icon: Heart, text: "Cabello con apariencia más llena" },
   ];
   return (
-    <section className="section-pad relative overflow-hidden">
+    <section className="section-pad relative overflow-hidden" style={{ paddingTop: 0 }}>
       {/* Background image */}
       <img
         src={routineBg.url}
