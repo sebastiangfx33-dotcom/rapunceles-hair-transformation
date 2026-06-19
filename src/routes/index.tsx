@@ -446,7 +446,7 @@ function Solution() {
       />
 
       <div className="relative z-10 mx-auto max-w-md px-6">
-        <Header eyebrow="La solución" title="Creamos una rutina para cuidar tu cabello desde la raíz." />
+        <Header eyebrow="" title={"\n"} />
 
         <div className="mt-8 relative">
           <div
