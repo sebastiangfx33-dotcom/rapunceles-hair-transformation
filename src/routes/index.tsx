@@ -429,7 +429,7 @@ function Solution() {
     <section className="section-pad relative overflow-hidden" style={{ paddingTop: 0 }}>
       {/* Background image */}
       <img
-        src={routineBg.url}
+        src={heroKitNew.url}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover"
@@ -448,25 +448,6 @@ function Solution() {
       <div className="relative z-10 mx-auto max-w-md px-6">
         <Header eyebrow="" title={"\n"} />
 
-        <div className="mt-8 relative">
-          <div
-            className="absolute -inset-6 -z-10 rounded-[3rem] opacity-80"
-            style={{
-              background:
-                "radial-gradient(60% 60% at 50% 40%, color-mix(in oklab, var(--lavender) 80%, transparent), transparent)",
-            }}
-          />
-          <div className="luxe-card overflow-hidden">
-            <img
-              src={heroKitNew.url}
-              alt="Rutina completa Rapuncelés"
-              width={1024}
-              height={1024}
-              loading="lazy"
-              className="w-full object-cover"
-            />
-          </div>
-        </div>
 
         <ul className="mt-8 space-y-3">
           {benefits.map(({ icon: Icon, text }) => (
