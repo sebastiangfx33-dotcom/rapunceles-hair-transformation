@@ -71,6 +71,7 @@ function Landing() {
       <Hero />
       <AfterBanner />
       <Solution />
+      <ProductRoutineSection />
       <KitIncludes />
       <Ingredients />
       <Results />
@@ -463,6 +464,104 @@ function Solution() {
     </section>
   );
 }
+
+/* ---------------------------- PRODUCT ROUTINE SECTION ---------------------------- */
+function ProductRoutineSection() {
+  const GOLD = "#c9a84c";
+  const SERIF = "'Playfair Display', serif";
+  const SANS = "'Jost', sans-serif";
+
+  const RootIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-6">
+      <path d="M12 3v6" />
+      <path d="M12 9c-2 0-4 1.5-4 4s2 4 4 4 4-1.5 4-4-2-4-4-4z" />
+      <path d="M8 17c-1.5 1-3 1.5-4 4" />
+      <path d="M16 17c1.5 1 3 1.5 4 4" />
+      <path d="M12 17v4" />
+    </svg>
+  );
+
+  const DropIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-6">
+      <path d="M12 3s6 7 6 12a6 6 0 1 1-12 0c0-5 6-12 6-12z" />
+    </svg>
+  );
+
+  const SproutIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-6">
+      <path d="M12 21V10" />
+      <path d="M12 10c0-3 2-5 5-5 0 3-2 5-5 5z" />
+      <path d="M12 13c0-3-2-5-5-5 0 3 2 5 5 5z" />
+    </svg>
+  );
+
+  const DensityIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-6">
+      <path d="M4 20c2-6 4-9 8-14" />
+      <path d="M8 20c2-6 4-9 8-14" />
+      <path d="M12 20c2-6 4-9 8-14" />
+    </svg>
+  );
+
+  const Badge = ({ icon, label }: { icon: React.ReactNode; label: string }) => (
+    <div
+      className="flex items-center gap-3 px-5 py-4 rounded-[12px]"
+      style={{
+        background: "#2d1347",
+        border: `1px solid ${GOLD}40`,
+        fontFamily: SANS,
+      }}
+    >
+      <span style={{ color: GOLD }}>{icon}</span>
+      <span className="text-white text-sm sm:text-base font-medium leading-tight">{label}</span>
+    </div>
+  );
+
+  return (
+    <section className="w-full py-16 sm:py-24 px-4" style={{ background: "#1a0a2e" }}>
+      <div className="mx-auto max-w-3xl">
+        <div className="text-center flex flex-col items-center">
+          <Crown className="size-9" style={{ color: GOLD }} strokeWidth={1.6} />
+          <h2
+            className="mt-5 text-3xl sm:text-4xl md:text-5xl leading-tight"
+            style={{ fontFamily: SERIF, color: GOLD, fontWeight: 500 }}
+          >
+            La rutina que tu cabello necesita
+          </h2>
+          <div className="mt-5 flex items-center gap-3" aria-hidden="true" style={{ color: GOLD }}>
+            <span className="block h-px w-10" style={{ background: GOLD }} />
+            <svg viewBox="0 0 24 24" className="size-3" fill="currentColor"><circle cx="12" cy="12" r="6" /></svg>
+            <span className="block h-px w-10" style={{ background: GOLD }} />
+          </div>
+          <p className="mt-5 text-base sm:text-lg text-white/85 max-w-xl" style={{ fontFamily: SANS }}>
+            Una combinación diseñada para fortalecer tu cabello desde la raíz.
+          </p>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Badge icon={<RootIcon />} label="Fortalece raíz" />
+          <Badge icon={<DropIcon />} label="Reduce caída" />
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <img
+            src={heroKitNew.url}
+            alt="Rutina completa Rapuncelés"
+            className="w-full max-w-[400px] h-auto object-contain"
+            loading="lazy"
+          />
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Badge icon={<SproutIcon />} label="Estimula crecimiento" />
+          <Badge icon={<DensityIcon />} label="Mayor densidad" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 
 /* ---------------------------- KIT INCLUDES ---------------------------- */
 function KitIncludes() {
