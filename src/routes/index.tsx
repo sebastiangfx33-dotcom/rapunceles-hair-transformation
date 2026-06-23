@@ -71,6 +71,7 @@ function Landing() {
       <Hero />
       <AfterBanner />
       <Solution />
+      <ProductRoutineSection />
       <KitIncludes />
       <Ingredients />
       <Results />
