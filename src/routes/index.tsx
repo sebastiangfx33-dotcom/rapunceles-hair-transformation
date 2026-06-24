@@ -553,8 +553,54 @@ function ProductRoutineSection() {
         alt="La rutina que tu cabello necesita"
         className="block w-full h-auto select-none"
       />
-
-
+      <div
+        className="grid grid-cols-4 gap-2 px-3 pb-4"
+        style={{ background: "#1a0a2e", marginTop: "-1px" }}
+      >
+        {badges.map((b) => (
+          <div
+            key={b.title}
+            className="flex flex-col items-center text-center"
+            style={{
+              background: "#2d1347",
+              border: "1px solid rgba(201,168,76,0.35)",
+              borderRadius: 14,
+              padding: "14px 8px",
+            }}
+          >
+            <div style={{ color: "#c9a84c" }} className="mb-2">
+              {b.icon}
+            </div>
+            <h3
+              className="font-bold text-white"
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                fontSize: 13,
+                lineHeight: 1.2,
+              }}
+            >
+              {b.title}
+            </h3>
+            <div
+              style={{ color: "#c9a84c", fontSize: 10 }}
+              className="my-2"
+              aria-hidden
+            >
+              ◆
+            </div>
+            <p
+              style={{
+                fontFamily: "'Jost', sans-serif",
+                fontSize: 11,
+                lineHeight: 1.35,
+                color: "#e8d9f0",
+              }}
+            >
+              {b.desc}
+            </p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
