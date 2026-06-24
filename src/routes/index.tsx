@@ -659,23 +659,26 @@ function KitIncludes() {
     {
       img: prodShampoo,
       name: "Shampoo Nutritivo",
-      desc: "Elimina impurezas mientras prepara el cuero cabelludo para recibir los nutrientes que tu cabello necesita",
+      tagline: "Limpia sin debilitar.",
+      desc: "Purifica el cuero cabelludo y crea el entorno ideal para que la raíz crezca fuerte desde el primer lavado.",
     },
     {
       img: prodConditioner,
-      name: "Acondicionador",
-      desc: "Aporta hidratación profunda, suavidad y nutrición para un cabello más manejable y saludable",
+      name: "Acondicionador Fortalecedor",
+      tagline: "Protege cada hebra.",
+      desc: "Reduce el quiebre, aporta nutrición profunda y da mayor resistencia, suavidad y volumen a tu cabello.",
     },
     {
       img: prodTonic,
       name: "Tónico de Crecimiento",
-      desc: "Actúa directamente en el cuero cabelludo ayudando a fortalecer las raíces.",
+      tagline: "El paso más importante de la rutina.",
+      desc: "Actúa directamente sobre la raíz, fortalece el folículo y favorece una melena más densa, llena y con vida.",
     },
   ];
   return (
     <section className="section-pad bg-[color-mix(in_oklab,var(--lavender)_30%,var(--ivory))]">
       <div className="mx-auto max-w-md px-6">
-        <Header eyebrow="El kit completo" title="Qué incluye tu rutina." />
+        <Header eyebrow="El kit completo" title="Todo lo que tu cabello necesita para dejar de caerse y empezar a crecer." />
         <div className="mt-8 grid grid-cols-1 gap-5">
           {items.map((p, idx) => (
             <article key={p.name} className="luxe-card overflow-hidden">
@@ -693,7 +696,8 @@ function KitIncludes() {
                 <div className="min-w-0 p-5">
                   <span className="eyebrow">Paso {idx + 1}</span>
                   <h3 className="mt-1 text-xl">{p.name}</h3>
-                  <p className="mt-1.5 text-sm text-muted-foreground">{p.desc}</p>
+                  <p className="mt-1.5 text-sm font-medium">{p.tagline}</p>
+                  <p className="mt-1 text-sm text-muted-foreground">{p.desc}</p>
                 </div>
               </div>
             </article>
@@ -703,6 +707,7 @@ function KitIncludes() {
     </section>
   );
 }
+
 
 /* ----------------------------- INGREDIENTS ----------------------------- */
 function Ingredients() {
