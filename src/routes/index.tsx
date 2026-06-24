@@ -548,8 +548,8 @@ function ProductRoutineSection() {
 
   const benefits = [
     "Activa crecimiento",
-    "Fortalece raíz",
     "Reduce caída",
+    "Fortalece raíz",
     "Mayor densidad",
   ];
 
