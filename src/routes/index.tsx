@@ -32,7 +32,7 @@ import routineSectionBg from "@/assets/routine-section-bg.jpg.asset.json";
 import prodShampoo from "@/assets/product-shampoo.jpg";
 import prodConditionerAsset from "@/assets/product-conditioner-new.png.asset.json";
 const prodConditioner = prodConditionerAsset.url;
-import prodTonicAsset from "@/assets/product-shampoo-new.png.asset.json";
+import prodTonicAsset from "@/assets/product-tonic-new.png.asset.json";
 const prodTonic = prodTonicAsset.url;
 import ingRosemary from "@/assets/ing-rosemary.jpg";
 import ingHoney from "@/assets/ing-honey.jpg";
