@@ -751,8 +751,23 @@ function Ingredients() {
     { img: ingBotanical, name: "Extractos botánicos", icon: Sparkles },
   ];
   return (
-    <section className="section-pad">
-      <div className="mx-auto max-w-md px-6">
+    <section className="section-pad relative w-full overflow-hidden">
+      <img
+        src={afterBannerBg.url}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover"
+        loading="lazy"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(20,8,38,0.52) 0%, rgba(20,8,38,0.42) 40%, rgba(20,8,38,0.55) 100%)",
+        }}
+      />
+      <div className="relative z-10 mx-auto max-w-md px-6">
         <Header
           eyebrow="Inspiración natural"
           title="Inspirado en ingredientes naturales cuidadosamente seleccionados."
@@ -777,12 +792,13 @@ function Ingredients() {
             </article>
           ))}
         </div>
-        <p className="mt-7 text-center text-sm italic text-muted-foreground text-balance">
+        <p className="mt-7 text-center text-sm italic text-balance text-white/85">
           Cada fórmula está inspirada en ingredientes reconocidos por apoyar rutinas de cuidado
           capilar saludables.
         </p>
       </div>
     </section>
+
   );
 }
 
