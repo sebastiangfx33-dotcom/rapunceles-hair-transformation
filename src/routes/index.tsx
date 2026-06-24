@@ -447,21 +447,38 @@ function Solution() {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-md px-6">
+      <div className="relative z-10 mx-auto max-w-md px-6 min-h-[560px] sm:min-h-[680px] flex flex-col">
         <Header eyebrow="" title={"\n"} />
 
+        {/* Top chips - above products */}
+        <ul className="mt-2 flex flex-wrap justify-center gap-2">
+          {benefits.slice(0, 2).map(({ icon: Icon, text }) => (
+            <li
+              key={text}
+              className="flex items-center gap-1.5 rounded-full border border-[var(--gold)]/40 bg-[#1a0a2e]/70 backdrop-blur-sm px-3 py-1.5 text-[0.72rem] text-white/95"
+            >
+              <Icon className="size-3.5 text-[var(--gold)]" />
+              <span className="leading-none">{text}</span>
+            </li>
+          ))}
+        </ul>
 
-        <ul className="mt-8 space-y-3">
-          {benefits.map(({ icon: Icon, text }) => (
-            <li key={text} className="flex items-start gap-3 rounded-2xl border border-border/60 bg-card/70 p-4">
-              <span className="grid size-9 shrink-0 place-items-center rounded-full bg-secondary text-primary">
-                <Icon className="size-4" />
-              </span>
-              <p className="min-w-0 text-[0.95rem] leading-snug">{text}</p>
+        <div className="flex-1" />
+
+        {/* Bottom chips - below products */}
+        <ul className="mb-2 flex flex-wrap justify-center gap-2">
+          {benefits.slice(2).map(({ icon: Icon, text }) => (
+            <li
+              key={text}
+              className="flex items-center gap-1.5 rounded-full border border-[var(--gold)]/40 bg-[#1a0a2e]/70 backdrop-blur-sm px-3 py-1.5 text-[0.72rem] text-white/95"
+            >
+              <Icon className="size-3.5 text-[var(--gold)]" />
+              <span className="leading-none">{text}</span>
             </li>
           ))}
         </ul>
       </div>
+
     </section>
   );
 }
