@@ -27,6 +27,7 @@ import routineBg from "@/assets/routine-bg.png.asset.json";
 import heroKit from "@/assets/hero-kit.jpg";
 import heroKitNew from "@/assets/hero-kit-new.png.asset.json";
 import routineProducts from "@/assets/routine-products.png.asset.json";
+import routineBgV3 from "@/assets/routine-bg-v3.jpg.asset.json";
 import routineSectionBg from "@/assets/routine-section-bg.jpg.asset.json";
 import prodShampoo from "@/assets/product-shampoo.jpg";
 import prodConditioner from "@/assets/product-conditioner.jpg";
@@ -540,10 +541,10 @@ function ProductRoutineSection() {
     <section className="relative w-full overflow-hidden" style={{ background: "#1a0a2e" }}>
       {/* Background products image, centered */}
       <img
-        src={routineProducts.url}
+        src={routineBgV3.url}
         alt=""
         aria-hidden="true"
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[88%] max-w-[520px] h-auto object-contain opacity-95 pointer-events-none select-none"
+        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
       />
       {/* Soft vignette for legibility */}
       <div
