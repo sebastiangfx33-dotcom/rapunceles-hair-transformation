@@ -554,37 +554,6 @@ function ProductRoutineSection() {
         className="block w-full h-auto select-none"
       />
 
-      <div
-        className="grid grid-cols-2 md:grid-cols-4"
-        style={{ background: "#1a0a2e", padding: 24, gap: 12 }}
-      >
-        {badges.map((b) => (
-          <div
-            key={b.title}
-            className="flex flex-col items-center text-center"
-            style={{
-              background: "#2d1347",
-              border: `1px solid ${GOLD}`,
-              borderRadius: 12,
-              padding: 16,
-            }}
-          >
-            <span style={{ color: GOLD }} className="mb-3">{b.icon}</span>
-            <h3
-              className="text-white font-bold text-base sm:text-lg leading-snug mb-2"
-              style={{ fontFamily: SERIF }}
-            >
-              {b.title}
-            </h3>
-            <p
-              className="text-white leading-relaxed"
-              style={{ fontFamily: SANS, fontSize: 13 }}
-            >
-              {b.desc}
-            </p>
-          </div>
-        ))}
-      </div>
 
     </section>
   );
