@@ -715,7 +715,18 @@ function KitIncludes() {
                   />
                 </div>
                 <div className="min-w-0 p-5">
-                  <span className="eyebrow">Paso {idx + 1}</span>
+                  <span
+                    className="inline-flex items-center rounded-full px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em]"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, color-mix(in oklab, var(--gold) 92%, white), color-mix(in oklab, var(--gold) 70%, var(--lavender)))",
+                      color: "#2a1746",
+                      boxShadow:
+                        "0 1px 0 color-mix(in oklab, white 60%, transparent) inset, 0 4px 12px -6px color-mix(in oklab, var(--gold) 60%, transparent)",
+                    }}
+                  >
+                    Paso {idx + 1}
+                  </span>
                   <h3 className="mt-1 text-xl">{p.name}</h3>
                   <p className="mt-1.5 text-sm font-medium">{p.tagline}</p>
                   <p className="mt-1 text-sm text-muted-foreground">{p.desc}</p>
