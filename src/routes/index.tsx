@@ -547,17 +547,47 @@ function ProductRoutineSection() {
   ];
 
   return (
-    <section className="w-full" style={{ background: "#1a0a2e" }}>
+    <section className="relative w-full" style={{ background: "#1a0a2e" }}>
       <img
         src={routineBgV3.url}
         alt="La rutina que tu cabello necesita"
         className="block w-full h-auto select-none"
       />
 
+      {/* Overlay de texto centrado arriba — no altera el tamaño ni la estructura */}
+      <div className="absolute inset-x-0 top-0 z-10 pointer-events-none flex flex-col items-center text-center px-4 pt-[4%] sm:pt-[3%]">
+        {/* Corona */}
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke={GOLD}
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="w-6 h-6 sm:w-8 sm:h-8 mb-1 sm:mb-2 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]"
+          aria-hidden="true"
+        >
+          <path d="M3 7l4 4 5-6 5 6 4-4-2 11H5z" />
+          <path d="M5 20h14" />
+        </svg>
 
+        <h2
+          className="font-bold leading-tight text-[clamp(18px,4.2vw,42px)] drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)]"
+          style={{ fontFamily: SERIF, color: GOLD }}
+        >
+          La rutina que tu cabello necesita
+        </h2>
+        <p
+          className="mt-1 sm:mt-2 text-white/90 text-[clamp(11px,2.2vw,16px)] max-w-[80%] drop-shadow-[0_1px_6px_rgba(0,0,0,0.75)]"
+          style={{ fontFamily: SANS }}
+        >
+          3 productos diseñados para fortalecer, nutrir y revitalizar tu cabello desde la raíz.
+        </p>
+      </div>
     </section>
   );
 }
+
 
 
 
