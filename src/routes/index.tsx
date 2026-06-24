@@ -490,80 +490,101 @@ function ProductRoutineSection() {
   const SERIF = "'Playfair Display', serif";
   const SANS = "'Jost', sans-serif";
 
-  const RootIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-6">
-      <path d="M12 3v6" />
-      <path d="M12 9c-2 0-4 1.5-4 4s2 4 4 4 4-1.5 4-4-2-4-4-4z" />
-      <path d="M8 17c-1.5 1-3 1.5-4 4" />
-      <path d="M16 17c1.5 1 3 1.5 4 4" />
-      <path d="M12 17v4" />
+  const HairSparkleIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="size-7">
+      <path d="M7 21c0-5 2-9 5-13" />
+      <path d="M10 21c0-4 1.5-7.5 4-11" />
+      <path d="M13 21c0-3 1-6 3-9" />
+      <path d="M18 4l.6 1.4L20 6l-1.4.6L18 8l-.6-1.4L16 6l1.4-.6z" />
+      <path d="M5 6l.4 1L6.5 7.5l-1 .4L5 9l-.4-1L3.5 7.5l1-.4z" />
+    </svg>
+  );
+
+  const ShieldHairIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="size-7">
+      <path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" />
+      <path d="M9 11c1-1 2-1.5 3-1.5s2 .5 3 1.5" />
+      <path d="M10 14c.5-.5 1.2-.8 2-.8s1.5.3 2 .8" />
     </svg>
   );
 
   const DropIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-6">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="size-7">
       <path d="M12 3s6 7 6 12a6 6 0 1 1-12 0c0-5 6-12 6-12z" />
+      <path d="M10 15c0 1.5 1 2.5 2.5 2.5" />
     </svg>
   );
 
-  const SproutIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-6">
-      <path d="M12 21V10" />
-      <path d="M12 10c0-3 2-5 5-5 0 3-2 5-5 5z" />
-      <path d="M12 13c0-3-2-5-5-5 0 3 2 5 5 5z" />
+  const SparklesIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="size-7">
+      <path d="M12 3l1.2 3.3L16.5 7.5l-3.3 1.2L12 12l-1.2-3.3L7.5 7.5l3.3-1.2z" />
+      <path d="M18 14l.7 1.8 1.8.7-1.8.7L18 19l-.7-1.8-1.8-.7 1.8-.7z" />
+      <path d="M5 15l.5 1.3 1.3.5-1.3.5L5 18.6l-.5-1.3-1.3-.5 1.3-.5z" />
     </svg>
   );
 
-  const DensityIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-6">
-      <path d="M4 20c2-6 4-9 8-14" />
-      <path d="M8 20c2-6 4-9 8-14" />
-      <path d="M12 20c2-6 4-9 8-14" />
-    </svg>
-  );
-
-  const Badge = ({ icon, label }: { icon: React.ReactNode; label: string }) => (
-    <div
-      className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-[12px] backdrop-blur-sm shadow-lg"
-      style={{
-        background: "rgba(45, 19, 71, 0.75)",
-        border: `1px solid ${GOLD}80`,
-        fontFamily: SANS,
-      }}
-    >
-      <span style={{ color: GOLD }} className="shrink-0">{icon}</span>
-      <span className="text-white text-xs sm:text-sm font-medium leading-tight">{label}</span>
-    </div>
-  );
-
+  const badges = [
+    {
+      icon: <HairSparkleIcon />,
+      title: "Activa el crecimiento desde la raíz",
+      desc: "Estimula los folículos capilares y despierta el potencial natural de tu cabello.",
+    },
+    {
+      icon: <ShieldHairIcon />,
+      title: "Fortalece la raíz y evita quiebre",
+      desc: "Nutre intensamente para un cabello más resistente y saludable.",
+    },
+    {
+      icon: <DropIcon />,
+      title: "Reduce la caída progresiva",
+      desc: "Fortalece la raíz y disminuye la caída causada por estrés, hormonas y factores externos.",
+    },
+    {
+      icon: <SparklesIcon />,
+      title: "Cabello más largo, fuerte y saludable",
+      desc: "Mejora visiblemente la calidad del cabello y te acerca a tu mejor versión.",
+    },
+  ];
 
   return (
-    <section className="relative w-full overflow-hidden" style={{ background: "#1a0a2e" }}>
-      {/* Background products image, centered */}
+    <section className="w-full" style={{ background: "#2a1040" }}>
       <img
         src={routineBgV3.url}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
-      />
-      {/* Soft vignette for legibility */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse at center, rgba(26,10,46,0) 35%, rgba(26,10,46,0.85) 90%)" }}
+        alt="La rutina que tu cabello necesita"
+        className="block w-full h-auto select-none"
       />
 
-      <div className="relative z-10 mx-auto max-w-3xl px-4 py-12 sm:py-20 min-h-[640px] sm:min-h-[760px] flex flex-col">
-
-
-
-
-        <div className="flex-1" />
-
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 px-4 sm:px-6 pb-10 sm:pb-14 pt-3">
+        {badges.map((b) => (
+          <div
+            key={b.title}
+            className="flex flex-col items-center text-center p-5"
+            style={{
+              background: "#2d1347",
+              border: `1px solid ${GOLD}`,
+              borderRadius: 14,
+            }}
+          >
+            <span style={{ color: GOLD }} className="mb-3">{b.icon}</span>
+            <h3
+              className="text-white font-bold text-base sm:text-lg leading-snug mb-2"
+              style={{ fontFamily: SERIF }}
+            >
+              {b.title}
+            </h3>
+            <p
+              className="text-white/80 leading-relaxed"
+              style={{ fontFamily: SANS, fontSize: 13 }}
+            >
+              {b.desc}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );
 }
+
 
 
 
