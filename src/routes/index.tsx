@@ -26,6 +26,7 @@ import routineBg from "@/assets/routine-bg.png.asset.json";
 
 import heroKit from "@/assets/hero-kit.jpg";
 import heroKitNew from "@/assets/hero-kit-new.png.asset.json";
+import routineSectionBg from "@/assets/routine-section-bg.jpg.asset.json";
 import prodShampoo from "@/assets/product-shampoo.jpg";
 import prodConditioner from "@/assets/product-conditioner.jpg";
 import prodTonic from "@/assets/product-tonic.jpg";
@@ -518,7 +519,10 @@ function ProductRoutineSection() {
   );
 
   return (
-    <section className="w-full py-16 sm:py-24 px-4" style={{ background: "#1a0a2e" }}>
+    <section
+      className="w-full py-16 sm:py-24 px-4 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundColor: "#1a0a2e", backgroundImage: `url(${routineSectionBg.url})` }}
+    >
       <div className="mx-auto max-w-3xl">
         <div className="text-center flex flex-col items-center">
           <Crown className="size-9" style={{ color: GOLD }} strokeWidth={1.6} />
@@ -543,14 +547,10 @@ function ProductRoutineSection() {
           <Badge icon={<DropIcon />} label="Reduce caída" />
         </div>
 
-        <div className="mt-8 flex justify-center">
-          <img
-            src={heroKitNew.url}
-            alt="Rutina completa Rapuncelés"
-            className="w-full max-w-[400px] h-auto object-contain"
-            loading="lazy"
-          />
+        <div className="mt-8 flex justify-center" aria-hidden="true">
+          <div className="w-full max-w-[400px] aspect-[3/4]" />
         </div>
+
 
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Badge icon={<SproutIcon />} label="Estimula crecimiento" />
