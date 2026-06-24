@@ -560,11 +560,6 @@ function ProductRoutineSection() {
 
         <div className="flex-1" />
 
-        {/* Bottom badges */}
-        <div className="mt-10 sm:mt-14 flex items-center justify-between gap-2 sm:gap-6">
-          <Badge icon={<SproutIcon />} label="Estimula crecimiento" />
-          <Badge icon={<DensityIcon />} label="Mayor densidad" />
-        </div>
       </div>
     </section>
   );
