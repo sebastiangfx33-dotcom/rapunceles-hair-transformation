@@ -519,7 +519,10 @@ function ProductRoutineSection() {
   );
 
   return (
-    <section className="w-full py-16 sm:py-24 px-4" style={{ background: "#1a0a2e" }}>
+    <section
+      className="w-full py-16 sm:py-24 px-4 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundColor: "#1a0a2e", backgroundImage: `url(${routineSectionBg.url})` }}
+    >
       <div className="mx-auto max-w-3xl">
         <div className="text-center flex flex-col items-center">
           <Crown className="size-9" style={{ color: GOLD }} strokeWidth={1.6} />
