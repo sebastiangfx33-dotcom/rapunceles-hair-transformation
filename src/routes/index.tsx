@@ -544,8 +544,9 @@ function ProductRoutineSection() {
         src={routineBgV3.url}
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
+        className="absolute inset-0 w-full h-full object-contain object-center pointer-events-none select-none"
       />
+
       {/* Soft vignette for legibility */}
       <div
         aria-hidden="true"
