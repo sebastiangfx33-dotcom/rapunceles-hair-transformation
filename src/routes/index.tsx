@@ -490,80 +490,124 @@ function ProductRoutineSection() {
   const SERIF = "'Playfair Display', serif";
   const SANS = "'Jost', sans-serif";
 
-  const RootIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-6">
-      <path d="M12 3v6" />
-      <path d="M12 9c-2 0-4 1.5-4 4s2 4 4 4 4-1.5 4-4-2-4-4-4z" />
-      <path d="M8 17c-1.5 1-3 1.5-4 4" />
-      <path d="M16 17c1.5 1 3 1.5 4 4" />
-      <path d="M12 17v4" />
-    </svg>
-  );
-
-  const DropIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-6">
-      <path d="M12 3s6 7 6 12a6 6 0 1 1-12 0c0-5 6-12 6-12z" />
-    </svg>
-  );
-
-  const SproutIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-6">
-      <path d="M12 21V10" />
-      <path d="M12 10c0-3 2-5 5-5 0 3-2 5-5 5z" />
-      <path d="M12 13c0-3-2-5-5-5 0 3 2 5 5 5z" />
-    </svg>
-  );
-
-  const DensityIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-6">
-      <path d="M4 20c2-6 4-9 8-14" />
-      <path d="M8 20c2-6 4-9 8-14" />
-      <path d="M12 20c2-6 4-9 8-14" />
-    </svg>
-  );
-
-  const Badge = ({ icon, label }: { icon: React.ReactNode; label: string }) => (
-    <div
-      className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-[12px] backdrop-blur-sm shadow-lg"
-      style={{
-        background: "rgba(45, 19, 71, 0.75)",
-        border: `1px solid ${GOLD}80`,
-        fontFamily: SANS,
-      }}
-    >
-      <span style={{ color: GOLD }} className="shrink-0">{icon}</span>
-      <span className="text-white text-xs sm:text-sm font-medium leading-tight">{label}</span>
-    </div>
-  );
-
+  const items = [
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="size-7">
+          <path d="M6 21c0-6 3-10 6-14" />
+          <path d="M10 21c0-5 2-9 4-13" />
+          <path d="M14 21c0-4 1-7 3-11" />
+          <path d="M19 4l.5 1.5L21 6l-1.5.5L19 8l-.5-1.5L17 6l1.5-.5z" />
+          <path d="M5 9l.4 1.1L6.5 10.5l-1.1.4L5 12l-.4-1.1L3.5 10.5l1.1-.4z" />
+        </svg>
+      ),
+      title: "Activa el crecimiento desde la raíz",
+      desc: "Estimula los folículos capilares y despierta el potencial natural de tu cabello.",
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="size-7">
+          <path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z" />
+          <path d="M9 12c1-2 2-3 3-5 1 2 2 3 3 5" />
+          <path d="M12 7v8" />
+        </svg>
+      ),
+      title: "Fortalece la raíz y evita quiebre",
+      desc: "Nutre intensamente para un cabello más resistente y saludable.",
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="size-7">
+          <path d="M12 3s6 7 6 12a6 6 0 1 1-12 0c0-5 6-12 6-12z" />
+        </svg>
+      ),
+      title: "Reduce la caída progresiva",
+      desc: "Fortalece la raíz y disminuye la caída causada por estrés, hormonas y factores externos.",
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="size-7">
+          <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5z" />
+          <path d="M19 15l.7 2L22 18l-2.3 1L19 21l-.7-2L16 18l2.3-1z" />
+          <path d="M5 16l.5 1.5L7 18l-1.5.5L5 20l-.5-1.5L3 18l1.5-.5z" />
+        </svg>
+      ),
+      title: "Cabello más largo, fuerte y saludable",
+      desc: "Mejora visiblemente la calidad del cabello y te acerca a tu mejor versión.",
+    },
+  ];
 
   return (
     <section className="relative w-full overflow-hidden" style={{ background: "#1a0a2e" }}>
-      {/* Background products image, centered */}
-      <img
-        src={routineBgV3.url}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
-      />
-      {/* Soft vignette for legibility */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse at center, rgba(26,10,46,0) 35%, rgba(26,10,46,0.85) 90%)" }}
-      />
+      <div className="relative z-10 mx-auto max-w-6xl px-4 py-16 sm:py-24">
+        {/* HEADER */}
+        <div className="flex flex-col items-center text-center">
+          <Crown style={{ color: GOLD }} className="size-7" />
+          <div className="mt-3 h-px w-24" style={{ background: GOLD }} />
+          <h2
+            className="mt-5 leading-tight max-w-3xl"
+            style={{ fontFamily: SERIF, color: GOLD, fontSize: "clamp(1.6rem, 4vw, 2.25rem)" }}
+          >
+            Más que una rutina, una transformación completa para tu cabello
+          </h2>
+          <div className="mt-5 flex items-center justify-center gap-2 w-full max-w-xs">
+            <span className="h-px flex-1" style={{ background: `${GOLD}80` }} />
+            <span
+              className="block size-2 rotate-45"
+              style={{ background: GOLD }}
+              aria-hidden="true"
+            />
+            <span className="h-px flex-1" style={{ background: `${GOLD}80` }} />
+          </div>
+          <p
+            className="mt-5 text-white/90 max-w-2xl text-sm sm:text-base leading-relaxed"
+            style={{ fontFamily: SANS }}
+          >
+            Una combinación diseñada para devolverle fuerza, densidad, nutrición y vitalidad a tu cabello desde la raíz.
+          </p>
+        </div>
 
-      <div className="relative z-10 mx-auto max-w-3xl px-4 py-12 sm:py-20 min-h-[640px] sm:min-h-[760px] flex flex-col">
+        {/* GRID 4 BADGES */}
+        <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          {items.map((it) => (
+            <div
+              key={it.title}
+              className="flex flex-col items-center text-center p-5 rounded-[14px]"
+              style={{
+                background: "#2d1347",
+                border: `1px solid ${GOLD}`,
+              }}
+            >
+              <span style={{ color: GOLD }}>{it.icon}</span>
+              <h3
+                className="mt-3 text-white font-bold text-base sm:text-lg leading-snug"
+                style={{ fontFamily: SERIF }}
+              >
+                {it.title}
+              </h3>
+              <p
+                className="mt-2 text-white/80 text-xs sm:text-sm leading-relaxed"
+                style={{ fontFamily: SANS }}
+              >
+                {it.desc}
+              </p>
+            </div>
+          ))}
+        </div>
 
-
-
-
-        <div className="flex-1" />
-
+        {/* PRODUCTS IMAGE */}
+        <div className="mt-12 flex justify-center">
+          <img
+            src={routineProducts.url}
+            alt="Productos Rapunceles"
+            className="w-full max-w-[500px] h-auto object-contain"
+          />
+        </div>
       </div>
     </section>
   );
 }
+
 
 
 
