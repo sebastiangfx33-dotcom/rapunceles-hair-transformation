@@ -557,11 +557,6 @@ function ProductRoutineSection() {
 
 
 
-        {/* Middle badges - left/right of products */}
-        <div className="mt-10 sm:mt-14 flex items-center justify-between gap-2 sm:gap-6">
-          <Badge icon={<RootIcon />} label="Fortalece raíz" />
-          <Badge icon={<DropIcon />} label="Reduce caída" />
-        </div>
 
         <div className="flex-1" />
 
