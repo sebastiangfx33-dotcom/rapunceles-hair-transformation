@@ -135,6 +135,7 @@ function Hero() {
             fontWeight: 500,
             color: IVORY,
             maxWidth: "62%",
+            marginLeft: "-10px",
           }}
         >
           Tu cabello <br />
