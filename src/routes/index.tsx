@@ -588,7 +588,7 @@ function ProductRoutineSection() {
         {/* Subtitle */}
         <div
           className="absolute left-0 right-0 text-center px-10"
-          style={{ top: "21.5%" }}
+          style={{ top: "17%" }}
         >
           <p
             className="text-[#e8d9b8]/90"
