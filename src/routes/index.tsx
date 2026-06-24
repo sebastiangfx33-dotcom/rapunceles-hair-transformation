@@ -660,7 +660,7 @@ function KitIncludes() {
       img: prodShampoo,
       name: "Shampoo Nutritivo",
       tagline: "Limpia sin debilitar.",
-      desc: "Purifica profundamente el cuero cabelludo y crea el entorno ideal para fortalecer la raíz y acompañar un crecimiento saludable desde el primer lavado.",
+      desc: "Purifica el cuero cabelludo y crea el entorno ideal para que la raíz crezca fuerte desde el primer lavado.",
     },
     {
       img: prodConditioner,
