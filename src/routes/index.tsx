@@ -523,17 +523,18 @@ function ProductRoutineSection() {
 
   const Badge = ({ icon, label }: { icon: React.ReactNode; label: string }) => (
     <div
-      className="flex items-center gap-3 px-5 py-4 rounded-[12px]"
+      className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-[12px] backdrop-blur-sm shadow-lg"
       style={{
-        background: "#2d1347",
-        border: `1px solid ${GOLD}40`,
+        background: "rgba(45, 19, 71, 0.75)",
+        border: `1px solid ${GOLD}80`,
         fontFamily: SANS,
       }}
     >
-      <span style={{ color: GOLD }}>{icon}</span>
-      <span className="text-white text-sm sm:text-base font-medium leading-tight">{label}</span>
+      <span style={{ color: GOLD }} className="shrink-0">{icon}</span>
+      <span className="text-white text-xs sm:text-sm font-medium leading-tight">{label}</span>
     </div>
   );
+
 
   return (
     <section className="w-full py-16 sm:py-24 px-4" style={{ background: "#1a0a2e" }}>
