@@ -566,7 +566,7 @@ function ProductRoutineSection() {
         {/* Title */}
         <div
           className="absolute left-0 right-0 text-center px-6"
-          style={{ top: "5.2%" }}
+          style={{ top: "2%" }}
         >
           <h2
             className="font-serif text-[#d9b86a] leading-[1.15]"
