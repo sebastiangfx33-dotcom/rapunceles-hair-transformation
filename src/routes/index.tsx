@@ -563,7 +563,7 @@ function ProductRoutineSection() {
 
         <div className="mt-8 flex justify-center">
           <img
-            src={heroKitNew.url}
+            src={routineProducts.url}
             alt="Rutina completa Rapuncelés"
             className="w-full max-w-[400px] h-auto object-contain"
             loading="lazy"
