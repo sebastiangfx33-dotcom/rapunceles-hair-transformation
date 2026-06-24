@@ -27,7 +27,7 @@ import routineBg from "@/assets/routine-bg.png.asset.json";
 import heroKit from "@/assets/hero-kit.jpg";
 import heroKitNew from "@/assets/hero-kit-new.png.asset.json";
 import routineProducts from "@/assets/routine-products.png.asset.json";
-import routineBgV3 from "@/assets/routine-bg-v4.png.asset.json";
+import routineBgV3 from "@/assets/routine-bg-v5.png.asset.json";
 import routineSectionBg from "@/assets/routine-section-bg.jpg.asset.json";
 import prodShampoo from "@/assets/product-shampoo.jpg";
 import prodConditioner from "@/assets/product-conditioner.jpg";
