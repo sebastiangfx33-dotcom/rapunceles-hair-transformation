@@ -547,14 +547,15 @@ function ProductRoutineSection() {
   ];
 
   return (
-    <section className="w-full" style={{ background: "#2a1040" }}>
+    <section className="w-full" style={{ background: "#1a0a2e" }}>
       <img
         src={routineBgV3.url}
         alt="La rutina que tu cabello necesita"
         className="block w-full h-auto select-none"
       />
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 px-4 sm:px-6 pb-10 sm:pb-14 pt-3">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-0 px-0 pb-10 sm:pb-14 pt-0">
+
         {badges.map((b) => (
           <div
             key={b.title}
