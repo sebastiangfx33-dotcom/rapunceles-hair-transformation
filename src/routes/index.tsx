@@ -569,7 +569,7 @@ function ProductRoutineSection() {
           style={{ top: "2%" }}
         >
           <h2
-            className="font-serif text-[#d9b86a] leading-[1.15]"
+            className="font-serif text-white leading-[1.15]"
             style={{
               fontFamily: '"Cormorant Garamond", "Playfair Display", serif',
               fontSize: "clamp(20px, 5.8vw, 34px)",
