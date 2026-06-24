@@ -555,12 +555,12 @@ function ProductRoutineSection() {
 
   return (
     <section className="w-full" style={{ background: "#1a0a2e" }}>
-      <div className="relative w-full mx-auto" style={{ maxWidth: 593 }}>
+      <div className="relative w-full mx-auto" style={{ maxWidth: 852 }}>
         <img
           src={routineBgV3.url}
           alt="La rutina que tu cabello necesita"
           className="block w-full h-auto select-none"
-          style={{ aspectRatio: "593 / 1280" }}
+          style={{ aspectRatio: "852 / 1280" }}
         />
 
         {/* Title */}
