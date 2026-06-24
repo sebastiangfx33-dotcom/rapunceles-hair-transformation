@@ -71,7 +71,6 @@ function Landing() {
     <main className="overflow-x-hidden bg-background text-foreground">
       <Hero />
       <AfterBanner />
-      <Solution />
       <ProductRoutineSection />
       <KitIncludes />
       <Ingredients />
