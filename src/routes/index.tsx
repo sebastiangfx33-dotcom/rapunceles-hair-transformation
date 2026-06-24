@@ -672,7 +672,7 @@ function KitIncludes() {
       img: prodTonic,
       name: "Tónico de Crecimiento",
       tagline: "El paso más importante de la rutina.",
-      desc: "Actúa directamente sobre la raíz, fortalece el folículo y favorece una melena más densa, llena y con vida.",
+      desc: "Una po",
     },
   ];
   return (
