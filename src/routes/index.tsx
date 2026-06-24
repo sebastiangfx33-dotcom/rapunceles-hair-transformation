@@ -679,8 +679,25 @@ function KitIncludes() {
     },
   ];
   return (
-    <section className="section-pad bg-[color-mix(in_oklab,var(--lavender)_30%,var(--ivory))]">
-      <div className="mx-auto max-w-md px-6">
+    <section className="section-pad relative w-full overflow-hidden">
+      {/* Background image — same as "Tu cabello te está enviando señales" */}
+      <img
+        src={afterBannerBg.url}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover"
+        loading="lazy"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(20,8,38,0.52) 0%, rgba(20,8,38,0.42) 40%, rgba(20,8,38,0.55) 100%)",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto max-w-md px-6">
         <Header eyebrow="El kit completo" title="Todo lo que tu cabello necesita para crecer más fuerte, abundante y saludable." />
 
         <div className="mt-8 grid grid-cols-1 gap-5">
@@ -711,6 +728,7 @@ function KitIncludes() {
     </section>
   );
 }
+
 
 
 /* ----------------------------- INGREDIENTS ----------------------------- */
