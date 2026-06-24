@@ -666,7 +666,7 @@ function KitIncludes() {
       img: prodConditioner,
       name: "Acondicionador Fortalecedor",
       tagline: "Protege cada hebra.",
-      desc: "Ayuda a reducir el quiebre, aporta nutrición profunda y mejora la resistencia, suavidad y apariencia de volumen de tu cabello.",
+      desc: "Reduce el quiebre, aporta nutrición profunda y da mayor resistencia, suavidad y volumen a tu cabello.",
     },
     {
       img: prodTonic,
