@@ -554,24 +554,8 @@ function ProductRoutineSection() {
       />
 
       <div className="relative z-10 mx-auto max-w-3xl px-4 py-12 sm:py-20 min-h-[640px] sm:min-h-[760px] flex flex-col">
-        {/* Header */}
-        <div className="text-center flex flex-col items-center">
-          <Crown className="size-8 sm:size-9" style={{ color: GOLD }} strokeWidth={1.6} />
-          <h2
-            className="mt-4 text-2xl sm:text-4xl md:text-5xl leading-tight"
-            style={{ fontFamily: SERIF, color: GOLD, fontWeight: 500 }}
-          >
-            La rutina que tu cabello necesita
-          </h2>
-          <div className="mt-4 flex items-center gap-3" aria-hidden="true" style={{ color: GOLD }}>
-            <span className="block h-px w-10" style={{ background: GOLD }} />
-            <svg viewBox="0 0 24 24" className="size-3" fill="currentColor"><circle cx="12" cy="12" r="6" /></svg>
-            <span className="block h-px w-10" style={{ background: GOLD }} />
-          </div>
-          <p className="mt-4 text-sm sm:text-base text-white/85 max-w-md" style={{ fontFamily: SANS }}>
-            Una combinación diseñada para fortalecer tu cabello desde la raíz.
-          </p>
-        </div>
+
+
 
         {/* Middle badges - left/right of products */}
         <div className="mt-10 sm:mt-14 flex items-center justify-between gap-2 sm:gap-6">
