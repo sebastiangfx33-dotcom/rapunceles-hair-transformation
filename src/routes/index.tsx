@@ -537,41 +537,51 @@ function ProductRoutineSection() {
 
 
   return (
-    <section className="w-full py-16 sm:py-24 px-4" style={{ background: "#1a0a2e" }}>
-      <div className="mx-auto max-w-3xl">
+    <section className="relative w-full overflow-hidden" style={{ background: "#1a0a2e" }}>
+      {/* Background products image, centered */}
+      <img
+        src={routineProducts.url}
+        alt=""
+        aria-hidden="true"
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[88%] max-w-[520px] h-auto object-contain opacity-95 pointer-events-none select-none"
+      />
+      {/* Soft vignette for legibility */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse at center, rgba(26,10,46,0) 35%, rgba(26,10,46,0.85) 90%)" }}
+      />
+
+      <div className="relative z-10 mx-auto max-w-3xl px-4 py-12 sm:py-20 min-h-[640px] sm:min-h-[760px] flex flex-col">
+        {/* Header */}
         <div className="text-center flex flex-col items-center">
-          <Crown className="size-9" style={{ color: GOLD }} strokeWidth={1.6} />
+          <Crown className="size-8 sm:size-9" style={{ color: GOLD }} strokeWidth={1.6} />
           <h2
-            className="mt-5 text-3xl sm:text-4xl md:text-5xl leading-tight"
+            className="mt-4 text-2xl sm:text-4xl md:text-5xl leading-tight"
             style={{ fontFamily: SERIF, color: GOLD, fontWeight: 500 }}
           >
             La rutina que tu cabello necesita
           </h2>
-          <div className="mt-5 flex items-center gap-3" aria-hidden="true" style={{ color: GOLD }}>
+          <div className="mt-4 flex items-center gap-3" aria-hidden="true" style={{ color: GOLD }}>
             <span className="block h-px w-10" style={{ background: GOLD }} />
             <svg viewBox="0 0 24 24" className="size-3" fill="currentColor"><circle cx="12" cy="12" r="6" /></svg>
             <span className="block h-px w-10" style={{ background: GOLD }} />
           </div>
-          <p className="mt-5 text-base sm:text-lg text-white/85 max-w-xl" style={{ fontFamily: SANS }}>
+          <p className="mt-4 text-sm sm:text-base text-white/85 max-w-md" style={{ fontFamily: SANS }}>
             Una combinación diseñada para fortalecer tu cabello desde la raíz.
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4">
+        {/* Middle badges - left/right of products */}
+        <div className="mt-10 sm:mt-14 flex items-center justify-between gap-2 sm:gap-6">
           <Badge icon={<RootIcon />} label="Fortalece raíz" />
           <Badge icon={<DropIcon />} label="Reduce caída" />
         </div>
 
-        <div className="mt-8 flex justify-center">
-          <img
-            src={routineProducts.url}
-            alt="Rutina completa Rapuncelés"
-            className="w-full max-w-[400px] h-auto object-contain"
-            loading="lazy"
-          />
-        </div>
+        <div className="flex-1" />
 
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4">
+        {/* Bottom badges */}
+        <div className="mt-10 sm:mt-14 flex items-center justify-between gap-2 sm:gap-6">
           <Badge icon={<SproutIcon />} label="Estimula crecimiento" />
           <Badge icon={<DensityIcon />} label="Mayor densidad" />
         </div>
@@ -579,6 +589,7 @@ function ProductRoutineSection() {
     </section>
   );
 }
+
 
 
 
