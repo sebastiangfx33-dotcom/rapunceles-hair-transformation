@@ -678,7 +678,7 @@ function KitIncludes() {
   return (
     <section className="section-pad bg-[color-mix(in_oklab,var(--lavender)_30%,var(--ivory))]">
       <div className="mx-auto max-w-md px-6">
-        <Header eyebrow="El kit completo" title="Todo lo que tu cabello necesita para dejar de caerse y empezar a crecer." />
+        <Header eyebrow="El kit completo" title="Todo lo que tu cabello necesita para crecer más fuerte, abundante y saludable." />
         <div className="mt-8 grid grid-cols-1 gap-5">
           {items.map((p, idx) => (
             <article key={p.name} className="luxe-card overflow-hidden">
