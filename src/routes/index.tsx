@@ -569,9 +569,7 @@ function ProductRoutineSection() {
           />
         </div>
 
-
-
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4">
           <Badge icon={<SproutIcon />} label="Estimula crecimiento" />
           <Badge icon={<DensityIcon />} label="Mayor densidad" />
         </div>
