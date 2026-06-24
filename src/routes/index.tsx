@@ -137,8 +137,8 @@ function Hero() {
             maxWidth: "62%",
           }}
         >
-          Tu cabello<br />
-          puede volver<br />
+          Tu cabello <br />
+          puede volver <br />
           a crecer fuerte,{" "}
           <span style={{ color: GOLD, fontStyle: "italic", fontWeight: 500 }}>
             abundante y saludable.
