@@ -805,9 +805,9 @@ function Ingredients() {
 /* ------------------------------ RESULTS ------------------------------ */
 function Results() {
   const items = [
-    { img: result1, name: "Andrea", time: "después de 12 semanas" },
-    { img: result2, name: "Camila", time: "después de 16 semanas" },
-    { img: result3, name: "Valentina", time: "después de 10 semanas" },
+    { before: result1, after: result1, name: "Andrea", time: "después de 12 semanas" },
+    { before: result2, after: result2, name: "Camila", time: "después de 16 semanas" },
+    { before: result3, after: result3, name: "Valentina", time: "después de 10 semanas" },
   ];
   return (
     <section className="section-pad bg-[color-mix(in_oklab,var(--beige)_60%,var(--ivory))]">
@@ -816,14 +816,34 @@ function Results() {
         <div className="mt-8 space-y-5">
           {items.map((r) => (
             <article key={r.name} className="luxe-card overflow-hidden">
-              <img
-                src={r.img}
-                alt={`Resultado de ${r.name}`}
-                width={1024}
-                height={768}
-                loading="lazy"
-                className="w-full object-cover"
-              />
+              <div className="grid grid-cols-2 gap-0">
+                <div className="relative">
+                  <img
+                    src={r.before}
+                    alt={`Antes - ${r.name}`}
+                    width={512}
+                    height={640}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                  <span className="absolute left-2 top-2 rounded-full bg-black/60 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
+                    Antes
+                  </span>
+                </div>
+                <div className="relative border-l border-white/40">
+                  <img
+                    src={r.after}
+                    alt={`Después - ${r.name}`}
+                    width={512}
+                    height={640}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                  <span className="absolute right-2 top-2 rounded-full bg-[var(--gold)] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-[#2a1746]">
+                    Después
+                  </span>
+                </div>
+              </div>
               <div className="flex items-center justify-between gap-3 px-5 py-4">
                 <div className="min-w-0">
                   <p className="truncate font-medium">{r.name}</p>
@@ -834,6 +854,7 @@ function Results() {
             </article>
           ))}
         </div>
+
       </div>
     </section>
   );
