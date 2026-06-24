@@ -547,14 +547,10 @@ function ProductRoutineSection() {
           <Badge icon={<DropIcon />} label="Reduce caída" />
         </div>
 
-        <div className="mt-8 flex justify-center">
-          <img
-            src={heroKitNew.url}
-            alt="Rutina completa Rapuncelés"
-            className="w-full max-w-[400px] h-auto object-contain"
-            loading="lazy"
-          />
+        <div className="mt-8 flex justify-center" aria-hidden="true">
+          <div className="w-full max-w-[400px] aspect-[3/4]" />
         </div>
+
 
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Badge icon={<SproutIcon />} label="Estimula crecimiento" />
