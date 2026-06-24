@@ -664,7 +664,7 @@ function KitIncludes() {
     {
       img: prodConditioner,
       name: "Acondicionador",
-      desc: "Hidrata y ayuda a proteger la fibra capilar.",
+      desc: "Aporta hidratación profunda, suavidad y nutrición para un cabello más manejable y saludable",
     },
     {
       img: prodTonic,
