@@ -522,36 +522,20 @@ function ProductRoutineSection() {
     </svg>
   );
 
-  const CrownIcon = () => (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="size-7">
-      <path d="M3 7l4 4 5-7 5 7 4-4-2 11H5L3 7zm2.5 13h13v1.5h-13z" />
-    </svg>
-  );
-
   const Badge = ({ icon, label }: { icon: React.ReactNode; label: string }) => (
     <div
-      className="flex flex-col items-center justify-center text-center gap-2 px-3 py-3 rounded-[12px] backdrop-blur-sm shadow-lg w-[130px]"
+      className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-[12px] backdrop-blur-sm shadow-lg"
       style={{
-        background: "rgba(45, 19, 71, 0.85)",
-        border: `1px solid ${GOLD}`,
+        background: "rgba(45, 19, 71, 0.75)",
+        border: `1px solid ${GOLD}80`,
         fontFamily: SANS,
       }}
     >
       <span style={{ color: GOLD }} className="shrink-0">{icon}</span>
-      <span className="text-white text-xs font-medium leading-tight">{label}</span>
+      <span className="text-white text-xs sm:text-sm font-medium leading-tight">{label}</span>
     </div>
   );
 
-  const leftBadges = [
-    { icon: <RootIcon />, label: "Fortalece desde la raíz" },
-    { icon: <DropIcon />, label: "Reduce caída progresiva" },
-    { icon: <SproutIcon />, label: "Estimula crecimiento saludable" },
-  ];
-  const rightBadges = [
-    { icon: <DensityIcon />, label: "Mayor densidad capilar" },
-    { icon: <DropIcon />, label: "Nutrición profunda diaria" },
-    { icon: <SproutIcon />, label: "Brillo y suavidad natural" },
-  ];
 
   return (
     <section className="relative w-full overflow-hidden" style={{ background: "#1a0a2e" }}>
@@ -566,48 +550,30 @@ function ProductRoutineSection() {
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse at center, rgba(26,10,46,0) 30%, rgba(26,10,46,0.9) 95%)" }}
+        style={{ background: "radial-gradient(ellipse at center, rgba(26,10,46,0) 35%, rgba(26,10,46,0.85) 90%)" }}
       />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-4 py-12 sm:py-16">
-        {/* Header */}
-        <div className="text-center flex flex-col items-center gap-4 max-w-2xl mx-auto">
-          <span style={{ color: GOLD }}><CrownIcon /></span>
-          <h2
-            className="text-2xl sm:text-4xl leading-tight"
-            style={{ fontFamily: SERIF, color: GOLD }}
-          >
-            Más que una rutina, una transformación completa para tu cabello
-          </h2>
-          <div className="flex items-center gap-2" aria-hidden="true">
-            <span className="block h-px w-16" style={{ background: GOLD }} />
-            <span className="inline-block size-2 rotate-45" style={{ background: GOLD }} />
-            <span className="block h-px w-16" style={{ background: GOLD }} />
-          </div>
-          <p className="text-white text-sm sm:text-base" style={{ fontFamily: SANS }}>
-            Una combinación diseñada para devolverle fuerza, densidad, nutrición y vitalidad a tu cabello desde la raíz.
-          </p>
+      <div className="relative z-10 mx-auto max-w-3xl px-4 py-12 sm:py-20 min-h-[640px] sm:min-h-[760px] flex flex-col">
+
+
+
+        {/* Middle badges - left/right of products */}
+        <div className="mt-10 sm:mt-14 flex items-center justify-between gap-2 sm:gap-6">
+          <Badge icon={<RootIcon />} label="Fortalece raíz" />
+          <Badge icon={<DropIcon />} label="Reduce caída" />
         </div>
 
-        {/* 3-column grid: left badges | image space | right badges */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-6 md:gap-8 items-center">
-          <div className="flex md:flex-col flex-wrap justify-center gap-4 order-2 md:order-1">
-            {leftBadges.map((b, i) => (
-              <Badge key={`l-${i}`} icon={b.icon} label={b.label} />
-            ))}
-          </div>
-          <div className="order-1 md:order-2 min-h-[280px] md:min-h-[480px]" />
-          <div className="flex md:flex-col flex-wrap justify-center gap-4 order-3">
-            {rightBadges.map((b, i) => (
-              <Badge key={`r-${i}`} icon={b.icon} label={b.label} />
-            ))}
-          </div>
+        <div className="flex-1" />
+
+        {/* Bottom badges */}
+        <div className="mt-10 sm:mt-14 flex items-center justify-between gap-2 sm:gap-6">
+          <Badge icon={<SproutIcon />} label="Estimula crecimiento" />
+          <Badge icon={<DensityIcon />} label="Mayor densidad" />
         </div>
       </div>
     </section>
   );
 }
-
 
 
 
