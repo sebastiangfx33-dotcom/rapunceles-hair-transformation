@@ -537,92 +537,29 @@ function ProductRoutineSection() {
   );
 
 
-  const leftBadges = [
-    { icon: <RootIcon />, label: "Fortalece desde la raíz" },
-    { icon: <DropIcon />, label: "Reduce caída progresiva" },
-    { icon: <SproutIcon />, label: "Estimula crecimiento saludable" },
-  ];
-  const rightBadges = [
-    { icon: <DensityIcon />, label: "Mayor densidad capilar" },
-    { icon: <DropIcon />, label: "Nutrición profunda diaria" },
-    { icon: <SproutIcon />, label: "Brillo y suavidad natural" },
-  ];
-
-  const BadgeCard = ({ icon, label }: { icon: React.ReactNode; label: string }) => (
-    <div
-      className="flex flex-col items-center justify-center gap-2 text-center text-white"
-      style={{
-        background: "rgba(45, 19, 71, 0.88)",
-        border: `1px solid ${GOLD}`,
-        borderRadius: 14,
-        padding: 16,
-        width: 130,
-        fontFamily: SANS,
-        fontSize: 13,
-        lineHeight: 1.25,
-      }}
-    >
-      <span style={{ color: GOLD }}>{icon}</span>
-      <span>{label}</span>
-    </div>
-  );
-
   return (
     <section className="relative w-full overflow-hidden" style={{ background: "#1a0a2e" }}>
-      <div className="relative z-10 mx-auto max-w-6xl px-4 py-12 sm:py-20">
-        {/* HEADER */}
-        <div className="flex flex-col items-center text-center mb-10 sm:mb-14">
-          <svg viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="size-7 mb-3">
-            <path d="M3 7l4 4 5-6 5 6 4-4-2 12H5L3 7z" />
-            <path d="M5 19h14" />
-          </svg>
-          <h2
-            className="text-3xl sm:text-4xl md:text-5xl leading-tight max-w-3xl"
-            style={{ fontFamily: SERIF, color: GOLD }}
-          >
-            Más que una rutina, una transformación completa para tu cabello
-          </h2>
-          <div className="flex items-center gap-3 my-5 w-full max-w-xs">
-            <span className="h-px flex-1" style={{ background: GOLD }} />
-            <span className="rotate-45 inline-block" style={{ width: 7, height: 7, background: GOLD }} />
-            <span className="h-px flex-1" style={{ background: GOLD }} />
-          </div>
-          <p className="text-white/90 max-w-2xl text-sm sm:text-base" style={{ fontFamily: SANS }}>
-            Una combinación diseñada para devolverle fuerza, densidad, nutrición y vitalidad a tu cabello desde la raíz.
-          </p>
-        </div>
+      {/* Background products image, centered */}
+      <img
+        src={routineBgV3.url}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
+      />
+      {/* Soft vignette for legibility */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse at center, rgba(26,10,46,0) 35%, rgba(26,10,46,0.85) 90%)" }}
+      />
 
-        {/* Desktop grid */}
-        <div className="hidden md:grid grid-cols-[auto_1fr_auto] gap-8 items-center justify-items-center">
-          <div className="flex flex-col gap-4">
-            {leftBadges.map((b, i) => <BadgeCard key={i} {...b} />)}
-          </div>
-          <img
-            src={routineBgV3.url}
-            alt="Rutina capilar Rapuncelés"
-            className="w-full object-contain"
-            style={{ maxWidth: 340 }}
-          />
-          <div className="flex flex-col gap-4">
-            {rightBadges.map((b, i) => <BadgeCard key={i} {...b} />)}
-          </div>
-        </div>
+      <div className="relative z-10 mx-auto max-w-3xl px-4 py-12 sm:py-20 min-h-[640px] sm:min-h-[760px] flex flex-col">
 
-        {/* Mobile layout */}
-        <div className="md:hidden flex flex-col items-center gap-6">
-          <div className="grid grid-cols-2 gap-3 justify-items-center">
-            {leftBadges.map((b, i) => <BadgeCard key={i} {...b} />)}
-          </div>
-          <img
-            src={routineBgV3.url}
-            alt="Rutina capilar Rapuncelés"
-            className="w-full object-contain"
-            style={{ maxWidth: 340 }}
-          />
-          <div className="grid grid-cols-2 gap-3 justify-items-center">
-            {rightBadges.map((b, i) => <BadgeCard key={i} {...b} />)}
-          </div>
-        </div>
+
+
+
+        <div className="flex-1" />
+
       </div>
     </section>
   );
