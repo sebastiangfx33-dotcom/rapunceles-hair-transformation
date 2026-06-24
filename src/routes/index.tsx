@@ -546,13 +546,104 @@ function ProductRoutineSection() {
     },
   ];
 
+  const benefits = [
+    "Activa crecimiento",
+    "Fortalece raíz",
+    "Reduce caída",
+    "Mayor densidad",
+  ];
+
   return (
     <section className="w-full" style={{ background: "#1a0a2e" }}>
-      <img
-        src={routineBgV3.url}
-        alt="La rutina que tu cabello necesita"
-        className="block w-full h-auto select-none"
-      />
+      <div className="relative w-full mx-auto" style={{ maxWidth: 593 }}>
+        <img
+          src={routineBgV3.url}
+          alt="La rutina que tu cabello necesita"
+          className="block w-full h-auto select-none"
+          style={{ aspectRatio: "593 / 1280" }}
+        />
+
+        {/* Title */}
+        <div
+          className="absolute left-0 right-0 text-center px-6"
+          style={{ top: "5.2%" }}
+        >
+          <h2
+            className="font-serif text-[#d9b86a] leading-[1.15]"
+            style={{
+              fontFamily: '"Cormorant Garamond", "Playfair Display", serif',
+              fontSize: "clamp(20px, 5.8vw, 34px)",
+              fontWeight: 500,
+              letterSpacing: "0.01em",
+            }}
+          >
+            Más que una rutina,
+            <br />
+            una transformación completa
+            <br />
+            para tu cabello
+          </h2>
+        </div>
+
+        {/* Subtitle */}
+        <div
+          className="absolute left-0 right-0 text-center px-10"
+          style={{ top: "21.5%" }}
+        >
+          <p
+            className="text-[#e8d9b8]/90"
+            style={{
+              fontFamily: '"Inter", system-ui, sans-serif',
+              fontSize: "clamp(11px, 3.1vw, 16px)",
+              lineHeight: 1.55,
+              fontWeight: 300,
+            }}
+          >
+            Una combinación diseñada para devolverle
+            <br />
+            fuerza, densidad, nutrición y vitalidad
+            <br />
+            a tu cabello desde la raíz.
+          </p>
+        </div>
+
+        {/* Four benefit cards */}
+        <div
+          className="absolute left-0 right-0 px-3"
+          style={{ bottom: "2.5%" }}
+        >
+          <div className="grid grid-cols-4 gap-1.5">
+            {benefits.map((b) => (
+              <div
+                key={b}
+                className="rounded-lg text-center flex items-center justify-center"
+                style={{
+                  background: "rgba(20, 8, 35, 0.55)",
+                  border: "1px solid rgba(217, 184, 106, 0.55)",
+                  boxShadow:
+                    "0 4px 14px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04)",
+                  backdropFilter: "blur(6px)",
+                  padding: "10px 6px",
+                  minHeight: 64,
+                }}
+              >
+                <span
+                  className="text-[#e8d3a0]"
+                  style={{
+                    fontFamily:
+                      '"Cormorant Garamond", "Playfair Display", serif',
+                    fontSize: "clamp(10px, 2.9vw, 14px)",
+                    lineHeight: 1.2,
+                    letterSpacing: "0.02em",
+                  }}
+                >
+                  {b}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
