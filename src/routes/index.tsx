@@ -659,7 +659,7 @@ function KitIncludes() {
     {
       img: prodShampoo,
       name: "Shampoo Nutritivo",
-      desc: "Limpia suavemente mientras prepara el cuero cabelludo.",
+      desc: "Elimina impurezas mientras prepara el cuero cabelludo para recibir los nutrientes que tu cabello necesita",
     },
     {
       img: prodConditioner,
