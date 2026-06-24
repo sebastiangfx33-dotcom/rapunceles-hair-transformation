@@ -660,25 +660,26 @@ function KitIncludes() {
       img: prodShampoo,
       name: "Shampoo Nutritivo",
       tagline: "Limpia sin debilitar.",
-      desc: "Purifica el cuero cabelludo y crea el entorno ideal para que la raíz crezca fuerte desde el primer lavado.",
+      desc: "Purifica profundamente el cuero cabelludo y crea el entorno ideal para fortalecer la raíz y acompañar un crecimiento saludable desde el primer lavado.",
     },
     {
       img: prodConditioner,
       name: "Acondicionador Fortalecedor",
       tagline: "Protege cada hebra.",
-      desc: "Reduce el quiebre, aporta nutrición profunda y da mayor resistencia, suavidad y volumen a tu cabello.",
+      desc: "Ayuda a reducir el quiebre, aporta nutrición profunda y mejora la resistencia, suavidad y apariencia de volumen de tu cabello.",
     },
     {
       img: prodTonic,
       name: "Tónico de Crecimiento",
       tagline: "El paso más importante de la rutina.",
-      desc: "Una potente mezcla de ingredientes naturales que fortalece la raíz, estimula el crecimiento y ayuda a recuperar una melena más abundante, fuerte y llena de vida.",
+      desc: "Actúa directamente sobre la raíz para fortalecer el folículo y favorecer una melena con mayor apariencia de densidad, abundancia y vitalidad.",
     },
   ];
   return (
     <section className="section-pad bg-[color-mix(in_oklab,var(--lavender)_30%,var(--ivory))]">
       <div className="mx-auto max-w-md px-6">
-        <Header eyebrow="El kit completo" title="Todo lo que tu cabello necesita para crecer más fuerte, abundante y saludable." />
+        <Header eyebrow="El kit completo" title="Todo lo que tu cabello necesita para dejar de caerse y volver a crecer con fuerza, densidad y vitalidad." />
+
         <div className="mt-8 grid grid-cols-1 gap-5">
           {items.map((p, idx) => (
             <article key={p.name} className="luxe-card overflow-hidden">
