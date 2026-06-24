@@ -22,7 +22,6 @@ import probVolumeAsset from "@/assets/card-problem-volume.png.asset.json";
 import heroBanner from "@/assets/hero-banner.png.asset.json";
 import afterBannerBg from "@/assets/after-banner-bg.png.asset.json";
 import routineBg from "@/assets/routine-bg.png.asset.json";
-import kitSectionBg from "@/assets/kit-section-bg.png.asset.json";
 
 
 import heroKit from "@/assets/hero-kit.jpg";
@@ -680,11 +679,7 @@ function KitIncludes() {
     },
   ];
   return (
-    <section
-      className="section-pad bg-[color-mix(in_oklab,var(--lavender)_30%,var(--ivory))] bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${kitSectionBg.url})` }}
-    >
-
+    <section className="section-pad bg-[color-mix(in_oklab,var(--lavender)_30%,var(--ivory))]">
       <div className="mx-auto max-w-md px-6">
         <Header eyebrow="El kit completo" title="Todo lo que tu cabello necesita para crecer más fuerte, abundante y saludable." />
 
