@@ -767,7 +767,7 @@ function Ingredients() {
   return (
     <section className="section-pad relative w-full overflow-hidden">
       <img
-        src="/__l5e/assets-v1/442b2488-c85d-45da-8593-f2ff5cb4df12/ingredients-bg.png"
+        src="/__l5e/assets-v1/e9876f9d-c858-4154-8d53-d3d1744a32a2/sec5-bg.png"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover"
