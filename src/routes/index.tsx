@@ -1353,11 +1353,11 @@ function TrustBenefits() {
           />
         </div>
 
-        <div className="mt-10 flex flex-col gap-5">
+        <div className="mt-10 grid grid-cols-2 gap-4">
           {benefits.map(({ icon: Icon, text }) => (
             <div
               key={text}
-              className="flex items-center gap-4 rounded-2xl bg-white px-5 py-5"
+              className="flex flex-col items-center justify-start gap-3 rounded-2xl bg-white px-3 py-5 text-center"
               style={{
                 border: `1px solid ${gold}55`,
                 boxShadow: "0 18px 40px -28px rgba(58,36,24,0.25)",
@@ -1373,7 +1373,7 @@ function TrustBenefits() {
                 <Icon className="size-5" style={{ color: gold }} strokeWidth={1.4} />
               </div>
               <p
-                className="font-display text-[0.95rem] leading-snug"
+                className="font-display text-[0.8rem] leading-snug"
                 style={{ color: ink }}
               >
                 {text}
