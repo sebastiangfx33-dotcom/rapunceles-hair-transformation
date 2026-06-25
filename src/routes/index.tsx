@@ -1214,46 +1214,64 @@ function ProductOptions() {
 
 /* ----------------------------- FINAL CTA ----------------------------- */
 function FinalCTA() {
+  const gold = "#D4A85E";
   return (
     <section
-      className="section-pad relative overflow-hidden"
-      style={{
-        background:
-          "radial-gradient(120% 100% at 50% 0%, color-mix(in oklab, var(--lavender) 80%, var(--ivory)), var(--ivory))",
-      }}
+      className="relative w-full overflow-hidden py-14"
+      style={{ background: "#2A1237" }}
     >
       <div
-        className="pointer-events-none absolute -top-24 left-1/2 -z-0 size-[28rem] -translate-x-1/2 rounded-full opacity-60 blur-3xl"
-        style={{ background: "color-mix(in oklab, var(--gold) 35%, transparent)" }}
+        className="pointer-events-none absolute inset-x-0 top-0 h-px"
+        style={{ background: `linear-gradient(90deg, transparent, ${gold}55, transparent)` }}
       />
       <div className="relative mx-auto max-w-md px-6 text-center">
-        <span className="eyebrow">Un último paso</span>
-        <h2 className="mt-4 text-balance text-[2.1rem] leading-tight sm:text-4xl">
-          Dale a tu cabello el{" "}
-          <em className="not-italic shimmer">cuidado que merece.</em>
+        <span
+          className="text-[0.5rem] uppercase tracking-[0.32em]"
+          style={{ color: gold }}
+        >
+          Tu momento es ahora
+        </span>
+        <h2
+          className="mt-4 font-display text-[1.65rem] leading-[1.15]"
+          style={{ color: "#F5E9D6" }}
+        >
+          Tu cabello todavía
+          <br />
+          puede cambiar
         </h2>
-        <p className="mt-4 text-sm text-muted-foreground">
-          Comienza hoy tu rutina Rapuncelés y descubre la versión más fuerte y luminosa de tu
-          cabello.
+        <div
+          className="mx-auto mt-5 h-px w-12"
+          style={{ background: gold }}
+        />
+        <p
+          className="mx-auto mt-5 max-w-[20rem] text-[0.82rem] leading-relaxed"
+          style={{ color: "#E8DCC8", opacity: 0.85 }}
+        >
+          Miles de mujeres están recuperando fuerza, crecimiento y abundancia con Rapunceles.
+        </p>
+        <p
+          className="mx-auto mt-4 max-w-[20rem] font-display text-[0.92rem] italic leading-relaxed"
+          style={{ color: gold }}
+        >
+          No sigas viendo cómo tu cabello pierde vida cada día.
         </p>
 
-        <div className="mt-8 space-y-3">
-          <a href="#options" className="btn-primary">
-            Obtener mi kit Rapuncelés <ArrowRight className="size-4" />
-          </a>
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-whatsapp">
-            <MessageCircle className="size-4" /> Consulta personalizada por WhatsApp
-          </a>
-        </div>
-
-        <div className="mt-8 flex items-center justify-center gap-2">
-          <Stars />
-          <span className="text-sm text-muted-foreground">4.9/5 — 68 reseñas</span>
-        </div>
+        <a
+          href="#options"
+          className="mt-9 inline-flex w-full items-center justify-center rounded-full px-6 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.18em] transition-transform active:scale-[0.98]"
+          style={{
+            background: `linear-gradient(180deg, ${gold}, #B8893F)`,
+            color: "#2A1237",
+            boxShadow: `0 18px 40px -12px ${gold}80, 0 0 0 1px ${gold}40 inset`,
+          }}
+        >
+          Quiero empezar mi transformación
+        </a>
       </div>
     </section>
   );
 }
+
 
 /* --------------------------- TRUST BENEFITS --------------------------- */
 function TrustBenefits() {
