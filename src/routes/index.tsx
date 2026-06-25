@@ -960,11 +960,13 @@ function Testimonials() {
     >
       <div className="mx-auto max-w-md px-6 [&_h2]:!text-[#D4A85E] [&_p.eyebrow]:!text-[#D4A85E]">
         <Header eyebrow="Testimonios" title="Lo que dicen nuestras clientas." />
-        <div className="mt-8 space-y-4">
+      </div>
+      <div className="mt-8 overflow-x-auto pb-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory">
+        <div className="flex gap-4 px-6">
           {reviews.map((r) => (
             <article
               key={r.name}
-              className="luxe-card p-5 rounded-2xl"
+              className="luxe-card p-5 rounded-2xl shrink-0 w-[85%] max-w-[340px] snap-center"
               style={{
                 background: "rgba(20,8,30,0.55)",
                 backdropFilter: "blur(6px)",
@@ -1004,6 +1006,7 @@ function Testimonials() {
           ))}
         </div>
       </div>
+
     </section>
   );
 }
