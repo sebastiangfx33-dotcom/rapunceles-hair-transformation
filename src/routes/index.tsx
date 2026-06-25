@@ -816,7 +816,7 @@ function Ingredients() {
 function Results() {
   const items = [
     { before: beforeAndrea, after: afterAndrea, name: "Andrea", time: "después de 12 semanas" },
-    { before: beforeCamila, after: afterCamila, name: "Camila", time: "después de 16 semanas" },
+    { before: afterCamila, after: beforeCamila, name: "Camila", time: "después de 16 semanas" },
     { before: result3, after: result3, name: "Valentina", time: "después de 10 semanas" },
   ];
   return (
