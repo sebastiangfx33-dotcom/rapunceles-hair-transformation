@@ -997,18 +997,14 @@ function Testimonials() {
           ))}
         </div>
 
-        <div
-          className="mt-10 -mx-6 flex gap-3 overflow-x-auto px-6 pb-2"
-          style={{ scrollbarWidth: "none" }}
-        >
+        <div className="mt-10 grid grid-cols-2 gap-2.5">
           {trust.map((it) => (
             <div
               key={it.t}
-              className="relative flex shrink-0 flex-col items-center justify-center rounded-full bg-white px-5 py-3 text-center"
+              className="relative flex flex-col items-center justify-center rounded-2xl bg-white px-2 py-3 text-center"
               style={{
-                minWidth: 132,
                 border: `1px solid ${gold}55`,
-                boxShadow: `0 10px 24px -16px rgba(58,36,24,0.3), 0 0 0 4px #FFFDF8, 0 0 0 5px ${gold}33`,
+                boxShadow: `0 10px 24px -16px rgba(58,36,24,0.3), 0 0 0 3px #FFFDF8, 0 0 0 4px ${gold}33`,
               }}
             >
               <div
@@ -1018,7 +1014,7 @@ function Testimonials() {
                 {it.n}
               </div>
               <div
-                className="mt-1.5 text-[0.6rem] uppercase tracking-[0.16em] whitespace-nowrap"
+                className="mt-1.5 text-[0.58rem] uppercase tracking-[0.14em]"
                 style={{ color: "#6B5544" }}
               >
                 {it.t}
@@ -1026,6 +1022,7 @@ function Testimonials() {
             </div>
           ))}
         </div>
+
 
       </div>
     </section>
