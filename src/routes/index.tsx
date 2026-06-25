@@ -767,7 +767,7 @@ function Ingredients() {
   return (
     <section className="section-pad relative w-full overflow-hidden">
       <img
-        src={afterBannerBg.url}
+        src="/__l5e/assets-v1/442b2488-c85d-45da-8593-f2ff5cb4df12/ingredients-bg.png"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover"
@@ -778,12 +778,12 @@ function Ingredients() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, rgba(20,8,38,0.52) 0%, rgba(20,8,38,0.42) 40%, rgba(20,8,38,0.55) 100%)",
+            "linear-gradient(180deg, rgba(20,8,38,0.55) 0%, rgba(20,8,38,0.4) 40%, rgba(20,8,38,0.6) 100%)",
         }}
       />
 
 
-      <div className="relative z-10 mx-auto max-w-md px-6">
+      <div className="relative z-10 mx-auto max-w-md px-6 [&_*]:!text-[#D4A85E]">
         <Header
           eyebrow="Inspiración natural"
           title="Inspirado en ingredientes naturales cuidadosamente seleccionados."
@@ -802,13 +802,13 @@ function Ingredients() {
                 />
               </div>
               <div className="flex items-center gap-2 px-4 py-3">
-                <Icon className="size-3.5 text-[var(--gold)]" />
-                <h3 className="text-base font-medium font-display">{name}</h3>
+                <Icon className="size-3.5 text-[#D4A85E]" />
+                <h3 className="text-base font-medium font-display text-[#D4A85E]">{name}</h3>
               </div>
             </article>
           ))}
         </div>
-        <p className="mt-7 text-center text-sm italic text-balance text-white/85">
+        <p className="mt-7 text-center text-sm italic text-balance text-[#D4A85E]">
           Cada fórmula está inspirada en ingredientes reconocidos por apoyar rutinas de cuidado
           capilar saludables.
         </p>
