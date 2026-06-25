@@ -1267,50 +1267,50 @@ function TrustBenefits() {
     { icon: HeartHandshake, text: "Acompañamiento durante tu proceso" },
   ];
   return (
-    <section className="relative w-full py-20" style={{ background: "#F8F1E4" }}>
-      <div className="mx-auto max-w-md px-6">
+    <section className="relative w-full py-10" style={{ background: "#F8F1E4" }}>
+      <div className="mx-auto max-w-md px-5">
         <div className="text-center">
           <span
-            className="text-[0.7rem] uppercase tracking-[0.32em]"
+            className="text-[0.6rem] uppercase tracking-[0.3em]"
             style={{ color: gold }}
           >
             Tu compra protegida
           </span>
           <h2
-            className="mt-4 font-display text-[1.85rem] leading-tight sm:text-4xl"
+            className="mt-2 font-display text-[1.25rem] leading-tight"
             style={{ color: "#3A2418" }}
           >
             Compra con total tranquilidad
           </h2>
-          <div className="mt-5 flex justify-center">
+          <div className="mt-3 flex justify-center">
             <span
-              className="block h-px w-16"
+              className="block h-px w-12"
               style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
             />
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-6">
+        <div className="mt-5 grid grid-cols-2 gap-2.5">
           {benefits.map(({ icon: Icon, text }) => (
             <div
               key={text}
-              className="flex items-center gap-5 rounded-2xl bg-white px-6 py-6"
+              className="flex flex-col items-center justify-start gap-2 rounded-xl bg-white px-2.5 py-3 text-center"
               style={{
                 border: `1px solid ${gold}55`,
-                boxShadow: "0 12px 32px -20px rgba(58,36,24,0.25)",
+                boxShadow: "0 8px 20px -16px rgba(58,36,24,0.25)",
               }}
             >
               <div
-                className="flex size-12 shrink-0 items-center justify-center rounded-full"
+                className="flex size-8 shrink-0 items-center justify-center rounded-full"
                 style={{
                   background: "#FBF6EC",
                   border: `1px solid ${gold}66`,
                 }}
               >
-                <Icon className="size-5" style={{ color: gold }} strokeWidth={1.5} />
+                <Icon className="size-3.5" style={{ color: gold }} strokeWidth={1.5} />
               </div>
               <p
-                className="font-display text-[1.02rem] leading-snug"
+                className="font-display text-[0.72rem] leading-tight"
                 style={{ color: "#3A2418" }}
               >
                 {text}
@@ -1320,6 +1320,7 @@ function TrustBenefits() {
         </div>
       </div>
     </section>
+
   );
 }
 
