@@ -1265,7 +1265,7 @@ function TrustBenefits() {
     { icon: HeartHandshake, text: "Acompañamiento durante tu proceso" },
   ];
   return (
-    <section className="relative w-full pt-1 pb-4" style={{ background: "#F8F1E4" }}>
+    <section className="relative w-full pt-0 pb-4 -mt-2" style={{ background: "#F8F1E4" }}>
       <div className="mx-auto max-w-md px-3">
         <div className="text-center">
           <span
