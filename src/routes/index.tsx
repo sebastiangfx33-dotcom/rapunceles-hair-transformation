@@ -868,7 +868,7 @@ function Results() {
       }}
     >
       <div className="mx-auto max-w-md px-6 [&_h2]:!text-[#D4A85E] [&_p.eyebrow]:!text-[#D4A85E]">
-        <Header eyebrow="Resultados reales" title="Transformaciones reales de nuestras clientas." />
+        <Header eyebrow="" title="Transformaciones reales de nuestras clientas." />
         <div className="mt-10 space-y-7">
           {items.map((r) => (
             <article
