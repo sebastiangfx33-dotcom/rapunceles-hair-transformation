@@ -936,85 +936,93 @@ function Results() {
 /* ---------------------------- TESTIMONIALS ---------------------------- */
 function Testimonials() {
   const gold = "#D4A85E";
-  const reviews = [
-    {
-      name: "María José",
-      avatar: avatarMariaJoseAsset.url,
-      body:
-        "Mi cabello dejó de caerse tanto después del segundo mes. Ahora veo cabellos nuevos creciendo. ¡Estoy enamorada!",
-    },
-    {
-      name: "Daniela R.",
-      avatar: avatarDanielaAsset.url,
-      body:
-        "El tónico es mágico. Lo uso todas las noches y siento mi cuero cabelludo más fuerte y mi cabello con más volumen.",
-    },
-    {
-      name: "Laura M.",
-      avatar: avatarLauraAsset.url,
-      body:
-        "Súper recomendado. El olor es delicioso y la textura premium. Vale cada peso. Mi cabello luce más sano y brillante.",
-    },
+  const trust = [
+    { n: "+10K", t: "Mujeres transformadas" },
+    { n: "4.9/5", t: "Calificación promedio" },
+    { n: "Semanas", t: "Resultados visibles" },
+    { n: "100%", t: "Ingredientes naturales" },
   ];
   return (
-    <section
-      className="section-pad relative"
-      style={{
-        backgroundImage: `linear-gradient(rgba(20,8,30,0.6), rgba(20,8,30,0.6)), url("/__l5e/assets-v1/bc61cf58-7fda-4f6b-a0e5-1046f6c6bb78/testimonials-bg.png")`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <div className="mx-auto max-w-md px-6 [&_h2]:!text-[#D4A85E] [&_p.eyebrow]:!text-[#D4A85E]">
-        <Header eyebrow="Testimonios" title="Lo que dicen nuestras clientas." />
-      </div>
-      <div className="mt-8 overflow-x-auto pb-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory">
-        <div className="flex gap-4 px-6">
-          {reviews.map((r) => (
-            <article
-              key={r.name}
-              className="luxe-card p-5 rounded-2xl shrink-0 w-[85%] max-w-[340px] snap-center"
+    <section className="section-pad relative" style={{ background: "#F8F4EE" }}>
+      <div className="mx-auto max-w-md px-6">
+        <Header eyebrow="Lo que dicen nuestras clientas" title="Testimonios reales" />
+
+        <article
+          className="mt-8 rounded-3xl bg-white p-6"
+          style={{
+            border: `1px solid ${gold}40`,
+            boxShadow: "0 22px 50px -28px rgba(58,36,24,0.28)",
+          }}
+        >
+          <div className="flex items-center gap-3">
+            <img
+              src={avatarDanielaAsset.url}
+              alt="Juliana R."
+              width={56}
+              height={56}
+              loading="lazy"
+              className="size-12 rounded-full object-cover"
+              style={{ border: `1.5px solid ${gold}` }}
+            />
+            <div className="flex flex-col">
+              <span className="font-display text-[1.05rem]" style={{ color: "#3A2418" }}>
+                Juliana R.
+              </span>
+              <span className="mt-0.5 flex items-center gap-1" style={{ color: gold }}>
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="size-[13px] fill-current" strokeWidth={0} />
+                ))}
+              </span>
+            </div>
+          </div>
+          <p
+            className="mt-5 text-[0.98rem] leading-relaxed italic"
+            style={{ color: "#4A3528" }}
+          >
+            “Este kit cambió por completo mi cabello. Menos caída, más crecimiento y se ve saludable de verdad.”
+          </p>
+        </article>
+
+        <div className="mt-5 flex items-center justify-center gap-2">
+          {[0, 1, 2].map((i) => (
+            <span
+              key={i}
+              className="block rounded-full transition-all"
               style={{
-                background: "rgba(20,8,30,0.55)",
-                backdropFilter: "blur(6px)",
+                width: i === 0 ? 18 : 6,
+                height: 6,
+                background: i === 0 ? gold : `${gold}55`,
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="mt-10 grid grid-cols-2 gap-4">
+          {trust.map((it) => (
+            <div
+              key={it.t}
+              className="rounded-2xl bg-white px-4 py-5 text-center"
+              style={{
                 border: `1px solid ${gold}33`,
-                boxShadow: "0 14px 36px -22px rgba(0,0,0,0.55)",
+                boxShadow: "0 12px 30px -22px rgba(58,36,24,0.22)",
               }}
             >
-              <div className="flex items-center gap-3">
-                <img
-                  src={r.avatar}
-                  alt={r.name}
-                  width={64}
-                  height={64}
-                  loading="lazy"
-                  className="size-12 rounded-full object-cover"
-                  style={{ border: `1.5px solid ${gold}` }}
-                />
-                <div className="flex flex-col">
-                  <span className="font-display text-[1rem]" style={{ color: gold }}>
-                    {r.name}
-                  </span>
-                  <span className="flex items-center gap-1" style={{ color: gold }}>
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="size-[12px] fill-current" strokeWidth={0} />
-                    ))}
-                  </span>
-                </div>
+              <div
+                className="font-display text-[1.15rem] leading-none"
+                style={{ color: gold }}
+              >
+                {it.n}
               </div>
-              <p className="mt-4 text-[0.95rem] italic leading-relaxed" style={{ color: gold }}>
-                “{r.body}”
-              </p>
-              <div className="mt-3 flex items-center gap-2 text-xs" style={{ color: `${gold}cc` }}>
-                <Check className="size-3.5" />
-                <span>Cliente verificada</span>
+              <div
+                className="mt-2 text-[0.72rem] uppercase tracking-[0.14em]"
+                style={{ color: "#6B5544" }}
+              >
+                {it.t}
               </div>
-            </article>
+            </div>
           ))}
         </div>
       </div>
-
     </section>
   );
 }
