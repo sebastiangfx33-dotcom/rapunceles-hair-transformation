@@ -101,7 +101,7 @@ function Landing() {
       <Ingredients />
       <Results />
       <Testimonials />
-      <Scarcity />
+      
       <ProductOptions />
       <TrustBenefits />
       <FAQ />
