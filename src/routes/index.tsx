@@ -1241,30 +1241,6 @@ function Urgency() {
           inventario limitado cada semana.
         </p>
 
-        <div className="relative mx-auto mb-6 w-[78%]">
-          <div
-            className="absolute inset-x-6 -bottom-3 h-6 rounded-full blur-xl"
-            style={{ background: `${gold}55` }}
-          />
-          <div
-            className="absolute -top-2 left-1/2 -translate-x-1/2 z-10 rounded-full px-3 py-1 text-[0.55rem] uppercase tracking-[0.28em]"
-            style={{
-              background: `linear-gradient(180deg, ${gold}, #B8893F)`,
-              color: "#fff",
-              boxShadow: `0 8px 20px -8px ${gold}99`,
-            }}
-          >
-            Edición limitada
-          </div>
-          <img
-            src={heroKitNew.url}
-            alt="Kit Rapunceles edición limitada"
-            className="relative w-full h-auto object-contain"
-          />
-        </div>
-
-
-
         <div
           className="rounded-2xl bg-white px-5 py-5"
           style={{
