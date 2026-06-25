@@ -1353,27 +1353,27 @@ function TrustBenefits() {
           />
         </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-4">
+        <div className="mt-9 flex gap-3 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {benefits.map(({ icon: Icon, text }) => (
             <div
               key={text}
-              className="flex flex-col items-center justify-start gap-3 rounded-2xl bg-white px-3 py-5 text-center"
+              className="flex min-w-[9.2rem] flex-1 items-center gap-3 rounded-2xl bg-white px-4 py-4 text-left"
               style={{
                 border: `1px solid ${gold}55`,
                 boxShadow: "0 18px 40px -28px rgba(58,36,24,0.25)",
               }}
             >
               <div
-                className="flex size-11 shrink-0 items-center justify-center rounded-full"
+                className="flex size-10 shrink-0 items-center justify-center rounded-full"
                 style={{
                   background: "#FBF6EC",
                   border: `1px solid ${gold}88`,
                 }}
               >
-                <Icon className="size-5" style={{ color: gold }} strokeWidth={1.4} />
+                <Icon className="size-[1.05rem]" style={{ color: gold }} strokeWidth={1.4} />
               </div>
               <p
-                className="font-display text-[0.8rem] leading-snug"
+                className="font-display text-[0.76rem] leading-snug"
                 style={{ color: ink }}
               >
                 {text}
