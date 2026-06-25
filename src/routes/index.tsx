@@ -1124,7 +1124,7 @@ function formatCOP(n: number) {
 function ProductOptions() {
   const [selected, setSelected] = useState("500");
   return (
-    <section id="options" className="py-6 bg-[color-mix(in_oklab,var(--beige)_55%,var(--ivory))]">
+    <section id="options" className="py-3 bg-[color-mix(in_oklab,var(--beige)_55%,var(--ivory))]">
       <div className="mx-auto max-w-md px-6">
         <Header eyebrow="Elige tu kit" title="Selecciona tu presentación." />
 
