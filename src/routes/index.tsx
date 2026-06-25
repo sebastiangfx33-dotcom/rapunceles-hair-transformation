@@ -50,6 +50,10 @@ import beforeCamilaAsset from "@/assets/before-camila.jpg.asset.json";
 const beforeCamila = beforeCamilaAsset.url;
 import afterCamilaAsset from "@/assets/after-camila.jpg.asset.json";
 const afterCamila = afterCamilaAsset.url;
+import beforeThirdAsset from "@/assets/before-third.jpg.asset.json";
+const beforeThird = beforeThirdAsset.url;
+import afterThirdAsset from "@/assets/after-third.jpg.asset.json";
+const afterThird = afterThirdAsset.url;
 
 
 
@@ -817,7 +821,7 @@ function Results() {
   const items = [
     { before: beforeAndrea, after: afterAndrea, name: "Andrea", time: "después de 12 semanas" },
     { before: afterCamila, after: beforeCamila, name: "Camila", time: "después de 16 semanas" },
-    { before: result3, after: result3, name: "Valentina", time: "después de 10 semanas" },
+    { before: beforeThird, after: afterThird, name: "Valentina", time: "después de 10 semanas" },
   ];
   return (
     <section className="section-pad bg-[color-mix(in_oklab,var(--beige)_60%,var(--ivory))]">
