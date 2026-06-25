@@ -103,7 +103,7 @@ function Landing() {
       <Testimonials />
       
       <ProductOptions />
-      
+      <TrustBenefits />
       <FAQ />
 
       <Urgency />
@@ -1352,6 +1352,68 @@ function FinalCTA() {
 
 
 /* --------------------------- TRUST BENEFITS --------------------------- */
+function TrustBenefits() {
+  const gold = "#C9A961";
+  const benefits = [
+    { icon: Crown, text: "Pago contra entrega disponible" },
+    { icon: Truck, text: "Envíos seguros a todo Colombia" },
+    { icon: Phone, text: "Atención personalizada por WhatsApp" },
+    { icon: HeartHandshake, text: "Acompañamiento durante tu proceso" },
+  ];
+  return (
+    <section className="relative w-full pt-0 pb-6 -mt-2" style={{ background: "#F8F1E4" }}>
+      <div className="mx-auto max-w-md px-4">
+        <div className="text-center">
+          <span
+            className="text-[0.58rem] uppercase tracking-[0.3em]"
+            style={{ color: gold }}
+          >
+            Tu compra protegida
+          </span>
+          <h2
+            className="mt-1.5 font-display text-[1.05rem] leading-tight"
+            style={{ color: "#3A2418" }}
+          >
+            Compra con total tranquilidad
+          </h2>
+        </div>
+
+        <div className="mt-4 grid grid-cols-4 gap-2">
+          {benefits.map(({ icon: Icon, text }) => (
+            <div
+              key={text}
+              className="flex flex-col items-center justify-start gap-1.5 rounded-lg bg-white px-1.5 py-2.5 text-center"
+              style={{
+                border: `1px solid ${gold}55`,
+                boxShadow: "0 6px 16px -12px rgba(58,36,24,0.22)",
+              }}
+            >
+              <div
+                className="flex size-7 shrink-0 items-center justify-center rounded-full"
+                style={{
+                  background: "#FBF6EC",
+                  border: `1px solid ${gold}66`,
+                }}
+              >
+                <Icon className="size-3.5" style={{ color: gold }} strokeWidth={1.5} />
+              </div>
+              <p
+                className="font-display text-[0.6rem] leading-tight"
+                style={{ color: "#3A2418" }}
+              >
+                {text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+
+
+
+  );
+}
 
 
 function FAQ() {
