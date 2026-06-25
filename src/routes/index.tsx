@@ -765,7 +765,23 @@ function Ingredients() {
     { img: ingBotanical, name: "Extractos botánicos", icon: Sparkles },
   ];
   return (
-    <section className="section-pad relative w-full overflow-hidden" style={{ background: "#1a0a2e" }}>
+    <section className="section-pad relative w-full overflow-hidden">
+      <img
+        src={afterBannerBg.url}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover"
+        loading="lazy"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(20,8,38,0.52) 0%, rgba(20,8,38,0.42) 40%, rgba(20,8,38,0.55) 100%)",
+        }}
+      />
+
 
       <div className="relative z-10 mx-auto max-w-md px-6">
         <Header
