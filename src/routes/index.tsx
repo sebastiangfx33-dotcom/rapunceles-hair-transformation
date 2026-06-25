@@ -103,7 +103,7 @@ function Landing() {
       <Testimonials />
       
       <ProductOptions />
-      <TrustBenefits />
+      
       <FAQ />
 
       <Urgency />
@@ -1402,7 +1402,7 @@ function FAQ() {
   ];
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section className="relative w-full py-12" style={{ background: "#F8F1E4" }}>
+    <section className="relative w-full pt-4 pb-12" style={{ background: "#F8F1E4" }}>
       <div className="mx-auto max-w-md px-5">
         <div className="text-center">
           <span
