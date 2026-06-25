@@ -1353,11 +1353,11 @@ function TrustBenefits() {
           />
         </div>
 
-        <div className="mt-9 flex gap-3 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="mt-9 grid grid-cols-2 gap-3">
           {benefits.map(({ icon: Icon, text }) => (
             <div
               key={text}
-              className="flex min-w-[9.2rem] flex-1 items-center gap-3 rounded-2xl bg-white px-4 py-4 text-left"
+              className="flex flex-col items-center justify-center gap-2 rounded-2xl bg-white px-3 py-4 text-center"
               style={{
                 border: `1px solid ${gold}55`,
                 boxShadow: "0 18px 40px -28px rgba(58,36,24,0.25)",
@@ -1381,6 +1381,7 @@ function TrustBenefits() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
