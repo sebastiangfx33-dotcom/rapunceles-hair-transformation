@@ -1257,7 +1257,73 @@ function FinalCTA() {
   );
 }
 
-/* ------------------------------- FOOTER ------------------------------- */
+/* --------------------------- TRUST BENEFITS --------------------------- */
+function TrustBenefits() {
+  const gold = "#C9A961";
+  const benefits = [
+    { icon: Crown, text: "Pago contra entrega disponible" },
+    { icon: Truck, text: "Envíos seguros a todo Colombia" },
+    { icon: Phone, text: "Atención personalizada por WhatsApp" },
+    { icon: HeartHandshake, text: "Acompañamiento durante tu proceso" },
+  ];
+  return (
+    <section className="relative w-full py-20" style={{ background: "#F8F1E4" }}>
+      <div className="mx-auto max-w-md px-6">
+        <div className="text-center">
+          <span
+            className="text-[0.7rem] uppercase tracking-[0.32em]"
+            style={{ color: gold }}
+          >
+            Tu compra protegida
+          </span>
+          <h2
+            className="mt-4 font-display text-[1.85rem] leading-tight sm:text-4xl"
+            style={{ color: "#3A2418" }}
+          >
+            Compra con total tranquilidad
+          </h2>
+          <div className="mt-5 flex justify-center">
+            <span
+              className="block h-px w-16"
+              style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
+            />
+          </div>
+        </div>
+
+        <div className="mt-12 flex flex-col gap-6">
+          {benefits.map(({ icon: Icon, text }) => (
+            <div
+              key={text}
+              className="flex items-center gap-5 rounded-2xl bg-white px-6 py-6"
+              style={{
+                border: `1px solid ${gold}55`,
+                boxShadow: "0 12px 32px -20px rgba(58,36,24,0.25)",
+              }}
+            >
+              <div
+                className="flex size-12 shrink-0 items-center justify-center rounded-full"
+                style={{
+                  background: "#FBF6EC",
+                  border: `1px solid ${gold}66`,
+                }}
+              >
+                <Icon className="size-5" style={{ color: gold }} strokeWidth={1.5} />
+              </div>
+              <p
+                className="font-display text-[1.02rem] leading-snug"
+                style={{ color: "#3A2418" }}
+              >
+                {text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 function Footer() {
   return (
     <footer className="border-t border-border/60 bg-background py-10">
