@@ -801,7 +801,7 @@ function Ingredients() {
 
       <div className="relative z-10 mx-auto max-w-md px-6 [&_*]:!text-[#D4A85E]">
         <Header
-          eyebrow="Inspiración natural"
+          eyebrow=""
           title="Inspirado en ingredientes naturales cuidadosamente seleccionados."
         />
         <div className="mt-8 grid grid-cols-2 gap-4">
