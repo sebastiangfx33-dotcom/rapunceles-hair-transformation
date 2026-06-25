@@ -1280,8 +1280,9 @@ function Urgency() {
   );
 }
 
-
+function FinalCTA() {
   const gold = "#D4A85E";
+
   return (
     <section
       className="relative w-full overflow-hidden py-14"
