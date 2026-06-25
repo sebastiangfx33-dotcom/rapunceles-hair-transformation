@@ -103,6 +103,7 @@ function Landing() {
       <Testimonials />
       
       <ProductOptions />
+      <TrustBenefits />
       
       <FAQ />
 
@@ -1323,6 +1324,7 @@ function FinalCTA() {
 /* --------------------------- TRUST BENEFITS --------------------------- */
 function TrustBenefits() {
   const gold = "#C9A961";
+  const ink = "#3A2418";
   const benefits = [
     { icon: Crown, text: "Pago contra entrega disponible" },
     { icon: Truck, text: "Envíos seguros a todo Colombia" },
@@ -1330,45 +1332,49 @@ function TrustBenefits() {
     { icon: HeartHandshake, text: "Acompañamiento durante tu proceso" },
   ];
   return (
-    <section className="relative w-full pt-0 pb-6 -mt-2" style={{ background: "#F8F1E4" }}>
-      <div className="mx-auto max-w-md px-4">
+    <section className="relative w-full py-14" style={{ background: "#FBF6EC" }}>
+      <div className="mx-auto max-w-md px-6">
         <div className="text-center">
           <span
-            className="text-[0.58rem] uppercase tracking-[0.3em]"
+            className="text-[0.62rem] uppercase tracking-[0.32em]"
             style={{ color: gold }}
           >
             Tu compra protegida
           </span>
           <h2
-            className="mt-1.5 font-display text-[1.05rem] leading-tight"
-            style={{ color: "#3A2418" }}
+            className="mt-3 font-display text-[1.7rem] leading-[1.15]"
+            style={{ color: ink }}
           >
             Compra con total tranquilidad
           </h2>
+          <div
+            className="mx-auto mt-4 h-px w-12"
+            style={{ background: gold, opacity: 0.6 }}
+          />
         </div>
 
-        <div className="mt-4 grid grid-cols-4 gap-2">
+        <div className="mt-10 flex flex-col gap-5">
           {benefits.map(({ icon: Icon, text }) => (
             <div
               key={text}
-              className="flex flex-col items-center justify-start gap-1.5 rounded-lg bg-white px-1.5 py-2.5 text-center"
+              className="flex items-center gap-4 rounded-2xl bg-white px-5 py-5"
               style={{
                 border: `1px solid ${gold}55`,
-                boxShadow: "0 6px 16px -12px rgba(58,36,24,0.22)",
+                boxShadow: "0 18px 40px -28px rgba(58,36,24,0.25)",
               }}
             >
               <div
-                className="flex size-7 shrink-0 items-center justify-center rounded-full"
+                className="flex size-11 shrink-0 items-center justify-center rounded-full"
                 style={{
                   background: "#FBF6EC",
-                  border: `1px solid ${gold}66`,
+                  border: `1px solid ${gold}88`,
                 }}
               >
-                <Icon className="size-3.5" style={{ color: gold }} strokeWidth={1.5} />
+                <Icon className="size-5" style={{ color: gold }} strokeWidth={1.4} />
               </div>
               <p
-                className="font-display text-[0.6rem] leading-tight"
-                style={{ color: "#3A2418" }}
+                className="font-display text-[0.95rem] leading-snug"
+                style={{ color: ink }}
               >
                 {text}
               </p>
@@ -1377,10 +1383,6 @@ function TrustBenefits() {
         </div>
       </div>
     </section>
-
-
-
-
   );
 }
 
