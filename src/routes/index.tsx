@@ -19,6 +19,7 @@ import {
   Package,
 } from "lucide-react";
 import finalCtaModel from "@/assets/final-cta-model.jpg.asset.json";
+import testimonialsBgNew from "@/assets/testimonials-bg-new.png.asset.json";
 import probFallAsset from "@/assets/card-problem-fall.png.asset.json";
 import probSlowGrowthAsset from "@/assets/card-problem-slow-growth.png.asset.json";
 import probRootsAsset from "@/assets/card-problem-roots.png.asset.json";
@@ -947,9 +948,19 @@ function Testimonials() {
     { n: "100%", t: "Ingredientes naturales" },
   ];
   return (
-    <section className="section-pad relative" style={{ background: "#F8F4EE" }}>
+    <section
+      className="section-pad relative bg-cover bg-center"
+      style={{
+        backgroundImage: `linear-gradient(rgba(20,10,30,0.55), rgba(20,10,30,0.55)), url(${testimonialsBgNew.url})`,
+      }}
+    >
       <div className="mx-auto max-w-md px-6">
-        <Header eyebrow="Lo que dicen nuestras clientas" title="Testimonios reales" />
+        <Header
+          eyebrow="Lo que dicen nuestras clientas"
+          title="Testimonios reales"
+          titleClassName="!text-[#D4A85E]"
+        />
+
 
         <article
           className="mt-8 rounded-3xl bg-white p-6"
