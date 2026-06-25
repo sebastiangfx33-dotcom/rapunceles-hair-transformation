@@ -106,7 +106,9 @@ function Landing() {
       <TrustBenefits />
       <FAQ />
 
+      <Urgency />
       <FinalCTA />
+
       <Footer />
     </main>
   );
@@ -1213,8 +1215,74 @@ function ProductOptions() {
 }
 
 /* ----------------------------- FINAL CTA ----------------------------- */
+function Urgency() {
+  const gold = "#C9A961";
+  const filled = ((50 - 21) / 50) * 100;
+  return (
+    <section className="px-5 pt-6 pb-8" style={{ background: "#F8F1E4" }}>
+      <div className="mx-auto max-w-md text-center">
+        <div
+          className="inline-block text-[0.62rem] uppercase tracking-[0.32em] mb-3"
+          style={{ color: gold, letterSpacing: "0.32em" }}
+        >
+          Edición limitada
+        </div>
+        <h2
+          className="font-display text-[1.5rem] leading-[1.15] mb-3"
+          style={{ color: "#3A2418" }}
+        >
+          Producción limitada esta semana
+        </h2>
+        <p
+          className="text-[0.82rem] leading-[1.55] mb-6"
+          style={{ color: "#6B5544" }}
+        >
+          Debido a nuestro proceso artesanal y alta demanda, trabajamos con
+          inventario limitado cada semana.
+        </p>
+
+        <div
+          className="rounded-2xl bg-white px-5 py-5"
+          style={{
+            border: `1px solid ${gold}40`,
+            boxShadow: "0 18px 40px -22px rgba(58,36,24,0.25)",
+          }}
+        >
+          <div
+            className="font-display text-[1.05rem] mb-3"
+            style={{ color: "#3A2418" }}
+          >
+            Solo quedan <span style={{ color: gold }}>21 kits</span> disponibles
+          </div>
+          <div
+            className="h-[6px] w-full rounded-full overflow-hidden"
+            style={{ background: `${gold}22` }}
+          >
+            <div
+              className="h-full rounded-full"
+              style={{
+                width: `${filled}%`,
+                background: `linear-gradient(90deg, ${gold}, #B8893F)`,
+                boxShadow: `0 0 12px ${gold}80`,
+              }}
+            />
+          </div>
+          <div
+            className="mt-3 flex justify-between text-[0.68rem] uppercase tracking-[0.2em]"
+            style={{ color: "#8A7058" }}
+          >
+            <span>Reservados</span>
+            <span>21 / 50</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FinalCTA() {
   const gold = "#D4A85E";
+
   return (
     <section
       className="relative w-full overflow-hidden py-14"
