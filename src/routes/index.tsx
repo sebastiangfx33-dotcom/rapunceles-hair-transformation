@@ -46,6 +46,10 @@ import beforeAndreaAsset from "@/assets/before-andrea.jpg.asset.json";
 const beforeAndrea = beforeAndreaAsset.url;
 import afterAndreaAsset from "@/assets/after-andrea.jpg.asset.json";
 const afterAndrea = afterAndreaAsset.url;
+import beforeCamilaAsset from "@/assets/before-camila.jpg.asset.json";
+const beforeCamila = beforeCamilaAsset.url;
+import afterCamilaAsset from "@/assets/after-camila.jpg.asset.json";
+const afterCamila = afterCamilaAsset.url;
 
 
 
@@ -812,7 +816,7 @@ function Ingredients() {
 function Results() {
   const items = [
     { before: beforeAndrea, after: afterAndrea, name: "Andrea", time: "después de 12 semanas" },
-    { before: result2, after: result2, name: "Camila", time: "después de 16 semanas" },
+    { before: beforeCamila, after: afterCamila, name: "Camila", time: "después de 16 semanas" },
     { before: result3, after: result3, name: "Valentina", time: "después de 10 semanas" },
   ];
   return (
