@@ -104,6 +104,8 @@ function Landing() {
       <Scarcity />
       <ProductOptions />
       <TrustBenefits />
+      <FAQ />
+
       <FinalCTA />
       <Footer />
     </main>
