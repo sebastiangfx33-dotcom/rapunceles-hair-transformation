@@ -1091,20 +1091,23 @@ const VARIANTS = [
   {
     id: "500",
     label: "500 ml",
-    sub: "Perfecto para comenzar tu rutina.",
+    sub: "Ideal para comenzar tu transformación.",
+    cta: "Quiero mi kit de 500 ml",
     price: 159000,
     compareAt: 199000,
     badge: null as string | null,
   },
   {
     id: "1l",
-    label: "1 Litro",
-    sub: "Mayor duración y mejor valor.",
+    label: "1 litro",
+    sub: "Para un tratamiento completo y duradero.",
+    cta: "Quiero mi kit de 1 litro",
     price: 249000,
     compareAt: 349000,
     badge: "Mejor valor",
   },
 ];
+
 
 function formatCOP(n: number) {
   return new Intl.NumberFormat("es-CO", {
@@ -1115,90 +1118,80 @@ function formatCOP(n: number) {
 }
 
 function ProductOptions() {
-  const [selected, setSelected] = useState("1l");
-  const current = VARIANTS.find((v) => v.id === selected)!;
+  const [selected, setSelected] = useState("500");
   return (
     <section id="options" className="section-pad bg-[color-mix(in_oklab,var(--beige)_55%,var(--ivory))]">
       <div className="mx-auto max-w-md px-6">
         <Header eyebrow="Elige tu kit" title="Selecciona tu presentación." />
 
-        <div className="mt-8 space-y-4">
+        <div className="mt-8 space-y-5">
           {VARIANTS.map((v) => {
             const active = selected === v.id;
             return (
-              <button
+              <div
                 key={v.id}
-                type="button"
                 onClick={() => setSelected(v.id)}
-                className="block w-full text-left transition-all"
+                className="luxe-card relative cursor-pointer p-6 transition-all"
+                style={
+                  active
+                    ? {
+                        borderColor: "var(--gold)",
+                        boxShadow:
+                          "0 0 0 1px var(--gold), 0 24px 48px -28px color-mix(in oklab, var(--purple-deep) 35%, transparent)",
+                      }
+                    : undefined
+                }
               >
-                <div
-                  className="luxe-card relative p-5 transition-all"
-                  style={
-                    active
-                      ? {
-                          borderColor: "var(--gold)",
-                          boxShadow:
-                            "0 0 0 1px var(--gold), 0 20px 40px -28px color-mix(in oklab, var(--purple-deep) 35%, transparent)",
-                        }
-                      : undefined
-                  }
+                <span
+                  className="absolute left-5 top-5 grid size-5 place-items-center rounded-full border-2"
+                  style={{
+                    borderColor: active ? "var(--gold)" : "var(--border)",
+                    background: "transparent",
+                  }}
                 >
-                  {v.badge && (
-                    <span className="absolute -top-2 right-5 rounded-full bg-[var(--gold)] px-3 py-1 text-[0.65rem] font-medium uppercase tracking-[0.18em] text-[var(--ivory)]">
-                      {v.badge}
-                    </span>
-                  )}
-                  <div className="grid grid-cols-[auto_auto_minmax(0,1fr)_auto] items-center gap-3">
+                  {active && (
                     <span
-                      className="grid size-6 shrink-0 place-items-center rounded-full border-2"
-                      style={{
-                        borderColor: active ? "var(--gold)" : "var(--border)",
-                        background: active ? "var(--gold)" : "transparent",
-                      }}
-                    >
-                      {active && <Check className="size-3.5 text-[var(--ivory)]" />}
-                    </span>
-                    <img
-                      src={heroKitNew.url}
-                      alt={`Kit Rapunceles ${v.label}`}
-                      className="h-28 w-28 shrink-0 object-contain"
-                      style={{
-                        transform: v.id === "500" ? "scale(0.82)" : "scale(1.05)",
-                      }}
+                      className="size-2.5 rounded-full"
+                      style={{ background: "var(--gold)" }}
                     />
+                  )}
+                </span>
 
-                    <div className="min-w-0">
-                      <p className="truncate font-display text-xl">{v.label}</p>
-                      <p className="truncate text-xs text-muted-foreground">{v.sub}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="font-display text-lg text-primary">{formatCOP(v.price)}</p>
-                      <p className="text-[0.7rem] text-muted-foreground line-through">
-                        {formatCOP(v.compareAt)}
-                      </p>
-                    </div>
-                  </div>
+                {v.badge && (
+                  <span className="absolute -top-2 right-5 rounded-full bg-[var(--gold)] px-3 py-1 text-[0.65rem] font-medium uppercase tracking-[0.18em] text-[var(--ivory)]">
+                    {v.badge}
+                  </span>
+                )}
+
+                <div className="flex flex-col items-center text-center">
+                  <img
+                    src={heroKitNew.url}
+                    alt={`Kit Rapunceles ${v.label}`}
+                    className="mt-2 h-40 w-40 object-contain"
+                    style={{ transform: v.id === "500" ? "scale(0.92)" : "scale(1)" }}
+                  />
+                  <p className="mt-4 font-display text-xl text-primary">{v.label}</p>
+                  <p className="mt-1 text-sm text-muted-foreground max-w-[14rem]">{v.sub}</p>
+
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="btn-primary mt-5 w-full uppercase tracking-[0.18em] text-[0.78rem]"
+                  >
+                    {v.cta}
+                  </a>
                 </div>
-              </button>
+              </div>
             );
           })}
         </div>
-
-        <div className="mt-6 space-y-3">
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-primary">
-            <Sparkles className="size-4" /> Quiero mi kit ({current.label})
-          </a>
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-whatsapp">
-            <MessageCircle className="size-4" /> Asesoría personalizada
-          </a>
-        </div>
-
-
       </div>
     </section>
   );
 }
+
 
 /* ----------------------------- FINAL CTA ----------------------------- */
 function Urgency() {
