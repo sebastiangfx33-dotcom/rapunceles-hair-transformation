@@ -87,7 +87,7 @@ const WHATSAPP_URL =
 
 function Landing() {
   return (
-    <main className="overflow-x-hidden bg-background text-foreground">
+    <main className="overflow-x-hidden text-foreground" style={{ background: "#1a0a2e" }}>
       <Hero />
       <AfterBanner />
       <ProductRoutineSection />
