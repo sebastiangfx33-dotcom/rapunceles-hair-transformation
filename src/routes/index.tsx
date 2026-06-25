@@ -1359,44 +1359,44 @@ function TrustBenefits() {
     { icon: HeartHandshake, text: "Acompañamiento durante tu proceso" },
   ];
   return (
-    <section className="relative w-full pt-0 pb-4 -mt-2" style={{ background: "#F8F1E4" }}>
-      <div className="mx-auto max-w-md px-3">
+    <section className="relative w-full pt-0 pb-6 -mt-2" style={{ background: "#F8F1E4" }}>
+      <div className="mx-auto max-w-md px-4">
         <div className="text-center">
           <span
-            className="text-[0.48rem] uppercase tracking-[0.28em]"
+            className="text-[0.58rem] uppercase tracking-[0.3em]"
             style={{ color: gold }}
           >
             Tu compra protegida
           </span>
           <h2
-            className="mt-1 font-display text-[0.9rem] leading-tight"
+            className="mt-1.5 font-display text-[1.05rem] leading-tight"
             style={{ color: "#3A2418" }}
           >
             Compra con total tranquilidad
           </h2>
         </div>
 
-        <div className="mt-3 grid grid-cols-4 gap-1.5">
+        <div className="mt-4 grid grid-cols-4 gap-2">
           {benefits.map(({ icon: Icon, text }) => (
             <div
               key={text}
-              className="flex flex-col items-center justify-start gap-1 rounded-md bg-white px-1 py-1.5 text-center"
+              className="flex flex-col items-center justify-start gap-1.5 rounded-lg bg-white px-1.5 py-2.5 text-center"
               style={{
                 border: `1px solid ${gold}55`,
-                boxShadow: "0 4px 12px -12px rgba(58,36,24,0.22)",
+                boxShadow: "0 6px 16px -12px rgba(58,36,24,0.22)",
               }}
             >
               <div
-                className="flex size-5 shrink-0 items-center justify-center rounded-full"
+                className="flex size-7 shrink-0 items-center justify-center rounded-full"
                 style={{
                   background: "#FBF6EC",
                   border: `1px solid ${gold}66`,
                 }}
               >
-                <Icon className="size-2.5" style={{ color: gold }} strokeWidth={1.5} />
+                <Icon className="size-3.5" style={{ color: gold }} strokeWidth={1.5} />
               </div>
               <p
-                className="font-display text-[0.5rem] leading-tight"
+                className="font-display text-[0.6rem] leading-tight"
                 style={{ color: "#3A2418" }}
               >
                 {text}
@@ -1406,6 +1406,7 @@ function TrustBenefits() {
         </div>
       </div>
     </section>
+
 
 
 
