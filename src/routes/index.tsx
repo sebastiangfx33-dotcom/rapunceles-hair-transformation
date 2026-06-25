@@ -1149,7 +1149,7 @@ function ProductOptions() {
                       {v.badge}
                     </span>
                   )}
-                  <div className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4">
+                  <div className="grid grid-cols-[auto_auto_minmax(0,1fr)_auto] items-center gap-3">
                     <span
                       className="grid size-6 shrink-0 place-items-center rounded-full border-2"
                       style={{
@@ -1159,6 +1159,14 @@ function ProductOptions() {
                     >
                       {active && <Check className="size-3.5 text-[var(--ivory)]" />}
                     </span>
+                    <img
+                      src={heroKitNew.url}
+                      alt={`Kit Rapunceles ${v.label}`}
+                      className="size-16 shrink-0 object-contain"
+                      style={{
+                        transform: v.id === "500" ? "scale(0.82)" : "scale(1)",
+                      }}
+                    />
                     <div className="min-w-0">
                       <p className="truncate font-display text-xl">{v.label}</p>
                       <p className="truncate text-xs text-muted-foreground">{v.sub}</p>
@@ -1176,14 +1184,6 @@ function ProductOptions() {
           })}
         </div>
 
-        <div className="mt-6 rounded-2xl border border-border/70 bg-card/70 p-4 text-center">
-          <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Tu kit</p>
-          <p className="mt-1 font-display text-2xl">
-            {current.label} ·{" "}
-            <span className="text-[var(--gold)]">{formatCOP(current.price)}</span>
-          </p>
-        </div>
-
         <div className="mt-6 space-y-3">
           <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-primary">
             <Sparkles className="size-4" /> Quiero mi kit ({current.label})
@@ -1192,6 +1192,7 @@ function ProductOptions() {
             <MessageCircle className="size-4" /> Asesoría personalizada
           </a>
         </div>
+
 
       </div>
     </section>
