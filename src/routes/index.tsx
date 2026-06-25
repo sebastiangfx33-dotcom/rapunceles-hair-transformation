@@ -13,6 +13,9 @@ import {
   Clock,
   ArrowRight,
   Crown,
+  Truck,
+  Phone,
+  HeartHandshake,
 } from "lucide-react";
 import probFallAsset from "@/assets/card-problem-fall.png.asset.json";
 import probSlowGrowthAsset from "@/assets/card-problem-slow-growth.png.asset.json";
