@@ -106,7 +106,9 @@ function Landing() {
       <TrustBenefits />
       <FAQ />
 
+      <Urgency />
       <FinalCTA />
+
       <Footer />
     </main>
   );
