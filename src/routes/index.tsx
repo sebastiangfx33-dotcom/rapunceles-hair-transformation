@@ -1519,7 +1519,7 @@ function FinalTransformation() {
   );
 }
 
-
+function FAQ() {
   const gold = "#C9A961";
   const faqs = [
     { q: "¿En cuánto tiempo comenzaré a notar cambios?", a: "Las primeras usuarias notan menos caída desde la segunda semana y crecimiento visible entre la cuarta y sexta semana de uso constante." },
