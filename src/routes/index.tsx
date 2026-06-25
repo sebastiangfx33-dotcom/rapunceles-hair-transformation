@@ -103,7 +103,7 @@ function Landing() {
       <Testimonials />
       
       <ProductOptions />
-      <TrustBenefits />
+      
       <FAQ />
 
       <Urgency />
