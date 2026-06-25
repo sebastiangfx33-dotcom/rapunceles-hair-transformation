@@ -1335,7 +1335,7 @@ function TrustBenefits() {
     { icon: HeartHandshake, text: "Acompañamiento durante tu proceso" },
   ];
   return (
-    <section className="relative w-full py-14" style={{ background: "#FBF6EC" }}>
+    <section className="relative w-full py-6" style={{ background: "#FBF6EC" }}>
       <div className="mx-auto max-w-md px-6">
         <div className="text-center">
           <h2
@@ -1345,12 +1345,12 @@ function TrustBenefits() {
             Compra con total tranquilidad
           </h2>
           <div
-            className="mx-auto mt-4 h-px w-12"
+            className="mx-auto mt-2 h-px w-12"
             style={{ background: gold, opacity: 0.6 }}
           />
         </div>
 
-        <div className="mt-9 grid grid-cols-4 gap-1.5">
+        <div className="mt-4 grid grid-cols-4 gap-1.5">
           {benefits.map(({ icon: Icon, text }) => (
             <div
               key={text}
