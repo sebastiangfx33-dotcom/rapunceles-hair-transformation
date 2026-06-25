@@ -712,7 +712,7 @@ function KitIncludes() {
       />
 
       <div className="relative z-10 mx-auto max-w-md px-6">
-        <Header eyebrow="El kit completo" title="Todo lo que tu cabello necesita para crecer más fuerte, abundante y saludable." />
+        <Header eyebrow="El kit completo" title="Todo lo que tu cabello necesita para crecer más fuerte, abundante y saludable." titleClassName="text-[var(--gold)]" />
 
         <div className="mt-8 grid grid-cols-1 gap-5">
           {items.map((p, idx) => (
@@ -1181,11 +1181,11 @@ function Footer() {
 }
 
 /* ------------------------------ HEADER ------------------------------ */
-function Header({ eyebrow, title }: { eyebrow: string; title: string }) {
+function Header({ eyebrow, title, titleClassName }: { eyebrow: string; title: string; titleClassName?: string }) {
   return (
     <div className="text-center">
       <span className="eyebrow">{eyebrow}</span>
-      <h2 className="mt-3 text-balance text-[1.95rem] leading-tight sm:text-4xl">{title}</h2>
+      <h2 className={`mt-3 text-balance text-[1.95rem] leading-tight sm:text-4xl ${titleClassName ?? ""}`}>{title}</h2>
       <div className="mt-4 flex justify-center">
         <span className="gold-divider" />
       </div>
