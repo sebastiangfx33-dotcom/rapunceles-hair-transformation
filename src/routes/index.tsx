@@ -104,6 +104,8 @@ function Landing() {
       <Scarcity />
       <ProductOptions />
       <TrustBenefits />
+      <FAQ />
+
       <FinalCTA />
       <Footer />
     </main>
@@ -1316,6 +1318,100 @@ function TrustBenefits() {
   );
 }
 
+
+function FAQ() {
+  const gold = "#C9A961";
+  const faqs = [
+    { q: "¿En cuánto tiempo comenzaré a notar cambios?", a: "Las primeras usuarias notan menos caída desde la segunda semana y crecimiento visible entre la cuarta y sexta semana de uso constante." },
+    { q: "¿Debo usar los tres productos juntos?", a: "Sí. El shampoo, el acondicionador y el tónico están formulados para trabajar en conjunto y potenciar los resultados de tu rutina." },
+    { q: "¿Sirve si mi cabello no crece hace mucho tiempo?", a: "Por supuesto. Su fórmula activa el folículo capilar incluso en cabellos con crecimiento estancado, devolviendo fuerza y densidad." },
+    { q: "¿Hacen envíos a todo Colombia?", a: "Sí. Realizamos envíos seguros a todo el país con opción de pago contra entrega para tu total tranquilidad." },
+  ];
+  const [open, setOpen] = useState<number | null>(0);
+  return (
+    <section className="relative w-full py-12" style={{ background: "#F8F1E4" }}>
+      <div className="mx-auto max-w-md px-5">
+        <div className="text-center">
+          <span
+            className="text-[0.55rem] uppercase tracking-[0.32em]"
+            style={{ color: gold }}
+          >
+            Preguntas frecuentes
+          </span>
+          <h2
+            className="mt-2 font-display text-[1.5rem] leading-tight"
+            style={{ color: "#3A2418" }}
+          >
+            Resolvemos tus dudas
+          </h2>
+        </div>
+
+        <div className="mt-8 flex flex-col gap-4">
+          {faqs.map((item, i) => {
+            const isOpen = open === i;
+            return (
+              <div
+                key={item.q}
+                className="rounded-2xl bg-white transition-all"
+                style={{
+                  border: `1px solid ${gold}55`,
+                  boxShadow: isOpen
+                    ? "0 18px 40px -28px rgba(58,36,24,0.32)"
+                    : "0 10px 28px -24px rgba(58,36,24,0.22)",
+                }}
+              >
+                <button
+                  type="button"
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+                  aria-expanded={isOpen}
+                >
+                  <span
+                    className="font-display text-[0.95rem] leading-snug"
+                    style={{ color: "#3A2418" }}
+                  >
+                    {item.q}
+                  </span>
+                  <span
+                    className="flex size-7 shrink-0 items-center justify-center rounded-full transition-transform"
+                    style={{
+                      background: "#FBF6EC",
+                      border: `1px solid ${gold}66`,
+                      transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
+                    }}
+                  >
+                    <span
+                      className="text-base leading-none"
+                      style={{ color: gold }}
+                    >
+                      +
+                    </span>
+                  </span>
+                </button>
+                <div
+                  className="grid overflow-hidden transition-all duration-300 ease-out"
+                  style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
+                >
+                  <div className="min-h-0">
+                    <div
+                      className="mx-5 border-t pt-3 pb-5 text-[0.8rem] leading-relaxed"
+                      style={{
+                        borderColor: `${gold}33`,
+                        color: "#6B5544",
+                      }}
+                    >
+                      {item.a}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function Footer() {
   return (
