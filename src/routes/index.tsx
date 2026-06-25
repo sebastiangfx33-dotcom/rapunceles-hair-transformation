@@ -997,24 +997,24 @@ function Testimonials() {
           ))}
         </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-2.5">
+        <div className="mt-10 grid grid-cols-2 gap-4">
           {trust.map((it) => (
             <div
               key={it.t}
-              className="relative flex flex-col items-center justify-center rounded-2xl bg-white px-2 py-3 text-center"
+              className="rounded-2xl bg-white px-4 py-5 text-center"
               style={{
-                border: `1px solid ${gold}55`,
-                boxShadow: `0 10px 24px -16px rgba(58,36,24,0.3), 0 0 0 3px #FFFDF8, 0 0 0 4px ${gold}33`,
+                border: `1px solid ${gold}33`,
+                boxShadow: "0 12px 30px -22px rgba(58,36,24,0.22)",
               }}
             >
               <div
-                className="font-display text-[1rem] leading-none"
+                className="font-display text-[1.15rem] leading-none"
                 style={{ color: gold }}
               >
                 {it.n}
               </div>
               <div
-                className="mt-1.5 text-[0.58rem] uppercase tracking-[0.14em]"
+                className="mt-2 text-[0.72rem] uppercase tracking-[0.14em]"
                 style={{ color: "#6B5544" }}
               >
                 {it.t}
@@ -1022,8 +1022,6 @@ function Testimonials() {
             </div>
           ))}
         </div>
-
-
       </div>
     </section>
   );
