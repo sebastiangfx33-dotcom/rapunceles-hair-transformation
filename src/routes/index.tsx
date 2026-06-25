@@ -1205,10 +1205,6 @@ function ProductOptions() {
           </a>
         </div>
 
-        <ul className="mt-6 grid gap-2 text-xs text-muted-foreground">
-          <li className="flex items-center gap-2"><ShieldCheck className="size-3.5 text-[var(--botanical)]" /> Envío seguro a todo el país</li>
-          <li className="flex items-center gap-2"><Heart className="size-3.5 text-[var(--botanical)]" /> Pago contra entrega disponible</li>
-        </ul>
       </div>
     </section>
   );
