@@ -997,31 +997,39 @@ function Testimonials() {
           ))}
         </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-4">
-          {trust.map((it) => (
-            <div
-              key={it.t}
-              className="rounded-2xl bg-white px-4 py-5 text-center"
-              style={{
-                border: `1px solid ${gold}33`,
-                boxShadow: "0 12px 30px -22px rgba(58,36,24,0.22)",
-              }}
-            >
-              <div
-                className="font-display text-[1.15rem] leading-none"
-                style={{ color: gold }}
-              >
-                {it.n}
+        <div
+          className="mt-10 flex items-stretch justify-between rounded-full bg-white px-3 py-3"
+          style={{
+            border: `1px solid ${gold}40`,
+            boxShadow: "0 14px 34px -22px rgba(58,36,24,0.25)",
+          }}
+        >
+          {trust.map((it, i) => (
+            <div key={it.t} className="flex flex-1 items-center">
+              <div className="flex-1 px-1 text-center">
+                <div
+                  className="font-display text-[0.82rem] leading-none"
+                  style={{ color: gold }}
+                >
+                  {it.n}
+                </div>
+                <div
+                  className="mt-1.5 text-[0.52rem] uppercase leading-tight tracking-[0.12em]"
+                  style={{ color: "#6B5544" }}
+                >
+                  {it.t}
+                </div>
               </div>
-              <div
-                className="mt-2 text-[0.72rem] uppercase tracking-[0.14em]"
-                style={{ color: "#6B5544" }}
-              >
-                {it.t}
-              </div>
+              {i < trust.length - 1 && (
+                <span
+                  className="block self-center"
+                  style={{ width: 1, height: 24, background: `${gold}55` }}
+                />
+              )}
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
