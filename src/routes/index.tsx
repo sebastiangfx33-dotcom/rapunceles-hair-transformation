@@ -997,31 +997,6 @@ function Testimonials() {
           ))}
         </div>
 
-        <div className="mt-10 grid grid-cols-4 gap-2">
-          {trust.map((it) => (
-            <div
-              key={it.t}
-              className="rounded-2xl bg-white px-1.5 py-3 text-center"
-              style={{
-                border: `1px solid ${gold}55`,
-                boxShadow: "0 10px 24px -18px rgba(58,36,24,0.28)",
-              }}
-            >
-              <div
-                className="font-display text-[0.78rem] leading-none"
-                style={{ color: gold }}
-              >
-                {it.n}
-              </div>
-              <div
-                className="mt-1.5 text-[0.52rem] uppercase tracking-[0.1em] leading-tight"
-                style={{ color: "#6B5544" }}
-              >
-                {it.t}
-              </div>
-            </div>
-          ))}
-        </div>
 
       </div>
     </section>
