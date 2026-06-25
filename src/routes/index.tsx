@@ -1423,7 +1423,7 @@ function FinalTransformation() {
               loading="lazy"
               width={768}
               height={1280}
-              className="h-full w-full object-cover object-right"
+              className="h-full w-full object-cover object-left"
               style={{
                 maskImage:
                   "linear-gradient(to right, #000 78%, transparent 100%)",
