@@ -728,7 +728,7 @@ function KitIncludes() {
       />
 
       <div className="relative z-10 mx-auto max-w-md px-6">
-        <Header title="Todo lo que tu cabello necesita para crecer más fuerte, abundante y saludable." titleClassName="text-[var(--gold)]" />
+        <Header eyebrow="" title="Todo lo que tu cabello necesita para crecer más fuerte, abundante y saludable." titleClassName="text-[var(--gold)]" />
 
         <div className="mt-8 grid grid-cols-1 gap-5">
           {items.map((p, idx) => (
