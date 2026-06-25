@@ -821,17 +821,37 @@ function Ingredients() {
 /* ------------------------------ RESULTS ------------------------------ */
 function Results() {
   const items = [
-    { before: beforeAndrea, after: afterAndrea, name: "Andrea", time: "después de 12 semanas" },
-    { before: afterCamila, after: beforeCamila, name: "Camila", time: "después de 16 semanas" },
-    { before: beforeThird, after: afterThird, name: "Valentina", time: "después de 10 semanas" },
+    {
+      before: beforeAndrea,
+      after: afterAndrea,
+      name: "Andrea",
+      quote: "Volvió a ver su cabello crecer de verdad.",
+    },
+    {
+      before: afterCamila,
+      after: beforeCamila,
+      name: "Camila",
+      quote: "Más abundancia, más movimiento, más confianza.",
+    },
+    {
+      before: beforeThird,
+      after: afterThird,
+      name: "Valentina",
+      quote: "Recuperó el brillo y la fuerza de siempre.",
+    },
   ];
+  const gold = "#D4A85E";
   return (
-    <section className="section-pad bg-[color-mix(in_oklab,var(--beige)_60%,var(--ivory))]">
+    <section className="section-pad bg-[#FBF7F0]">
       <div className="mx-auto max-w-md px-6">
         <Header eyebrow="Resultados reales" title="Transformaciones reales de nuestras clientas." />
-        <div className="mt-8 space-y-5">
+        <div className="mt-10 space-y-7">
           {items.map((r) => (
-            <article key={r.name} className="luxe-card overflow-hidden">
+            <article
+              key={r.name}
+              className="luxe-card overflow-hidden rounded-2xl bg-white"
+              style={{ boxShadow: "0 1px 2px rgba(40,25,10,0.04), 0 14px 36px -22px rgba(40,25,10,0.18)" }}
+            >
               <div className="grid grid-cols-2 gap-0">
                 <div className="relative">
                   <img
@@ -842,11 +862,11 @@ function Results() {
                     loading="lazy"
                     className="h-full w-full object-cover"
                   />
-                  <span className="absolute left-2 top-2 rounded-full bg-black/60 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
+                  <span className="absolute left-3 top-3 rounded-full bg-white/85 px-3 py-1 text-[10px] font-light uppercase tracking-[0.25em] text-[#3a2a18] backdrop-blur-sm">
                     Antes
                   </span>
                 </div>
-                <div className="relative border-l border-white/40">
+                <div className="relative" style={{ borderLeft: `1px solid ${gold}33` }}>
                   <img
                     src={r.after}
                     alt={`Después - ${r.name}`}
@@ -855,22 +875,34 @@ function Results() {
                     loading="lazy"
                     className="h-full w-full object-cover"
                   />
-                  <span className="absolute right-2 top-2 rounded-full bg-[var(--gold)] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-[#2a1746]">
+                  <span
+                    className="absolute right-3 top-3 rounded-full px-3 py-1 text-[10px] font-light uppercase tracking-[0.25em] text-white"
+                    style={{ background: gold }}
+                  >
                     Después
                   </span>
                 </div>
               </div>
-              <div className="flex items-center justify-between gap-3 px-5 py-4">
-                <div className="min-w-0">
-                  <p className="truncate font-medium">{r.name}</p>
-                  <p className="text-xs text-muted-foreground">{r.time}</p>
+              <div className="px-6 pt-6 pb-7 text-center">
+                <p
+                  className="font-display text-[1.35rem] leading-none tracking-[0.02em] text-[#2a1c0e]"
+                  style={{ fontWeight: 400 }}
+                >
+                  {r.name}
+                </p>
+                <div className="mx-auto mt-3 h-px w-8" style={{ background: gold }} />
+                <div className="mt-4 flex items-center justify-center gap-1.5" style={{ color: gold }}>
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="size-[13px] fill-current" strokeWidth={0} />
+                  ))}
                 </div>
-                <Stars />
+                <p className="mt-5 px-1 font-display italic text-[0.95rem] leading-relaxed text-[#4a3a2a]">
+                  “{r.quote}”
+                </p>
               </div>
             </article>
           ))}
         </div>
-
       </div>
     </section>
   );
