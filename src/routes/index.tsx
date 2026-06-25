@@ -100,6 +100,7 @@ function Landing() {
       <Testimonials />
       <Scarcity />
       <ProductOptions />
+      <TrustBenefits />
       <FinalCTA />
       <Footer />
     </main>
