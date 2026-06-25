@@ -16,7 +16,9 @@ import {
   Truck,
   Phone,
   HeartHandshake,
+  Package,
 } from "lucide-react";
+import finalCtaModel from "@/assets/final-cta-model.jpg.asset.json";
 import probFallAsset from "@/assets/card-problem-fall.png.asset.json";
 import probSlowGrowthAsset from "@/assets/card-problem-slow-growth.png.asset.json";
 import probRootsAsset from "@/assets/card-problem-roots.png.asset.json";
@@ -104,6 +106,7 @@ function Landing() {
       
       <ProductOptions />
       <TrustBenefits />
+      <FinalTransformation />
       
       <FAQ />
 
@@ -1381,6 +1384,140 @@ function TrustBenefits() {
   );
 }
 
+
+
+function FinalTransformation() {
+  const gold = "#D4A85E";
+  const purple = "#2A1237";
+  const benefits = [
+    { icon: Truck, line1: "Envío gratis", line2: "a todo Colombia" },
+    { icon: Package, line1: "Pago contra", line2: "entrega" },
+    { icon: ShieldCheck, line1: "Compra 100%", line2: "segura" },
+  ];
+  return (
+    <section
+      className="relative w-full overflow-hidden"
+      style={{
+        background:
+          "radial-gradient(120% 80% at 20% 30%, #3B1A4D 0%, #2A1237 55%, #1B0A26 100%)",
+      }}
+    >
+      <div className="mx-auto flex max-w-md flex-col">
+        {/* Top split: image + text */}
+        <div className="grid grid-cols-[42%_58%] items-stretch">
+          <div className="relative">
+            <img
+              src={finalCtaModel.url}
+              alt="Mujer con cabello largo y saludable"
+              loading="lazy"
+              width={768}
+              height={1280}
+              className="h-full w-full object-cover object-right"
+              style={{
+                maskImage:
+                  "linear-gradient(to right, #000 78%, transparent 100%)",
+                WebkitMaskImage:
+                  "linear-gradient(to right, #000 78%, transparent 100%)",
+              }}
+            />
+          </div>
+          <div className="flex flex-col justify-center px-4 py-10 text-center">
+            <h2
+              className="font-display text-[1.55rem] leading-[1.1] text-white"
+              style={{ letterSpacing: "0.01em" }}
+            >
+              TU CABELLO
+              <br />
+              TODAVÍA PUEDE
+              <br />
+              <span
+                className="italic"
+                style={{ color: gold, fontWeight: 500 }}
+              >
+                CAMBIAR
+              </span>
+            </h2>
+            <div
+              className="mx-auto mt-3 h-px w-10"
+              style={{ background: gold, opacity: 0.8 }}
+            />
+            <p
+              className="mt-4 text-[0.78rem] leading-[1.45] text-white/85"
+            >
+              Miles de mujeres están recuperando fuerza, crecimiento y abundancia con Rapunceles.
+            </p>
+            <p className="mt-3 text-[0.78rem] leading-[1.45] text-white/85">
+              No sigas viendo cómo tu cabello pierde vida cada día.
+            </p>
+
+            <button
+              type="button"
+              className="mt-5 rounded-xl px-4 py-3.5 font-display text-[0.78rem] leading-tight tracking-wide"
+              style={{
+                background:
+                  "linear-gradient(180deg, #DDB46A 0%, #B88A3F 100%)",
+                color: "#2A1237",
+                boxShadow:
+                  "0 18px 40px -16px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.35)",
+              }}
+            >
+              QUIERO EMPEZAR MI
+              <br />
+              TRANSFORMACIÓN
+            </button>
+          </div>
+        </div>
+
+        {/* Benefits row */}
+        <div className="grid grid-cols-3 gap-2 px-5 pb-10 pt-4">
+          {benefits.map(({ icon: Icon, line1, line2 }, i) => (
+            <div
+              key={line1}
+              className="relative flex flex-col items-center gap-2 px-1 text-center"
+            >
+              <Icon className="size-7" style={{ color: gold }} strokeWidth={1.3} />
+              <p className="text-[0.7rem] leading-[1.25] text-white">
+                {line1}
+                <br />
+                {line2}
+              </p>
+              {i < benefits.length - 1 && (
+                <span
+                  className="pointer-events-none absolute right-0 top-1 h-12 w-px"
+                  style={{ background: "rgba(212,168,94,0.25)" }}
+                />
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Brand footer */}
+        <div className="flex flex-col items-center px-5 pb-12 pt-2 text-center">
+          <Crown className="size-5" style={{ color: gold }} strokeWidth={1.2} />
+          <div
+            className="mt-1 flex h-10 w-10 items-center justify-center rounded-full"
+            style={{ border: `1px solid ${gold}` }}
+          >
+            <span
+              className="font-display text-[1.35rem] leading-none"
+              style={{ color: gold }}
+            >
+              R
+            </span>
+          </div>
+          <p
+            className="mt-3 font-display text-[1.15rem] tracking-[0.32em] text-white"
+          >
+            RAPUNCELES
+          </p>
+          <p className="mt-2 text-[0.7rem] tracking-wide text-white/70">
+            Naturaleza. Ciencia. Transformación.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function FAQ() {
   const gold = "#C9A961";
