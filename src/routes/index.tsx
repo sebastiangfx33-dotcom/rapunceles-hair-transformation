@@ -270,7 +270,23 @@ function AfterBanner() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-background">
+    <section className="relative w-full overflow-hidden">
+      {/* Background image — untouched */}
+      <img
+        src={afterBannerBg.url}
+        alt="Fondo de la experiencia Rapuncelés"
+        className="absolute inset-0 h-full w-full object-cover"
+        loading="lazy"
+      />
+      {/* Subtle tonal overlay for legibility without altering the image */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(20,8,38,0.52) 0%, rgba(20,8,38,0.42) 40%, rgba(20,8,38,0.55) 100%)",
+        }}
+      />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center px-5 py-16 md:py-20">
