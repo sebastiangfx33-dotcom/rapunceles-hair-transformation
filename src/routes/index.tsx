@@ -1335,12 +1335,6 @@ function TrustBenefits() {
     <section className="relative w-full py-14" style={{ background: "#FBF6EC" }}>
       <div className="mx-auto max-w-md px-6">
         <div className="text-center">
-          <span
-            className="text-[0.62rem] uppercase tracking-[0.32em]"
-            style={{ color: gold }}
-          >
-            Tu compra protegida
-          </span>
           <h2
             className="mt-3 font-display text-[1.7rem] leading-[1.15]"
             style={{ color: ink }}
