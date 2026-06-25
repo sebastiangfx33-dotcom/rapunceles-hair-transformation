@@ -54,6 +54,9 @@ import beforeThirdAsset from "@/assets/before-third.jpg.asset.json";
 const beforeThird = beforeThirdAsset.url;
 import afterThirdAsset from "@/assets/after-third.jpg.asset.json";
 const afterThird = afterThirdAsset.url;
+import avatarMariaJoseAsset from "@/assets/avatar-maria-jose.jpg.asset.json";
+import avatarDanielaAsset from "@/assets/avatar-daniela.jpg.asset.json";
+import avatarLauraAsset from "@/assets/avatar-laura.jpg.asset.json";
 
 
 
@@ -924,42 +927,78 @@ function Results() {
 
 /* ---------------------------- TESTIMONIALS ---------------------------- */
 function Testimonials() {
+  const gold = "#D4A85E";
   const reviews = [
     {
       name: "María José",
+      avatar: avatarMariaJoseAsset.url,
       body:
         "Mi cabello dejó de caerse tanto después del segundo mes. Ahora veo cabellos nuevos creciendo. ¡Estoy enamorada!",
     },
     {
       name: "Daniela R.",
+      avatar: avatarDanielaAsset.url,
       body:
         "El tónico es mágico. Lo uso todas las noches y siento mi cuero cabelludo más fuerte y mi cabello con más volumen.",
     },
     {
       name: "Laura M.",
+      avatar: avatarLauraAsset.url,
       body:
         "Súper recomendado. El olor es delicioso y la textura premium. Vale cada peso. Mi cabello luce más sano y brillante.",
     },
   ];
   return (
-    <section className="section-pad">
-      <div className="mx-auto max-w-md px-6">
+    <section
+      className="section-pad relative"
+      style={{
+        backgroundImage: `linear-gradient(rgba(20,8,30,0.6), rgba(20,8,30,0.6)), url("/__l5e/assets-v1/bc61cf58-7fda-4f6b-a0e5-1046f6c6bb78/testimonials-bg.png")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="mx-auto max-w-md px-6 [&_h2]:!text-[#D4A85E] [&_p.eyebrow]:!text-[#D4A85E]">
         <Header eyebrow="Testimonios" title="Lo que dicen nuestras clientas." />
         <div className="mt-8 space-y-4">
           {reviews.map((r) => (
             <article
               key={r.name}
-              className="luxe-card p-5"
+              className="luxe-card p-5 rounded-2xl"
               style={{
-                background:
-                  "linear-gradient(180deg, color-mix(in oklab, var(--lavender) 25%, var(--card)), var(--card))",
+                background: "rgba(20,8,30,0.55)",
+                backdropFilter: "blur(6px)",
+                border: `1px solid ${gold}33`,
+                boxShadow: "0 14px 36px -22px rgba(0,0,0,0.55)",
               }}
             >
-              <Stars />
-              <p className="mt-3 text-[0.95rem] leading-relaxed">{r.body}</p>
-              <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
-                <Check className="size-3.5 text-[var(--botanical)]" />
-                <span>Cliente verificada · {r.name}</span>
+              <div className="flex items-center gap-3">
+                <img
+                  src={r.avatar}
+                  alt={r.name}
+                  width={64}
+                  height={64}
+                  loading="lazy"
+                  className="size-12 rounded-full object-cover"
+                  style={{ border: `1.5px solid ${gold}` }}
+                />
+                <div className="flex flex-col">
+                  <span className="font-display text-[1rem]" style={{ color: gold }}>
+                    {r.name}
+                  </span>
+                  <span className="flex items-center gap-1" style={{ color: gold }}>
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} className="size-[12px] fill-current" strokeWidth={0} />
+                    ))}
+                  </span>
+                </div>
+              </div>
+              <p className="mt-4 text-[0.95rem] italic leading-relaxed" style={{ color: gold }}>
+                “{r.body}”
+              </p>
+              <div className="mt-3 flex items-center gap-2 text-xs" style={{ color: `${gold}cc` }}>
+                <Check className="size-3.5" />
+                <span>Cliente verificada</span>
               </div>
             </article>
           ))}
