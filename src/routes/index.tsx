@@ -1162,11 +1162,12 @@ function ProductOptions() {
                     <img
                       src={heroKitNew.url}
                       alt={`Kit Rapunceles ${v.label}`}
-                      className="size-16 shrink-0 object-contain"
+                      className="h-28 w-28 shrink-0 object-contain"
                       style={{
-                        transform: v.id === "500" ? "scale(0.82)" : "scale(1)",
+                        transform: v.id === "500" ? "scale(0.82)" : "scale(1.05)",
                       }}
                     />
+
                     <div className="min-w-0">
                       <p className="truncate font-display text-xl">{v.label}</p>
                       <p className="truncate text-xs text-muted-foreground">{v.sub}</p>
