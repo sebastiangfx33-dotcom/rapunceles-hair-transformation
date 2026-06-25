@@ -842,15 +842,28 @@ function Results() {
   ];
   const gold = "#D4A85E";
   return (
-    <section className="section-pad bg-[#FBF7F0]">
-      <div className="mx-auto max-w-md px-6">
+    <section
+      className="section-pad relative"
+      style={{
+        backgroundImage: `linear-gradient(rgba(20,8,30,0.55), rgba(20,8,30,0.55)), url("/__l5e/assets-v1/da26aace-3f54-43ca-a073-a1f89cec247d/results-bg.png")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="mx-auto max-w-md px-6 [&_h2]:!text-[#D4A85E] [&_p.eyebrow]:!text-[#D4A85E]">
         <Header eyebrow="Resultados reales" title="Transformaciones reales de nuestras clientas." />
         <div className="mt-10 space-y-7">
           {items.map((r) => (
             <article
               key={r.name}
-              className="luxe-card overflow-hidden rounded-2xl bg-white"
-              style={{ boxShadow: "0 1px 2px rgba(40,25,10,0.04), 0 14px 36px -22px rgba(40,25,10,0.18)" }}
+              className="luxe-card overflow-hidden rounded-2xl"
+              style={{
+                background: "rgba(20,8,30,0.55)",
+                backdropFilter: "blur(6px)",
+                border: `1px solid ${gold}33`,
+                boxShadow: "0 14px 36px -22px rgba(0,0,0,0.55)",
+              }}
             >
               <div className="grid grid-cols-2 gap-0">
                 <div className="relative">
@@ -862,7 +875,7 @@ function Results() {
                     loading="lazy"
                     className="h-full w-full object-cover"
                   />
-                  <span className="absolute left-3 top-3 rounded-full bg-white/85 px-3 py-1 text-[10px] font-light uppercase tracking-[0.25em] text-[#3a2a18] backdrop-blur-sm">
+                  <span className="absolute left-3 top-3 rounded-full bg-black/55 px-3 py-1 text-[10px] font-light uppercase tracking-[0.25em] backdrop-blur-sm" style={{ color: gold, border: `1px solid ${gold}55` }}>
                     Antes
                   </span>
                 </div>
@@ -876,8 +889,8 @@ function Results() {
                     className="h-full w-full object-cover"
                   />
                   <span
-                    className="absolute right-3 top-3 rounded-full px-3 py-1 text-[10px] font-light uppercase tracking-[0.25em] text-white"
-                    style={{ background: gold }}
+                    className="absolute right-3 top-3 rounded-full px-3 py-1 text-[10px] font-light uppercase tracking-[0.25em]"
+                    style={{ background: gold, color: "#1a0a2e" }}
                   >
                     Después
                   </span>
@@ -885,8 +898,8 @@ function Results() {
               </div>
               <div className="px-6 pt-6 pb-7 text-center">
                 <p
-                  className="font-display text-[1.35rem] leading-none tracking-[0.02em] text-[#2a1c0e]"
-                  style={{ fontWeight: 400 }}
+                  className="font-display text-[1.35rem] leading-none tracking-[0.02em]"
+                  style={{ fontWeight: 400, color: gold }}
                 >
                   {r.name}
                 </p>
@@ -896,7 +909,7 @@ function Results() {
                     <Star key={i} className="size-[13px] fill-current" strokeWidth={0} />
                   ))}
                 </div>
-                <p className="mt-5 px-1 font-display italic text-[0.95rem] leading-relaxed text-[#4a3a2a]">
+                <p className="mt-5 px-1 font-display italic text-[0.95rem] leading-relaxed" style={{ color: gold }}>
                   “{r.quote}”
                 </p>
               </div>
@@ -905,6 +918,7 @@ function Results() {
         </div>
       </div>
     </section>
+
   );
 }
 
