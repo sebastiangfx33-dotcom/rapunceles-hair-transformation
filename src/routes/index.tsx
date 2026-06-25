@@ -1339,8 +1339,8 @@ function TrustBenefits() {
       <div className="mx-auto max-w-md px-6">
         <div className="text-center">
           <h2
-            className="mt-3 font-display text-[1.7rem] leading-[1.15]"
-            style={{ color: ink }}
+            className="-mt-2 font-display text-[1.7rem] leading-[1.15]"
+            style={{ color: gold }}
           >
             Compra con total tranquilidad
           </h2>
