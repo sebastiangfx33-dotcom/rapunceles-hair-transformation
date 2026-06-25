@@ -1167,8 +1167,8 @@ function ProductOptions() {
                   <img
                     src={heroKitNew.url}
                     alt={`Kit Rapunceles ${v.label}`}
-                    className="mt-2 h-40 w-40 object-contain"
-                    style={{ transform: v.id === "500" ? "scale(0.92)" : "scale(1)" }}
+                    className="mt-2 h-60 w-60 object-contain sm:h-64 sm:w-64"
+                    style={{ transform: v.id === "500" ? "scale(0.95)" : "scale(1.05)" }}
                   />
                   <p className="mt-4 font-display text-xl text-primary">{v.label}</p>
                   <p className="mt-1 text-sm text-muted-foreground max-w-[14rem]">{v.sub}</p>
