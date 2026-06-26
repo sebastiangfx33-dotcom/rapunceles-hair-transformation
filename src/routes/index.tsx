@@ -1294,16 +1294,10 @@ function Urgency() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="relative mx-auto max-w-md px-6 pt-10 pb-10 text-center">
+      <div className="relative mx-auto max-w-md px-6 pt-4 pb-10 text-center">
         <Ornament />
-        <div
-          className="mt-4 text-[0.7rem] uppercase"
-          style={{ color: gold, letterSpacing: "0.42em" }}
-        >
-          Edición limitada
-        </div>
         <h2
-          className="mt-4 font-display text-[2rem] leading-[1.05] uppercase"
+          className="mt-3 font-display text-[2rem] leading-[1.05] uppercase"
           style={{ color: "#F6E9CF", letterSpacing: "0.02em" }}
         >
           Producción
@@ -1312,6 +1306,7 @@ function Urgency() {
           <br />
           esta semana
         </h2>
+
         <p
           className="mx-auto mt-5 max-w-[18rem] text-[0.85rem] leading-[1.6]"
           style={{ color: "#E8DCC8", opacity: 0.85 }}
