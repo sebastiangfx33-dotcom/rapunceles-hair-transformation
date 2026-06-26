@@ -29,6 +29,7 @@ import probVolumeAsset from "@/assets/card-problem-volume.png.asset.json";
 
 import heroBanner from "@/assets/hero-banner.png.asset.json";
 import afterBannerBg from "@/assets/after-banner-bg.png.asset.json";
+import signalsBg from "@/assets/signals-bg.png.asset.json";
 import routineBg from "@/assets/routine-bg.png.asset.json";
 
 
