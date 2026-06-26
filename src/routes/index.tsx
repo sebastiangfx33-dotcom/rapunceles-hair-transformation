@@ -1764,7 +1764,8 @@ function LuxuryCampaign() {
         {/* Trust badges - gold elegant icons */}
         <ul
           className="mt-1 flex w-full max-w-[300px] items-start justify-center gap-4"
-          style={{ color: "rgba(245,236,217,0.85)" }}
+          style={{ color: "#e8c98a" }}
+
         >
           {[
             {
