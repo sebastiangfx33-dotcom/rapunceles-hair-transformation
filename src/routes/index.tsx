@@ -1817,7 +1817,7 @@ function LuxuryCampaign() {
                 className="whitespace-pre-line text-[7.5px] uppercase leading-[1.35] tracking-[0.12em]"
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
-                  color: "rgba(245,236,217,0.85)",
+                  color: "#e8c98a",
                   fontWeight: 500,
                 }}
               >
