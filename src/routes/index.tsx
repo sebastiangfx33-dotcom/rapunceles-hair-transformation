@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import finalCtaModel from "@/assets/final-cta-model-v2.jpg.asset.json";
 import trustBgAsset from "@/assets/trust-bg-v2.png.asset.json";
+import luxuryCampaign from "@/assets/luxury-campaign.jpg.asset.json";
 import testimonialsBgNew from "@/assets/testimonials-bg-new.png.asset.json";
 import probFallAsset from "@/assets/card-problem-fall.png.asset.json";
 import probSlowGrowthAsset from "@/assets/card-problem-slow-growth.png.asset.json";
@@ -108,8 +109,9 @@ function Landing() {
       
       <ProductOptions />
       <TrustBenefits />
-      
-      
+
+      <LuxuryCampaign />
+
       <FAQ />
 
       <Urgency />
