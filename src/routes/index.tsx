@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import finalCtaModel from "@/assets/final-cta-model-v2.jpg.asset.json";
 import trustBgAsset from "@/assets/trust-bg-v2.png.asset.json";
+import luxuryCampaign from "@/assets/luxury-campaign.jpg.asset.json";
 import testimonialsBgNew from "@/assets/testimonials-bg-new.png.asset.json";
 import probFallAsset from "@/assets/card-problem-fall.png.asset.json";
 import probSlowGrowthAsset from "@/assets/card-problem-slow-growth.png.asset.json";
@@ -108,8 +109,9 @@ function Landing() {
       
       <ProductOptions />
       <TrustBenefits />
-      
-      
+
+      <LuxuryCampaign />
+
       <FAQ />
 
       <Urgency />
@@ -1665,5 +1667,27 @@ function Header({ eyebrow, title, titleClassName }: { eyebrow: string; title: st
         <span className="gold-divider" />
       </div>
     </div>
+  );
+}
+
+/* ------------------------------ LUXURY CAMPAIGN ------------------------------ */
+function LuxuryCampaign() {
+  return (
+    <section className="relative w-full" style={{ background: "#1a0a2e" }}>
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full"
+        aria-label="Quiero empezar mi transformación"
+      >
+        <img
+          src={luxuryCampaign.url}
+          alt="Rapunceles - Tu cabello puede empezar a cambiar desde hoy"
+          className="block w-full h-auto"
+          loading="lazy"
+        />
+      </a>
+    </section>
   );
 }
