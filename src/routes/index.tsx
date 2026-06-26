@@ -1732,7 +1732,7 @@ function LuxuryCampaign() {
         {/* Body */}
         <p
           className="mb-2 max-w-[270px] text-[11px] leading-[1.5]"
-          style={{ color: "#e8c98a", fontFamily: "'Inter', sans-serif" }}
+          style={{ color: "#ffffff", fontFamily: "'Inter', sans-serif" }}
         >
           Miles de mujeres ya están recuperando crecimiento, fuerza y abundancia con Rapunceles.
         </p>
