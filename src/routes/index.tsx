@@ -1804,15 +1804,19 @@ function LuxuryCampaign() {
               className="flex flex-1 flex-col items-center gap-1.5 text-center"
             >
               <span
-                className="flex items-center justify-center"
+                className="flex items-center justify-center rounded-full"
                 style={{
-                  width: 25,
-                  height: 25,
+                  width: 40,
+                  height: 40,
                   color: "#e8c98a",
+                  border: "1px solid rgba(232,201,138,0.55)",
+                  padding: 8,
+                  boxShadow: "inset 0 0 0 1px rgba(232,201,138,0.12)",
                 }}
               >
                 {b.icon}
               </span>
+
               <span
                 className="whitespace-pre-line text-[7.5px] uppercase leading-[1.35] tracking-[0.12em]"
                 style={{
