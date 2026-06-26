@@ -37,6 +37,7 @@ import heroKitNew from "@/assets/hero-kit-new.png.asset.json";
 import routineProducts from "@/assets/routine-products.png.asset.json";
 import routineBgV3 from "@/assets/routine-bg-v6.png.asset.json";
 import routineSectionBg from "@/assets/routine-section-bg.jpg.asset.json";
+import kitBgAsset from "@/assets/kit-bg.png.asset.json";
 import prodShampooAsset from "@/assets/product-shampoo-v2.png.asset.json";
 const prodShampoo = prodShampooAsset.url;
 import prodConditionerAsset from "@/assets/product-conditioner-new.png.asset.json";
@@ -1149,10 +1150,11 @@ function ProductOptions() {
       className="py-3"
       style={{
         backgroundImage:
-          "linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/__l5e/assets-v1/e587ad8f-04b6-44ad-86e9-1655a14a631a/kit-bg.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+          `linear-gradient(to bottom, rgba(0,0,0,0.52), rgba(0,0,0,0.52)), url('${kitBgAsset.url}')`,
+        backgroundSize: "100% auto",
+        backgroundPosition: "center top",
         backgroundRepeat: "no-repeat",
+        backgroundColor: "#17091f",
       }}
     >
 
@@ -1203,7 +1205,6 @@ function ProductOptions() {
                     src={heroKitNew.url}
                     alt={`Kit Rapunceles ${v.label}`}
                     className="mt-2 h-60 w-60 object-contain sm:h-64 sm:w-64"
-                    style={{ transform: v.id === "500" ? "scale(0.95)" : "scale(1.05)" }}
                   />
                   <p className="mt-4 font-display text-xl text-primary">{v.label}</p>
                   <p className="mt-1 text-sm text-muted-foreground max-w-[14rem]">{v.sub}</p>
