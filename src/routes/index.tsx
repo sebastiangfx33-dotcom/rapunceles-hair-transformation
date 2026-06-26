@@ -492,14 +492,32 @@ function Solution() {
         <Header eyebrow="" title={"\n"} />
 
         {/* Top chips - above products */}
-        <ul className="mt-2 flex flex-wrap justify-center gap-2">
+        <ul className="mt-2 flex flex-wrap justify-center gap-2.5">
           {benefits.slice(0, 2).map(({ icon: Icon, text }) => (
             <li
               key={text}
-              className="flex items-center gap-1.5 rounded-full border border-[var(--gold)]/40 bg-[#1a0a2e]/70 backdrop-blur-sm px-3 py-1.5 text-[0.72rem] text-white/95"
+              className="group relative flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[0.72rem] tracking-wide text-white/95"
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                background:
+                  "linear-gradient(135deg, rgba(26,10,46,0.85) 0%, rgba(42,18,68,0.85) 100%)",
+                border: "1px solid rgba(201,168,76,0.55)",
+                boxShadow:
+                  "0 0 0 1px rgba(201,168,76,0.12), 0 0 18px rgba(201,168,76,0.25), inset 0 1px 0 rgba(255,255,255,0.08)",
+                backdropFilter: "blur(8px)",
+                WebkitBackdropFilter: "blur(8px)",
+              }}
             >
-              <Icon className="size-3.5 text-[var(--gold)]" />
-              <span className="leading-none">{text}</span>
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 rounded-full"
+                style={{
+                  background:
+                    "radial-gradient(ellipse at top, rgba(245,230,168,0.18) 0%, transparent 70%)",
+                }}
+              />
+              <Icon className="relative size-3.5 text-[var(--gold)]" style={{ filter: "drop-shadow(0 0 4px rgba(201,168,76,0.6))" }} />
+              <span className="relative leading-none">{text}</span>
             </li>
           ))}
         </ul>
@@ -507,17 +525,36 @@ function Solution() {
         <div className="flex-1" />
 
         {/* Bottom chips - below products */}
-        <ul className="mb-2 flex flex-wrap justify-center gap-2">
+        <ul className="mb-2 flex flex-wrap justify-center gap-2.5">
           {benefits.slice(2).map(({ icon: Icon, text }) => (
             <li
               key={text}
-              className="flex items-center gap-1.5 rounded-full border border-[var(--gold)]/40 bg-[#1a0a2e]/70 backdrop-blur-sm px-3 py-1.5 text-[0.72rem] text-white/95"
+              className="group relative flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[0.72rem] tracking-wide text-white/95"
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                background:
+                  "linear-gradient(135deg, rgba(26,10,46,0.85) 0%, rgba(42,18,68,0.85) 100%)",
+                border: "1px solid rgba(201,168,76,0.55)",
+                boxShadow:
+                  "0 0 0 1px rgba(201,168,76,0.12), 0 0 18px rgba(201,168,76,0.25), inset 0 1px 0 rgba(255,255,255,0.08)",
+                backdropFilter: "blur(8px)",
+                WebkitBackdropFilter: "blur(8px)",
+              }}
             >
-              <Icon className="size-3.5 text-[var(--gold)]" />
-              <span className="leading-none">{text}</span>
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 rounded-full"
+                style={{
+                  background:
+                    "radial-gradient(ellipse at top, rgba(245,230,168,0.18) 0%, transparent 70%)",
+                }}
+              />
+              <Icon className="relative size-3.5 text-[var(--gold)]" style={{ filter: "drop-shadow(0 0 4px rgba(201,168,76,0.6))" }} />
+              <span className="relative leading-none">{text}</span>
             </li>
           ))}
         </ul>
+
       </div>
 
     </section>
