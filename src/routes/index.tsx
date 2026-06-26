@@ -1751,46 +1751,62 @@ function LuxuryCampaign() {
         {/* Spacer where scene shows through */}
         <div className="flex-1 min-h-[180px]" />
 
-        <p
-          className="text-[12.5px] leading-[1.6] max-w-[300px] italic mb-6"
-          style={{ color: "rgba(245,236,217,0.7)", fontFamily: "'Cormorant Garamond', serif" }}
-        >
-          La decisión que tomes hoy puede definir cómo se verá tu cabello en los próximos meses.
-        </p>
-
         {/* CTA */}
         <a
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block w-full max-w-[320px] py-4 px-6 rounded-full text-center transition-transform active:scale-[0.98] mb-6"
+          className="inline-block max-w-[260px] py-2.5 px-7 rounded-full text-center transition-transform active:scale-[0.98] mb-8"
           style={{
             background: "linear-gradient(180deg, #f4d98a 0%, #c79a4a 100%)",
             color: "#1a0a1e",
-            fontFamily: "'Inter', sans-serif",
-            fontWeight: 600,
-            fontSize: "12px",
-            letterSpacing: "0.18em",
-            boxShadow: "0 10px 30px -10px rgba(199,154,74,0.5)",
+            fontFamily: "'Cormorant Garamond', serif",
+            fontWeight: 500,
+            fontSize: "11px",
+            letterSpacing: "0.22em",
+            boxShadow: "0 6px 20px -8px rgba(199,154,74,0.55)",
+            border: "1px solid rgba(245,217,138,0.5)",
           }}
         >
-          QUIERO EMPEZAR MI TRANSFORMACIÓN
+          EMPEZAR MI TRANSFORMACIÓN
         </a>
 
         {/* Trust badges */}
         <ul
-          className="grid grid-cols-3 gap-3 w-full max-w-[340px] mt-2"
-          style={{ color: "rgba(245,236,217,0.85)" }}
+          className="grid grid-cols-3 gap-2.5 w-full max-w-[340px] mt-2"
+          style={{ color: "rgba(245,236,217,0.9)" }}
         >
           {[
-            { icon: "✦", label: "Envío gratis\na todo Colombia" },
-            { icon: "✦", label: "Pago contra\nentrega" },
-            { icon: "✦", label: "Compra 100%\nsegura" },
+            { icon: "🚚", label: "Envío gratis\na todo Colombia" },
+            { icon: "💵", label: "Pago contra\nentrega" },
+            { icon: "🔒", label: "Compra 100%\nsegura" },
           ].map((b) => (
-            <li key={b.label} className="flex flex-col items-center text-center gap-1.5">
-              <span style={{ color: "#e8c98a", fontSize: "14px" }}>{b.icon}</span>
+            <li
+              key={b.label}
+              className="flex flex-col items-center text-center gap-2 px-2 py-3 rounded-xl"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(245,236,217,0.08) 0%, rgba(245,236,217,0.02) 100%)",
+                border: "1px solid rgba(232,201,138,0.25)",
+                backdropFilter: "blur(6px)",
+                boxShadow: "0 4px 14px -6px rgba(0,0,0,0.3)",
+              }}
+            >
               <span
-                className="text-[9.5px] leading-[1.35] whitespace-pre-line tracking-[0.08em] uppercase"
+                className="flex items-center justify-center rounded-full"
+                style={{
+                  width: 34,
+                  height: 34,
+                  background:
+                    "radial-gradient(circle at 30% 30%, rgba(245,217,138,0.35), rgba(199,154,74,0.15))",
+                  border: "1px solid rgba(232,201,138,0.45)",
+                  fontSize: "15px",
+                }}
+              >
+                {b.icon}
+              </span>
+              <span
+                className="text-[9px] leading-[1.35] whitespace-pre-line tracking-[0.1em] uppercase"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 {b.label}
@@ -1798,6 +1814,7 @@ function LuxuryCampaign() {
             </li>
           ))}
         </ul>
+
       </div>
     </section>
   );
