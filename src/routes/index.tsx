@@ -1800,7 +1800,7 @@ function LuxuryCampaign() {
 
 
       {/* Content */}
-      <div className="relative z-10 flex min-h-[570px] flex-col items-center px-7 pb-8 pt-8 text-center sm:min-h-[620px]">
+      <div className="relative z-10 flex min-h-[570px] flex-col items-center px-7 pb-8 pt-2 text-center sm:min-h-[620px]">
         {/* Headline */}
         <h2
           className="mb-3 max-w-[292px] text-[22px] leading-[1.13]"
