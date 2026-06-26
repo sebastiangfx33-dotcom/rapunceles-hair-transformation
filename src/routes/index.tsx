@@ -330,7 +330,7 @@ function AfterBanner() {
             color: IVORY,
           }}
         >
-          Si tu cabello está pasando por esto… necesita actuar ahora
+          Si tu cabello está pasando por esto…\u00a0
         </h2>
 
         {/* Subtitle */}
