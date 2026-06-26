@@ -1283,15 +1283,6 @@ function Urgency() {
           formulados para garantizar máxima calidad en cada fórmula.
         </p>
 
-        <div className="mt-8 flex justify-center">
-          <img
-            src={heroKitNew.url}
-            alt="Kit Rapunceles edición limitada"
-            className="w-[88%] max-w-[340px] object-contain"
-            loading="lazy"
-            style={{ filter: "drop-shadow(0 30px 40px rgba(0,0,0,0.5))" }}
-          />
-        </div>
 
         <div className="mt-8">
           <div
