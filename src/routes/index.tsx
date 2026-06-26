@@ -296,7 +296,7 @@ function AfterBanner() {
     <section className="relative w-full overflow-hidden">
       {/* Background image — untouched */}
       <img
-        src={afterBannerBg.url}
+        src={signalsBg.url}
         alt="Fondo de la experiencia Rapuncelés"
         className="absolute inset-0 h-full w-full object-cover"
         loading="lazy"
