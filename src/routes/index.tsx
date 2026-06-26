@@ -763,7 +763,7 @@ function KitIncludes() {
     <section className="section-pad relative w-full overflow-hidden">
       {/* Background image — same as "Tu cabello te está enviando señales" */}
       <img
-        src={afterBannerBg.url}
+        src={kitIncludesBg.url}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover"
