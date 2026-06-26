@@ -1343,52 +1343,6 @@ function Urgency() {
           </p>
         </div>
 
-        <div className="mt-8">
-          <Ornament />
-          <div className="mt-6 grid grid-cols-3 gap-3">
-            {[
-              {
-                label: "Envío gratis\na todo Colombia",
-                icon: (
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke={gold} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3 7h11v9H3z" />
-                    <path d="M14 10h4l3 3v3h-7" />
-                    <circle cx="7" cy="17.5" r="1.6" />
-                    <circle cx="17" cy="17.5" r="1.6" />
-                  </svg>
-                ),
-              },
-              {
-                label: "Pago contra\nentrega",
-                icon: (
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke={gold} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4 10l8-4 8 4-8 4-8-4z" />
-                    <path d="M4 10v5l8 4 8-4v-5" />
-                    <path d="M2 17c2 2 4 2 6 0" />
-                  </svg>
-                ),
-              },
-              {
-                label: "Compra 100%\nsegura",
-                icon: (
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke={gold} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z" />
-                  </svg>
-                ),
-              },
-            ].map((b, i) => (
-              <div key={i} className="flex flex-col items-center text-center">
-                <span className="mb-2">{b.icon}</span>
-                <span
-                  className="whitespace-pre-line text-[0.72rem] leading-[1.35]"
-                  style={{ color: "#E8DCC8" }}
-                >
-                  {b.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
 
         <div className="mt-8">
           <Ornament />
