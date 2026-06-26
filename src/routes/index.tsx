@@ -38,6 +38,7 @@ import routineProducts from "@/assets/routine-products.png.asset.json";
 import routineBgV3 from "@/assets/routine-bg-v6.png.asset.json";
 import routineSectionBg from "@/assets/routine-section-bg.jpg.asset.json";
 import kitBgAsset from "@/assets/kit-bg.png.asset.json";
+import urgencyBgUrl from "@/assets/urgency-bg.jpg";
 import prodShampooAsset from "@/assets/product-shampoo-v2.png.asset.json";
 const prodShampoo = prodShampooAsset.url;
 import prodConditionerAsset from "@/assets/product-conditioner-new.png.asset.json";
@@ -1231,63 +1232,175 @@ function ProductOptions() {
 
 /* ----------------------------- FINAL CTA ----------------------------- */
 function Urgency() {
-  const gold = "#C9A961";
-  const filled = ((50 - 21) / 50) * 100;
+  const gold = "#E8C98A";
+  const goldDeep = "#C9A35A";
+  const filled = 78;
+  const Ornament = () => (
+    <div className="flex items-center justify-center gap-2" aria-hidden>
+      <span style={{ width: 28, height: 1, background: `linear-gradient(90deg, transparent, ${gold})` }} />
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill={gold} opacity="0.9" />
+      </svg>
+      <span style={{ width: 28, height: 1, background: `linear-gradient(90deg, ${gold}, transparent)` }} />
+    </div>
+  );
   return (
-    <section className="px-5 pt-6 pb-8" style={{ background: "#F8F1E4" }}>
-      <div className="mx-auto max-w-md text-center">
+    <section
+      className="relative w-full overflow-hidden"
+      style={{
+        backgroundColor: "#2A0E3A",
+        backgroundImage: `linear-gradient(180deg, rgba(30,8,45,0.55) 0%, rgba(30,8,45,0.25) 40%, rgba(30,8,45,0.85) 100%), url(${urgencyBgUrl})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="relative mx-auto max-w-md px-6 pt-10 pb-10 text-center">
+        <Ornament />
         <div
-          className="inline-block text-[0.62rem] uppercase tracking-[0.32em] mb-3"
-          style={{ color: gold, letterSpacing: "0.32em" }}
+          className="mt-4 text-[0.7rem] uppercase"
+          style={{ color: gold, letterSpacing: "0.42em" }}
         >
           Edición limitada
         </div>
         <h2
-          className="font-display text-[1.5rem] leading-[1.15] mb-3"
-          style={{ color: "#3A2418" }}
+          className="mt-4 font-display text-[2rem] leading-[1.05] uppercase"
+          style={{ color: "#F6E9CF", letterSpacing: "0.02em" }}
         >
-          Producción limitada esta semana
+          Producción
+          <br />
+          exclusiva
+          <br />
+          esta semana
         </h2>
         <p
-          className="text-[0.82rem] leading-[1.55] mb-6"
-          style={{ color: "#6B5544" }}
+          className="mx-auto mt-5 max-w-[18rem] text-[0.85rem] leading-[1.6]"
+          style={{ color: "#E8DCC8", opacity: 0.85 }}
         >
-          Debido a nuestro proceso artesanal y alta demanda, trabajamos con
-          inventario limitado cada semana.
+          Cada kit Rapunceles es elaborado en pequeños lotes cuidadosamente
+          formulados para garantizar máxima calidad en cada fórmula.
         </p>
 
-        <div
-          className="rounded-2xl bg-white px-5 py-5"
-          style={{
-            border: `1px solid ${gold}40`,
-            boxShadow: "0 18px 40px -22px rgba(58,36,24,0.25)",
-          }}
-        >
+        <div className="mt-8 flex justify-center">
+          <img
+            src={heroKitNew.url}
+            alt="Kit Rapunceles edición limitada"
+            className="w-[88%] max-w-[340px] object-contain"
+            loading="lazy"
+            style={{ filter: "drop-shadow(0 30px 40px rgba(0,0,0,0.5))" }}
+          />
+        </div>
+
+        <div className="mt-8">
           <div
-            className="font-display text-[1.05rem] mb-3"
-            style={{ color: "#3A2418" }}
+            className="text-[0.7rem] uppercase"
+            style={{ color: gold, letterSpacing: "0.4em" }}
           >
-            Solo quedan <span style={{ color: gold }}>21 kits</span> disponibles
+            Disponibles esta semana
           </div>
+          <div className="mt-3 flex items-baseline justify-center gap-3">
+            <span
+              className="font-display leading-none"
+              style={{ color: "#F6E9CF", fontSize: "4.2rem" }}
+            >
+              21
+            </span>
+            <span
+              className="font-display"
+              style={{ color: gold, fontSize: "1.5rem", letterSpacing: "0.1em" }}
+            >
+              KITS
+            </span>
+          </div>
+
           <div
-            className="h-[6px] w-full rounded-full overflow-hidden"
-            style={{ background: `${gold}22` }}
+            className="mx-auto mt-5 h-[8px] w-[80%] rounded-full overflow-hidden"
+            style={{ background: "rgba(255,255,255,0.08)", border: `1px solid ${gold}33` }}
           >
             <div
               className="h-full rounded-full"
               style={{
                 width: `${filled}%`,
-                background: `linear-gradient(90deg, ${gold}, #B8893F)`,
-                boxShadow: `0 0 12px ${gold}80`,
+                background: `linear-gradient(90deg, ${goldDeep}, ${gold}, ${goldDeep})`,
+                boxShadow: `0 0 14px ${gold}aa`,
               }}
             />
           </div>
-          <div
-            className="mt-3 flex justify-between text-[0.68rem] uppercase tracking-[0.2em]"
-            style={{ color: "#8A7058" }}
+          <p
+            className="mt-4 text-[0.82rem] italic"
+            style={{ color: "#E8DCC8" }}
           >
-            <span>Reservados</span>
-            <span>21 / 50</span>
+            78% reservado esta semana
+          </p>
+          <p
+            className="mx-auto mt-3 max-w-[20rem] text-[0.82rem] leading-[1.6]"
+            style={{ color: "#D8C9B4", opacity: 0.85 }}
+          >
+            Cuando este lote se agote, cerraremos pedidos temporalmente hasta
+            nuestra próxima producción.
+          </p>
+        </div>
+
+        <div className="mt-8">
+          <Ornament />
+          <div className="mt-6 grid grid-cols-3 gap-3">
+            {[
+              {
+                label: "Envío gratis\na todo Colombia",
+                icon: (
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke={gold} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M3 7h11v9H3z" />
+                    <path d="M14 10h4l3 3v3h-7" />
+                    <circle cx="7" cy="17.5" r="1.6" />
+                    <circle cx="17" cy="17.5" r="1.6" />
+                  </svg>
+                ),
+              },
+              {
+                label: "Pago contra\nentrega",
+                icon: (
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke={gold} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 10l8-4 8 4-8 4-8-4z" />
+                    <path d="M4 10v5l8 4 8-4v-5" />
+                    <path d="M2 17c2 2 4 2 6 0" />
+                  </svg>
+                ),
+              },
+              {
+                label: "Compra 100%\nsegura",
+                icon: (
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke={gold} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z" />
+                  </svg>
+                ),
+              },
+            ].map((b, i) => (
+              <div key={i} className="flex flex-col items-center text-center">
+                <span className="mb-2">{b.icon}</span>
+                <span
+                  className="whitespace-pre-line text-[0.72rem] leading-[1.35]"
+                  style={{ color: "#E8DCC8" }}
+                >
+                  {b.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <Ornament />
+          <div
+            className="mt-3 font-display text-[1.35rem] tracking-[0.15em]"
+            style={{ color: "#F6E9CF" }}
+          >
+            RAPUNCELES
+          </div>
+          <div
+            className="mt-1 text-[0.7rem]"
+            style={{ color: gold, letterSpacing: "0.18em" }}
+          >
+            Naturaleza. Ciencia. Transformación.
           </div>
         </div>
       </div>
