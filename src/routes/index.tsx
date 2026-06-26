@@ -603,12 +603,18 @@ function ProductRoutineSection() {
           style={{ top: "2%" }}
         >
           <h2
-            className="font-serif text-white leading-[1.15]"
+            className="font-serif leading-[1.15]"
             style={{
               fontFamily: '"Cormorant Garamond", "Playfair Display", serif',
               fontSize: "clamp(20px, 5.8vw, 34px)",
               fontWeight: 500,
               letterSpacing: "0.01em",
+              backgroundImage:
+                "linear-gradient(180deg, #f5e6a8 0%, #d4af37 45%, #b8860b 100%)",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              color: "transparent",
+              WebkitTextFillColor: "transparent",
             }}
           >
             Más que una rutina,
