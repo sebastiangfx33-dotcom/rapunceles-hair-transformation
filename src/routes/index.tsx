@@ -115,7 +115,7 @@ function Landing() {
       <FAQ />
 
       <Urgency />
-      <FinalCTA />
+
 
       <Footer />
     </main>
