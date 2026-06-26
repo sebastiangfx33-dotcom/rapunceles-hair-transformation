@@ -1249,7 +1249,7 @@ function Urgency() {
       className="relative w-full overflow-hidden"
       style={{
         backgroundColor: "#2A0E3A",
-        backgroundImage: `linear-gradient(180deg, rgba(30,8,45,0.55) 0%, rgba(30,8,45,0.25) 40%, rgba(30,8,45,0.85) 100%), url(${urgencyBg.url})`,
+        backgroundImage: `linear-gradient(180deg, rgba(30,8,45,0.55) 0%, rgba(30,8,45,0.25) 40%, rgba(30,8,45,0.85) 100%), url(${urgencyBgUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
