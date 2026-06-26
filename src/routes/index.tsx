@@ -1700,25 +1700,13 @@ function LuxuryCampaign() {
 
       {/* Content */}
       <div className="relative z-10 flex min-h-[570px] flex-col items-center px-7 pb-8 pt-8 text-center sm:min-h-[620px]">
-        {/* Brand */}
-        <p
-          className="mb-4 text-[9px] uppercase tracking-[0.46em]"
-          style={{
-            color: "#e8c98a",
-            fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
-            fontWeight: 500,
-          }}
-        >
-          RAPUNCELES
-        </p>
-
         {/* Headline */}
         <h2
           className="mb-3 max-w-[292px] text-[22px] leading-[1.13]"
           style={{
             fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
             fontWeight: 400,
-            color: "#f5ecd9",
+            color: "#e8c98a",
             letterSpacing: "0.01em",
           }}
         >
@@ -1744,10 +1732,11 @@ function LuxuryCampaign() {
         {/* Body */}
         <p
           className="mb-2 max-w-[270px] text-[11px] leading-[1.5]"
-          style={{ color: "rgba(245,236,217,0.78)", fontFamily: "'Inter', sans-serif" }}
+          style={{ color: "#e8c98a", fontFamily: "'Inter', sans-serif" }}
         >
           Miles de mujeres ya están recuperando crecimiento, fuerza y abundancia con Rapunceles.
         </p>
+
 
         {/* Spacer where scene shows through */}
         <div className="min-h-[140px] flex-1" />
