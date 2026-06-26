@@ -1353,7 +1353,15 @@ function TrustBenefits() {
     { icon: HeartHandshake, text: "Acompañamiento durante tu proceso" },
   ];
   return (
-    <section className="relative w-full py-6" style={{ background: "#FBF6EC" }}>
+    <section
+      className="relative w-full py-6"
+      style={{
+        backgroundImage: `url(${trustBgAsset.url})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="mx-auto max-w-md px-6">
         <div className="text-center">
           <h2
