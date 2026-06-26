@@ -120,7 +120,7 @@ function Landing() {
       <Urgency />
 
 
-      <Footer />
+      
     </main>
   );
 }
@@ -1339,18 +1339,27 @@ function Urgency() {
           </div>
 
           <div
-            className="mx-auto mt-5 h-[8px] w-[80%] rounded-full overflow-hidden"
+            className="relative mx-auto mt-5 h-[8px] w-[80%] rounded-full overflow-hidden"
             style={{ background: "rgba(255,255,255,0.08)", border: `1px solid ${gold}33` }}
           >
             <div
-              className="h-full rounded-full"
+              className="animate-progress-glow h-full rounded-full"
               style={{
                 width: `${filled}%`,
                 background: `linear-gradient(90deg, ${goldDeep}, ${gold}, ${goldDeep})`,
-                boxShadow: `0 0 14px ${gold}aa`,
+              }}
+            />
+            <div
+              aria-hidden="true"
+              className="animate-progress-shine pointer-events-none absolute inset-y-0 left-0 w-1/3"
+              style={{
+                background:
+                  "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.55) 50%, transparent 100%)",
+                mixBlendMode: "screen",
               }}
             />
           </div>
+
           <p
             className="mt-4 text-[0.82rem] italic"
             style={{ color: "#E8DCC8" }}
@@ -1367,25 +1376,11 @@ function Urgency() {
         </div>
 
 
-        <div className="mt-8">
-          <Ornament />
-          <div
-            className="mt-3 font-display text-[1.35rem] tracking-[0.15em]"
-            style={{ color: "#F6E9CF" }}
-          >
-            RAPUNCELES
-          </div>
-          <div
-            className="mt-1 text-[0.7rem]"
-            style={{ color: gold, letterSpacing: "0.18em" }}
-          >
-            Naturaleza. Ciencia. Transformación.
-          </div>
-        </div>
       </div>
     </section>
   );
 }
+
 
 function FinalCTA() {
   const gold = "#D4A85E";
