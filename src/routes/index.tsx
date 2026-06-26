@@ -38,7 +38,7 @@ import routineProducts from "@/assets/routine-products.png.asset.json";
 import routineBgV3 from "@/assets/section4-bg.png.asset.json";
 import routineSectionBg from "@/assets/routine-section-bg.jpg.asset.json";
 import kitBgAsset from "@/assets/kit-bg.png.asset.json";
-import urgencyBgAsset from "@/assets/urgency-bg-v3.jpg.asset.json";
+import urgencyBgAsset from "@/assets/urgency-bg-v4.png.asset.json";
 const urgencyBgUrl = urgencyBgAsset.url;
 import prodShampooAsset from "@/assets/product-shampoo-v2.png.asset.json";
 const prodShampoo = prodShampooAsset.url;
