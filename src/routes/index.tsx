@@ -1151,10 +1151,11 @@ function ProductOptions() {
       className="py-3"
       style={{
         backgroundImage:
-          `linear-gradient(to bottom, rgba(0,0,0,0.52), rgba(0,0,0,0.52)), url('${kitBgAsset.url}')`,
-        backgroundSize: "100% auto",
-        backgroundPosition: "center top",
+          `linear-gradient(to bottom, rgba(10,4,20,0.78), rgba(10,4,20,0.85)), url('${kitBgAsset.url}')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
+        backgroundAttachment: "scroll",
         backgroundColor: "#17091f",
       }}
     >
