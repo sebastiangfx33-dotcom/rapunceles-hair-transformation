@@ -1294,10 +1294,10 @@ function Urgency() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="relative mx-auto max-w-md px-6 pt-4 pb-10 text-center">
+      <div className="relative mx-auto max-w-md px-6 pt-0 pb-10 text-center">
         <Ornament />
         <h2
-          className="mt-3 font-display text-[2rem] leading-[1.05] uppercase"
+          className="mt-1 font-display text-[2rem] leading-[1.05] uppercase"
           style={{ color: "#F6E9CF", letterSpacing: "0.02em" }}
         >
           Producción
