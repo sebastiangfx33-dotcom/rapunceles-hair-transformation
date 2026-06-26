@@ -1756,58 +1756,79 @@ function LuxuryCampaign() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block max-w-[260px] py-2.5 px-7 rounded-full text-center transition-transform active:scale-[0.98] mb-8"
+          className="inline-block max-w-[210px] py-2 px-6 rounded-full text-center transition-transform active:scale-[0.98] mb-10"
           style={{
             background: "linear-gradient(180deg, #f4d98a 0%, #c79a4a 100%)",
             color: "#1a0a1e",
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 500,
-            fontSize: "11px",
-            letterSpacing: "0.22em",
-            boxShadow: "0 6px 20px -8px rgba(199,154,74,0.55)",
+            fontSize: "10px",
+            letterSpacing: "0.25em",
+            boxShadow: "0 4px 16px -8px rgba(199,154,74,0.5)",
             border: "1px solid rgba(245,217,138,0.5)",
           }}
         >
           EMPEZAR MI TRANSFORMACIÓN
         </a>
 
-        {/* Trust badges */}
+        {/* Trust badges - gold elegant icons */}
         <ul
-          className="grid grid-cols-3 gap-2.5 w-full max-w-[340px] mt-2"
-          style={{ color: "rgba(245,236,217,0.9)" }}
+          className="flex justify-center items-start gap-6 w-full max-w-[340px] mt-2"
+          style={{ color: "rgba(245,236,217,0.85)" }}
         >
           {[
-            { icon: "🚚", label: "Envío gratis\na todo Colombia" },
-            { icon: "💵", label: "Pago contra\nentrega" },
-            { icon: "🔒", label: "Compra 100%\nsegura" },
+            {
+              label: "Envío gratis\na todo Colombia",
+              icon: (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+                  <path d="M3 7h11v9H3z" />
+                  <path d="M14 10h4l3 3v3h-7z" />
+                  <circle cx="7" cy="18" r="1.6" />
+                  <circle cx="17.5" cy="18" r="1.6" />
+                </svg>
+              ),
+            },
+            {
+              label: "Pago contra\nentrega",
+              icon: (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+                  <rect x="2.5" y="6" width="19" height="12" rx="1.5" />
+                  <circle cx="12" cy="12" r="2.6" />
+                  <path d="M6 9.5v5M18 9.5v5" />
+                </svg>
+              ),
+            },
+            {
+              label: "Compra 100%\nsegura",
+              icon: (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+                  <path d="M12 3l8 3v6c0 4.5-3.4 7.8-8 9-4.6-1.2-8-4.5-8-9V6l8-3z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+              ),
+            },
           ].map((b) => (
             <li
               key={b.label}
-              className="flex flex-col items-center text-center gap-2 px-2 py-3 rounded-xl"
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(245,236,217,0.08) 0%, rgba(245,236,217,0.02) 100%)",
-                border: "1px solid rgba(232,201,138,0.25)",
-                backdropFilter: "blur(6px)",
-                boxShadow: "0 4px 14px -6px rgba(0,0,0,0.3)",
-              }}
+              className="flex flex-col items-center text-center gap-2 flex-1"
             >
               <span
-                className="flex items-center justify-center rounded-full"
+                className="flex items-center justify-center"
                 style={{
-                  width: 34,
-                  height: 34,
-                  background:
-                    "radial-gradient(circle at 30% 30%, rgba(245,217,138,0.35), rgba(199,154,74,0.15))",
-                  border: "1px solid rgba(232,201,138,0.45)",
-                  fontSize: "15px",
+                  width: 32,
+                  height: 32,
+                  color: "#e8c98a",
                 }}
               >
                 {b.icon}
               </span>
               <span
-                className="text-[9px] leading-[1.35] whitespace-pre-line tracking-[0.1em] uppercase"
-                style={{ fontFamily: "'Inter', sans-serif" }}
+                className="text-[8.5px] leading-[1.4] whitespace-pre-line tracking-[0.14em] uppercase"
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  color: "rgba(245,236,217,0.85)",
+                  fontWeight: 500,
+                }}
               >
                 {b.label}
               </span>
