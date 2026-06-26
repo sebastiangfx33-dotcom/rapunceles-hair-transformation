@@ -1685,7 +1685,8 @@ function LuxuryCampaign() {
         width={832}
         height={1472}
         loading="lazy"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover"
+        style={{ objectPosition: "center center", transform: "scale(0.96)" }}
       />
       {/* Cinematic gradient overlay for legibility */}
       <div
@@ -1698,10 +1699,10 @@ function LuxuryCampaign() {
 
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 pt-10 pb-10 min-h-[640px]">
+      <div className="relative z-10 flex min-h-[570px] flex-col items-center px-7 pb-8 pt-8 text-center sm:min-h-[620px]">
         {/* Brand */}
         <p
-          className="text-[11px] tracking-[0.5em] uppercase mb-5"
+          className="mb-4 text-[9px] uppercase tracking-[0.46em]"
           style={{
             color: "#e8c98a",
             fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
@@ -1713,7 +1714,7 @@ function LuxuryCampaign() {
 
         {/* Headline */}
         <h2
-          className="text-[26px] leading-[1.15] mb-4 max-w-[320px]"
+          className="mb-3 max-w-[292px] text-[22px] leading-[1.13]"
           style={{
             fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
             fontWeight: 400,
@@ -1742,29 +1743,29 @@ function LuxuryCampaign() {
 
         {/* Body */}
         <p
-          className="text-[13px] leading-[1.6] max-w-[300px] mb-3"
+          className="mb-2 max-w-[270px] text-[11px] leading-[1.5]"
           style={{ color: "rgba(245,236,217,0.78)", fontFamily: "'Inter', sans-serif" }}
         >
           Miles de mujeres ya están recuperando crecimiento, fuerza y abundancia con Rapunceles.
         </p>
 
         {/* Spacer where scene shows through */}
-        <div className="flex-1 min-h-[180px]" />
+        <div className="min-h-[140px] flex-1" />
 
         {/* CTA */}
         <a
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block max-w-[210px] py-2 px-6 rounded-full text-center transition-transform active:scale-[0.98] mb-10"
+          className="mb-7 inline-block max-w-[178px] rounded-full px-5 py-1.5 text-center transition-transform active:scale-[0.98]"
           style={{
             background: "linear-gradient(180deg, #f4d98a 0%, #c79a4a 100%)",
             color: "#1a0a1e",
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 500,
-            fontSize: "10px",
-            letterSpacing: "0.25em",
-            boxShadow: "0 4px 16px -8px rgba(199,154,74,0.5)",
+            fontSize: "8.5px",
+            letterSpacing: "0.22em",
+            boxShadow: "0 3px 12px -7px rgba(199,154,74,0.5)",
             border: "1px solid rgba(245,217,138,0.5)",
           }}
         >
@@ -1773,7 +1774,7 @@ function LuxuryCampaign() {
 
         {/* Trust badges - gold elegant icons */}
         <ul
-          className="flex justify-center items-start gap-6 w-full max-w-[340px] mt-2"
+          className="mt-1 flex w-full max-w-[300px] items-start justify-center gap-4"
           style={{ color: "rgba(245,236,217,0.85)" }}
         >
           {[
@@ -1810,20 +1811,20 @@ function LuxuryCampaign() {
           ].map((b) => (
             <li
               key={b.label}
-              className="flex flex-col items-center text-center gap-2 flex-1"
+              className="flex flex-1 flex-col items-center gap-1.5 text-center"
             >
               <span
                 className="flex items-center justify-center"
                 style={{
-                  width: 32,
-                  height: 32,
+                  width: 25,
+                  height: 25,
                   color: "#e8c98a",
                 }}
               >
                 {b.icon}
               </span>
               <span
-                className="text-[8.5px] leading-[1.4] whitespace-pre-line tracking-[0.14em] uppercase"
+                className="whitespace-pre-line text-[7.5px] uppercase leading-[1.35] tracking-[0.12em]"
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   color: "rgba(245,236,217,0.85)",
