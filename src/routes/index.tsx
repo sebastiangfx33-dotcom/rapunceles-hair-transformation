@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import finalCtaModel from "@/assets/final-cta-model-v2.jpg.asset.json";
 import trustBgAsset from "@/assets/trust-bg-v2.png.asset.json";
-import luxuryCampaign from "@/assets/luxury-campaign.jpg.asset.json";
+import luxuryBgScene from "@/assets/luxury-bg-scene.jpg";
 import testimonialsBgNew from "@/assets/testimonials-bg-new.png.asset.json";
 import probFallAsset from "@/assets/card-problem-fall.png.asset.json";
 import probSlowGrowthAsset from "@/assets/card-problem-slow-growth.png.asset.json";
@@ -1673,21 +1673,131 @@ function Header({ eyebrow, title, titleClassName }: { eyebrow: string; title: st
 /* ------------------------------ LUXURY CAMPAIGN ------------------------------ */
 function LuxuryCampaign() {
   return (
-    <section className="relative w-full" style={{ background: "#1a0a2e" }}>
-      <a
-        href={WHATSAPP_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block w-full"
-        aria-label="Quiero empezar mi transformación"
-      >
-        <img
-          src={luxuryCampaign.url}
-          alt="Rapunceles - Tu cabello puede empezar a cambiar desde hoy"
-          className="block w-full h-auto"
-          loading="lazy"
-        />
-      </a>
+    <section
+      className="relative w-full overflow-hidden"
+      style={{ background: "#1a0a1e" }}
+    >
+      {/* Background scene */}
+      <img
+        src={luxuryBgScene}
+        alt=""
+        aria-hidden="true"
+        width={832}
+        height={1472}
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover opacity-90"
+      />
+      {/* Cinematic gradient overlay for legibility */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(26,10,30,0.85) 0%, rgba(26,10,30,0.35) 28%, rgba(26,10,30,0.35) 60%, rgba(26,10,30,0.95) 100%)",
+        }}
+      />
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center text-center px-6 pt-10 pb-10 min-h-[640px]">
+        {/* Brand */}
+        <p
+          className="text-[11px] tracking-[0.5em] uppercase mb-5"
+          style={{
+            color: "#e8c98a",
+            fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
+            fontWeight: 500,
+          }}
+        >
+          RAPUNCELES
+        </p>
+
+        {/* Headline */}
+        <h2
+          className="text-[26px] leading-[1.15] mb-4 max-w-[320px]"
+          style={{
+            fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
+            fontWeight: 400,
+            color: "#f5ecd9",
+            letterSpacing: "0.01em",
+          }}
+        >
+          Tu cabello puede
+          <br />
+          empezar a{" "}
+          <span
+            style={{
+              fontStyle: "italic",
+              background:
+                "linear-gradient(180deg, #f4d98a 0%, #c79a4a 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            cambiar
+          </span>
+          <br />
+          desde hoy
+        </h2>
+
+        {/* Body */}
+        <p
+          className="text-[13px] leading-[1.6] max-w-[300px] mb-3"
+          style={{ color: "rgba(245,236,217,0.78)", fontFamily: "'Inter', sans-serif" }}
+        >
+          Miles de mujeres ya están recuperando crecimiento, fuerza y abundancia con Rapunceles.
+        </p>
+
+        {/* Spacer where scene shows through */}
+        <div className="flex-1 min-h-[180px]" />
+
+        <p
+          className="text-[12.5px] leading-[1.6] max-w-[300px] italic mb-6"
+          style={{ color: "rgba(245,236,217,0.7)", fontFamily: "'Cormorant Garamond', serif" }}
+        >
+          La decisión que tomes hoy puede definir cómo se verá tu cabello en los próximos meses.
+        </p>
+
+        {/* CTA */}
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block w-full max-w-[320px] py-4 px-6 rounded-full text-center transition-transform active:scale-[0.98] mb-6"
+          style={{
+            background: "linear-gradient(180deg, #f4d98a 0%, #c79a4a 100%)",
+            color: "#1a0a1e",
+            fontFamily: "'Inter', sans-serif",
+            fontWeight: 600,
+            fontSize: "12px",
+            letterSpacing: "0.18em",
+            boxShadow: "0 10px 30px -10px rgba(199,154,74,0.5)",
+          }}
+        >
+          QUIERO EMPEZAR MI TRANSFORMACIÓN
+        </a>
+
+        {/* Trust badges */}
+        <ul
+          className="grid grid-cols-3 gap-3 w-full max-w-[340px] mt-2"
+          style={{ color: "rgba(245,236,217,0.85)" }}
+        >
+          {[
+            { icon: "✦", label: "Envío gratis\na todo Colombia" },
+            { icon: "✦", label: "Pago contra\nentrega" },
+            { icon: "✦", label: "Compra 100%\nsegura" },
+          ].map((b) => (
+            <li key={b.label} className="flex flex-col items-center text-center gap-1.5">
+              <span style={{ color: "#e8c98a", fontSize: "14px" }}>{b.icon}</span>
+              <span
+                className="text-[9.5px] leading-[1.35] whitespace-pre-line tracking-[0.08em] uppercase"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                {b.label}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }
