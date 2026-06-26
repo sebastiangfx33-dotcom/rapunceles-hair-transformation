@@ -1669,3 +1669,25 @@ function Header({ eyebrow, title, titleClassName }: { eyebrow: string; title: st
     </div>
   );
 }
+
+/* ------------------------------ LUXURY CAMPAIGN ------------------------------ */
+function LuxuryCampaign() {
+  return (
+    <section className="relative w-full" style={{ background: "#1a0a2e" }}>
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full"
+        aria-label="Quiero empezar mi transformación"
+      >
+        <img
+          src={luxuryCampaign.url}
+          alt="Rapunceles - Tu cabello puede empezar a cambiar desde hoy"
+          className="block w-full h-auto"
+          loading="lazy"
+        />
+      </a>
+    </section>
+  );
+}
