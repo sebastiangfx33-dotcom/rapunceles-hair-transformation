@@ -185,3 +185,15 @@
   background-clip: text;
   color: transparent;
 }
+
+@keyframes progress-shine {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(220%); }
+}
+@utility animate-progress-shine { animation: progress-shine 2.8s ease-in-out infinite; }
+
+@keyframes progress-glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(232,201,138,0.45); }
+  50%      { box-shadow: 0 0 22px rgba(232,201,138,0.85); }
+}
+@utility animate-progress-glow { animation: progress-glow 2.4s ease-in-out infinite; }
