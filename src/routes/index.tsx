@@ -1685,16 +1685,17 @@ function LuxuryCampaign() {
         width={832}
         height={1472}
         loading="lazy"
-        className="absolute inset-0 w-full h-full object-cover opacity-90"
+        className="absolute inset-0 w-full h-full object-cover"
       />
       {/* Cinematic gradient overlay for legibility */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, rgba(26,10,30,0.85) 0%, rgba(26,10,30,0.35) 28%, rgba(26,10,30,0.35) 60%, rgba(26,10,30,0.95) 100%)",
+            "linear-gradient(180deg, rgba(26,10,30,0.55) 0%, rgba(26,10,30,0.05) 30%, rgba(26,10,30,0.05) 65%, rgba(26,10,30,0.75) 100%)",
         }}
       />
+
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 pt-10 pb-10 min-h-[640px]">
