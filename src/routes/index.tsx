@@ -179,11 +179,10 @@ function Hero() {
             marginLeft: "-10px",
           }}
         >
-          Tu cabello <br />
-          puede volver <br />
-          a crecer fuerte,{" "}
+          Tu cabello puede <br />
+          volver a crecer fuerte, <br />
           <span style={{ color: GOLD, fontStyle: "italic", fontWeight: 500 }}>
-            abundante y saludable.
+            abundante y saludable
           </span>
         </h1>
 
