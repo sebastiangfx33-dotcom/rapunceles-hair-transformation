@@ -834,7 +834,7 @@ function Ingredients() {
   return (
     <section className="section-pad relative w-full overflow-hidden">
       <img
-        src="/__l5e/assets-v1/e9876f9d-c858-4154-8d53-d3d1744a32a2/sec5-bg.png"
+        src="/sec5-bg.png"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover"
@@ -912,7 +912,7 @@ function Results() {
     <section
       className="section-pad relative"
       style={{
-        backgroundImage: `linear-gradient(rgba(20,8,30,0.55), rgba(20,8,30,0.55)), url("/__l5e/assets-v1/da26aace-3f54-43ca-a073-a1f89cec247d/results-bg.png")`,
+        backgroundImage: `linear-gradient(rgba(20,8,30,0.55), rgba(20,8,30,0.55)), url("/results-bg.png")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
