@@ -18,35 +18,35 @@ import {
   HeartHandshake,
   Package,
 } from "lucide-react";
-import finalCtaModel from "@/assets/final-cta-model-v2.jpg.asset.json";
-import trustBgAsset from "@/assets/trust-bg-v2.png.asset.json";
+const finalCtaModel = { url: "/final-cta-model-v2.jpg" };
+const trustBgAsset = { url: "/trust-bg-v2.png" };
 import luxuryBgScene from "@/assets/luxury-bg-scene.jpg";
-import testimonialsBgNew from "@/assets/testimonials-bg-new.png.asset.json";
-import probFallAsset from "@/assets/card-problem-fall.png.asset.json";
-import probSlowGrowthAsset from "@/assets/card-problem-slow-growth.png.asset.json";
-import probRootsAsset from "@/assets/card-problem-roots.png.asset.json";
-import probVolumeAsset from "@/assets/card-problem-volume.png.asset.json";
+const testimonialsBgNew = { url: "/testimonials-bg-new.png" };
+const probFallAsset = { url: "/card1.png" };
+const probSlowGrowthAsset = { url: "/card2.png" };
+const probRootsAsset = { url: "/card3.png" };
+const probVolumeAsset = { url: "/card4.png" };
 
-import heroBanner from "@/assets/hero-banner.png.asset.json";
-import afterBannerBg from "@/assets/after-banner-bg.png.asset.json";
-import signalsBg from "@/assets/signals-bg.png.asset.json";
-import kitIncludesBg from "@/assets/kit-includes-bg.png.asset.json";
-import routineBg from "@/assets/routine-bg.png.asset.json";
+const heroBanner = { url: "/hero-banner.png" };
+const afterBannerBg = { url: "/after-banner-bg.png" };
+const signalsBg = { url: "/signals-bg.png" };
+const kitIncludesBg = { url: "/kit-includes-bg.png" };
+const routineBg = { url: "/routine-bg.png" };
 
 
 import heroKit from "@/assets/hero-kit.jpg";
-import heroKitNew from "@/assets/hero-kit-new.png.asset.json";
-import routineProducts from "@/assets/routine-products.png.asset.json";
-import routineBgV3 from "@/assets/section4-bg.png.asset.json";
-import routineSectionBg from "@/assets/routine-section-bg.jpg.asset.json";
-import kitBgAsset from "@/assets/kit-bg.png.asset.json";
-import urgencyBgAsset from "@/assets/urgency-bg-v4.png.asset.json";
+const heroKitNew = { url: "/hero-kit-new.png" };
+const routineProducts = { url: "/routine-products.png" };
+const routineBgV3 = { url: "/section4-bg.png" };
+const routineSectionBg = { url: "/routine-section-bg.jpg" };
+const kitBgAsset = { url: "/kit-bg.png" };
+const urgencyBgAsset = { url: "/urgency-bg-v4.png" };
 const urgencyBgUrl = urgencyBgAsset.url;
-import prodShampooAsset from "@/assets/product-shampoo-v2.png.asset.json";
+const prodShampooAsset = { url: "/product-shampoo-v2.png" };
 const prodShampoo = prodShampooAsset.url;
-import prodConditionerAsset from "@/assets/product-conditioner-new.png.asset.json";
+const prodConditionerAsset = { url: "/product-conditioner-new.png" };
 const prodConditioner = prodConditionerAsset.url;
-import prodTonicAsset from "@/assets/product-tonic-new.png.asset.json";
+const prodTonicAsset = { url: "/product-tonic-new.png" };
 const prodTonic = prodTonicAsset.url;
 import ingRosemary from "@/assets/ing-rosemary.jpg";
 import ingHoney from "@/assets/ing-honey.jpg";
@@ -55,21 +55,22 @@ import ingBotanical from "@/assets/ing-botanical.jpg";
 import result1 from "@/assets/result-1.jpg";
 import result2 from "@/assets/result-2.jpg";
 import result3 from "@/assets/result-3.jpg";
-import beforeAndreaAsset from "@/assets/before-andrea.jpg.asset.json";
+const beforeAndreaAsset = { url: "/before-andrea.jpg" };
 const beforeAndrea = beforeAndreaAsset.url;
-import afterAndreaAsset from "@/assets/after-andrea.jpg.asset.json";
+const afterAndreaAsset = { url: "/after-andrea.jpg" };
 const afterAndrea = afterAndreaAsset.url;
-import beforeCamilaAsset from "@/assets/before-camila.jpg.asset.json";
+const beforeCamilaAsset = { url: "/before-camila.jpg" };
 const beforeCamila = beforeCamilaAsset.url;
-import afterCamilaAsset from "@/assets/after-camila.jpg.asset.json";
+const afterCamilaAsset = { url: "/after-camila.jpg" };
 const afterCamila = afterCamilaAsset.url;
-import beforeThirdAsset from "@/assets/before-third.jpg.asset.json";
+const beforeThirdAsset = { url: "/before-third.jpg" };
 const beforeThird = beforeThirdAsset.url;
-import afterThirdAsset from "@/assets/after-third.jpg.asset.json";
+const afterThirdAsset = { url: "/after-third.jpg" };
 const afterThird = afterThirdAsset.url;
-import avatarMariaJoseAsset from "@/assets/avatar-maria-jose.jpg.asset.json";
-import avatarDanielaAsset from "@/assets/avatar-daniela.jpg.asset.json";
-import avatarLauraAsset from "@/assets/avatar-laura.jpg.asset.json";
+const avatarMariaJoseAsset = { url: "/avatar-maria-jose.jpg" };
+const avatarDanielaAsset = { url: "/avatar-daniela.jpg" };
+const avatarLauraAsset = { url: "/avatar-laura.jpg" };
+
 
 
 
