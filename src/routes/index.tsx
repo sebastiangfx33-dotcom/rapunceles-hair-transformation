@@ -277,8 +277,9 @@ function Hero() {
               color: "#1A0F2E",
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 600,
-              fontSize: 11.5,
-              letterSpacing: "0.16em",
+              fontSize: 10,
+              letterSpacing: "0.14em",
+
               textTransform: "uppercase",
               boxShadow:
                 "0 16px 32px -14px rgba(212,168,94,0.55), inset 0 0 0 1px rgba(255,235,180,0.6), inset 0 -2px 6px rgba(120,80,20,0.35)",
