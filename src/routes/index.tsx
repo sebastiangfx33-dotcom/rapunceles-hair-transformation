@@ -220,12 +220,13 @@ function Hero() {
         </h2>
 
         <h1
-          className="mt-1 whitespace-nowrap text-[26px] leading-[1.05]"
+          className="mt-1 whitespace-nowrap leading-[1.05]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 500,
             color: GOLD,
-            letterSpacing: "0.01em",
+            letterSpacing: "0em",
+            fontSize: "clamp(20px, 6.8vw, 30px)",
           }}
         >
           FUERTE <span style={{ color: GOLD_SOFT }}>·</span> ABUNDANTE{" "}
