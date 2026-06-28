@@ -137,8 +137,9 @@ function Hero() {
   const PURPLE_DEEP = "#1A0A2E";
 
   const heroScene = {
-    url: "/__l5e/assets-v1/f85e66a1-2dd9-48aa-88e6-5c38d6d7f2ab/hero-scene.jpg",
+    url: "/__l5e/assets-v1/4fda5232-6fd2-42b5-8f33-0f2801e1b185/hero-scene-v2.jpg",
   };
+
 
   return (
     <section
@@ -157,7 +158,7 @@ function Hero() {
           width={608}
           height={1280}
           fetchPriority="high"
-          className="block w-full h-[55vh] max-h-[460px] min-h-[320px] object-cover object-center"
+          className="block h-auto w-full object-cover object-center"
         />
 
 
@@ -225,8 +226,9 @@ function Hero() {
             letterSpacing: "0.02em",
           }}
         >
-          FUERTE <span style={{ color: GOLD_SOFT }}>·</span> ABUNDANTE{" "}
-          <span style={{ color: GOLD_SOFT }}>·</span> ESPECTACULAR
+          STRONG <span style={{ color: GOLD_SOFT }}>·</span> ABUNDANT{" "}
+          <span style={{ color: GOLD_SOFT }}>·</span> BEAUTIFUL
+
         </h1>
 
         <p
@@ -271,14 +273,15 @@ function Hero() {
         <div className="mt-4 w-full">
           <a
             href="#options"
-            className="relative mx-auto inline-flex w-auto max-w-[230px] items-center justify-center rounded-full px-4 py-2.5 text-center"
+            className="relative mx-auto flex w-full max-w-[360px] items-center justify-center rounded-full px-6 py-4 text-center"
             style={{
               background: `linear-gradient(180deg, ${GOLD_SOFT} 0%, ${GOLD} 60%, #B98A3F 100%)`,
               color: "#1A0F2E",
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 600,
-              fontSize: 10,
-              letterSpacing: "0.14em",
+              fontSize: 12.5,
+              letterSpacing: "0.18em",
+
 
               textTransform: "uppercase",
               boxShadow:
