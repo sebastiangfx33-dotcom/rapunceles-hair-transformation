@@ -147,8 +147,11 @@ function Hero() {
     <section
       className="relative w-full overflow-hidden"
       style={{
-        background:
-          "radial-gradient(120% 90% at 50% 0%, #2A1237 0%, #1F0E33 55%, #14081F 100%)",
+        backgroundImage:
+          "linear-gradient(180deg, rgba(20,8,31,0.55) 0%, rgba(20,8,31,0.75) 70%, rgba(20,8,31,0.95) 100%), url('/__l5e/assets-v1/0d07d7de-992a-4d0f-9d74-bb9e5925224b/hero-section-bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         color: IVORY,
       }}
     >
