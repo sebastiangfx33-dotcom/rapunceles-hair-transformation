@@ -9,6 +9,8 @@ import {
   Check,
   MessageCircle,
   Droplets,
+  Sprout,
+  Shield,
   Flower2,
   Clock,
   ArrowRight,
@@ -295,76 +297,105 @@ function Hero() {
         </div>
 
 
-        {/* Trust benefits */}
-        <div className="relative mt-9 w-full max-w-[380px]">
-          {/* Luxury champagne ribbon */}
+        {/* Premium product benefits cards */}
+        <div className="relative mt-9 w-full max-w-[400px]">
+          {/* Soft outer golden glow */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 rounded-2xl"
-            style={{
-              background:
-                "linear-gradient(135deg, rgba(212,168,94,0.18) 0%, rgba(244,236,220,0.10) 50%, rgba(212,168,94,0.18) 100%)",
-              backdropFilter: "blur(10px)",
-              border: "1px solid rgba(212,168,94,0.35)",
-              boxShadow:
-                "0 0 24px rgba(212,168,94,0.25), inset 0 1px 0 rgba(244,236,220,0.35), inset 0 -1px 0 rgba(212,168,94,0.25)",
-            }}
-          />
-          {/* Soft outer glow */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -inset-x-2 -inset-y-1 rounded-2xl"
+            className="pointer-events-none absolute -inset-x-4 -inset-y-3 rounded-3xl"
             style={{
               background:
                 "radial-gradient(ellipse at center, rgba(212,168,94,0.18), transparent 70%)",
-              filter: "blur(8px)",
+              filter: "blur(14px)",
             }}
           />
-          <div className="relative grid grid-cols-3 gap-0 px-2 py-1">
+          <div className="relative flex flex-col gap-3">
             {[
-              { Icon: Truck, l1: "Envío gratis", l2: "a todo Colombia" },
-              { Icon: HeartHandshake, l1: "Pago contra", l2: "entrega" },
-              { Icon: ShieldCheck, l1: "Compra 100%", l2: "segura" },
-            ].map(({ Icon, l1, l2 }, i) => (
+              {
+                Icon: Sprout,
+                title: "ACTIVA EL CRECIMIENTO CAPILAR",
+                desc: "Estimula la raíz y favorece un crecimiento progresivo para lograr un cabello más largo y abundante.",
+              },
+              {
+                Icon: Shield,
+                title: "REDUCE LA CAÍDA EXCESIVA",
+                desc: "Fortalece el folículo capilar para disminuir la caída constante al peinarte o lavarlo.",
+              },
+              {
+                Icon: Sparkles,
+                title: "DEVUELVE FUERZA Y VOLUMEN",
+                desc: "Nutre profundamente cada hebra para recuperar un cabello más fuerte, grueso y saludable.",
+              },
+            ].map(({ Icon, title, desc }, i) => (
               <div
                 key={i}
-                className="relative flex flex-col items-center px-1 text-center"
+                className="relative rounded-2xl px-5 py-4 text-center"
+                style={{
+                  background:
+                    "linear-gradient(135deg, rgba(244,236,220,0.10) 0%, rgba(212,168,94,0.10) 50%, rgba(244,236,220,0.06) 100%)",
+                  backdropFilter: "blur(14px)",
+                  border: "1px solid rgba(212,168,94,0.35)",
+                  boxShadow:
+                    "0 10px 30px -16px rgba(0,0,0,0.55), inset 0 1px 0 rgba(244,236,220,0.28), inset 0 -1px 0 rgba(212,168,94,0.22), 0 0 22px rgba(212,168,94,0.12)",
+                }}
               >
-                {i > 0 && (
+                <div className="flex flex-col items-center">
                   <span
                     aria-hidden="true"
-                    className="pointer-events-none absolute left-0 top-1/2 h-10 w-px -translate-y-1/2"
+                    className="flex h-10 w-10 items-center justify-center rounded-full"
+                    style={{
+                      border: "1px solid rgba(212,168,94,0.45)",
+                      background:
+                        "radial-gradient(circle at 30% 30%, rgba(244,236,220,0.18), rgba(212,168,94,0.06))",
+                    }}
+                  >
+                    <Icon
+                      className="size-5"
+                      strokeWidth={1}
+                      style={{
+                        color: "#E8C98A",
+                        filter:
+                          "drop-shadow(0 0 6px rgba(212,168,94,0.55))",
+                      }}
+                    />
+                  </span>
+                  <h3
+                    className="mt-3 text-[11px]"
+                    style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      color: "#E8C98A",
+                      letterSpacing: "0.22em",
+                      fontWeight: 500,
+                    }}
+                  >
+                    {title}
+                  </h3>
+                  <span
+                    aria-hidden="true"
+                    className="mt-2 block h-px w-8"
                     style={{
                       background:
-                        "linear-gradient(to bottom, transparent, rgba(212,168,94,0.55), transparent)",
+                        "linear-gradient(to right, transparent, rgba(212,168,94,0.7), transparent)",
                     }}
                   />
-                )}
-                <Icon
-                  className="size-7"
-                  strokeWidth={1}
-                  style={{
-                    color: "#E8C98A",
-                    filter: "drop-shadow(0 0 6px rgba(212,168,94,0.5))",
-                  }}
-                  aria-hidden="true"
-                />
-                <p
-                  className="mt-3 text-[12px] leading-snug"
-                  style={{
-                    fontFamily: "'Cormorant Garamond', serif",
-                    color: IVORY,
-                    fontWeight: 400,
-                  }}
-                >
-                  {l1}
-                  <br />
-                  {l2}
-                </p>
+                  <p
+                    className="mt-2 text-[11.5px] leading-relaxed"
+                    style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      color: IVORY,
+                      fontWeight: 300,
+                      opacity: 0.9,
+                    }}
+                  >
+                    {desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
+
+
 
 
         {/* Brand sign-off */}
