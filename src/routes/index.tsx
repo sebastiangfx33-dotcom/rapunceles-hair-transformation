@@ -228,8 +228,8 @@ function Hero() {
             letterSpacing: "0.02em",
           }}
         >
-          STRONG <span style={{ color: GOLD_SOFT }}>·</span> ABUNDANT{" "}
-          <span style={{ color: GOLD_SOFT }}>·</span> BEAUTIFUL
+          FUERTE <span style={{ color: GOLD_SOFT }}>·</span> ABUNDANTE{" "}
+          <span style={{ color: GOLD_SOFT }}>·</span> SALUDABLE
 
         </h1>
 
