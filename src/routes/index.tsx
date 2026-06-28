@@ -312,21 +312,21 @@ function Hero() {
           <div className="relative grid grid-cols-3 gap-2">
             {[
               {
-                emoji: "🌱",
+                Icon: Sprout,
                 title: "ACTIVA EL CRECIMIENTO CAPILAR",
                 desc: "Estimula la raíz y favorece un crecimiento progresivo para lograr un cabello más largo y abundante.",
               },
               {
-                emoji: "🛡️",
+                Icon: Shield,
                 title: "REDUCE LA CAÍDA EXCESIVA",
                 desc: "Fortalece el folículo capilar para disminuir la caída constante al peinarte o lavarlo.",
               },
               {
-                emoji: "✨",
+                Icon: Sparkles,
                 title: "DEVUELVE FUERZA Y VOLUMEN",
                 desc: "Nutre profundamente cada hebra para recuperar un cabello más fuerte, grueso y saludable.",
               },
-            ].map(({ emoji, title, desc }, i) => (
+            ].map(({ Icon, title, desc }, i) => (
               <div
                 key={i}
                 className="relative rounded-2xl px-2 py-3 text-center"
@@ -342,40 +342,21 @@ function Hero() {
                 <div className="flex flex-col items-center">
                   <span
                     aria-hidden="true"
-                    className="relative flex h-12 w-12 items-center justify-center rounded-full"
+                    className="relative flex h-10 w-10 items-center justify-center rounded-full"
                     style={{
+                      border: "1px solid rgba(212,168,94,0.5)",
                       background:
-                        "radial-gradient(circle at 30% 25%, #FFF4D6 0%, #F5D88A 22%, #D4A85E 55%, #8A6224 88%, #5C3F14 100%)",
-                      boxShadow:
-                        "0 6px 14px rgba(0,0,0,0.55), 0 2px 4px rgba(0,0,0,0.4), inset 0 1.5px 1px rgba(255,248,220,0.9), inset 0 -2px 3px rgba(70,40,10,0.7), inset 0 0 0 1px rgba(255,235,180,0.35)",
+                        "radial-gradient(circle at 30% 30%, rgba(244,236,220,0.16), rgba(212,168,94,0.05))",
                     }}
                   >
-                    <span
-                      aria-hidden="true"
-                      className="pointer-events-none absolute left-[14%] top-[10%] h-[35%] w-[55%] rounded-full"
+                    <Icon
+                      className="size-[18px]"
+                      strokeWidth={1}
                       style={{
-                        background:
-                          "radial-gradient(ellipse at center, rgba(255,255,255,0.75), rgba(255,255,255,0) 70%)",
-                        filter: "blur(1px)",
+                        color: "#E8C98A",
+                        filter: "drop-shadow(0 0 4px rgba(212,168,94,0.5))",
                       }}
                     />
-                    <span
-                      aria-hidden="true"
-                      className="pointer-events-none absolute inset-[3px] rounded-full"
-                      style={{
-                        border: "1px solid rgba(92,55,15,0.55)",
-                        boxShadow: "inset 0 0 0 1px rgba(255,235,180,0.4)",
-                      }}
-                    />
-                    <span
-                      className="relative text-[22px] leading-none"
-                      style={{
-                        filter:
-                          "drop-shadow(0 1px 1px rgba(0,0,0,0.45)) drop-shadow(0 0 4px rgba(255,220,150,0.35))",
-                      }}
-                    >
-                      {emoji}
-                    </span>
                   </span>
                   <h3
                     className="mt-3 text-[8.5px] leading-tight"
