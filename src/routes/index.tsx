@@ -217,7 +217,7 @@ function Hero() {
         </h2>
 
         <h1
-          className="mt-2 text-[30px] leading-[1.05]"
+          className="mt-1.5 text-[24px] leading-[1.05]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 500,
@@ -230,7 +230,7 @@ function Hero() {
         </h1>
 
         <p
-          className="mt-4 max-w-[320px] text-[13.5px] leading-[1.55]"
+          className="mt-2.5 max-w-[300px] text-[12.5px] leading-[1.5]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             color: IVORY,
@@ -242,11 +242,11 @@ function Hero() {
 
         {/* Gold ornamental divider */}
         <div
-          className="mt-5 flex items-center justify-center"
+          className="mt-3 flex items-center justify-center"
           aria-hidden="true"
         >
           <span
-            className="h-px w-14"
+            className="h-px w-12"
             style={{
               background: `linear-gradient(90deg, transparent, ${GOLD}, ${GOLD})`,
             }}
@@ -254,13 +254,13 @@ function Hero() {
           <span
             className="mx-2 inline-block rotate-45"
             style={{
-              width: 6,
-              height: 6,
+              width: 5,
+              height: 5,
               border: `1px solid ${GOLD}`,
             }}
           />
           <span
-            className="h-px w-14"
+            className="h-px w-12"
             style={{
               background: `linear-gradient(90deg, ${GOLD}, ${GOLD}, transparent)`,
             }}
@@ -268,7 +268,7 @@ function Hero() {
         </div>
 
         {/* CTA */}
-        <div className="mt-6 w-full">
+        <div className="mt-4 w-full">
           <a
             href="#options"
             className="relative mx-auto inline-flex w-auto max-w-[230px] items-center justify-center rounded-full px-4 py-2.5 text-center"
@@ -289,6 +289,7 @@ function Hero() {
             Quiero empezar mi transformación
           </a>
         </div>
+
 
         {/* Trust benefits */}
         <div className="mt-9 grid w-full max-w-[360px] grid-cols-3 gap-3">
