@@ -206,35 +206,53 @@ function Hero() {
       </div>
 
       {/* Editorial copy block */}
-      <div className="relative z-10 -mt-2 flex flex-col items-center px-6 text-center">
+      <div className="relative z-10 -mt-2 flex flex-col items-center px-5 text-center">
         <h2
-          className="text-[15px]"
+          className="text-[13px]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 400,
             color: IVORY,
-            letterSpacing: "0.22em",
+            letterSpacing: "0.32em",
           }}
         >
           TU CABELLO PUEDE VOLVER A SER
         </h2>
 
         <h1
-          className="mt-1.5 text-[24px] leading-[1.05]"
+          className="mt-1 whitespace-nowrap text-[26px] leading-[1.05]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 500,
             color: GOLD,
-            letterSpacing: "0.02em",
+            letterSpacing: "0.01em",
           }}
         >
           FUERTE <span style={{ color: GOLD_SOFT }}>·</span> ABUNDANTE{" "}
           <span style={{ color: GOLD_SOFT }}>·</span> SALUDABLE
-
         </h1>
 
+        {/* Gold ornamental divider — directly under title, per reference */}
+        <div
+          className="mt-2 flex items-center justify-center"
+          aria-hidden="true"
+        >
+          <span
+            className="h-px w-10"
+            style={{ background: `linear-gradient(90deg, transparent, ${GOLD})` }}
+          />
+          <span
+            className="mx-2 inline-block rotate-45"
+            style={{ width: 5, height: 5, border: `1px solid ${GOLD}` }}
+          />
+          <span
+            className="h-px w-10"
+            style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }}
+          />
+        </div>
+
         <p
-          className="mt-2.5 max-w-[300px] text-[12.5px] leading-[1.5]"
+          className="mt-3 max-w-[320px] text-[14px] leading-[1.5]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             color: IVORY,
@@ -244,57 +262,28 @@ function Hero() {
           Miles de mujeres están recuperando el crecimiento natural de su cabello con Rapunceles.
         </p>
 
-        {/* Gold ornamental divider */}
-        <div
-          className="mt-3 flex items-center justify-center"
-          aria-hidden="true"
-        >
-          <span
-            className="h-px w-12"
-            style={{
-              background: `linear-gradient(90deg, transparent, ${GOLD}, ${GOLD})`,
-            }}
-          />
-          <span
-            className="mx-2 inline-block rotate-45"
-            style={{
-              width: 5,
-              height: 5,
-              border: `1px solid ${GOLD}`,
-            }}
-          />
-          <span
-            className="h-px w-12"
-            style={{
-              background: `linear-gradient(90deg, ${GOLD}, ${GOLD}, transparent)`,
-            }}
-          />
-        </div>
-
         {/* CTA */}
-        <div className="mt-4 w-full">
+        <div className="mt-5 w-full">
           <a
             href="#options"
-            className="relative mx-auto flex w-full max-w-[300px] items-center justify-center rounded-full px-5 py-2.5 text-center"
+            className="relative mx-auto flex w-full max-w-[340px] items-center justify-center rounded-full px-5 py-3 text-center"
             style={{
               background: `linear-gradient(180deg, ${GOLD_SOFT} 0%, ${GOLD} 60%, #B98A3F 100%)`,
               color: "#1A0F2E",
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 600,
-              fontSize: 11,
-
-              letterSpacing: "0.18em",
-
-
+              fontSize: 13,
+              letterSpacing: "0.14em",
+              whiteSpace: "nowrap",
               textTransform: "uppercase",
               boxShadow:
                 "0 16px 32px -14px rgba(212,168,94,0.55), inset 0 0 0 1px rgba(255,235,180,0.6), inset 0 -2px 6px rgba(120,80,20,0.35)",
             }}
           >
-
             Quiero empezar mi transformación
           </a>
         </div>
+
 
 
         {/* Premium product benefits cards */}
