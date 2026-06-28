@@ -158,7 +158,7 @@ function Hero() {
           width={608}
           height={1280}
           fetchPriority="high"
-          className="block w-full h-[55vh] max-h-[460px] min-h-[320px] object-cover object-center"
+          className="block h-auto w-full object-cover object-center"
         />
 
 
