@@ -320,7 +320,7 @@ function Hero() {
               filter: "blur(8px)",
             }}
           />
-          <div className="relative grid grid-cols-3 gap-0 px-2 py-2.5">
+          <div className="relative grid grid-cols-3 gap-0 px-2 py-1.5">
             {[
               { Icon: Truck, l1: "Envío gratis", l2: "a todo Colombia" },
               { Icon: HeartHandshake, l1: "Pago contra", l2: "entrega" },
