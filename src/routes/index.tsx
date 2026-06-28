@@ -312,21 +312,21 @@ function Hero() {
           <div className="relative grid grid-cols-3 gap-2">
             {[
               {
-                Icon: Sprout,
+                emoji: "🌱",
                 title: "ACTIVA EL CRECIMIENTO CAPILAR",
                 desc: "Estimula la raíz y favorece un crecimiento progresivo para lograr un cabello más largo y abundante.",
               },
               {
-                Icon: Shield,
+                emoji: "🛡️",
                 title: "REDUCE LA CAÍDA EXCESIVA",
                 desc: "Fortalece el folículo capilar para disminuir la caída constante al peinarte o lavarlo.",
               },
               {
-                Icon: Sparkles,
+                emoji: "✨",
                 title: "DEVUELVE FUERZA Y VOLUMEN",
                 desc: "Nutre profundamente cada hebra para recuperar un cabello más fuerte, grueso y saludable.",
               },
-            ].map(({ Icon, title, desc }, i) => (
+            ].map(({ emoji, title, desc }, i) => (
               <div
                 key={i}
                 className="relative rounded-2xl px-2 py-3 text-center"
