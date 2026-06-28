@@ -279,8 +279,9 @@ function Hero() {
               color: "#1A0F2E",
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 600,
-              fontSize: 10,
-              letterSpacing: "0.14em",
+              fontSize: 12.5,
+              letterSpacing: "0.18em",
+
 
               textTransform: "uppercase",
               boxShadow:
