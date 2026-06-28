@@ -271,19 +271,20 @@ function Hero() {
         <div className="mt-6 w-full">
           <a
             href="#options"
-            className="relative mx-auto flex w-full max-w-[360px] items-center justify-center rounded-full px-6 py-[18px] text-center"
+            className="relative mx-auto flex w-auto max-w-[280px] items-center justify-center rounded-full px-5 py-3 text-center"
             style={{
               background: `linear-gradient(180deg, ${GOLD_SOFT} 0%, ${GOLD} 60%, #B98A3F 100%)`,
               color: "#1A0F2E",
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 600,
-              fontSize: 13.5,
-              letterSpacing: "0.18em",
+              fontSize: 11.5,
+              letterSpacing: "0.16em",
               textTransform: "uppercase",
               boxShadow:
-                "0 22px 42px -16px rgba(212,168,94,0.55), inset 0 0 0 1px rgba(255,235,180,0.6), inset 0 -2px 6px rgba(120,80,20,0.35)",
+                "0 16px 32px -14px rgba(212,168,94,0.55), inset 0 0 0 1px rgba(255,235,180,0.6), inset 0 -2px 6px rgba(120,80,20,0.35)",
             }}
           >
+
             Quiero empezar mi transformación
           </a>
         </div>
