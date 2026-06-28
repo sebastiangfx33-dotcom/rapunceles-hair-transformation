@@ -298,7 +298,7 @@ function Hero() {
 
 
         {/* Premium product benefits cards */}
-        <div className="relative mt-9 w-full max-w-[400px]">
+        <div className="relative mt-9 w-full max-w-[460px]">
           {/* Soft outer golden glow */}
           <div
             aria-hidden="true"
