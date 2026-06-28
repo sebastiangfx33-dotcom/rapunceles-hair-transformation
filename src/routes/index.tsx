@@ -298,7 +298,7 @@ function Hero() {
 
 
         {/* Premium product benefits cards */}
-        <div className="relative mt-9 w-full max-w-[400px]">
+        <div className="relative mt-9 w-full max-w-[460px]">
           {/* Soft outer golden glow */}
           <div
             aria-hidden="true"
@@ -309,7 +309,7 @@ function Hero() {
               filter: "blur(14px)",
             }}
           />
-          <div className="relative flex flex-col gap-3">
+          <div className="relative grid grid-cols-3 gap-2">
             {[
               {
                 Icon: Sprout,
@@ -329,7 +329,7 @@ function Hero() {
             ].map(({ Icon, title, desc }, i) => (
               <div
                 key={i}
-                className="relative rounded-2xl px-5 py-4 text-center"
+                className="relative rounded-2xl px-2 py-3 text-center"
                 style={{
                   background:
                     "linear-gradient(135deg, rgba(244,236,220,0.10) 0%, rgba(212,168,94,0.10) 50%, rgba(244,236,220,0.06) 100%)",
@@ -360,11 +360,11 @@ function Hero() {
                     />
                   </span>
                   <h3
-                    className="mt-3 text-[11px]"
+                    className="mt-3 text-[8.5px] leading-tight"
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
                       color: "#E8C98A",
-                      letterSpacing: "0.22em",
+                      letterSpacing: "0.16em",
                       fontWeight: 500,
                     }}
                   >
@@ -379,7 +379,7 @@ function Hero() {
                     }}
                   />
                   <p
-                    className="mt-2 text-[11.5px] leading-relaxed"
+                    className="mt-2 text-[9.5px] leading-snug"
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
                       color: IVORY,
