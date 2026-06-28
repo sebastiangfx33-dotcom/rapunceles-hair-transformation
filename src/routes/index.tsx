@@ -268,25 +268,6 @@ function Hero() {
         </div>
       </div>
 
-      {/* Kit composition */}
-      <div className="relative z-10 mt-8 px-5">
-        <div
-          className="relative mx-auto overflow-hidden rounded-[24px]"
-          style={{
-            maxWidth: 440,
-            background:
-              "linear-gradient(180deg, rgba(248,244,238,0.04) 0%, rgba(220,207,230,0.06) 100%)",
-            border: "1px solid rgba(212,168,94,0.18)",
-          }}
-        >
-          <img
-            src={heroKitNew.url}
-            alt="Kit completo Rapunceles — shampoo, acondicionador y tónico capilar"
-            loading="lazy"
-            className="block h-auto w-full object-contain"
-          />
-        </div>
-      </div>
 
       {/* CTA */}
       <div className="relative z-10 mt-7 flex justify-center px-6">
