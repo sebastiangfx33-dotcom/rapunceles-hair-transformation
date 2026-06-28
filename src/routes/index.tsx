@@ -228,8 +228,8 @@ function Hero() {
             letterSpacing: "0.02em",
           }}
         >
-          STRONG <span style={{ color: GOLD_SOFT }}>·</span> ABUNDANT{" "}
-          <span style={{ color: GOLD_SOFT }}>·</span> BEAUTIFUL
+          FUERTE <span style={{ color: GOLD_SOFT }}>·</span> ABUNDANTE{" "}
+          <span style={{ color: GOLD_SOFT }}>·</span> SALUDABLE
 
         </h1>
 
@@ -299,6 +299,24 @@ function Hero() {
 
         {/* Premium product benefits cards */}
         <div className="relative mt-9 w-full max-w-[460px]">
+          {/* Subtle gold flowing streaks behind cards */}
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 460 180"
+            preserveAspectRatio="none"
+            className="pointer-events-none absolute -inset-x-2 -inset-y-4 h-[calc(100%+2rem)] w-[calc(100%+1rem)] opacity-40"
+          >
+            <defs>
+              <linearGradient id="streakGold" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0%" stopColor="rgba(201,168,76,0)" />
+                <stop offset="50%" stopColor="rgba(224,201,127,0.7)" />
+                <stop offset="100%" stopColor="rgba(201,168,76,0)" />
+              </linearGradient>
+            </defs>
+            <path d="M-20,30 C120,10 320,70 480,20" fill="none" stroke="url(#streakGold)" strokeWidth="0.6" />
+            <path d="M-20,90 C140,140 320,40 480,110" fill="none" stroke="url(#streakGold)" strokeWidth="0.5" />
+            <path d="M-20,160 C160,120 300,180 480,150" fill="none" stroke="url(#streakGold)" strokeWidth="0.4" />
+          </svg>
           {/* Soft outer golden glow */}
           <div
             aria-hidden="true"
@@ -331,12 +349,10 @@ function Hero() {
                 key={i}
                 className="relative rounded-2xl px-2 py-3 text-center"
                 style={{
-                  background:
-                    "linear-gradient(135deg, rgba(244,236,220,0.10) 0%, rgba(212,168,94,0.10) 50%, rgba(244,236,220,0.06) 100%)",
-                  backdropFilter: "blur(14px)",
-                  border: "1px solid rgba(212,168,94,0.35)",
+                  background: "#2A0D3E",
+                  border: "1px solid rgba(201,168,76,0.3)",
                   boxShadow:
-                    "0 10px 30px -16px rgba(0,0,0,0.55), inset 0 1px 0 rgba(244,236,220,0.28), inset 0 -1px 0 rgba(212,168,94,0.22), 0 0 22px rgba(212,168,94,0.12)",
+                    "0 14px 36px -18px rgba(0,0,0,0.7), inset 0 1px 0 rgba(224,201,127,0.18), 0 0 22px rgba(201,168,76,0.10)",
                 }}
               >
                 <div className="flex flex-col items-center">
