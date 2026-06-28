@@ -160,27 +160,6 @@ function Hero() {
           className="block h-auto w-full object-cover"
         />
 
-        {/* Products overlay on the marble surface */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-[10%] z-[5] flex items-end justify-center gap-1.5 px-6">
-          <img
-            src={prodConditioner}
-            alt="Acondicionador Rapunceles"
-            className="h-[26vw] max-h-[180px] w-auto object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.55)]"
-            loading="lazy"
-          />
-          <img
-            src={prodShampoo}
-            alt="Shampoo Rapunceles"
-            className="h-[28vw] max-h-[200px] w-auto object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.55)]"
-            loading="lazy"
-          />
-          <img
-            src={prodTonic}
-            alt="Tónico de crecimiento Rapunceles"
-            className="h-[24vw] max-h-[170px] w-auto object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.55)]"
-            loading="lazy"
-          />
-        </div>
 
         {/* Gold arched bottom frame */}
         <svg
