@@ -321,18 +321,18 @@ function Hero() {
             {[
               {
                 Icon: Sprout,
-                title: "ACTIVA EL CRECIMIENTO CAPILAR",
-                desc: "Estimula la raíz y favorece un crecimiento progresivo para lograr un cabello más largo y abundante.",
+                title: "ACTIVA EL CRECIMIENTO",
+                desc: "Estimula la raíz para un cabello más largo.",
               },
               {
                 Icon: Shield,
-                title: "REDUCE LA CAÍDA EXCESIVA",
-                desc: "Fortalece el folículo capilar para disminuir la caída constante al peinarte o lavarlo.",
+                title: "REDUCE LA CAÍDA",
+                desc: "Fortalece el folículo y disminuye la caída.",
               },
               {
                 Icon: Sparkles,
-                title: "DEVUELVE FUERZA Y VOLUMEN",
-                desc: "Nutre profundamente cada hebra para recuperar un cabello más fuerte, grueso y saludable.",
+                title: "FUERZA Y VOLUMEN",
+                desc: "Nutre cada hebra para un cabello más fuerte.",
               },
             ].map(({ Icon, title, desc }, i) => (
               <div
