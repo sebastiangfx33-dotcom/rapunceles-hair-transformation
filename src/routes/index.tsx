@@ -367,15 +367,15 @@ function Hero() {
                         boxShadow: "inset 0 0 0 1px rgba(255,235,180,0.4)",
                       }}
                     />
-                    <Icon
-                      className="relative size-5"
-                      strokeWidth={1.75}
+                    <span
+                      className="relative text-[22px] leading-none"
                       style={{
-                        color: "#3A2608",
                         filter:
-                          "drop-shadow(0 1px 0 rgba(255,240,200,0.55)) drop-shadow(0 -1px 0 rgba(0,0,0,0.3))",
+                          "drop-shadow(0 1px 1px rgba(0,0,0,0.45)) drop-shadow(0 0 4px rgba(255,220,150,0.35))",
                       }}
-                    />
+                    >
+                      {emoji}
+                    </span>
                   </span>
                   <h3
                     className="mt-3 text-[8.5px] leading-tight"
