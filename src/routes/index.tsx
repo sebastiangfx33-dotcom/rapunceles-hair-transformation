@@ -273,13 +273,14 @@ function Hero() {
         <div className="mt-4 w-full">
           <a
             href="#options"
-            className="relative mx-auto flex w-full max-w-[360px] items-center justify-center rounded-full px-6 py-4 text-center"
+            className="relative mx-auto flex w-full max-w-[300px] items-center justify-center rounded-full px-5 py-2.5 text-center"
             style={{
               background: `linear-gradient(180deg, ${GOLD_SOFT} 0%, ${GOLD} 60%, #B98A3F 100%)`,
               color: "#1A0F2E",
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 600,
-              fontSize: 12.5,
+              fontSize: 11,
+
               letterSpacing: "0.18em",
 
 
