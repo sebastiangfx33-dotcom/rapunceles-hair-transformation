@@ -329,7 +329,7 @@ function Hero() {
             ].map(({ Icon, title, desc }, i) => (
               <div
                 key={i}
-                className="relative rounded-2xl px-5 py-4 text-center"
+                className="relative rounded-2xl px-2 py-3 text-center"
                 style={{
                   background:
                     "linear-gradient(135deg, rgba(244,236,220,0.10) 0%, rgba(212,168,94,0.10) 50%, rgba(244,236,220,0.06) 100%)",
