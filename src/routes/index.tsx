@@ -295,37 +295,76 @@ function Hero() {
 
 
         {/* Trust benefits */}
-        <div className="mt-9 grid w-full max-w-[360px] grid-cols-3 gap-3">
-          {[
-            { Icon: Truck, l1: "Envío gratis", l2: "a todo Colombia" },
-            { Icon: HeartHandshake, l1: "Pago contra", l2: "entrega" },
-            { Icon: ShieldCheck, l1: "Compra 100%", l2: "segura" },
-          ].map(({ Icon, l1, l2 }, i) => (
-            <div
-              key={i}
-              className="flex flex-col items-center px-1 text-center"
-            >
-              <Icon
-                className="size-7"
-                strokeWidth={1}
-                style={{ color: GOLD }}
-                aria-hidden="true"
-              />
-              <p
-                className="mt-3 text-[12px] leading-snug"
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  color: IVORY,
-                  fontWeight: 400,
-                }}
+        <div className="relative mt-9 w-full max-w-[380px]">
+          {/* Luxury champagne ribbon */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 rounded-2xl"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(212,168,94,0.18) 0%, rgba(244,236,220,0.10) 50%, rgba(212,168,94,0.18) 100%)",
+              backdropFilter: "blur(10px)",
+              border: "1px solid rgba(212,168,94,0.35)",
+              boxShadow:
+                "0 0 24px rgba(212,168,94,0.25), inset 0 1px 0 rgba(244,236,220,0.35), inset 0 -1px 0 rgba(212,168,94,0.25)",
+            }}
+          />
+          {/* Soft outer glow */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -inset-x-2 -inset-y-1 rounded-2xl"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, rgba(212,168,94,0.18), transparent 70%)",
+              filter: "blur(8px)",
+            }}
+          />
+          <div className="relative grid grid-cols-3 gap-0 px-2 py-4">
+            {[
+              { Icon: Truck, l1: "Envío gratis", l2: "a todo Colombia" },
+              { Icon: HeartHandshake, l1: "Pago contra", l2: "entrega" },
+              { Icon: ShieldCheck, l1: "Compra 100%", l2: "segura" },
+            ].map(({ Icon, l1, l2 }, i) => (
+              <div
+                key={i}
+                className="relative flex flex-col items-center px-1 text-center"
               >
-                {l1}
-                <br />
-                {l2}
-              </p>
-            </div>
-          ))}
+                {i > 0 && (
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute left-0 top-1/2 h-10 w-px -translate-y-1/2"
+                    style={{
+                      background:
+                        "linear-gradient(to bottom, transparent, rgba(212,168,94,0.55), transparent)",
+                    }}
+                  />
+                )}
+                <Icon
+                  className="size-7"
+                  strokeWidth={1}
+                  style={{
+                    color: "#E8C98A",
+                    filter: "drop-shadow(0 0 6px rgba(212,168,94,0.5))",
+                  }}
+                  aria-hidden="true"
+                />
+                <p
+                  className="mt-3 text-[12px] leading-snug"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    color: IVORY,
+                    fontWeight: 400,
+                  }}
+                >
+                  {l1}
+                  <br />
+                  {l2}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
+
 
         {/* Brand sign-off */}
         <div className="mt-12 flex flex-col items-center pb-10">
