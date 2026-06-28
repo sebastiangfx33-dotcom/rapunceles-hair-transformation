@@ -9,6 +9,8 @@ import {
   Check,
   MessageCircle,
   Droplets,
+  Sprout,
+  Shield,
   Flower2,
   Clock,
   ArrowRight,
