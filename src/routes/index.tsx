@@ -294,38 +294,105 @@ function Hero() {
         </div>
 
 
-        {/* Trust benefits */}
-        <div className="mt-9 grid w-full max-w-[360px] grid-cols-3 gap-3">
-          {[
-            { Icon: Truck, l1: "Envío gratis", l2: "a todo Colombia" },
-            { Icon: HeartHandshake, l1: "Pago contra", l2: "entrega" },
-            { Icon: ShieldCheck, l1: "Compra 100%", l2: "segura" },
-          ].map(({ Icon, l1, l2 }, i) => (
-            <div
-              key={i}
-              className="flex flex-col items-center px-1 text-center"
+        {/* Trust benefits with elegant gold ribbon */}
+        <div className="relative mt-9 w-full max-w-[360px]">
+          {/* Gold ribbon backdrop */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-[-14px] top-1/2 -translate-y-1/2"
+          >
+            <svg
+              viewBox="0 0 400 56"
+              preserveAspectRatio="none"
+              className="block h-[56px] w-full"
             >
-              <Icon
-                className="size-7"
-                strokeWidth={1}
-                style={{ color: GOLD }}
-                aria-hidden="true"
+              <defs>
+                <linearGradient id="ribbonGold" x1="0" x2="1" y1="0" y2="0">
+                  <stop offset="0%" stopColor="rgba(212,168,94,0)" />
+                  <stop offset="12%" stopColor="#B98A3F" />
+                  <stop offset="50%" stopColor="#F0D38A" />
+                  <stop offset="88%" stopColor="#B98A3F" />
+                  <stop offset="100%" stopColor="rgba(212,168,94,0)" />
+                </linearGradient>
+                <linearGradient id="ribbonShine" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stopColor="rgba(255,240,200,0.55)" />
+                  <stop offset="50%" stopColor="rgba(212,168,94,0.95)" />
+                  <stop offset="100%" stopColor="rgba(140,95,40,0.85)" />
+                </linearGradient>
+              </defs>
+              {/* Tails */}
+              <path
+                d="M0 14 L24 14 L18 28 L24 42 L0 42 Z"
+                fill="#8A5E2A"
+                opacity="0.85"
               />
-              <p
-                className="mt-3 text-[12px] leading-snug"
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  color: IVORY,
-                  fontWeight: 400,
-                }}
+              <path
+                d="M400 14 L376 14 L382 28 L376 42 L400 42 Z"
+                fill="#8A5E2A"
+                opacity="0.85"
+              />
+              {/* Main ribbon */}
+              <rect
+                x="18"
+                y="10"
+                width="364"
+                height="36"
+                fill="url(#ribbonShine)"
+                stroke="#7A5220"
+                strokeWidth="0.6"
+              />
+              {/* Thin shine line */}
+              <line
+                x1="22"
+                x2="378"
+                y1="20"
+                y2="20"
+                stroke="rgba(255,245,210,0.55)"
+                strokeWidth="0.6"
+              />
+              <line
+                x1="22"
+                x2="378"
+                y1="36"
+                y2="36"
+                stroke="rgba(120,80,30,0.45)"
+                strokeWidth="0.6"
+              />
+            </svg>
+          </div>
+
+          <div className="relative grid grid-cols-3 gap-3">
+            {[
+              { Icon: Truck, l1: "Envío gratis", l2: "a todo Colombia" },
+              { Icon: HeartHandshake, l1: "Pago contra", l2: "entrega" },
+              { Icon: ShieldCheck, l1: "Compra 100%", l2: "segura" },
+            ].map(({ Icon, l1, l2 }, i) => (
+              <div
+                key={i}
+                className="flex flex-col items-center px-1 pt-14 text-center"
               >
-                {l1}
-                <br />
-                {l2}
-              </p>
-            </div>
-          ))}
-        </div>
+                <Icon
+                  className="size-7"
+                  strokeWidth={1}
+                  style={{ color: GOLD }}
+                  aria-hidden="true"
+                />
+                <p
+                  className="mt-3 text-[12px] leading-snug"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    color: IVORY,
+                    fontWeight: 400,
+                  }}
+                >
+                  {l1}
+                  <br />
+                  {l2}
+                </p>
+              </div>
+            ))}
+          </div>
+
 
         {/* Brand sign-off */}
         <div className="mt-12 flex flex-col items-center pb-10">
