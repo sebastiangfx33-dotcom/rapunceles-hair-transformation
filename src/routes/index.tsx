@@ -312,21 +312,21 @@ function Hero() {
           <div className="relative grid grid-cols-3 gap-2">
             {[
               {
-                Icon: Sprout,
+                emoji: "🌱",
                 title: "ACTIVA EL CRECIMIENTO CAPILAR",
                 desc: "Estimula la raíz y favorece un crecimiento progresivo para lograr un cabello más largo y abundante.",
               },
               {
-                Icon: Shield,
+                emoji: "🛡️",
                 title: "REDUCE LA CAÍDA EXCESIVA",
                 desc: "Fortalece el folículo capilar para disminuir la caída constante al peinarte o lavarlo.",
               },
               {
-                Icon: Sparkles,
+                emoji: "✨",
                 title: "DEVUELVE FUERZA Y VOLUMEN",
                 desc: "Nutre profundamente cada hebra para recuperar un cabello más fuerte, grueso y saludable.",
               },
-            ].map(({ Icon, title, desc }, i) => (
+            ].map(({ emoji, title, desc }, i) => (
               <div
                 key={i}
                 className="relative rounded-2xl px-2 py-3 text-center"
@@ -367,15 +367,15 @@ function Hero() {
                         boxShadow: "inset 0 0 0 1px rgba(255,235,180,0.4)",
                       }}
                     />
-                    <Icon
-                      className="relative size-5"
-                      strokeWidth={1.75}
+                    <span
+                      className="relative text-[22px] leading-none"
                       style={{
-                        color: "#3A2608",
                         filter:
-                          "drop-shadow(0 1px 0 rgba(255,240,200,0.55)) drop-shadow(0 -1px 0 rgba(0,0,0,0.3))",
+                          "drop-shadow(0 1px 1px rgba(0,0,0,0.45)) drop-shadow(0 0 4px rgba(255,220,150,0.35))",
                       }}
-                    />
+                    >
+                      {emoji}
+                    </span>
                   </span>
                   <h3
                     className="mt-3 text-[8.5px] leading-tight"
