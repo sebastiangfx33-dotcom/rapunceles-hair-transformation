@@ -365,12 +365,12 @@ function Hero() {
                     />
                   </span>
                   <h3
-                    className="mt-3 text-[8.5px] leading-tight"
+                    className="mt-3 text-[10px] leading-tight"
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
                       color: "#E8C98A",
-                      letterSpacing: "0.16em",
-                      fontWeight: 500,
+                      letterSpacing: "0.14em",
+                      fontWeight: 600,
                     }}
                   >
                     {title}
@@ -384,12 +384,12 @@ function Hero() {
                     }}
                   />
                   <p
-                    className="mt-2 text-[9.5px] leading-snug"
+                    className="mt-2 text-[11px] leading-snug"
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
                       color: IVORY,
                       fontWeight: 300,
-                      opacity: 0.9,
+                      opacity: 0.92,
                     }}
                   >
                     {desc}
