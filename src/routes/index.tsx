@@ -299,6 +299,24 @@ function Hero() {
 
         {/* Premium product benefits cards */}
         <div className="relative mt-9 w-full max-w-[460px]">
+          {/* Subtle gold flowing streaks behind cards */}
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 460 180"
+            preserveAspectRatio="none"
+            className="pointer-events-none absolute -inset-x-2 -inset-y-4 h-[calc(100%+2rem)] w-[calc(100%+1rem)] opacity-40"
+          >
+            <defs>
+              <linearGradient id="streakGold" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0%" stopColor="rgba(201,168,76,0)" />
+                <stop offset="50%" stopColor="rgba(224,201,127,0.7)" />
+                <stop offset="100%" stopColor="rgba(201,168,76,0)" />
+              </linearGradient>
+            </defs>
+            <path d="M-20,30 C120,10 320,70 480,20" fill="none" stroke="url(#streakGold)" strokeWidth="0.6" />
+            <path d="M-20,90 C140,140 320,40 480,110" fill="none" stroke="url(#streakGold)" strokeWidth="0.5" />
+            <path d="M-20,160 C160,120 300,180 480,150" fill="none" stroke="url(#streakGold)" strokeWidth="0.4" />
+          </svg>
           {/* Soft outer golden glow */}
           <div
             aria-hidden="true"
