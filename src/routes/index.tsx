@@ -337,19 +337,18 @@ function Hero() {
             ].map(({ Icon, title, desc }, i) => (
               <div
                 key={i}
-                className="relative rounded-2xl px-2 py-3 text-center"
+                className="relative rounded-xl px-2 py-2 text-center"
                 style={{
                   background: "transparent",
                   border: "1px solid rgba(212,168,94,0.45)",
                   boxShadow:
-                    "0 0 18px rgba(224,201,127,0.45), 0 0 36px rgba(212,168,94,0.25), inset 0 0 14px rgba(224,201,127,0.18)",
+                    "0 0 14px rgba(224,201,127,0.4), 0 0 28px rgba(212,168,94,0.22), inset 0 0 10px rgba(224,201,127,0.16)",
                 }}
-
               >
                 <div className="flex flex-col items-center">
                   <span
                     aria-hidden="true"
-                    className="relative flex h-10 w-10 items-center justify-center rounded-full"
+                    className="relative flex h-7 w-7 items-center justify-center rounded-full"
                     style={{
                       border: "1px solid rgba(212,168,94,0.5)",
                       background:
@@ -357,7 +356,7 @@ function Hero() {
                     }}
                   >
                     <Icon
-                      className="size-[18px]"
+                      className="size-[14px]"
                       strokeWidth={1}
                       style={{
                         color: "#E8C98A",
@@ -366,26 +365,18 @@ function Hero() {
                     />
                   </span>
                   <h3
-                    className="mt-3 text-[10px] leading-tight"
+                    className="mt-1.5 text-[9px] leading-tight"
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
                       color: "#E8C98A",
-                      letterSpacing: "0.14em",
+                      letterSpacing: "0.12em",
                       fontWeight: 600,
                     }}
                   >
                     {title}
                   </h3>
-                  <span
-                    aria-hidden="true"
-                    className="mt-2 block h-px w-8"
-                    style={{
-                      background:
-                        "linear-gradient(to right, transparent, rgba(212,168,94,0.7), transparent)",
-                    }}
-                  />
                   <p
-                    className="mt-2 text-[11px] leading-snug"
+                    className="mt-1 text-[10px] leading-snug"
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
                       color: IVORY,
