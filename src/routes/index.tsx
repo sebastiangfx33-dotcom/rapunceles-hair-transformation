@@ -379,7 +379,7 @@ function Hero() {
                     }}
                   />
                   <p
-                    className="mt-2 text-[11.5px] leading-relaxed"
+                    className="mt-2 text-[9.5px] leading-snug"
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
                       color: IVORY,
