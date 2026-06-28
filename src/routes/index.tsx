@@ -349,12 +349,10 @@ function Hero() {
                 key={i}
                 className="relative rounded-2xl px-2 py-3 text-center"
                 style={{
-                  background:
-                    "linear-gradient(135deg, rgba(244,236,220,0.10) 0%, rgba(212,168,94,0.10) 50%, rgba(244,236,220,0.06) 100%)",
-                  backdropFilter: "blur(14px)",
-                  border: "1px solid rgba(212,168,94,0.35)",
+                  background: "#2A0D3E",
+                  border: "1px solid rgba(201,168,76,0.3)",
                   boxShadow:
-                    "0 10px 30px -16px rgba(0,0,0,0.55), inset 0 1px 0 rgba(244,236,220,0.28), inset 0 -1px 0 rgba(212,168,94,0.22), 0 0 22px rgba(212,168,94,0.12)",
+                    "0 14px 36px -18px rgba(0,0,0,0.7), inset 0 1px 0 rgba(224,201,127,0.18), 0 0 22px rgba(201,168,76,0.10)",
                 }}
               >
                 <div className="flex flex-col items-center">
