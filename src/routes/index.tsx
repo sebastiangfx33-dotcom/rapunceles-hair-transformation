@@ -360,11 +360,11 @@ function Hero() {
                     />
                   </span>
                   <h3
-                    className="mt-3 text-[11px]"
+                    className="mt-3 text-[8.5px] leading-tight"
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
                       color: "#E8C98A",
-                      letterSpacing: "0.22em",
+                      letterSpacing: "0.16em",
                       fontWeight: 500,
                     }}
                   >
