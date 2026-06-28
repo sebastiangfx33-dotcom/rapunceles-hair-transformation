@@ -339,11 +339,12 @@ function Hero() {
                 key={i}
                 className="relative rounded-2xl px-2 py-3 text-center"
                 style={{
-                  background: "#2A0D3E",
-                  border: "1px solid rgba(201,168,76,0.3)",
+                  background: "transparent",
+                  border: "1px solid rgba(212,168,94,0.45)",
                   boxShadow:
-                    "0 14px 36px -18px rgba(0,0,0,0.7), inset 0 1px 0 rgba(224,201,127,0.18), 0 0 22px rgba(201,168,76,0.10)",
+                    "0 0 18px rgba(224,201,127,0.45), 0 0 36px rgba(212,168,94,0.25), inset 0 0 14px rgba(224,201,127,0.18)",
                 }}
+
               >
                 <div className="flex flex-col items-center">
                   <span
