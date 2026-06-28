@@ -342,20 +342,38 @@ function Hero() {
                 <div className="flex flex-col items-center">
                   <span
                     aria-hidden="true"
-                    className="flex h-10 w-10 items-center justify-center rounded-full"
+                    className="relative flex h-12 w-12 items-center justify-center rounded-full"
                     style={{
-                      border: "1px solid rgba(212,168,94,0.45)",
                       background:
-                        "radial-gradient(circle at 30% 30%, rgba(244,236,220,0.18), rgba(212,168,94,0.06))",
+                        "radial-gradient(circle at 30% 25%, #FFF4D6 0%, #F5D88A 22%, #D4A85E 55%, #8A6224 88%, #5C3F14 100%)",
+                      boxShadow:
+                        "0 6px 14px rgba(0,0,0,0.55), 0 2px 4px rgba(0,0,0,0.4), inset 0 1.5px 1px rgba(255,248,220,0.9), inset 0 -2px 3px rgba(70,40,10,0.7), inset 0 0 0 1px rgba(255,235,180,0.35)",
                     }}
                   >
-                    <Icon
-                      className="size-5"
-                      strokeWidth={1}
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute left-[14%] top-[10%] h-[35%] w-[55%] rounded-full"
                       style={{
-                        color: "#E8C98A",
+                        background:
+                          "radial-gradient(ellipse at center, rgba(255,255,255,0.75), rgba(255,255,255,0) 70%)",
+                        filter: "blur(1px)",
+                      }}
+                    />
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-[3px] rounded-full"
+                      style={{
+                        border: "1px solid rgba(92,55,15,0.55)",
+                        boxShadow: "inset 0 0 0 1px rgba(255,235,180,0.4)",
+                      }}
+                    />
+                    <Icon
+                      className="relative size-5"
+                      strokeWidth={1.75}
+                      style={{
+                        color: "#3A2608",
                         filter:
-                          "drop-shadow(0 0 6px rgba(212,168,94,0.55))",
+                          "drop-shadow(0 1px 0 rgba(255,240,200,0.55)) drop-shadow(0 -1px 0 rgba(0,0,0,0.3))",
                       }}
                     />
                   </span>
