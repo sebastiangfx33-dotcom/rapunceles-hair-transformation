@@ -317,7 +317,7 @@ function Hero() {
               filter: "blur(14px)",
             }}
           />
-          <div className="relative grid grid-cols-3 gap-2">
+          <div className="relative grid grid-cols-3 gap-3">
             {[
               {
                 Icon: Sprout,
@@ -337,7 +337,7 @@ function Hero() {
             ].map(({ Icon, title, desc }, i) => (
               <div
                 key={i}
-                className="relative rounded-xl px-2 py-2 text-center"
+                className="relative rounded-xl px-3 py-4 text-center"
                 style={{
                   background: "transparent",
                   border: "1px solid rgba(212,168,94,0.45)",
@@ -348,7 +348,7 @@ function Hero() {
                 <div className="flex flex-col items-center">
                   <span
                     aria-hidden="true"
-                    className="relative flex h-7 w-7 items-center justify-center rounded-full"
+                    className="relative flex h-9 w-9 items-center justify-center rounded-full"
                     style={{
                       border: "1px solid rgba(212,168,94,0.5)",
                       background:
@@ -356,7 +356,7 @@ function Hero() {
                     }}
                   >
                     <Icon
-                      className="size-[14px]"
+                      className="size-[18px]"
                       strokeWidth={1}
                       style={{
                         color: "#E8C98A",
@@ -365,18 +365,18 @@ function Hero() {
                     />
                   </span>
                   <h3
-                    className="mt-1.5 text-[9px] leading-tight"
+                    className="mt-3 text-[10px] leading-tight"
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
                       color: "#E8C98A",
-                      letterSpacing: "0.12em",
+                      letterSpacing: "0.14em",
                       fontWeight: 600,
                     }}
                   >
                     {title}
                   </h3>
                   <p
-                    className="mt-1 text-[10px] leading-snug"
+                    className="mt-2 text-[11px] leading-snug"
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
                       color: IVORY,
@@ -390,6 +390,7 @@ function Hero() {
               </div>
             ))}
           </div>
+
         </div>
 
 
