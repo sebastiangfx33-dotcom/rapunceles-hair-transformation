@@ -309,7 +309,7 @@ function Hero() {
               filter: "blur(14px)",
             }}
           />
-          <div className="relative flex flex-col gap-3">
+          <div className="relative grid grid-cols-3 gap-2">
             {[
               {
                 Icon: Sprout,
