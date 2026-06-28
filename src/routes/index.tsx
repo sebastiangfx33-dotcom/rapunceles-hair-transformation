@@ -340,13 +340,11 @@ function Hero() {
             ].map(({ Icon, title, desc }, i) => (
               <div
                 key={i}
-                className="relative rounded-xl px-2 py-2.5 text-center"
+                className="animate-gold-aura relative rounded-xl px-2 py-2.5 text-center"
                 style={{
                   background: "transparent",
                   border: "1px solid rgba(232,201,138,0.75)",
-                  boxShadow:
-                    "0 0 10px rgba(232,201,138,0.7), 0 0 22px rgba(212,168,94,0.55), 0 0 38px rgba(212,168,94,0.35), inset 0 0 12px rgba(232,201,138,0.22)",
-
+                  animationDelay: `${i * 0.4}s`,
                 }}
               >
                 <div className="flex flex-col items-center">
