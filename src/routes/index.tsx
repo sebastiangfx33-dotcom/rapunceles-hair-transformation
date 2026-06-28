@@ -404,61 +404,6 @@ function Hero() {
 
 
 
-        {/* Brand sign-off */}
-        <div className="relative mt-12 flex flex-col items-center pb-10">
-          {/* Flowing gold curves wrapping brand block */}
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 400 140"
-            preserveAspectRatio="none"
-            className="pointer-events-none absolute inset-x-0 top-0 h-full w-full opacity-70"
-          >
-            <defs>
-              <linearGradient id="brandGoldLeft" x1="0" x2="1" y1="0" y2="0">
-                <stop offset="0%" stopColor="rgba(212,168,94,0)" />
-                <stop offset="60%" stopColor="rgba(232,201,138,0.9)" />
-                <stop offset="100%" stopColor="rgba(212,168,94,0)" />
-              </linearGradient>
-              <linearGradient id="brandGoldRight" x1="1" x2="0" y1="0" y2="0">
-                <stop offset="0%" stopColor="rgba(212,168,94,0)" />
-                <stop offset="60%" stopColor="rgba(232,201,138,0.9)" />
-                <stop offset="100%" stopColor="rgba(212,168,94,0)" />
-              </linearGradient>
-            </defs>
-            <path d="M0,40 C70,10 140,90 200,55" fill="none" stroke="url(#brandGoldLeft)" strokeWidth="0.7" />
-            <path d="M0,100 C80,70 150,130 200,90" fill="none" stroke="url(#brandGoldLeft)" strokeWidth="0.5" />
-            <path d="M400,40 C330,10 260,90 200,55" fill="none" stroke="url(#brandGoldRight)" strokeWidth="0.7" />
-            <path d="M400,100 C320,70 250,130 200,90" fill="none" stroke="url(#brandGoldRight)" strokeWidth="0.5" />
-          </svg>
-          <Crown
-            className="relative size-6"
-            strokeWidth={1}
-            style={{ color: GOLD }}
-            aria-hidden="true"
-          />
-          <span
-            className="relative mt-2 text-[26px] leading-none"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontWeight: 500,
-              color: GOLD,
-              letterSpacing: "0.32em",
-            }}
-          >
-            RAPUNCELES
-          </span>
-          <span
-            className="relative mt-3 text-[11px]"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontStyle: "italic",
-              color: LAVENDER,
-              letterSpacing: "0.04em",
-            }}
-          >
-            Naturaleza. Ciencia. Transformación.
-          </span>
-        </div>
       </div>
 
       {/* Botanical lavender decorations in lower corners */}
