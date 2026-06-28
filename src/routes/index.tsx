@@ -150,15 +150,16 @@ function Hero() {
       }}
     >
       {/* Hero scene with model + products on marble */}
-      <div className="relative mx-auto w-full max-w-[360px] px-4 pt-4">
+      <div className="relative w-full">
         <img
           src={heroScene.url}
           alt="Modelo con cabello largo, abundante y saludable junto al kit Rapunceles"
           width={608}
           height={1280}
           fetchPriority="high"
-          className="block h-auto w-full object-cover"
+          className="block w-full h-[55vh] max-h-[460px] min-h-[320px] object-cover object-center"
         />
+
 
 
 
