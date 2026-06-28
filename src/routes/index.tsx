@@ -132,219 +132,245 @@ function Landing() {
 function Hero() {
   const GOLD = "#D4A85E";
   const GOLD_SOFT = "#E8C98A";
-  const IVORY = "#F8F4EE";
-  const LAVENDER = "#DCCFE6";
-  const PURPLE_DEEP = "#2A1237";
+  const IVORY = "#F4ECDC";
+  const LAVENDER = "#CBB8DC";
+  const PURPLE_DEEP = "#1A0A2E";
 
-  const heroModel = { url: "/__l5e/assets-v1/cccf10f8-57fb-4e7e-9f85-3589e25edc01/hero-luxury-model.jpg" };
+  const heroScene = {
+    url: "/__l5e/assets-v1/f85e66a1-2dd9-48aa-88e6-5c38d6d7f2ab/hero-scene.jpg",
+  };
 
   return (
     <section
       className="relative w-full overflow-hidden"
       style={{
         background:
-          "radial-gradient(120% 80% at 50% 0%, #3A1B4A 0%, #2A1237 45%, #1A0A2E 100%)",
+          "radial-gradient(120% 90% at 50% 0%, #2A1237 0%, #1F0E33 55%, #14081F 100%)",
         color: IVORY,
       }}
     >
-      {/* Ambient luxury glows */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(60% 40% at 80% 15%, rgba(212,168,94,0.18) 0%, transparent 60%), radial-gradient(70% 50% at 15% 85%, rgba(220,207,230,0.14) 0%, transparent 65%)",
-        }}
-      />
+      {/* Hero scene with model + products on marble */}
+      <div className="relative w-full">
+        <img
+          src={heroScene.url}
+          alt="Modelo con cabello largo, abundante y saludable junto al kit Rapunceles"
+          width={608}
+          height={1280}
+          fetchPriority="high"
+          className="block h-auto w-full object-cover"
+        />
 
-      {/* Brand wordmark */}
-      <div className="relative z-10 flex items-center justify-center pt-6">
-        <span
-          className="text-[26px] leading-none"
-          style={{
-            fontFamily: "'Great Vibes', cursive",
-            color: GOLD,
-            letterSpacing: "0.01em",
-          }}
-        >
-          Rapunceles
-        </span>
-      </div>
-
-      {/* Hero model image */}
-      <div className="relative z-10 mt-5 px-5">
-        <div
-          className="relative mx-auto overflow-hidden rounded-[28px]"
-          style={{
-            maxWidth: 440,
-            boxShadow:
-              "0 30px 80px -30px rgba(0,0,0,0.6), 0 0 0 1px rgba(212,168,94,0.22) inset",
-          }}
-        >
+        {/* Products overlay on the marble surface */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-[10%] z-[5] flex items-end justify-center gap-1.5 px-6">
           <img
-            src={heroModel.url}
-            alt="Mujer con cabello largo, abundante y saludable — campaña Rapunceles"
-            width={896}
-            height={1216}
-            fetchPriority="high"
-            className="block h-auto w-full object-cover"
-            style={{ aspectRatio: "896 / 1216" }}
+            src={prodConditioner}
+            alt="Acondicionador Rapunceles"
+            className="h-[26vw] max-h-[180px] w-auto object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.55)]"
+            loading="lazy"
           />
-          {/* gentle bottom fade into the section bg */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 bottom-0 h-24"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(26,10,46,0) 0%, rgba(26,10,46,0.85) 100%)",
-            }}
+          <img
+            src={prodShampoo}
+            alt="Shampoo Rapunceles"
+            className="h-[28vw] max-h-[200px] w-auto object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.55)]"
+            loading="lazy"
+          />
+          <img
+            src={prodTonic}
+            alt="Tónico de crecimiento Rapunceles"
+            className="h-[24vw] max-h-[170px] w-auto object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.55)]"
+            loading="lazy"
           />
         </div>
+
+        {/* Gold arched bottom frame */}
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 100 14"
+          preserveAspectRatio="none"
+          className="pointer-events-none absolute inset-x-0 bottom-0 z-[6] h-[12%] w-full"
+        >
+          <defs>
+            <linearGradient id="archGold" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0%" stopColor="rgba(212,168,94,0)" />
+              <stop offset="20%" stopColor="#D4A85E" />
+              <stop offset="50%" stopColor="#F0D38A" />
+              <stop offset="80%" stopColor="#D4A85E" />
+              <stop offset="100%" stopColor="rgba(212,168,94,0)" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0,14 L0,8 Q50,-6 100,8 L100,14 Z"
+            fill={PURPLE_DEEP}
+          />
+          <path
+            d="M0,8 Q50,-6 100,8"
+            fill="none"
+            stroke="url(#archGold)"
+            strokeWidth="0.22"
+          />
+        </svg>
+
+        {/* Bottom fade into section bg */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-12"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(20,8,31,0) 0%, rgba(20,8,31,1) 100%)",
+          }}
+        />
       </div>
 
-      {/* Editorial copy */}
-      <div className="relative z-10 mt-8 flex flex-col items-center px-6 text-center">
-        {/* small gold ornament */}
-        <div className="flex items-center justify-center" aria-hidden="true">
-          <span className="h-px w-10" style={{ background: GOLD }} />
-          <span
-            className="mx-2 inline-block rotate-45"
-            style={{ width: 6, height: 6, background: GOLD }}
-          />
-          <span className="h-px w-10" style={{ background: GOLD }} />
-        </div>
-
-        <p
-          className="mt-4 text-[10px] uppercase"
-          style={{
-            letterSpacing: "0.42em",
-            color: GOLD_SOFT,
-            fontFamily: "'Inter', sans-serif",
-            fontWeight: 500,
-          }}
-        >
-          The Hair Ritual
-        </p>
-
-        <h1
-          className="mt-4 text-[32px] leading-[1.1]"
+      {/* Editorial copy block */}
+      <div className="relative z-10 -mt-2 flex flex-col items-center px-6 text-center">
+        <h2
+          className="text-[15px]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 400,
             color: IVORY,
-            maxWidth: 340,
+            letterSpacing: "0.22em",
           }}
         >
-          Tu cabello puede volver a ser
+          TU CABELLO PUEDE VOLVER A SER
+        </h2>
+
+        <h1
+          className="mt-2 text-[30px] leading-[1.05]"
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            fontWeight: 500,
+            color: GOLD,
+            letterSpacing: "0.02em",
+          }}
+        >
+          FUERTE <span style={{ color: GOLD_SOFT }}>·</span> ABUNDANTE{" "}
+          <span style={{ color: GOLD_SOFT }}>·</span> ESPECTACULAR
         </h1>
 
         <p
-          className="mt-4 text-[15px] leading-tight"
+          className="mt-4 max-w-[320px] text-[13.5px] leading-[1.55]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
-            fontStyle: "italic",
-            fontWeight: 500,
-            color: GOLD,
-            letterSpacing: "0.06em",
-          }}
-        >
-          Fuerte · Abundante · Espectacular
-        </p>
-
-        <p
-          className="mt-5 max-w-[300px] text-[14px] leading-relaxed"
-          style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            color: LAVENDER,
+            color: IVORY,
             fontWeight: 300,
           }}
         >
           Miles de mujeres están recuperando el crecimiento natural de su cabello con Rapunceles.
         </p>
 
-        {/* divider */}
-        <div className="mt-6 flex items-center justify-center" aria-hidden="true">
-          <span className="h-px w-16" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
+        {/* Gold ornamental divider */}
+        <div
+          className="mt-5 flex items-center justify-center"
+          aria-hidden="true"
+        >
+          <span
+            className="h-px w-14"
+            style={{
+              background: `linear-gradient(90deg, transparent, ${GOLD}, ${GOLD})`,
+            }}
+          />
+          <span
+            className="mx-2 inline-block rotate-45"
+            style={{
+              width: 6,
+              height: 6,
+              border: `1px solid ${GOLD}`,
+            }}
+          />
+          <span
+            className="h-px w-14"
+            style={{
+              background: `linear-gradient(90deg, ${GOLD}, ${GOLD}, transparent)`,
+            }}
+          />
         </div>
-      </div>
 
-
-      {/* CTA */}
-      <div className="relative z-10 mt-7 flex justify-center px-6">
-        <a
-          href="#options"
-          className="inline-flex w-full max-w-[360px] items-center justify-center rounded-full px-6 py-4 text-center"
-          style={{
-            background: `linear-gradient(180deg, ${GOLD_SOFT} 0%, ${GOLD} 100%)`,
-            color: "#1A0F2E",
-            fontFamily: "'Inter', sans-serif",
-            fontWeight: 600,
-            fontSize: 12,
-            letterSpacing: "0.22em",
-            textTransform: "uppercase",
-            boxShadow:
-              "0 18px 40px -14px rgba(212,168,94,0.55), inset 0 1px 0 rgba(255,255,255,0.4)",
-          }}
-        >
-          Quiero empezar mi transformación
-        </a>
-      </div>
-
-      {/* Trust benefits */}
-      <div className="relative z-10 mt-10 grid grid-cols-3 gap-3 px-5">
-        {[
-          { Icon: Truck, l1: "Envío gratis", l2: "a todo Colombia" },
-          { Icon: HeartHandshake, l1: "Pago contra", l2: "entrega" },
-          { Icon: ShieldCheck, l1: "Compra 100%", l2: "segura" },
-        ].map(({ Icon, l1, l2 }, i) => (
-          <div
-            key={i}
-            className="flex flex-col items-center px-1 text-center"
+        {/* CTA */}
+        <div className="mt-6 w-full">
+          <a
+            href="#options"
+            className="relative mx-auto flex w-full max-w-[360px] items-center justify-center rounded-full px-6 py-[18px] text-center"
+            style={{
+              background: `linear-gradient(180deg, ${GOLD_SOFT} 0%, ${GOLD} 60%, #B98A3F 100%)`,
+              color: "#1A0F2E",
+              fontFamily: "'Cormorant Garamond', serif",
+              fontWeight: 600,
+              fontSize: 13.5,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              boxShadow:
+                "0 22px 42px -16px rgba(212,168,94,0.55), inset 0 0 0 1px rgba(255,235,180,0.6), inset 0 -2px 6px rgba(120,80,20,0.35)",
+            }}
           >
-            <Icon
-              className="size-5"
-              strokeWidth={1.2}
-              style={{ color: GOLD }}
-              aria-hidden="true"
-            />
-            <p
-              className="mt-2 text-[11px] leading-snug"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                color: IVORY,
-                fontWeight: 500,
-              }}
-            >
-              {l1}
-              <br />
-              {l2}
-            </p>
-          </div>
-        ))}
-      </div>
+            Quiero empezar mi transformación
+          </a>
+        </div>
 
-      {/* Brand sign-off */}
-      <div className="relative z-10 mt-10 flex flex-col items-center pb-10">
-        <span className="h-px w-14" style={{ background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
-        <span
-          className="mt-3 text-[34px] leading-none"
-          style={{
-            fontFamily: "'Great Vibes', cursive",
-            color: GOLD,
-          }}
-        >
-          Rapunceles
-        </span>
-        <span
-          className="mt-2 text-[9px] uppercase"
-          style={{
-            letterSpacing: "0.5em",
-            color: LAVENDER,
-            fontFamily: "'Inter', sans-serif",
-          }}
-        >
-          Luxury Hair Ritual
-        </span>
+        {/* Trust benefits */}
+        <div className="mt-9 grid w-full max-w-[360px] grid-cols-3 gap-3">
+          {[
+            { Icon: Truck, l1: "Envío gratis", l2: "a todo Colombia" },
+            { Icon: HeartHandshake, l1: "Pago contra", l2: "entrega" },
+            { Icon: ShieldCheck, l1: "Compra 100%", l2: "segura" },
+          ].map(({ Icon, l1, l2 }, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center px-1 text-center"
+            >
+              <Icon
+                className="size-7"
+                strokeWidth={1}
+                style={{ color: GOLD }}
+                aria-hidden="true"
+              />
+              <p
+                className="mt-3 text-[12px] leading-snug"
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  color: IVORY,
+                  fontWeight: 400,
+                }}
+              >
+                {l1}
+                <br />
+                {l2}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Brand sign-off */}
+        <div className="mt-12 flex flex-col items-center pb-10">
+          <Crown
+            className="size-6"
+            strokeWidth={1}
+            style={{ color: GOLD }}
+            aria-hidden="true"
+          />
+          <span
+            className="mt-2 text-[26px] leading-none"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontWeight: 500,
+              color: GOLD,
+              letterSpacing: "0.32em",
+            }}
+          >
+            RAPUNCELES
+          </span>
+          <span
+            className="mt-3 text-[11px]"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontStyle: "italic",
+              color: LAVENDER,
+              letterSpacing: "0.04em",
+            }}
+          >
+            Naturaleza. Ciencia. Transformación.
+          </span>
+        </div>
       </div>
     </section>
   );
