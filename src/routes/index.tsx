@@ -347,6 +347,20 @@ function Hero() {
                   animationDelay: `${i * 0.4}s`,
                 }}
               >
+                <span aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-visible">
+                  {[0, 120, 240].map((deg, di) => (
+                    <span
+                      key={di}
+                      className="absolute left-1/2 top-1/2 block h-1.5 w-1.5 -ml-[3px] -mt-[3px] rounded-full animate-orbit-dot"
+                      style={{
+                        background: "#F4DEA5",
+                        boxShadow: "0 0 6px rgba(244,222,165,0.95), 0 0 12px rgba(212,168,94,0.7)",
+                        animationDelay: `${-(deg / 360) * 4}s`,
+                        ["--orbit-r" as any]: "52px",
+                      }}
+                    />
+                  ))}
+                </span>
                 <div className="flex flex-col items-center">
                   <span
                     aria-hidden="true"
