@@ -364,7 +364,7 @@ function AfterBanner() {
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 400,
-            color: IVORY,
+            color: "#D4A85E",
           }}
         >
           Reconoce estas señales — tu cabello te está pidiendo ayuda
@@ -690,7 +690,7 @@ function ProductRoutineSection() {
               fontSize: "clamp(20px, 5.8vw, 34px)",
               fontWeight: 500,
               letterSpacing: "0.01em",
-              color: "#d4af37",
+              color: "#D4A85E",
 
             }}
           >
@@ -1211,7 +1211,10 @@ function Scarcity() {
             Producción limitada
           </span>
         </div>
-        <h2 className="mt-5 text-3xl text-[var(--ivory)]">
+        <h2
+          className="mt-5 text-3xl"
+          style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A85E" }}
+        >
           Producción limitada esta semana.
         </h2>
         <p className="mt-3 text-sm leading-relaxed text-[color-mix(in_oklab,var(--ivory)_75%,transparent)]">
@@ -1389,8 +1392,8 @@ function Urgency() {
       <div className="relative mx-auto max-w-md px-6 pt-0 pb-10 text-center">
         <Ornament />
         <h2
-          className="mt-1 font-display text-[2rem] leading-[1.05] uppercase"
-          style={{ color: "#F6E9CF", letterSpacing: "0.02em" }}
+          className="mt-1 text-[2rem] leading-[1.05] uppercase"
+          style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A85E", letterSpacing: "0.02em" }}
         >
           Producción
           <br />
@@ -1494,8 +1497,8 @@ function FinalCTA() {
           Tu momento es ahora
         </span>
         <h2
-          className="mt-4 font-display text-[1.65rem] leading-[1.15]"
-          style={{ color: "#F5E9D6" }}
+          className="mt-4 text-[1.65rem] leading-[1.15]"
+          style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A85E" }}
         >
           Tu cabello todavía
           <br />
@@ -1558,8 +1561,8 @@ function TrustBenefits() {
       <div className="mx-auto max-w-md px-6">
         <div className="text-center">
           <h2
-            className="-mt-2 font-display text-[1.7rem] leading-[1.15]"
-            style={{ color: gold }}
+            className="-mt-2 text-[1.7rem] leading-[1.15]"
+            style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A85E" }}
           >
             Compra con total tranquilidad
           </h2>
@@ -1642,8 +1645,8 @@ function FinalTransformation() {
           </div>
           <div className="flex flex-col justify-center px-4 py-10 text-center">
             <h2
-              className="font-display text-[1.55rem] leading-[1.1] text-white"
-              style={{ letterSpacing: "0.01em" }}
+              className="text-[1.55rem] leading-[1.1]"
+              style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A85E", letterSpacing: "0.01em" }}
             >
               TU CABELLO
               <br />
@@ -1758,8 +1761,8 @@ function FAQ() {
             Preguntas frecuentes
           </span>
           <h2
-            className="mt-2 font-display text-[1.5rem] leading-tight"
-            style={{ color: "#3A2418" }}
+            className="mt-2 text-[1.5rem] leading-tight"
+            style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A85E" }}
           >
             Resolvemos tus dudas
           </h2>
@@ -1897,7 +1900,7 @@ function LuxuryCampaign() {
           style={{
             fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
             fontWeight: 400,
-            color: "#e8c98a",
+            color: "#D4A85E",
             letterSpacing: "0.01em",
           }}
         >
