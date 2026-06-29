@@ -39,8 +39,9 @@ const routineBg = { url: "/routine-bg.png" };
 import heroKit from "@/assets/hero-kit.jpg";
 const heroKitNew = { url: "/hero-kit-new.png" };
 const routineProducts = { url: "/routine-products.png" };
-import routineBgV9Asset from "@/assets/routine-bg-v9.png.asset.json";
-const routineBgV3 = { url: routineBgV9Asset.url };
+import routineBgV10Asset from "@/assets/routine-bg-v10.png.asset.json";
+const routineBgV3 = { url: routineBgV10Asset.url };
+
 const routineSectionBg = { url: "/routine-section-bg.jpg" };
 const kitBgAsset = { url: "/kit-bg.png" };
 const urgencyBgAsset = { url: "/urgency-bg-v4.png" };
