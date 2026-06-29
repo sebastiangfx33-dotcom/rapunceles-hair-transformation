@@ -1375,6 +1375,7 @@ function Results() {
 /* ---------------------------- TESTIMONIALS ---------------------------- */
 function Testimonials() {
   const gold = "#D4A85E";
+  const ivory = "#F4E9D4";
   const trust = [
     { n: "+10K", t: "Mujeres transformadas" },
     { n: "4.9/5", t: "Calificación promedio" },
