@@ -867,7 +867,7 @@ function KitIncludes() {
       step: "03",
       name: "TÓNICO",
       tagline: ["ESTIMULA", "Y ACTIVA"],
-      desc: "Actúa directamente sobre la raíz para estimular el crecimiento y fortalecer desde el origen.",
+      desc: "uUna potnte mezla de ingredientes naturales que activan el crecimiento,fortalce la razi yrecupera una melena mas fuerte abundante y llena de vida",
     },
   ];
 
