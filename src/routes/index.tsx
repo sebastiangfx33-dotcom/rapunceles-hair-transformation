@@ -690,12 +690,8 @@ function ProductRoutineSection() {
               fontSize: "clamp(20px, 5.8vw, 34px)",
               fontWeight: 500,
               letterSpacing: "0.01em",
-              backgroundImage:
-                "linear-gradient(180deg, #f5e6a8 0%, #d4af37 45%, #b8860b 100%)",
-              WebkitBackgroundClip: "text",
-              backgroundClip: "text",
-              color: "transparent",
-              WebkitTextFillColor: "transparent",
+              color: "#d4af37",
+
             }}
           >
             Tu cabello ya te mostró las señales…
