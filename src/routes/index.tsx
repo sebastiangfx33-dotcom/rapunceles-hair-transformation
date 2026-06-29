@@ -1395,6 +1395,15 @@ function Testimonials() {
   const gold = "#D4A85E";
   const goldSoft = "#E8C98A";
   const ivory = "#F4E9D4";
+  const CHAT_CARDS_COUNT = 4;
+  const [chatIndex, setChatIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => {
+      setChatIndex((i) => (i + 1) % CHAT_CARDS_COUNT);
+    }, 5000);
+    return () => clearInterval(id);
+  }, []);
+
 
   const conversations = [
     {
