@@ -346,13 +346,12 @@ function Hero() {
                   border: "1px solid rgba(212,168,94,0.55)",
                 }}
               >
-                <span aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-visible">
+                <span aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-xl overflow-hidden">
                   <span
-                    className="absolute left-1/2 top-1/2 block h-1.5 w-1.5 -ml-[3px] -mt-[3px] rounded-full animate-orbit-dot"
+                    className="block h-1.5 w-1.5 rounded-full animate-border-trace"
                     style={{
                       background: "#F4DEA5",
-                      boxShadow: "0 0 6px rgba(244,222,165,0.9)",
-                      ["--orbit-r" as any]: "52px",
+                      boxShadow: "0 0 6px rgba(244,222,165,0.95), 0 0 12px rgba(212,168,94,0.7)",
                     }}
                   />
                 </span>
