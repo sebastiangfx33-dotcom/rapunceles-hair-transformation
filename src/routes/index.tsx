@@ -340,26 +340,21 @@ function Hero() {
             ].map(({ Icon, title, desc }, i) => (
               <div
                 key={i}
-                className="animate-gold-aura relative rounded-xl px-2 py-2.5 text-center"
+                className="relative rounded-xl px-2 py-2.5 text-center"
                 style={{
                   background: "transparent",
-                  border: "1px solid rgba(232,201,138,0.75)",
-                  animationDelay: `${i * 0.4}s`,
+                  border: "1px solid rgba(212,168,94,0.55)",
                 }}
               >
                 <span aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-visible">
-                  {[0, 120, 240].map((deg, di) => (
-                    <span
-                      key={di}
-                      className="absolute left-1/2 top-1/2 block h-1.5 w-1.5 -ml-[3px] -mt-[3px] rounded-full animate-orbit-dot"
-                      style={{
-                        background: "#F4DEA5",
-                        boxShadow: "0 0 6px rgba(244,222,165,0.95), 0 0 12px rgba(212,168,94,0.7)",
-                        animationDelay: `${-(deg / 360) * 4}s`,
-                        ["--orbit-r" as any]: "52px",
-                      }}
-                    />
-                  ))}
+                  <span
+                    className="absolute left-1/2 top-1/2 block h-1.5 w-1.5 -ml-[3px] -mt-[3px] rounded-full animate-orbit-dot"
+                    style={{
+                      background: "#F4DEA5",
+                      boxShadow: "0 0 6px rgba(244,222,165,0.9)",
+                      ["--orbit-r" as any]: "52px",
+                    }}
+                  />
                 </span>
                 <div className="flex flex-col items-center">
                   <span
