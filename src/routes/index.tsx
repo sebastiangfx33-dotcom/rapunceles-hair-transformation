@@ -1123,8 +1123,8 @@ function Results() {
   const ivory = "#F4E9D4";
   const items = [
     {
-      before: beforeAndrea,
-      after: afterAndrea,
+      before: beforeValentina,
+      after: afterValentina,
       avatar: avatarValentinaAsset.url,
       quote:
         "Empecé a notar mucho menos caída al peinarme y mi cabello se siente mucho más fuerte.",
