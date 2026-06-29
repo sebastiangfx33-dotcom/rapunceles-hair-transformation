@@ -763,13 +763,14 @@ function ProductRoutineSection() {
               ].map(({ Icon, title, desc }, i) => (
                 <div
                   key={i}
-                  className="relative rounded-lg px-2 py-1.5 text-left"
+                  className="animate-gold-aura relative rounded-lg px-2 py-1.5 text-left"
                   style={{
                     background: "rgba(20, 8, 35, 0.55)",
-                    border: "1px solid rgba(212,168,94,0.55)",
+                    border: "1px solid rgba(232,201,138,0.7)",
                     backdropFilter: "blur(6px)",
                   }}
                 >
+
                   <div className="flex items-center gap-1.5">
                     <span
                       aria-hidden="true"
