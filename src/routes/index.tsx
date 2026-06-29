@@ -1147,6 +1147,15 @@ function Results() {
       name: "Juliana",
       city: "Cali",
     },
+    {
+      before: beforeAndrea,
+      after: afterAndrea,
+      avatar: avatarCamilaAsset.url,
+      quote:
+        "Mi cabello luce más brillante, suave y con un crecimiento que no había visto en años.",
+      name: "Camila",
+      city: "Barranquilla",
+    },
   ];
 
   return (
