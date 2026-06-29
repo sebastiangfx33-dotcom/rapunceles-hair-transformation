@@ -854,20 +854,20 @@ function KitIncludes() {
       desc: "Limpia profundamente el cuero cabelludo y lo prepara para recibir los nutrientes.",
     },
     {
-      img: prodTonic,
-      Icon: DropIcon,
-      step: "02",
-      name: "TÓNICO",
-      tagline: ["ESTIMULA", "Y ACTIVA"],
-      desc: "Actúa directamente sobre la raíz para estimular el crecimiento y fortalecer desde el origen.",
-    },
-    {
       img: prodConditioner,
       Icon: SparkleIcon,
-      step: "03",
+      step: "02",
       name: "ACONDICIONADOR",
       tagline: ["NUTRE", "Y FORTALECE"],
       desc: "Nutre profundamente cada hebra, mejora la resistencia y deja tu cabello más fuerte, suave y saludable.",
+    },
+    {
+      img: prodTonic,
+      Icon: DropIcon,
+      step: "03",
+      name: "TÓNICO",
+      tagline: ["ESTIMULA", "Y ACTIVA"],
+      desc: "Actúa directamente sobre la raíz para estimular el crecimiento y fortalecer desde el origen.",
     },
   ];
 
