@@ -416,216 +416,144 @@ function Hero() {
 
 /* ------------------------- AFTER BANNER -------------------------- */
 function AfterBanner() {
-  const GOLD = "#D4B071";
-  const GOLD_SOFT = "#E8C98A";
-  const IVORY = "#F4E9D8";
-  const PURPLE_BG = "#2A1237";
+  const GOLD = "#C9A15D";
+  const IVORY = "#F7F1E8";
+  const BEIGE = "#E7D8C6";
+  const CARD_BG = "rgba(45, 19, 47, 0.78)";
+  const CARD_BORDER = "rgba(201, 161, 93, 0.32)";
 
   const items = [
     {
       img: probFallAsset.url,
-      title: "CAÍDA CONSTANTE",
-      desc: "Cada día pierdes más cabello del que deberías y la caída comienza a hacerse evidente.",
+      title: "Caída excesiva",
+      desc: "Cada día pierdes más cabello del que deberías.",
     },
     {
       img: probSlowGrowthAsset.url,
-      title: "CRECIMIENTO ESTANCADO",
-      desc: "Tu cabello tarda demasiado en crecer o parece haberse detenido por completo.",
+      title: "Crecimiento lento",
+      desc: "Tu cabello tarda demasiado en crecer o parece detenido.",
+    },
+    {
+      img: probRootsAsset.url,
+      title: "Raíces debilitadas",
+      desc: "Cuando la raíz pierde fuerza, el cabello comienza a caer.",
     },
     {
       img: probVolumeAsset.url,
-      title: "PÉRDIDA DE DENSIDAD",
-      desc: "Tu cabello comienza a perder volumen, fuerza y abundancia natural.",
+      title: "Pérdida de abundancia",
+      desc: "Tu cabello pierde volumen, densidad y vitalidad natural.",
     },
   ];
 
   return (
-    <section
-      className="relative w-full overflow-hidden"
-      style={{ background: PURPLE_BG }}
-    >
-      {/* Royal purple base with cinematic depth */}
+    <section className="relative w-full overflow-hidden">
+      {/* Background image — untouched */}
+      <img
+        src={signalsBg.url}
+        alt="Fondo de la experiencia Rapuncelés"
+        className="absolute inset-0 h-full w-full object-cover"
+        loading="lazy"
+      />
+      {/* Subtle tonal overlay for legibility without altering the image */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 20% 0%, rgba(94,42,120,0.55) 0%, transparent 55%), radial-gradient(ellipse at 85% 100%, rgba(64,22,92,0.7) 0%, transparent 60%), linear-gradient(180deg, #2A1237 0%, #1E0C2A 100%)",
+            "linear-gradient(180deg, rgba(20,8,38,0.52) 0%, rgba(20,8,38,0.42) 40%, rgba(20,8,38,0.55) 100%)",
         }}
       />
-
-      {/* Flowing golden ribbon — top */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -top-24 left-0 h-[420px] w-full opacity-[0.18]"
-        style={{
-          background:
-            "radial-gradient(60% 50% at 30% 50%, rgba(232,201,138,0.9) 0%, transparent 70%)",
-          filter: "blur(40px)",
-          transform: "skewY(-6deg)",
-        }}
-      />
-
-      {/* Floating gold particles */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        {[
-          { l: "8%", t: "18%", s: 3, o: 0.55 },
-          { l: "22%", t: "62%", s: 2, o: 0.45 },
-          { l: "48%", t: "12%", s: 2, o: 0.5 },
-          { l: "72%", t: "30%", s: 3, o: 0.6 },
-          { l: "88%", t: "70%", s: 2, o: 0.5 },
-          { l: "35%", t: "84%", s: 2, o: 0.4 },
-          { l: "62%", t: "55%", s: 2, o: 0.45 },
-          { l: "15%", t: "40%", s: 2, o: 0.35 },
-        ].map((p, i) => (
-          <span
-            key={i}
-            className="absolute rounded-full"
-            style={{
-              left: p.l,
-              top: p.t,
-              width: p.s,
-              height: p.s,
-              background: GOLD_SOFT,
-              opacity: p.o,
-              boxShadow: `0 0 ${p.s * 4}px rgba(232,201,138,0.7)`,
-            }}
-          />
-        ))}
-      </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center px-5 py-20 md:py-28">
-        {/* Eyebrow */}
-        <span
-          className="text-[10px] tracking-[0.4em]"
-          style={{ color: GOLD, fontFamily: "'Inter', sans-serif", fontWeight: 400 }}
-        >
-          — SEÑALES —
-        </span>
+      <div className="relative z-10 flex flex-col items-center px-5 py-16 md:py-20">
+        {/* Crown icon */}
+        <Crown
+          aria-hidden="true"
+          className="size-5"
+          style={{ color: GOLD }}
+          strokeWidth={1.2}
+        />
 
         {/* Title */}
         <h2
-          className="mt-5 text-center"
+          className="mt-5 text-center text-[28px] leading-[1.15] md:text-[36px]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
-            fontWeight: 300,
-            color: "#FFFFFF",
-            lineHeight: 1.08,
-            letterSpacing: "0.005em",
+            fontWeight: 400,
+            color: IVORY,
           }}
         >
-          <span className="block text-[26px] md:text-[44px]">
-            TU CABELLO TE ESTÁ ENVIANDO SEÑALES…
-          </span>
-          <span
-            className="mt-2 block text-[20px] italic md:text-[32px]"
-            style={{ color: "#F8EAD0" }}
-          >
-            y no deberías ignorarlas.
-          </span>
+          Si tu cabello está pasando por esto… necesita actuar ahora
         </h2>
 
         {/* Subtitle */}
         <p
-          className="mt-6 max-w-md text-center text-[14px] leading-[1.7] md:text-[16px]"
+          className="mt-3 max-w-xs text-center text-[15px] leading-relaxed"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
-            color: IVORY,
-            fontWeight: 300,
+            color: BEIGE,
           }}
         >
-          La caída, el crecimiento lento y la pérdida de densidad suelen ser señales
-          de que la raíz necesita recuperarse.
+          Estas son algunas señales de que tu cabello necesita recuperar su fuerza natural.
         </p>
 
         {/* Gold divider */}
-        <div className="mt-7 flex items-center justify-center">
-          <span
-            className="h-px w-12"
-            style={{ background: `linear-gradient(90deg, transparent, ${GOLD})` }}
-          />
+        <div className="mt-6 flex items-center justify-center">
+          <span className="h-px w-16" style={{ background: GOLD }} />
           <span
             className="mx-2 inline-block rotate-45"
             style={{ width: 5, height: 5, background: GOLD }}
           />
-          <span
-            className="h-px w-12"
-            style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }}
-          />
+          <span className="h-px w-16" style={{ background: GOLD }} />
         </div>
 
-        {/* Cards — 3 horizontal */}
-        <div className="mt-12 grid w-full max-w-5xl grid-cols-3 gap-3 md:gap-7">
+        {/* Problem cards — 2 per row, mobile-first luxury grid */}
+        <div className="mt-10 grid w-full max-w-sm grid-cols-2 gap-4">
           {items.map((it) => (
             <article
               key={it.title}
-              className="group relative flex flex-col overflow-hidden rounded-[18px] md:rounded-[24px]"
+              className="flex flex-col overflow-hidden rounded-2xl"
               style={{
-                background:
-                  "linear-gradient(180deg, rgba(72,32,92,0.55) 0%, rgba(40,16,55,0.7) 100%)",
-                border: "1px solid rgba(212,176,113,0.28)",
-                backdropFilter: "blur(14px)",
-                boxShadow:
-                  "0 24px 60px -28px rgba(0,0,0,0.7), inset 0 1px 0 rgba(232,201,138,0.18)",
+                background: CARD_BG,
+                border: `1px solid ${CARD_BORDER}`,
+                backdropFilter: "blur(10px)",
+                WebkitBackdropFilter: "blur(10px)",
+                boxShadow: "0 18px 36px -20px rgba(0,0,0,0.55)",
               }}
             >
-              {/* Traveling gold border light */}
-              <span
-                aria-hidden="true"
-                className="animate-border-trace pointer-events-none absolute z-10"
-                style={{
-                  width: 7,
-                  height: 7,
-                  borderRadius: "9999px",
-                  background: "#F4DEA5",
-                  boxShadow:
-                    "0 0 12px 2px rgba(244,222,165,0.95), 0 0 24px 6px rgba(212,168,94,0.6)",
-                }}
-              />
-
-              {/* Image */}
-              <div className="w-full overflow-hidden" style={{ aspectRatio: "1 / 1" }}>
+              {/* Image — square, full width */}
+              <div
+                className="w-full overflow-hidden"
+                style={{ aspectRatio: "1 / 1" }}
+              >
                 <img
                   src={it.img}
                   alt={it.title}
+                  width={300}
+                  height={300}
                   loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                />
-                {/* Image bottom fade */}
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none -mt-12 h-12 w-full"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, transparent, rgba(40,16,55,0.85))",
-                  }}
+                  className="h-full w-full object-cover"
                 />
               </div>
 
               {/* Text */}
-              <div className="flex min-w-0 flex-1 flex-col items-center px-2 py-3 text-center md:px-5 md:py-6">
-                <span
-                  className="h-px w-6 md:w-10"
-                  style={{ background: GOLD, opacity: 0.7 }}
-                />
+              <div className="flex min-w-0 flex-1 flex-col justify-center p-3">
                 <h3
-                  className="mt-2 text-[10px] leading-tight tracking-[0.18em] md:mt-4 md:text-[14px] md:tracking-[0.22em]"
+                  className="text-[15px] leading-tight"
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
                     fontWeight: 500,
-                    color: GOLD_SOFT,
+                    color: GOLD,
                   }}
                 >
                   {it.title}
                 </h3>
                 <p
-                  className="mt-2 hidden text-[12px] leading-[1.65] md:mt-3 md:block md:text-[14px]"
+                  className="mt-1 text-[11px] leading-relaxed"
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
                     color: IVORY,
-                    fontWeight: 300,
+                    opacity: 0.9,
                   }}
                 >
                   {it.desc}
@@ -635,89 +563,38 @@ function AfterBanner() {
           ))}
         </div>
 
-        {/* Mobile-only descriptions under cards */}
-        <div className="mt-6 grid w-full max-w-5xl grid-cols-1 gap-3 md:hidden">
-          {items.map((it) => (
-            <p
-              key={it.title + "-m"}
-              className="text-center text-[13px] leading-[1.65]"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                color: IVORY,
-                fontWeight: 300,
-              }}
-            >
-              <span style={{ color: GOLD_SOFT, letterSpacing: "0.18em" }}>
-                {it.title}.
-              </span>{" "}
-              {it.desc}
-            </p>
-          ))}
-        </div>
-
-        {/* Flowing gold ribbon — bottom */}
-        <div className="relative mt-16 w-full max-w-3xl">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 -top-6 mx-auto h-24 w-full opacity-30"
+        {/* Bottom text */}
+        <div className="mt-12 flex flex-col items-center text-center">
+          <p
+            className="text-[20px] leading-relaxed"
             style={{
-              background:
-                "radial-gradient(60% 50% at 50% 50%, rgba(232,201,138,0.9) 0%, transparent 70%)",
-              filter: "blur(28px)",
-              transform: "skewY(-4deg)",
+              fontFamily: "'Cormorant Garamond', serif",
+              color: IVORY,
             }}
-          />
-          <div className="relative flex flex-col items-center text-center">
-            <p
-              className="text-[19px] leading-[1.4] md:text-[26px]"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                color: IVORY,
-                fontWeight: 300,
-                fontStyle: "italic",
-              }}
-            >
-              Mientras más tiempo esperas…
-            </p>
-            <p
-              className="mt-2 text-[20px] leading-[1.4] md:text-[28px]"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                color: "#FFFFFF",
-                fontWeight: 300,
-              }}
-            >
-              más difícil puede ser{" "}
-              <span
-                style={{
-                  background:
-                    "linear-gradient(90deg, #E8C98A, #F4DEA5, #D4B071)",
-                  WebkitBackgroundClip: "text",
-                  backgroundClip: "text",
-                  color: "transparent",
-                  fontStyle: "italic",
-                  fontWeight: 500,
-                }}
-              >
-                recuperar su fuerza natural
-              </span>
-              .
-            </p>
+          >
+            No ignores las señales.
+          </p>
+          <p
+            className="mt-1 text-[22px] leading-[1.3]"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              color: IVORY,
+            }}
+          >
+            Tu cabello merece{" "}
+            <span style={{ color: GOLD, fontStyle: "italic" }}>
+              recuperarse desde la raíz
+            </span>
+            .
+          </p>
 
-            <div className="mt-6 flex items-center">
-              <span
-                className="h-px w-14"
-                style={{ background: `linear-gradient(90deg, transparent, ${GOLD})` }}
-              />
-              <span
-                className="mx-2 inline-block rotate-45"
-                style={{ width: 5, height: 5, background: GOLD }}
-              />
-              <span
-                className="h-px w-14"
-                style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }}
-              />
-            </div>
+          <div className="mt-5 flex items-center">
+            <span className="h-px w-14" style={{ background: GOLD }} />
+            <span
+              className="mx-2 inline-block rotate-45"
+              style={{ width: 5, height: 5, background: GOLD }}
+            />
+            <span className="h-px w-14" style={{ background: GOLD }} />
           </div>
         </div>
       </div>
