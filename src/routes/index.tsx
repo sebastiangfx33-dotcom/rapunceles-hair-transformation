@@ -675,7 +675,7 @@ function ProductRoutineSection() {
     <section
       className="w-full relative overflow-hidden"
       style={{
-        backgroundImage: `url(/__l5e/assets-v1/4ec51d3a-4296-4c44-8538-6a3d9fead268/formula-bg.png)`,
+        backgroundImage: `url(/__l5e/assets-v1/99d0848f-96a4-444d-bac5-af8299629d69/formula-trio.png)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -731,15 +731,8 @@ function ProductRoutineSection() {
           del proceso de recuperación capilar.
         </p>
 
-        {/* Hero product trio */}
-        <div className="mt-8 mb-10">
-          <img
-            src="/__l5e/assets-v1/99d0848f-96a4-444d-bac5-af8299629d69/formula-trio.png"
-            alt="Shampoo, Tónico y Acondicionador Rapunceles"
-            loading="lazy"
-            className="block w-full h-auto select-none"
-          />
-        </div>
+        {/* Hero product trio is now the section background */}
+        <div className="mt-8 mb-10" aria-hidden="true" style={{ height: "clamp(220px, 60vw, 320px)" }} />
 
         {/* Steps */}
         <div className="flex flex-col gap-5">
