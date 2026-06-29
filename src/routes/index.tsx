@@ -593,223 +593,272 @@ function Solution() {
 
 /* ---------------------------- PRODUCT ROUTINE SECTION ---------------------------- */
 function ProductRoutineSection() {
-  const GOLD = "#c9a84c";
-  const SERIF = "'Playfair Display', serif";
-  const SANS = "'Jost', sans-serif";
+  const GOLD = "#D4A85E";
+  const GOLD_SOFT = "#E8C98A";
+  const IVORY = "#F4ECDC";
+  const SERIF = '"Cormorant Garamond", "Playfair Display", serif';
+  const SANS = '"Inter", system-ui, sans-serif';
 
-  const HairSparkleIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="size-7">
-      <path d="M7 21c0-5 2-9 5-13" />
-      <path d="M10 21c0-4 1.5-7.5 4-11" />
-      <path d="M13 21c0-3 1-6 3-9" />
-      <path d="M18 4l.6 1.4L20 6l-1.4.6L18 8l-.6-1.4L16 6l1.4-.6z" />
-      <path d="M5 6l.4 1L6.5 7.5l-1 .4L5 9l-.4-1L3.5 7.5l1-.4z" />
+  // Small leaf / sprout icon
+  const LeafIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+      <path d="M12 21V11" />
+      <path d="M12 11c-3 0-5-2-5-5 3 0 5 2 5 5z" />
+      <path d="M12 11c3 0 5-2 5-5-3 0-5 2-5 5z" />
+    </svg>
+  );
+  // Dropper / tonic icon
+  const DropperIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+      <path d="M14 4l6 6" />
+      <path d="M16 2l6 6-3 3-6-6z" />
+      <path d="M13 7l-7 7c-1 1-1 3 0 4l1 1c1 1 3 1 4 0l7-7" />
+    </svg>
+  );
+  // Sparkle icon
+  const SparkIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+      <path d="M12 3l1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6z" />
     </svg>
   );
 
-  const ShieldHairIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="size-7">
-      <path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" />
-      <path d="M9 11c1-1 2-1.5 3-1.5s2 .5 3 1.5" />
-      <path d="M10 14c.5-.5 1.2-.8 2-.8s1.5.3 2 .8" />
-    </svg>
-  );
-
-  const DropIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="size-7">
-      <path d="M12 3s6 7 6 12a6 6 0 1 1-12 0c0-5 6-12 6-12z" />
-      <path d="M10 15c0 1.5 1 2.5 2.5 2.5" />
-    </svg>
-  );
-
-  const SparklesIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="size-7">
-      <path d="M12 3l1.2 3.3L16.5 7.5l-3.3 1.2L12 12l-1.2-3.3L7.5 7.5l3.3-1.2z" />
-      <path d="M18 14l.7 1.8 1.8.7-1.8.7L18 19l-.7-1.8-1.8-.7 1.8-.7z" />
-      <path d="M5 15l.5 1.3 1.3.5-1.3.5L5 18.6l-.5-1.3-1.3-.5 1.3-.5z" />
-    </svg>
-  );
-
-  const badges = [
+  const steps = [
     {
-      icon: <HairSparkleIcon />,
-      title: "Activa el crecimiento desde la raíz",
-      desc: "Estimula los folículos capilares y despierta el potencial natural de tu cabello.",
+      n: "01",
+      icon: <LeafIcon />,
+      title: "SHAMPOO",
+      sub: "FORTALECEDOR",
+      desc: (
+        <>
+          Purifica profundamente<br />
+          el cuero cabelludo y elimina<br />
+          residuos que debilitan la raíz.
+        </>
+      ),
+      img: prodShampoo,
+      reverse: false,
     },
     {
-      icon: <ShieldHairIcon />,
-      title: "Fortalece la raíz y evita quiebre",
-      desc: "Nutre intensamente para un cabello más resistente y saludable.",
+      n: "02",
+      icon: <DropperIcon />,
+      title: "TÓNICO",
+      sub: "CAPILAR",
+      sub2: "FORTALECEDOR",
+      desc: (
+        <>
+          Estimula la raíz y acompaña<br />
+          el proceso natural de<br />
+          crecimiento capilar.
+        </>
+      ),
+      img: prodTonic,
+      reverse: true,
     },
     {
-      icon: <DropIcon />,
-      title: "Reduce la caída progresiva",
-      desc: "Fortalece la raíz y disminuye la caída causada por estrés, hormonas y factores externos.",
+      n: "03",
+      icon: <SparkIcon />,
+      title: "ACONDICIONADOR",
+      sub: "FORTALECEDOR",
+      desc: (
+        <>
+          Nutre intensamente cada hebra<br />
+          para devolver fuerza, suavidad<br />
+          y protección.
+        </>
+      ),
+      img: prodConditioner,
+      reverse: false,
     },
-    {
-      icon: <SparklesIcon />,
-      title: "Cabello más largo, fuerte y saludable",
-      desc: "Mejora visiblemente la calidad del cabello y te acerca a tu mejor versión.",
-    },
-  ];
-
-  const benefits = [
-    "Activa crecimiento",
-    "Reduce caída",
-    "Fortalece raíz",
-    "Mayor densidad",
   ];
 
   return (
-    <section className="w-full" style={{ background: "#1a0a2e" }}>
-      <div className="relative w-full mx-auto" style={{ maxWidth: 852 }}>
-        <img loading="lazy" decoding="async"
-          src={routineBgV3.url}
-          alt="La rutina que tu cabello necesita"
-          className="block w-full h-auto select-none"
-          style={{ aspectRatio: "852 / 1280" }}
-        />
+    <section
+      className="w-full relative overflow-hidden"
+      style={{
+        background:
+          "radial-gradient(ellipse at 50% 25%, #3a1d5e 0%, #2a134a 35%, #1a0a2e 75%, #14082a 100%)",
+      }}
+    >
+      <div className="relative mx-auto w-full px-5 py-12" style={{ maxWidth: 480 }}>
+        {/* Top ornament */}
+        <div className="flex justify-center mb-4" aria-hidden="true">
+          <svg viewBox="0 0 60 24" className="w-16 h-6" fill="none" stroke={GOLD} strokeWidth="1">
+            <path d="M0 12 L24 12" />
+            <path d="M36 12 L60 12" />
+            <path d="M30 4 L33 12 L30 20 L27 12 Z" fill={GOLD} fillOpacity="0.85" />
+            <circle cx="30" cy="12" r="1.2" fill="#1a0a2e" />
+          </svg>
+        </div>
 
         {/* Title */}
-        <div
-          className="absolute left-0 right-0 text-center px-6"
-          style={{ top: "2%" }}
+        <h2
+          className="text-center leading-[1.12]"
+          style={{
+            fontFamily: SERIF,
+            color: GOLD,
+            fontWeight: 500,
+            letterSpacing: "0.06em",
+            fontSize: "clamp(22px, 6.4vw, 32px)",
+          }}
         >
-          <h2
-            className="font-serif leading-[1.15]"
-            style={{
-              fontFamily: '"Cormorant Garamond", "Playfair Display", serif',
-              fontSize: "clamp(20px, 5.8vw, 34px)",
-              fontWeight: 500,
-              letterSpacing: "0.01em",
-              color: "#D4A85E",
+          CADA FÓRMULA<br />
+          CUMPLE UNA FUNCIÓN<br />
+          <em style={{ fontStyle: "italic", fontWeight: 500 }}>ESPECÍFICA</em>
+        </h2>
 
-            }}
-          >
-            Tu cabello ya te mostró las señales…
-            <br />
-            ahora dale lo que necesita”
-          </h2>
+        {/* Tiny divider */}
+        <div className="flex justify-center my-4" aria-hidden="true">
+          <div style={{ width: 6, height: 6, transform: "rotate(45deg)", border: `1px solid ${GOLD}` }} />
         </div>
 
         {/* Subtitle */}
-        <div
-          className="absolute left-0 right-0 text-center px-10"
-          style={{ top: "17%" }}
+        <p
+          className="text-center"
+          style={{
+            fontFamily: SANS,
+            color: IVORY,
+            opacity: 0.85,
+            fontWeight: 300,
+            fontSize: "clamp(12px, 3.4vw, 14px)",
+            lineHeight: 1.55,
+          }}
         >
-          <p
-            className="text-[#e8d9b8]/90"
-            style={{
-              fontFamily: '"Inter", system-ui, sans-serif',
-              fontSize: "clamp(11px, 3.1vw, 16px)",
-              lineHeight: 1.55,
-              fontWeight: 300,
-            }}
-          >
-            Un ritual de cuidado completo,
-            <br />
-            formulado para mujeres que merecen un cabello fuerte,
-            <br />
-            abundante y saludable
-          </p>
+          Creamos un sistema donde cada producto<br />
+          trabaja una parte fundamental<br />
+          del proceso de recuperación capilar.
+        </p>
+
+        {/* Hero product trio */}
+        <div className="mt-8 mb-10">
+          <img
+            src={routineProducts.url}
+            alt="Shampoo, Tónico y Acondicionador Rapunceles"
+            loading="lazy"
+            className="block w-full h-auto select-none"
+          />
         </div>
 
-        {/* Premium product benefits cards */}
-        <div
-          className="absolute left-0 right-0 px-4"
-          style={{ bottom: "12%" }}
-        >
-          <div className="relative mx-auto w-full max-w-[460px]">
-            {/* Soft outer golden glow */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -inset-x-4 -inset-y-3 rounded-3xl"
+        {/* Steps */}
+        <div className="flex flex-col gap-5">
+          {steps.map((s) => (
+            <article
+              key={s.n}
+              className="relative rounded-2xl overflow-hidden"
               style={{
                 background:
-                  "radial-gradient(ellipse at center, rgba(212,168,94,0.18), transparent 70%)",
-                filter: "blur(14px)",
+                  "linear-gradient(135deg, rgba(58,29,94,0.55) 0%, rgba(36,18,68,0.7) 100%)",
+                border: "1px solid rgba(212,168,94,0.35)",
+                boxShadow:
+                  "0 10px 30px -12px rgba(0,0,0,0.55), inset 0 0 30px rgba(212,168,94,0.06)",
               }}
-            />
-            <div className="relative grid grid-cols-3 gap-3">
-              {[
-                {
-                  Icon: Sprout,
-                  title: "ACTIVA EL CRECIMIENTO",
-                  desc: "Estimula la raíz para un cabello más largo.",
-                },
-                {
-                  Icon: Shield,
-                  title: "REDUCE LA CAÍDA",
-                  desc: "Fortalece el folículo y disminuye la caída.",
-                },
-                {
-                  Icon: Sparkles,
-                  title: "FUERZA Y VOLUMEN",
-                  desc: "Nutre cada hebra para un cabello más fuerte.",
-                },
-              ].map(({ Icon, title, desc }, i) => (
-                <div
-                  key={i}
-                  className="animate-gold-aura relative rounded-lg px-2 py-1.5 text-left"
-                  style={{
-                    background: "rgba(20, 8, 35, 0.55)",
-                    border: "1px solid rgba(244,222,165,0.9)",
-                    backdropFilter: "blur(6px)",
-                    boxShadow:
-                      "0 0 12px rgba(244,222,165,0.7), 0 0 28px rgba(232,201,138,0.55), 0 0 50px rgba(212,168,94,0.4), inset 0 0 14px rgba(244,222,165,0.25)",
-                  }}
-                >
-
-                  <div className="flex items-center gap-1.5">
-                    <span
-                      aria-hidden="true"
-                      className="relative flex h-5 w-5 shrink-0 items-center justify-center rounded-full"
-                      style={{
-                        border: "1px solid rgba(212,168,94,0.5)",
-                        background:
-                          "radial-gradient(circle at 30% 30%, rgba(244,236,220,0.16), rgba(212,168,94,0.05))",
-                      }}
-                    >
-                      <Icon
-                        className="size-[10px]"
-                        strokeWidth={1}
+            >
+              <div
+                className={`grid items-center ${s.reverse ? "grid-cols-[1fr_1.4fr]" : "grid-cols-[1.4fr_1fr]"} gap-2 px-4 py-4`}
+              >
+                {/* Text side */}
+                <div className={s.reverse ? "order-2" : "order-1"}>
+                  <div className="flex items-start gap-3">
+                    <div className="flex flex-col items-center shrink-0" style={{ color: GOLD }}>
+                      <span
+                        className="flex items-center justify-center rounded-full"
                         style={{
-                          color: "#E8C98A",
-                          filter: "drop-shadow(0 0 4px rgba(212,168,94,0.5))",
-                        }}
-                      />
-                    </span>
-                    <div className="min-w-0 flex-1">
-                      <h3
-                        className="text-[7px] leading-tight"
-                        style={{
-                          fontFamily: "'Cormorant Garamond', serif",
-                          color: "#E8C98A",
-                          letterSpacing: "0.12em",
-                          fontWeight: 600,
+                          width: 36,
+                          height: 36,
+                          border: `1px solid ${GOLD}`,
+                          color: GOLD,
                         }}
                       >
-                        {title}
-                      </h3>
-                      <p
-                        className="mt-0.5 text-[8px] leading-snug"
+                        {s.icon}
+                      </span>
+                      <span
+                        className="mt-2"
                         style={{
-                          fontFamily: "'Cormorant Garamond', serif",
-                          color: "#F4ECDC",
-                          fontWeight: 300,
-                          opacity: 0.92,
+                          fontFamily: SERIF,
+                          color: GOLD,
+                          fontSize: 18,
+                          letterSpacing: "0.05em",
                         }}
-                    >
-                      {desc}
-                    </p>
+                      >
+                        {s.n}
+                      </span>
+                    </div>
+                    <div className="min-w-0">
+                      <h3
+                        style={{
+                          fontFamily: SERIF,
+                          color: IVORY,
+                          fontWeight: 500,
+                          letterSpacing: "0.08em",
+                          fontSize: "clamp(15px, 4.2vw, 19px)",
+                          lineHeight: 1.1,
+                        }}
+                      >
+                        {s.title}
+                      </h3>
+                      <h4
+                        style={{
+                          fontFamily: SERIF,
+                          color: IVORY,
+                          fontWeight: 400,
+                          letterSpacing: "0.08em",
+                          fontSize: "clamp(13px, 3.6vw, 16px)",
+                          lineHeight: 1.1,
+                        }}
+                      >
+                        {s.sub}
+                      </h4>
+                      {s.sub2 && (
+                        <h4
+                          style={{
+                            fontFamily: SERIF,
+                            color: IVORY,
+                            fontWeight: 400,
+                            letterSpacing: "0.08em",
+                            fontSize: "clamp(13px, 3.6vw, 16px)",
+                            lineHeight: 1.1,
+                          }}
+                        >
+                          {s.sub2}
+                        </h4>
+                      )}
+                      <div
+                        className="my-2"
+                        style={{
+                          width: 28,
+                          height: 1,
+                          background: `linear-gradient(90deg, ${GOLD}, transparent)`,
+                        }}
+                      />
+                      <p
+                        style={{
+                          fontFamily: SANS,
+                          color: IVORY,
+                          opacity: 0.85,
+                          fontWeight: 300,
+                          fontSize: "clamp(11px, 3vw, 13px)",
+                          lineHeight: 1.55,
+                        }}
+                      >
+                        {s.desc}
+                      </p>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
+                {/* Product image side */}
+                <div className={`${s.reverse ? "order-1" : "order-2"} flex items-center justify-center`}>
+                  <img
+                    src={s.img}
+                    alt={`${s.title} ${s.sub}`}
+                    loading="lazy"
+                    className="block w-full h-auto max-h-[160px] object-contain select-none"
+                    style={{ filter: "drop-shadow(0 10px 18px rgba(0,0,0,0.45))" }}
+                  />
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
