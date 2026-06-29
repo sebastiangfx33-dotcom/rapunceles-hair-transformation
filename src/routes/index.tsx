@@ -706,11 +706,9 @@ function ProductRoutineSection() {
               fontWeight: 300,
             }}
           >
-            Una combinación diseñada para devolverle
-            <br />
-            fuerza, densidad, nutrición y vitalidad
-            <br />
-            a tu cabello desde la raíz.
+            Desarrollamos un sistema capilar diseñado para ayudar a
+            fortalecer, estimular el crecimiento y devolverle vitalidad a tu
+            cabello desde la raíz.
           </p>
         </div>
 
