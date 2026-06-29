@@ -1414,11 +1414,32 @@ function Testimonials() {
   const CHAT_CARDS_COUNT = 4;
   const [chatIndex, setChatIndex] = useState(0);
   useEffect(() => {
-    const id = setInterval(() => {
-      setChatIndex((i) => (i + 1) % CHAT_CARDS_COUNT);
-    }, 5000);
-    return () => clearInterval(id);
+    let id: ReturnType<typeof setInterval> | null = null;
+    const start = () => {
+      if (id) return;
+      id = setInterval(() => {
+        setChatIndex((i) => (i + 1) % CHAT_CARDS_COUNT);
+      }, 5000);
+    };
+    const stop = () => {
+      if (id) {
+        clearInterval(id);
+        id = null;
+      }
+    };
+    const onVisibility = () => {
+      if (document.hidden) stop();
+      else start();
+    };
+    start();
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => {
+      stop();
+      document.removeEventListener("visibilitychange", onVisibility);
+    };
   }, []);
+
+
 
 
   const conversations = [
