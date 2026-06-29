@@ -1115,51 +1115,116 @@ function Ingredients() {
 
 /* ------------------------------ RESULTS ------------------------------ */
 function Results() {
+  const gold = "#D4A85E";
+  const ivory = "#F4E9D4";
   const items = [
     {
       before: beforeAndrea,
       after: afterAndrea,
-      name: "Andrea",
-      quote: "Volvió a ver su cabello crecer de verdad.",
+      avatar: avatarMariaJoseAsset.url,
+      quote:
+        "Empecé a notar mucho menos caída al peinarme y mi cabello se siente mucho más fuerte.",
+      name: "Valentina",
+      city: "Medellín",
     },
     {
       before: afterCamila,
       after: beforeCamila,
-      name: "Camila",
-      quote: "Más abundancia, más movimiento, más confianza.",
+      avatar: avatarDanielaAsset.url,
+      quote:
+        "Llevaba meses sintiendo mi cabello estancado y después de varias semanas empecé a ver cambios.",
+      name: "Daniela",
+      city: "Bogotá",
     },
     {
       before: beforeThird,
       after: afterThird,
-      name: "Valentina",
-      quote: "Recuperó el brillo y la fuerza de siempre.",
+      avatar: avatarLauraAsset.url,
+      quote:
+        "Lo que más me sorprendió fue recuperar volumen y sentir mi cabello con más vida.",
+      name: "Juliana",
+      city: "Cali",
     },
   ];
-  const gold = "#D4A85E";
+
   return (
     <section
-      className="section-pad relative"
+      className="section-pad relative overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(20,8,30,0.55), rgba(20,8,30,0.55)), url("/results-bg.png")`,
+        backgroundImage: `linear-gradient(180deg, rgba(20,8,30,0.72) 0%, rgba(28,12,46,0.78) 50%, rgba(20,8,30,0.82) 100%), url("/results-bg.png")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="mx-auto max-w-md px-6 [&_h2]:!text-[#D4A85E] [&_p.eyebrow]:!text-[#D4A85E]">
-        <Header eyebrow="" title="Transformaciones reales de nuestras clientas." />
-        <div className="mt-10 space-y-7">
+      {/* floating golden particles */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        {[
+          { l: "8%", t: "12%", s: 3, o: 0.55 },
+          { l: "22%", t: "38%", s: 2, o: 0.4 },
+          { l: "78%", t: "18%", s: 2.5, o: 0.5 },
+          { l: "88%", t: "52%", s: 2, o: 0.35 },
+          { l: "14%", t: "72%", s: 2.5, o: 0.45 },
+          { l: "62%", t: "84%", s: 2, o: 0.4 },
+          { l: "48%", t: "8%", s: 1.5, o: 0.3 },
+          { l: "34%", t: "92%", s: 2, o: 0.35 },
+        ].map((p, i) => (
+          <span
+            key={i}
+            className="absolute rounded-full"
+            style={{
+              left: p.l,
+              top: p.t,
+              width: p.s,
+              height: p.s,
+              background: gold,
+              opacity: p.o,
+              boxShadow: `0 0 ${p.s * 4}px ${gold}`,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative mx-auto max-w-md px-6">
+        {/* TOP HEADER */}
+        <div className="text-center">
+          <div
+            className="mx-auto mb-5 h-px w-14"
+            style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
+          />
+          <h2
+            className="font-display tracking-[0.22em] text-[1.05rem] uppercase"
+            style={{ color: gold, fontWeight: 400 }}
+          >
+            Transformaciones reales
+          </h2>
+          <div
+            className="mx-auto mt-5 h-px w-14"
+            style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
+          />
+          <p
+            className="mx-auto mt-6 max-w-[22rem] font-display text-[0.95rem] leading-relaxed"
+            style={{ color: ivory, fontWeight: 300 }}
+          >
+            Mujeres que decidieron darle a su cabello el cuidado que realmente necesitaba.
+          </p>
+        </div>
+
+        {/* CARDS */}
+        <div className="mt-12 space-y-10">
           {items.map((r) => (
             <article
               key={r.name}
-              className="luxe-card overflow-hidden rounded-2xl"
+              className="luxe-card overflow-hidden rounded-[22px]"
               style={{
-                background: "rgba(20,8,30,0.55)",
-                backdropFilter: "blur(6px)",
-                border: `1px solid ${gold}33`,
-                boxShadow: "0 14px 36px -22px rgba(0,0,0,0.55)",
+                background:
+                  "linear-gradient(180deg, rgba(38,18,58,0.55) 0%, rgba(22,10,36,0.65) 100%)",
+                backdropFilter: "blur(14px)",
+                border: `1px solid ${gold}44`,
+                boxShadow: `0 0 0 1px ${gold}10, 0 18px 50px -24px rgba(0,0,0,0.7), 0 0 40px -18px ${gold}55`,
               }}
             >
+              {/* before / after */}
               <div className="grid grid-cols-2 gap-0">
                 <div className="relative">
                   <img
@@ -1170,7 +1235,10 @@ function Results() {
                     loading="lazy"
                     className="h-full w-full object-cover"
                   />
-                  <span className="absolute left-3 top-3 rounded-full bg-black/55 px-3 py-1 text-[10px] font-light uppercase tracking-[0.25em] backdrop-blur-sm" style={{ color: gold, border: `1px solid ${gold}55` }}>
+                  <span
+                    className="absolute left-3 top-3 rounded-full bg-black/55 px-3 py-1 text-[10px] font-light uppercase tracking-[0.25em] backdrop-blur-sm"
+                    style={{ color: gold, border: `1px solid ${gold}55` }}
+                  >
                     Antes
                   </span>
                 </div>
@@ -1191,46 +1259,105 @@ function Results() {
                   </span>
                 </div>
               </div>
-              <div className="px-6 pt-6 pb-7 text-center">
-                <div className="flex items-center justify-center gap-2.5">
-                  <div
-                    className="flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-full"
-                    style={{
-                      border: `1.5px solid ${gold}`,
-                      background: "rgba(255,255,255,0.06)",
-                    }}
-                    aria-label={`Foto de perfil de ${r.name}`}
-                  >
-                    {/* Espacio para foto de perfil */}
-                    <span className="font-display text-xs" style={{ color: gold }}>
-                      {r.name.charAt(0)}
-                    </span>
-                  </div>
-                  <p
-                    className="font-display text-[1.35rem] leading-none tracking-[0.02em]"
-                    style={{ fontWeight: 400, color: gold }}
-                  >
-                    {r.name}
-                  </p>
-                </div>
-                <div className="mx-auto mt-3 h-px w-8" style={{ background: gold }} />
-                <div className="mt-4 flex items-center justify-center gap-1.5" style={{ color: gold }}>
+
+              {/* testimonial */}
+              <div className="px-6 pt-6 pb-7">
+                {/* stars */}
+                <div
+                  className="flex items-center justify-center gap-1.5"
+                  style={{ color: gold }}
+                >
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="size-[13px] fill-current" strokeWidth={0} />
+                    <Star
+                      key={i}
+                      className="size-[13px] fill-current"
+                      strokeWidth={0}
+                      style={{ filter: `drop-shadow(0 0 4px ${gold}88)` }}
+                    />
                   ))}
                 </div>
-                <p className="mt-5 px-1 font-display italic text-[0.95rem] leading-relaxed" style={{ color: gold }}>
+
+                {/* quote */}
+                <p
+                  className="mt-4 text-center font-display italic text-[0.98rem] leading-relaxed"
+                  style={{ color: ivory, fontWeight: 300 }}
+                >
                   “{r.quote}”
                 </p>
+
+                {/* divider */}
+                <div
+                  className="mx-auto mt-5 h-px w-10"
+                  style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
+                />
+
+                {/* profile */}
+                <div className="mt-5 flex items-center justify-center gap-3">
+                  <div
+                    className="size-10 shrink-0 overflow-hidden rounded-full"
+                    style={{
+                      border: `1.5px solid ${gold}`,
+                      boxShadow: `0 0 12px -2px ${gold}66`,
+                    }}
+                  >
+                    <img
+                      src={r.avatar}
+                      alt={`${r.name} - cliente`}
+                      width={80}
+                      height={80}
+                      loading="lazy"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="text-left leading-tight">
+                    <p
+                      className="font-display text-[0.95rem] tracking-[0.04em]"
+                      style={{ color: gold, fontWeight: 400 }}
+                    >
+                      {r.name}
+                    </p>
+                    <p
+                      className="font-display text-[0.72rem] tracking-[0.18em] uppercase"
+                      style={{ color: `${ivory}cc`, fontWeight: 300 }}
+                    >
+                      {r.city}
+                    </p>
+                  </div>
+                </div>
               </div>
             </article>
           ))}
         </div>
+
+        {/* SOCIAL PROOF COUNTER */}
+        <div className="mt-14 text-center">
+          <div
+            className="mx-auto mb-5 h-px w-20"
+            style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
+          />
+          <p
+            className="font-display text-[1.15rem] leading-snug tracking-[0.04em]"
+            style={{ color: gold, fontWeight: 400 }}
+          >
+            +1500 mujeres ya han confiado en{" "}
+            <span style={{ fontStyle: "italic" }}>Rapunceles</span>
+          </p>
+          <div
+            className="mx-auto mt-5 h-px w-20"
+            style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
+          />
+          <p
+            className="mx-auto mt-5 max-w-[20rem] font-display text-[0.72rem] leading-relaxed tracking-[0.02em]"
+            style={{ color: `${ivory}99`, fontWeight: 300 }}
+          >
+            Los resultados pueden variar según cada tipo de cabello y constancia en el uso.
+          </p>
+        </div>
       </div>
     </section>
-
   );
 }
+
 
 /* ---------------------------- TESTIMONIALS ---------------------------- */
 function Testimonials() {
