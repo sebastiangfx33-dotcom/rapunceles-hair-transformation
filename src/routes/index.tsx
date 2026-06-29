@@ -867,7 +867,7 @@ function KitIncludes() {
       step: "03",
       name: "TÓNICO",
       tagline: ["ESTIMULA", "Y ACTIVA"],
-      desc: "uUna potnte mezla de ingredientes naturales que activan el crecimiento,fortalce la razi yrecupera una melena mas fuerte abundante y llena de vida",
+      desc: "Una potente mezcla de ingredientes naturales que activan el crecimiento, fortalece la raíz y recupera una melena más fuerte, abundante y llena de vida.",
     },
   ];
 
