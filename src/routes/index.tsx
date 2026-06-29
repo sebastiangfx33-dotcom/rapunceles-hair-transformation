@@ -378,7 +378,7 @@ function AfterBanner() {
             color: BEIGE,
           }}
         >
-          Estas son algunas señales de que tu cabello necesita recuperar su fuerza natural.
+          {"\n"}
         </p>
 
         {/* Gold divider */}
