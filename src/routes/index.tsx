@@ -787,7 +787,7 @@ function ProductRoutineSection() {
   return (
     <section className="w-full" style={{ background: "#1a0a2e" }}>
       <div className="relative w-full mx-auto" style={{ maxWidth: 852 }}>
-        <img
+        <img loading="lazy" decoding="async"
           src={routineBgV3.url}
           alt="La rutina que tu cabello necesita"
           className="block w-full h-auto select-none"
@@ -1395,7 +1395,7 @@ function ProductOptions() {
                 )}
 
                 <div className="flex flex-col items-center text-center">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={heroKitNew.url}
                     alt={`Kit Rapunceles ${v.label}`}
                     className="mt-2 h-60 w-60 object-contain sm:h-64 sm:w-64"
