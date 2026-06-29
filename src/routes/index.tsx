@@ -1634,25 +1634,6 @@ function Testimonials() {
                       "linear-gradient(180deg, transparent 70%, rgba(26,15,40,0.45) 100%)",
                   }}
                 />
-                {/* "real delivery" chip */}
-                <div
-                  className="absolute left-3 top-3 flex items-center gap-1.5 rounded-full px-2.5 py-1 backdrop-blur-md"
-                  style={{
-                    background: "rgba(26,15,40,0.55)",
-                    border: `1px solid ${gold}66`,
-                  }}
-                >
-                  <span
-                    className="size-1.5 rounded-full"
-                    style={{ background: "#7ED957", boxShadow: "0 0 6px #7ED957" }}
-                  />
-                  <span
-                    className="text-[0.6rem] uppercase tracking-[0.2em]"
-                    style={{ color: ivory }}
-                  >
-                    Entrega real
-                  </span>
-                </div>
               </div>
             </div>
 
