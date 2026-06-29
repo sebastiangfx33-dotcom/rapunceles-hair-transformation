@@ -1645,9 +1645,16 @@ function Testimonials() {
           ];
 
           return (
-            <div className="mt-14 space-y-10">
-              {chats.map((chat, idx) => (
-                <div key={idx} className="relative">
+            <div className="mt-14">
+              <div className="overflow-hidden">
+                <div
+                  className="flex transition-transform duration-700 ease-out"
+                  style={{ transform: `translateX(-${chatIndex * 100}%)` }}
+                >
+                  {chats.map((chat, idx) => (
+                    <div key={idx} className="w-full shrink-0 px-1">
+                      <div className="relative">
+
                   {/* floating gold particles around card */}
                   <div aria-hidden className="pointer-events-none absolute -inset-6">
                     {[
