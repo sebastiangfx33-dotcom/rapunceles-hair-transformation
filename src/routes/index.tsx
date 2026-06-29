@@ -661,155 +661,192 @@ function ProductRoutineSection() {
   ];
 
   return (
-    <section className="w-full" style={{ background: "#1a0a2e" }}>
-      <div className="relative w-full mx-auto" style={{ maxWidth: 852 }}>
-        <img loading="lazy" decoding="async"
-          src={routineBgV3.url}
-          alt="La rutina que tu cabello necesita"
-          className="block w-full h-auto select-none"
-          style={{ aspectRatio: "852 / 1280" }}
-        />
+    <section className="w-full overflow-hidden" style={{ background: "#1a0a2e" }}>
+      <div className="relative mx-auto w-full px-5 pt-10 pb-12" style={{ maxWidth: 480 }}>
+        {/* Decorative ornament */}
+        <div className="flex justify-center mb-3" aria-hidden="true">
+          <svg width="46" height="18" viewBox="0 0 46 18" fill="none">
+            <path d="M2 9 H18" stroke="#D4A85E" strokeWidth="1" strokeLinecap="round" />
+            <path d="M28 9 H44" stroke="#D4A85E" strokeWidth="1" strokeLinecap="round" />
+            <path d="M23 2 L25 8 L23 14 L21 8 Z" fill="#D4A85E" />
+            <circle cx="23" cy="8" r="1.2" fill="#1a0a2e" />
+          </svg>
+        </div>
 
         {/* Title */}
-        <div
-          className="absolute left-0 right-0 text-center px-6"
-          style={{ top: "2%" }}
+        <h2
+          className="text-center leading-[1.1]"
+          style={{
+            fontFamily: '"Cormorant Garamond", serif',
+            color: "#D4A85E",
+            fontSize: "clamp(22px, 6.4vw, 30px)",
+            fontWeight: 500,
+            letterSpacing: "0.06em",
+          }}
         >
-          <h2
-            className="font-serif leading-[1.15]"
-            style={{
-              fontFamily: '"Cormorant Garamond", "Playfair Display", serif',
-              fontSize: "clamp(20px, 5.8vw, 34px)",
-              fontWeight: 500,
-              letterSpacing: "0.01em",
-              color: "#D4A85E",
-
-            }}
-          >
-            Tu cabello ya te mostró las señales…
-            <br />
-            ahora dale lo que necesita”
-          </h2>
-        </div>
+          CADA FÓRMULA
+          <br />
+          CUMPLE UNA FUNCIÓN
+          <br />
+          <em style={{ fontStyle: "italic", fontWeight: 500 }}>ESPECÍFICA</em>
+        </h2>
 
         {/* Subtitle */}
-        <div
-          className="absolute left-0 right-0 text-center px-10"
-          style={{ top: "17%" }}
+        <p
+          className="mx-auto mt-5 text-center"
+          style={{
+            fontFamily: '"Inter", system-ui, sans-serif',
+            color: "#E8D9B8",
+            opacity: 0.9,
+            fontSize: "clamp(12px, 3.4vw, 14px)",
+            lineHeight: 1.55,
+            fontWeight: 300,
+            maxWidth: 340,
+          }}
         >
-          <p
-            className="text-[#e8d9b8]/90"
-            style={{
-              fontFamily: '"Inter", system-ui, sans-serif',
-              fontSize: "clamp(11px, 3.1vw, 16px)",
-              lineHeight: 1.55,
-              fontWeight: 300,
-            }}
-          >
-            Una combinación diseñada para devolverle
-            <br />
-            fuerza, densidad, nutrición y vitalidad
-            <br />
-            a tu cabello desde la raíz.
-          </p>
+          Creamos un sistema donde cada producto trabaja una parte fundamental del proceso de recuperación capilar.
+        </p>
+
+        {/* Hero products image */}
+        <div className="mt-6 mb-8">
+          <img
+            src={routineProducts.url}
+            alt="Línea Rapunceles: Shampoo, Tónico Capilar y Acondicionador"
+            loading="lazy"
+            decoding="async"
+            className="block w-full h-auto select-none"
+          />
         </div>
 
-        {/* Premium product benefits cards */}
-        <div
-          className="absolute left-0 right-0 px-4"
-          style={{ bottom: "12%" }}
-        >
-          <div className="relative mx-auto w-full max-w-[460px]">
-            {/* Soft outer golden glow */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -inset-x-4 -inset-y-3 rounded-3xl"
+        {/* Product cards */}
+        <div className="flex flex-col gap-4">
+          {[
+            {
+              num: "01",
+              Icon: Leaf,
+              title: "SHAMPOO",
+              subtitle: "FORTALECEDOR",
+              desc: "Purifica profundamente el cuero cabelludo y elimina residuos que debilitan la raíz.",
+              img: prodShampoo,
+              imgAlt: "Shampoo Fortalecedor Rapunceles",
+              reverse: false,
+            },
+            {
+              num: "02",
+              Icon: Droplets,
+              title: "TÓNICO",
+              subtitle: "CAPILAR",
+              extra: "FORTALECEDOR",
+              desc: "Estimula la raíz y acompaña el proceso natural de crecimiento capilar.",
+              img: prodTonic,
+              imgAlt: "Tónico Capilar Fortalecedor Rapunceles",
+              reverse: true,
+            },
+            {
+              num: "03",
+              Icon: Sparkles,
+              title: "ACONDICIONADOR",
+              subtitle: "FORTALECEDOR",
+              desc: "Nutre intensamente cada hebra para devolver fuerza, suavidad y protección.",
+              img: prodConditioner,
+              imgAlt: "Acondicionador Fortalecedor Rapunceles",
+              reverse: false,
+            },
+          ].map((c, i) => (
+            <article
+              key={i}
+              className="relative overflow-hidden rounded-2xl"
               style={{
                 background:
-                  "radial-gradient(ellipse at center, rgba(212,168,94,0.18), transparent 70%)",
-                filter: "blur(14px)",
+                  "linear-gradient(135deg, rgba(58,30,82,0.55) 0%, rgba(36,16,58,0.6) 100%)",
+                border: "1px solid rgba(212,168,94,0.45)",
+                boxShadow:
+                  "0 0 0 1px rgba(212,168,94,0.08), 0 8px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(244,222,165,0.08)",
               }}
-            />
-            <div className="relative grid grid-cols-3 gap-3">
-              {[
-                {
-                  Icon: Sprout,
-                  title: "ACTIVA EL CRECIMIENTO",
-                  desc: "Estimula la raíz para un cabello más largo.",
-                },
-                {
-                  Icon: Shield,
-                  title: "REDUCE LA CAÍDA",
-                  desc: "Fortalece el folículo y disminuye la caída.",
-                },
-                {
-                  Icon: Sparkles,
-                  title: "FUERZA Y VOLUMEN",
-                  desc: "Nutre cada hebra para un cabello más fuerte.",
-                },
-              ].map(({ Icon, title, desc }, i) => (
-                <div
-                  key={i}
-                  className="animate-gold-aura relative rounded-lg px-2 py-1.5 text-left"
-                  style={{
-                    background: "rgba(20, 8, 35, 0.55)",
-                    border: "1px solid rgba(244,222,165,0.9)",
-                    backdropFilter: "blur(6px)",
-                    boxShadow:
-                      "0 0 12px rgba(244,222,165,0.7), 0 0 28px rgba(232,201,138,0.55), 0 0 50px rgba(212,168,94,0.4), inset 0 0 14px rgba(244,222,165,0.25)",
-                  }}
-                >
-
-                  <div className="flex items-center gap-1.5">
+            >
+              <div className={`grid grid-cols-[1fr_38%] items-center gap-2 px-4 py-4 ${c.reverse ? "[direction:rtl]" : ""}`}>
+                <div className="[direction:ltr]">
+                  <div className="flex items-center gap-3">
                     <span
-                      aria-hidden="true"
-                      className="relative flex h-5 w-5 shrink-0 items-center justify-center rounded-full"
+                      className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full"
                       style={{
-                        border: "1px solid rgba(212,168,94,0.5)",
+                        border: "1px solid rgba(212,168,94,0.55)",
                         background:
-                          "radial-gradient(circle at 30% 30%, rgba(244,236,220,0.16), rgba(212,168,94,0.05))",
+                          "radial-gradient(circle at 30% 30%, rgba(244,236,220,0.12), rgba(212,168,94,0.04))",
                       }}
                     >
-                      <Icon
-                        className="size-[10px]"
-                        strokeWidth={1}
-                        style={{
-                          color: "#E8C98A",
-                          filter: "drop-shadow(0 0 4px rgba(212,168,94,0.5))",
-                        }}
+                      <c.Icon
+                        className="h-4 w-4"
+                        strokeWidth={1.2}
+                        style={{ color: "#D4A85E" }}
                       />
                     </span>
-                    <div className="min-w-0 flex-1">
-                      <h3
-                        className="text-[7px] leading-tight"
-                        style={{
-                          fontFamily: "'Cormorant Garamond', serif",
-                          color: "#E8C98A",
-                          letterSpacing: "0.12em",
-                          fontWeight: 600,
-                        }}
-                      >
-                        {title}
-                      </h3>
-                      <p
-                        className="mt-0.5 text-[8px] leading-snug"
-                        style={{
-                          fontFamily: "'Cormorant Garamond', serif",
-                          color: "#F4ECDC",
-                          fontWeight: 300,
-                          opacity: 0.92,
-                        }}
+                    <span
+                      style={{
+                        fontFamily: '"Cormorant Garamond", serif',
+                        color: "#D4A85E",
+                        fontSize: 22,
+                        fontWeight: 500,
+                        letterSpacing: "0.05em",
+                      }}
                     >
-                      {desc}
-                    </p>
-                    </div>
+                      {c.num}
+                    </span>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
+                  <h3
+                    className="mt-3 leading-[1.05]"
+                    style={{
+                      fontFamily: '"Cormorant Garamond", serif',
+                      color: "#F2E4C4",
+                      letterSpacing: "0.08em",
+                      fontWeight: 500,
+                      fontSize: "clamp(15px, 4.4vw, 18px)",
+                    }}
+                  >
+                    {c.title}
+                    <br />
+                    <span style={{ color: "#E8D9B8", fontSize: "0.78em", letterSpacing: "0.14em" }}>
+                      {c.subtitle}
+                    </span>
+                    {c.extra && (
+                      <>
+                        <br />
+                        <span style={{ color: "#E8D9B8", fontSize: "0.78em", letterSpacing: "0.14em" }}>
+                          {c.extra}
+                        </span>
+                      </>
+                    )}
+                  </h3>
+
+                  <p
+                    className="mt-2"
+                    style={{
+                      fontFamily: '"Inter", system-ui, sans-serif',
+                      color: "#E8D9B8",
+                      opacity: 0.85,
+                      fontSize: "clamp(11px, 3vw, 13px)",
+                      lineHeight: 1.5,
+                      fontWeight: 300,
+                    }}
+                  >
+                    {c.desc}
+                  </p>
+                </div>
+
+                <div className="[direction:ltr] flex items-center justify-center">
+                  <img
+                    src={c.img}
+                    alt={c.imgAlt}
+                    loading="lazy"
+                    decoding="async"
+                    className="block h-auto w-full max-h-[150px] object-contain"
+                  />
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
