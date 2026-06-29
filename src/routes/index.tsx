@@ -1551,6 +1551,258 @@ function Testimonials() {
           Clientas reales · Colombia
         </p>
 
+        {/* SECTION 2 — FEATURED WHATSAPP TESTIMONIAL CARD */}
+        <div className="relative mt-14">
+          {/* floating gold particles around card */}
+          <div aria-hidden className="pointer-events-none absolute -inset-6">
+            {[
+              { t: "4%", l: "6%", s: 3 },
+              { t: "18%", l: "92%", s: 2 },
+              { t: "48%", l: "-2%", s: 2 },
+              { t: "70%", l: "96%", s: 3 },
+              { t: "92%", l: "20%", s: 2 },
+            ].map((p, i) => (
+              <span
+                key={i}
+                className="absolute rounded-full"
+                style={{
+                  top: p.t,
+                  left: p.l,
+                  width: p.s,
+                  height: p.s,
+                  background: goldSoft,
+                  boxShadow: `0 0 ${p.s * 5}px ${goldSoft}`,
+                  opacity: 0.85,
+                }}
+              />
+            ))}
+          </div>
+
+          {/* card */}
+          <div
+            className="relative overflow-hidden rounded-[28px] backdrop-blur-xl"
+            style={{
+              background:
+                "linear-gradient(170deg, rgba(74,53,98,0.55) 0%, rgba(38,22,56,0.65) 60%, rgba(26,15,40,0.75) 100%)",
+              border: `1px solid ${gold}66`,
+              boxShadow: `0 0 0 1px ${gold}22, 0 20px 60px -20px rgba(0,0,0,0.7), 0 0 40px -10px ${gold}55, inset 0 1px 0 ${goldSoft}33`,
+            }}
+          >
+            {/* gold border glow trace */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 rounded-[28px]"
+              style={{
+                background: `linear-gradient(135deg, ${gold}22, transparent 40%, transparent 60%, ${gold}22)`,
+              }}
+            />
+
+            {/* top label */}
+            <div className="relative flex items-center justify-center gap-2 px-6 pt-5">
+              <span className="h-px w-8" style={{ background: `linear-gradient(90deg, transparent, ${gold})` }} />
+              <span
+                className="text-[0.6rem] uppercase tracking-[0.35em]"
+                style={{ color: gold }}
+              >
+                Testimonio verificado
+              </span>
+              <span className="h-px w-8" style={{ background: `linear-gradient(90deg, ${gold}, transparent)` }} />
+            </div>
+
+            {/* customer product photo */}
+            <div className="relative mt-4 px-4">
+              <div
+                className="relative overflow-hidden rounded-2xl"
+                style={{
+                  border: `1px solid ${gold}55`,
+                  boxShadow: `0 20px 40px -20px rgba(0,0,0,0.6), 0 0 25px -10px ${gold}55`,
+                }}
+              >
+                <img
+                  src="/__l5e/assets-v1/cc894fb6-d127-459c-8718-5e22223885de/customer-whatsapp-product.jpg"
+                  alt="Clienta recibió su kit Rapunceles en casa"
+                  loading="lazy"
+                  width={780}
+                  height={1040}
+                  className="block w-full object-cover"
+                />
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, transparent 70%, rgba(26,15,40,0.45) 100%)",
+                  }}
+                />
+                {/* "real delivery" chip */}
+                <div
+                  className="absolute left-3 top-3 flex items-center gap-1.5 rounded-full px-2.5 py-1 backdrop-blur-md"
+                  style={{
+                    background: "rgba(26,15,40,0.55)",
+                    border: `1px solid ${gold}66`,
+                  }}
+                >
+                  <span
+                    className="size-1.5 rounded-full"
+                    style={{ background: "#7ED957", boxShadow: "0 0 6px #7ED957" }}
+                  />
+                  <span
+                    className="text-[0.6rem] uppercase tracking-[0.2em]"
+                    style={{ color: ivory }}
+                  >
+                    Entrega real
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* WHATSAPP CHAT MOCK */}
+            <div className="relative mt-5 px-4 pb-5">
+              <div
+                className="overflow-hidden rounded-2xl"
+                style={{
+                  background: "#0B141A",
+                  border: `1px solid ${gold}33`,
+                  boxShadow: `0 10px 30px -15px rgba(0,0,0,0.7)`,
+                }}
+              >
+                {/* WhatsApp header */}
+                <div
+                  className="flex items-center gap-3 px-3 py-2.5"
+                  style={{
+                    background: "#1F2C33",
+                    borderBottom: "1px solid rgba(255,255,255,0.04)",
+                  }}
+                >
+                  <svg width="10" height="14" viewBox="0 0 10 14" fill="none" className="shrink-0">
+                    <path d="M8 1L2 7l6 6" stroke="#00A884" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <img
+                    src={avatarMariaJoseAsset.url}
+                    alt=""
+                    className="size-9 rounded-full object-cover"
+                    style={{ border: "1px solid rgba(255,255,255,0.08)" }}
+                  />
+                  <div className="min-w-0 flex-1">
+                    <div
+                      className="truncate text-[0.92rem] font-medium leading-tight"
+                      style={{ color: "#E9EDEF", fontFamily: "system-ui, -apple-system, sans-serif" }}
+                    >
+                      María José G.
+                    </div>
+                    <div
+                      className="text-[0.7rem] leading-tight"
+                      style={{ color: "#8696A0" }}
+                    >
+                      en línea
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 text-[#AEBAC1]">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                      <path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4z" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                      <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 0 0-1.02.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.2a1 1 0 0 0 .24-1.02A11.36 11.36 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* chat body */}
+                <div
+                  className="relative px-3 py-3"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #0B141A 0%, #0B141A 100%)",
+                  }}
+                >
+                  {/* outgoing — brand reply */}
+                  <div className="mb-3 flex justify-end">
+                    <div
+                      className="relative max-w-[78%] rounded-lg rounded-tr-sm px-2.5 py-1.5"
+                      style={{
+                        background: "#005C4B",
+                        boxShadow: "0 1px 0.5px rgba(0,0,0,0.13)",
+                      }}
+                    >
+                      <p
+                        className="text-[0.88rem] leading-snug"
+                        style={{ color: "#E9EDEF", fontFamily: "system-ui, -apple-system, sans-serif" }}
+                      >
+                        Tranquila mi reina ☺️
+                      </p>
+                      <div className="mt-0.5 flex items-center justify-end gap-1">
+                        <span className="text-[0.62rem]" style={{ color: "#AEBAC1" }}>
+                          3:08 p. m.
+                        </span>
+                        <svg width="14" height="10" viewBox="0 0 16 11" fill="none" aria-hidden>
+                          <path d="M11.1 0.5L4.6 7 1.9 4.3l-.7.7L4.6 8.4 11.8 1.2zM15 0.5L8.5 7 7.7 6.2l-.7.7.8.8L15.7 1.2z" fill="#53BDEB" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* "Hoy" pill */}
+                  <div className="mb-3 flex justify-center">
+                    <span
+                      className="rounded-md px-2.5 py-1 text-[0.65rem]"
+                      style={{ background: "#1F2C33", color: "#AEBAC1" }}
+                    >
+                      Hoy
+                    </span>
+                  </div>
+
+                  {/* incoming — customer message with photo */}
+                  <div className="flex justify-start">
+                    <div
+                      className="relative max-w-[82%] overflow-hidden rounded-lg rounded-tl-sm"
+                      style={{
+                        background: "#1F2C33",
+                        boxShadow: "0 1px 0.5px rgba(0,0,0,0.13)",
+                      }}
+                    >
+                      <div className="p-1">
+                        <div className="overflow-hidden rounded-md">
+                          <img
+                            src="/__l5e/assets-v1/cc894fb6-d127-459c-8718-5e22223885de/customer-whatsapp-product.jpg"
+                            alt=""
+                            loading="lazy"
+                            className="block aspect-[4/5] w-full object-cover"
+                          />
+                        </div>
+                      </div>
+                      <div className="px-2.5 pb-1.5">
+                        <p
+                          className="text-[0.88rem] leading-snug"
+                          style={{ color: "#E9EDEF", fontFamily: "system-ui, -apple-system, sans-serif" }}
+                        >
+                          Muchas gracias a 🙏✨
+                        </p>
+                        <div className="mt-0.5 flex justify-end">
+                          <span className="text-[0.62rem]" style={{ color: "#8696A0" }}>
+                            10:17 a. m.
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* caption under chat */}
+              <p
+                className="mt-4 text-center text-[0.78rem] leading-relaxed"
+                style={{ color: ivory, opacity: 0.75 }}
+              >
+                María José nos escribió apenas recibió su kit.
+                <br />
+                <span style={{ color: goldSoft, fontStyle: "italic" }}>
+                  Una clienta real. Una entrega real.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
 
         {/* SECTION 3 — TRUST COUNTER */}
         <div className="mt-16 text-center">
