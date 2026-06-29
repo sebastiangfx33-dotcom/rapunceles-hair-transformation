@@ -75,7 +75,7 @@ const avatarMariaJoseAsset = { url: "/avatar-maria-jose.jpg" };
 const avatarDanielaAsset = { url: "/__l5e/assets-v1/1b00e3ab-616b-414e-8c2c-88a56a937a14/avatar-daniela-new.jpg" };
 const avatarLauraAsset = { url: "/__l5e/assets-v1/29c76f46-2d56-4ecc-b2c7-8549af83ee12/avatar-juliana.jpg" };
 const avatarValentinaAsset = { url: "/__l5e/assets-v1/94f9e274-8ac5-4c59-96df-331d6c58f7ba/avatar-valentina.jpg" };
-const avatarCamilaAsset = { url: "/__l5e/assets-v1/b7de35f1-6e7e-43bd-801a-dcffce25de70/avatar-camila.jpg" };
+const avatarCamilaAsset = { url: "/__l5e/assets-v1/2939f1e5-b934-4572-a5aa-df1e85c7dcb4/avatar-camila-v2.jpg" };
 
 
 
