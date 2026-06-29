@@ -1121,7 +1121,7 @@ function Results() {
     {
       before: beforeAndrea,
       after: afterAndrea,
-      avatar: avatarMariaJoseAsset.url,
+      avatar: avatarValentinaAsset.url,
       quote:
         "Empecé a notar mucho menos caída al peinarme y mi cabello se siente mucho más fuerte.",
       name: "Valentina",
