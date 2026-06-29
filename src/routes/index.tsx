@@ -257,6 +257,31 @@ function Hero() {
           />
         </div>
 
+        {/* Social proof — 5 stars */}
+        <div className="mt-3 flex items-center gap-2">
+          <div className="flex" aria-label="Calificación 5 de 5 estrellas">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <Star
+                key={i}
+                className="size-3.5"
+                style={{ color: GOLD, fill: GOLD }}
+                strokeWidth={1}
+              />
+            ))}
+          </div>
+          <span
+            className="text-[11px]"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              color: IVORY,
+              letterSpacing: "0.14em",
+              opacity: 0.85,
+            }}
+          >
+            +10.000 MUJERES
+          </span>
+        </div>
+
         <p
           className="mt-3 max-w-[320px] text-[14px] leading-[1.5]"
           style={{
@@ -267,6 +292,7 @@ function Hero() {
         >
           Miles de mujeres están recuperando el crecimiento natural de su cabello con Rapunceles.
         </p>
+
 
         {/* CTA */}
         <div className="mt-5 w-full">
