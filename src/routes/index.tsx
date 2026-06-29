@@ -1879,8 +1879,28 @@ function Testimonials() {
                       </p>
                     </div>
                   </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              {/* dot indicators */}
+              <div className="mt-6 flex items-center justify-center gap-2">
+                {chats.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    aria-label={`Ver testimonio ${i + 1}`}
+                    onClick={() => setChatIndex(i)}
+                    className="h-1.5 rounded-full transition-all duration-500"
+                    style={{
+                      width: i === chatIndex ? 24 : 8,
+                      background: i === chatIndex ? gold : `${gold}55`,
+                      boxShadow: i === chatIndex ? `0 0 10px ${gold}88` : "none",
+                    }}
+                  />
+                ))}
+              </div>
             </div>
           );
         })()}
