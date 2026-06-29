@@ -706,11 +706,11 @@ function ProductRoutineSection() {
               fontWeight: 300,
             }}
           >
-            Una combinación diseñada para devolverle
+            Un ritual de cuidado completo,
             <br />
-            fuerza, densidad, nutrición y vitalidad
+            formulado para mujeres que merecen un cabello fuerte,
             <br />
-            a tu cabello desde la raíz.
+            abundante y saludable
           </p>
         </div>
 
