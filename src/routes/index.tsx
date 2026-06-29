@@ -1551,211 +1551,363 @@ function Testimonials() {
           Clientas reales · Colombia
         </p>
 
-        {/* SECTION 2 — FEATURED WHATSAPP TESTIMONIAL CARD */}
-        <div className="relative mt-14">
-          {/* floating gold particles around card */}
-          <div aria-hidden className="pointer-events-none absolute -inset-6">
-            {[
-              { t: "4%", l: "6%", s: 3 },
-              { t: "18%", l: "92%", s: 2 },
-              { t: "48%", l: "-2%", s: 2 },
-              { t: "70%", l: "96%", s: 3 },
-              { t: "92%", l: "20%", s: 2 },
-            ].map((p, i) => (
-              <span
-                key={i}
-                className="absolute rounded-full"
-                style={{
-                  top: p.t,
-                  left: p.l,
-                  width: p.s,
-                  height: p.s,
-                  background: goldSoft,
-                  boxShadow: `0 0 ${p.s * 5}px ${goldSoft}`,
-                  opacity: 0.85,
-                }}
-              />
-            ))}
-          </div>
+        {/* SECTION 2 — FEATURED WHATSAPP TESTIMONIAL CARDS */}
+        {(() => {
+          type Msg =
+            | { from: "in" | "out"; kind: "text"; text: string; time: string; read?: boolean }
+            | {
+                from: "in" | "out";
+                kind: "image";
+                src: string;
+                caption?: string;
+                time: string;
+                read?: boolean;
+              }
+            | { kind: "divider"; text: string };
 
-          {/* card */}
-          <div
-            className="relative overflow-hidden rounded-[28px] backdrop-blur-xl"
-            style={{
-              background:
-                "linear-gradient(170deg, rgba(74,53,98,0.55) 0%, rgba(38,22,56,0.65) 60%, rgba(26,15,40,0.75) 100%)",
-              border: `1px solid ${gold}66`,
-              boxShadow: `0 0 0 1px ${gold}22, 0 20px 60px -20px rgba(0,0,0,0.7), 0 0 40px -10px ${gold}55, inset 0 1px 0 ${goldSoft}33`,
-            }}
-          >
-            {/* gold border glow trace */}
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-0 rounded-[28px]"
-              style={{
-                background: `linear-gradient(135deg, ${gold}22, transparent 40%, transparent 60%, ${gold}22)`,
-              }}
-            />
+          const chats: {
+            name: string;
+            avatar: string;
+            messages: Msg[];
+            caption: string;
+          }[] = [
+            {
+              name: "María José G.",
+              avatar: avatarMariaJoseAsset.url,
+              messages: [
+                {
+                  from: "out",
+                  kind: "text",
+                  text: "Tranquila mi reina ☺️",
+                  time: "3:08 p. m.",
+                  read: true,
+                },
+                { kind: "divider", text: "Hoy" },
+                {
+                  from: "in",
+                  kind: "image",
+                  src: "/__l5e/assets-v1/cc894fb6-d127-459c-8718-5e22223885de/customer-whatsapp-product.jpg",
+                  caption: "Muchas gracias a 🙏✨",
+                  time: "10:17 a. m.",
+                },
+              ],
+              caption: "María José nos escribió apenas recibió su kit.",
+            },
+            {
+              name: "Daniela R.",
+              avatar: avatarDanielaAsset.url,
+              messages: [
+                { kind: "divider", text: "5 mensajes no leídos" },
+                {
+                  from: "in",
+                  kind: "image",
+                  src: "/__l5e/assets-v1/2d16d196-63da-40d3-9c76-8385cc75a97a/customer-chat-p1.jpg",
+                  caption:
+                    "Hermosa hola cómo estás, qué pena la hora. Acabé de llegar a mi casa y ya me había llegado el pedido",
+                  time: "11:27 p. m.",
+                },
+              ],
+              caption: "Daniela recibió su kit completo en casa.",
+            },
+            {
+              name: "Camila S.",
+              avatar: avatarCamilaAsset.url,
+              messages: [
+                {
+                  from: "out",
+                  kind: "text",
+                  text: "Hola hermosa buenos días",
+                  time: "10:50 a. m.",
+                  read: true,
+                },
+                {
+                  from: "out",
+                  kind: "text",
+                  text: "Mira tu guía 📦",
+                  time: "10:50 a. m.",
+                  read: true,
+                },
+                {
+                  from: "in",
+                  kind: "text",
+                  text: "Dale reina muchas gracias",
+                  time: "11:12 a. m.",
+                },
+                {
+                  from: "in",
+                  kind: "image",
+                  src: "/__l5e/assets-v1/c0aeaea7-0186-43a9-84c6-45e5648b26d3/customer-chat-p2.jpg",
+                  caption:
+                    "Muchas gracias reina, ya me llegaron los productos, me pondré juiciosa para tener un cabello hermoso 😍 Gracias por el obsequio, todo muy lindo y los productos huelen riquísimo 😍🙏",
+                  time: "12:49 p. m.",
+                },
+              ],
+              caption: "Camila estrenó su rutina apenas recibió el pedido.",
+            },
+            {
+              name: "Valentina L.",
+              avatar: avatarValentinaAsset.url,
+              messages: [
+                {
+                  from: "out",
+                  kind: "text",
+                  text: "Hola bella, ¿cómo te va con la rutina? 💜",
+                  time: "9:14 a. m.",
+                  read: true,
+                },
+                { kind: "divider", text: "Hoy" },
+                {
+                  from: "in",
+                  kind: "text",
+                  text: "Reinaaa increíble 😭 llevo 3 semanas y siento muchísima menos caída",
+                  time: "7:42 p. m.",
+                },
+                {
+                  from: "in",
+                  kind: "text",
+                  text: "Mi cabello está brillando como nunca, mil gracias ✨",
+                  time: "7:42 p. m.",
+                },
+              ],
+              caption: "Valentina lleva 3 semanas con la rutina Rapunceles.",
+            },
+          ];
 
-            {/* top label */}
-            <div className="relative flex items-center justify-center gap-2 px-6 pt-5">
-              <span className="h-px w-8" style={{ background: `linear-gradient(90deg, transparent, ${gold})` }} />
-              <span
-                className="text-[0.6rem] uppercase tracking-[0.35em]"
-                style={{ color: gold }}
-              >
-                Testimonio verificado
-              </span>
-              <span className="h-px w-8" style={{ background: `linear-gradient(90deg, ${gold}, transparent)` }} />
-            </div>
-
-
-            {/* WHATSAPP CHAT MOCK */}
-            <div className="relative mt-5 px-4 pb-5">
-              <div
-                className="overflow-hidden rounded-2xl"
-                style={{
-                  background: "#0B141A",
-                  border: `1px solid ${gold}33`,
-                  boxShadow: `0 10px 30px -15px rgba(0,0,0,0.7)`,
-                }}
-              >
-                {/* WhatsApp header */}
-                <div
-                  className="flex items-center gap-3 px-3 py-2.5"
-                  style={{
-                    background: "#1F2C33",
-                    borderBottom: "1px solid rgba(255,255,255,0.04)",
-                  }}
-                >
-                  <svg width="10" height="14" viewBox="0 0 10 14" fill="none" className="shrink-0">
-                    <path d="M8 1L2 7l6 6" stroke="#00A884" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <img
-                    src={avatarMariaJoseAsset.url}
-                    alt=""
-                    className="size-9 rounded-full object-cover"
-                    style={{ border: "1px solid rgba(255,255,255,0.08)" }}
-                  />
-                  <div className="min-w-0 flex-1">
-                    <div
-                      className="truncate text-[0.92rem] font-medium leading-tight"
-                      style={{ color: "#E9EDEF", fontFamily: "system-ui, -apple-system, sans-serif" }}
-                    >
-                      María José G.
-                    </div>
-                    <div
-                      className="text-[0.7rem] leading-tight"
-                      style={{ color: "#8696A0" }}
-                    >
-                      en línea
-                    </div>
+          return (
+            <div className="mt-14 space-y-10">
+              {chats.map((chat, idx) => (
+                <div key={idx} className="relative">
+                  {/* floating gold particles around card */}
+                  <div aria-hidden className="pointer-events-none absolute -inset-6">
+                    {[
+                      { t: "4%", l: "6%", s: 3 },
+                      { t: "18%", l: "92%", s: 2 },
+                      { t: "48%", l: "-2%", s: 2 },
+                      { t: "70%", l: "96%", s: 3 },
+                      { t: "92%", l: "20%", s: 2 },
+                    ].map((p, i) => (
+                      <span
+                        key={i}
+                        className="absolute rounded-full"
+                        style={{
+                          top: p.t,
+                          left: p.l,
+                          width: p.s,
+                          height: p.s,
+                          background: goldSoft,
+                          boxShadow: `0 0 ${p.s * 5}px ${goldSoft}`,
+                          opacity: 0.85,
+                        }}
+                      />
+                    ))}
                   </div>
-                  <div className="flex items-center gap-3 text-[#AEBAC1]">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-                      <path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4z" />
-                    </svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-                      <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 0 0-1.02.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.2a1 1 0 0 0 .24-1.02A11.36 11.36 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z" />
-                    </svg>
-                  </div>
-                </div>
 
-                {/* chat body */}
-                <div
-                  className="relative px-3 py-3"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, #0B141A 0%, #0B141A 100%)",
-                  }}
-                >
-                  {/* outgoing — brand reply */}
-                  <div className="mb-3 flex justify-end">
+                  {/* card */}
+                  <div
+                    className="relative overflow-hidden rounded-[28px] backdrop-blur-xl"
+                    style={{
+                      background:
+                        "linear-gradient(170deg, rgba(74,53,98,0.55) 0%, rgba(38,22,56,0.65) 60%, rgba(26,15,40,0.75) 100%)",
+                      border: `1px solid ${gold}66`,
+                      boxShadow: `0 0 0 1px ${gold}22, 0 20px 60px -20px rgba(0,0,0,0.7), 0 0 40px -10px ${gold}55, inset 0 1px 0 ${goldSoft}33`,
+                    }}
+                  >
                     <div
-                      className="relative max-w-[78%] rounded-lg rounded-tr-sm px-2.5 py-1.5"
+                      aria-hidden
+                      className="pointer-events-none absolute inset-0 rounded-[28px]"
                       style={{
-                        background: "#005C4B",
-                        boxShadow: "0 1px 0.5px rgba(0,0,0,0.13)",
+                        background: `linear-gradient(135deg, ${gold}22, transparent 40%, transparent 60%, ${gold}22)`,
                       }}
-                    >
-                      <p
-                        className="text-[0.88rem] leading-snug"
-                        style={{ color: "#E9EDEF", fontFamily: "system-ui, -apple-system, sans-serif" }}
+                    />
+
+                    {/* top label */}
+                    <div className="relative flex items-center justify-center gap-2 px-6 pt-5">
+                      <span
+                        className="h-px w-8"
+                        style={{ background: `linear-gradient(90deg, transparent, ${gold})` }}
+                      />
+                      <span
+                        className="text-[0.6rem] uppercase tracking-[0.35em]"
+                        style={{ color: gold }}
                       >
-                        Tranquila mi reina ☺️
-                      </p>
-                      <div className="mt-0.5 flex items-center justify-end gap-1">
-                        <span className="text-[0.62rem]" style={{ color: "#AEBAC1" }}>
-                          3:08 p. m.
-                        </span>
-                        <svg width="14" height="10" viewBox="0 0 16 11" fill="none" aria-hidden>
-                          <path d="M11.1 0.5L4.6 7 1.9 4.3l-.7.7L4.6 8.4 11.8 1.2zM15 0.5L8.5 7 7.7 6.2l-.7.7.8.8L15.7 1.2z" fill="#53BDEB" />
-                        </svg>
-                      </div>
+                        Testimonio verificado
+                      </span>
+                      <span
+                        className="h-px w-8"
+                        style={{ background: `linear-gradient(90deg, ${gold}, transparent)` }}
+                      />
                     </div>
-                  </div>
 
-                  {/* "Hoy" pill */}
-                  <div className="mb-3 flex justify-center">
-                    <span
-                      className="rounded-md px-2.5 py-1 text-[0.65rem]"
-                      style={{ background: "#1F2C33", color: "#AEBAC1" }}
-                    >
-                      Hoy
-                    </span>
-                  </div>
-
-                  {/* incoming — customer message with photo */}
-                  <div className="flex justify-start">
-                    <div
-                      className="relative max-w-[82%] overflow-hidden rounded-lg rounded-tl-sm"
-                      style={{
-                        background: "#1F2C33",
-                        boxShadow: "0 1px 0.5px rgba(0,0,0,0.13)",
-                      }}
-                    >
-                      <div className="p-1">
-                        <div className="overflow-hidden rounded-md">
-                          <img
-                            src="/__l5e/assets-v1/cc894fb6-d127-459c-8718-5e22223885de/customer-whatsapp-product.jpg"
-                            alt=""
-                            loading="lazy"
-                            className="block aspect-[4/5] w-full object-cover"
-                          />
-                        </div>
-                      </div>
-                      <div className="px-2.5 pb-1.5">
-                        <p
-                          className="text-[0.88rem] leading-snug"
-                          style={{ color: "#E9EDEF", fontFamily: "system-ui, -apple-system, sans-serif" }}
+                    {/* WHATSAPP CHAT MOCK */}
+                    <div className="relative mt-5 px-4 pb-5">
+                      <div
+                        className="overflow-hidden rounded-2xl"
+                        style={{
+                          background: "#0B141A",
+                          border: `1px solid ${gold}33`,
+                          boxShadow: `0 10px 30px -15px rgba(0,0,0,0.7)`,
+                        }}
+                      >
+                        {/* WhatsApp header */}
+                        <div
+                          className="flex items-center gap-3 px-3 py-2.5"
+                          style={{
+                            background: "#1F2C33",
+                            borderBottom: "1px solid rgba(255,255,255,0.04)",
+                          }}
                         >
-                          Muchas gracias a 🙏✨
-                        </p>
-                        <div className="mt-0.5 flex justify-end">
-                          <span className="text-[0.62rem]" style={{ color: "#8696A0" }}>
-                            10:17 a. m.
-                          </span>
+                          <svg
+                            width="10"
+                            height="14"
+                            viewBox="0 0 10 14"
+                            fill="none"
+                            className="shrink-0"
+                          >
+                            <path
+                              d="M8 1L2 7l6 6"
+                              stroke="#00A884"
+                              strokeWidth="1.6"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                          <img
+                            src={chat.avatar}
+                            alt=""
+                            className="size-9 rounded-full object-cover"
+                            style={{ border: "1px solid rgba(255,255,255,0.08)" }}
+                          />
+                          <div className="min-w-0 flex-1">
+                            <div
+                              className="truncate text-[0.92rem] font-medium leading-tight"
+                              style={{
+                                color: "#E9EDEF",
+                                fontFamily: "system-ui, -apple-system, sans-serif",
+                              }}
+                            >
+                              {chat.name}
+                            </div>
+                            <div
+                              className="text-[0.7rem] leading-tight"
+                              style={{ color: "#8696A0" }}
+                            >
+                              en línea
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-3 text-[#AEBAC1]">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                              <path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4z" />
+                            </svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                              <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 0 0-1.02.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.2a1 1 0 0 0 .24-1.02A11.36 11.36 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z" />
+                            </svg>
+                          </div>
+                        </div>
+
+                        {/* chat body */}
+                        <div className="relative space-y-2.5 px-3 py-3" style={{ background: "#0B141A" }}>
+                          {chat.messages.map((m, mi) => {
+                            if (m.kind === "divider") {
+                              return (
+                                <div key={mi} className="flex justify-center py-1">
+                                  <span
+                                    className="rounded-md px-2.5 py-1 text-[0.65rem]"
+                                    style={{ background: "#1F2C33", color: "#AEBAC1" }}
+                                  >
+                                    {m.text}
+                                  </span>
+                                </div>
+                              );
+                            }
+                            const isOut = m.from === "out";
+                            const bubbleBg = isOut ? "#005C4B" : "#1F2C33";
+                            const align = isOut ? "justify-end" : "justify-start";
+                            const corner = isOut ? "rounded-tr-sm" : "rounded-tl-sm";
+                            const timeColor = isOut ? "#AEBAC1" : "#8696A0";
+                            return (
+                              <div key={mi} className={`flex ${align}`}>
+                                <div
+                                  className={`relative max-w-[82%] overflow-hidden rounded-lg ${corner}`}
+                                  style={{
+                                    background: bubbleBg,
+                                    boxShadow: "0 1px 0.5px rgba(0,0,0,0.13)",
+                                  }}
+                                >
+                                  {m.kind === "image" && (
+                                    <div className="p-1">
+                                      <div className="overflow-hidden rounded-md">
+                                        <img
+                                          src={m.src}
+                                          alt=""
+                                          loading="lazy"
+                                          className="block aspect-[4/5] w-full object-cover"
+                                        />
+                                      </div>
+                                    </div>
+                                  )}
+                                  <div
+                                    className={
+                                      m.kind === "image" ? "px-2.5 pb-1.5 pt-1" : "px-2.5 py-1.5"
+                                    }
+                                  >
+                                    {(m.kind === "text" || (m.kind === "image" && m.caption)) && (
+                                      <p
+                                        className="text-[0.88rem] leading-snug"
+                                        style={{
+                                          color: "#E9EDEF",
+                                          fontFamily: "system-ui, -apple-system, sans-serif",
+                                        }}
+                                      >
+                                        {m.kind === "text" ? m.text : m.caption}
+                                      </p>
+                                    )}
+                                    <div className="mt-0.5 flex items-center justify-end gap-1">
+                                      <span className="text-[0.62rem]" style={{ color: timeColor }}>
+                                        {m.time}
+                                      </span>
+                                      {isOut && m.read && (
+                                        <svg
+                                          width="14"
+                                          height="10"
+                                          viewBox="0 0 16 11"
+                                          fill="none"
+                                          aria-hidden
+                                        >
+                                          <path
+                                            d="M11.1 0.5L4.6 7 1.9 4.3l-.7.7L4.6 8.4 11.8 1.2zM15 0.5L8.5 7 7.7 6.2l-.7.7.8.8L15.7 1.2z"
+                                            fill="#53BDEB"
+                                          />
+                                        </svg>
+                                      )}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          })}
                         </div>
                       </div>
+
+                      {/* caption under chat */}
+                      <p
+                        className="mt-4 text-center text-[0.78rem] leading-relaxed"
+                        style={{ color: ivory, opacity: 0.75 }}
+                      >
+                        {chat.caption}
+                        <br />
+                        <span style={{ color: goldSoft, fontStyle: "italic" }}>
+                          Una clienta real. Una entrega real.
+                        </span>
+                      </p>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* caption under chat */}
-              <p
-                className="mt-4 text-center text-[0.78rem] leading-relaxed"
-                style={{ color: ivory, opacity: 0.75 }}
-              >
-                María José nos escribió apenas recibió su kit.
-                <br />
-                <span style={{ color: goldSoft, fontStyle: "italic" }}>
-                  Una clienta real. Una entrega real.
-                </span>
-              </p>
+              ))}
             </div>
-          </div>
-        </div>
+          );
+        })()}
+
+
 
 
         {/* SECTION 3 — TRUST COUNTER */}
