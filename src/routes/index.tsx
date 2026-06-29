@@ -767,8 +767,10 @@ function ProductRoutineSection() {
                   className="animate-gold-aura relative rounded-lg px-2 py-1.5 text-left"
                   style={{
                     background: "rgba(20, 8, 35, 0.55)",
-                    border: "1px solid rgba(232,201,138,0.7)",
+                    border: "1px solid rgba(244,222,165,0.9)",
                     backdropFilter: "blur(6px)",
+                    boxShadow:
+                      "0 0 12px rgba(244,222,165,0.7), 0 0 28px rgba(232,201,138,0.55), 0 0 50px rgba(212,168,94,0.4), inset 0 0 14px rgba(244,222,165,0.25)",
                   }}
                 >
 
