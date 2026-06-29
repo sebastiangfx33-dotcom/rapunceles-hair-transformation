@@ -1609,33 +1609,6 @@ function Testimonials() {
               <span className="h-px w-8" style={{ background: `linear-gradient(90deg, ${gold}, transparent)` }} />
             </div>
 
-            {/* customer product photo */}
-            <div className="relative mt-4 px-4">
-              <div
-                className="relative overflow-hidden rounded-2xl"
-                style={{
-                  border: `1px solid ${gold}55`,
-                  boxShadow: `0 20px 40px -20px rgba(0,0,0,0.6), 0 0 25px -10px ${gold}55`,
-                }}
-              >
-                <img
-                  src="/__l5e/assets-v1/cc894fb6-d127-459c-8718-5e22223885de/customer-whatsapp-product.jpg"
-                  alt="Clienta recibió su kit Rapunceles en casa"
-                  loading="lazy"
-                  width={780}
-                  height={1040}
-                  className="block w-full object-cover"
-                />
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute inset-0"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, transparent 70%, rgba(26,15,40,0.45) 100%)",
-                  }}
-                />
-              </div>
-            </div>
 
             {/* WHATSAPP CHAT MOCK */}
             <div className="relative mt-5 px-4 pb-5">
