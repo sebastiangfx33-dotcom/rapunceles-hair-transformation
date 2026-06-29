@@ -763,17 +763,17 @@ function ProductRoutineSection() {
               ].map(({ Icon, title, desc }, i) => (
                 <div
                   key={i}
-                  className="relative rounded-xl px-2 py-2.5 text-center"
+                  className="relative rounded-lg px-2 py-1.5 text-left"
                   style={{
                     background: "rgba(20, 8, 35, 0.55)",
                     border: "1px solid rgba(212,168,94,0.55)",
                     backdropFilter: "blur(6px)",
                   }}
                 >
-                  <div className="flex flex-col items-center">
+                  <div className="flex items-center gap-1.5">
                     <span
                       aria-hidden="true"
-                      className="relative flex h-7 w-7 items-center justify-center rounded-full"
+                      className="relative flex h-5 w-5 shrink-0 items-center justify-center rounded-full"
                       style={{
                         border: "1px solid rgba(212,168,94,0.5)",
                         background:
@@ -781,7 +781,7 @@ function ProductRoutineSection() {
                       }}
                     >
                       <Icon
-                        className="size-[14px]"
+                        className="size-[10px]"
                         strokeWidth={1}
                         style={{
                           color: "#E8C98A",
@@ -789,28 +789,30 @@ function ProductRoutineSection() {
                         }}
                       />
                     </span>
-                    <h3
-                      className="mt-1.5 text-[9px] leading-tight"
-                      style={{
-                        fontFamily: "'Cormorant Garamond', serif",
-                        color: "#E8C98A",
-                        letterSpacing: "0.14em",
-                        fontWeight: 600,
-                      }}
-                    >
-                      {title}
-                    </h3>
-                    <p
-                      className="mt-1 text-[10px] leading-snug"
-                      style={{
-                        fontFamily: "'Cormorant Garamond', serif",
-                        color: "#F4ECDC",
-                        fontWeight: 300,
-                        opacity: 0.92,
-                      }}
+                    <div className="min-w-0 flex-1">
+                      <h3
+                        className="text-[7px] leading-tight"
+                        style={{
+                          fontFamily: "'Cormorant Garamond', serif",
+                          color: "#E8C98A",
+                          letterSpacing: "0.12em",
+                          fontWeight: 600,
+                        }}
+                      >
+                        {title}
+                      </h3>
+                      <p
+                        className="mt-0.5 text-[8px] leading-snug"
+                        style={{
+                          fontFamily: "'Cormorant Garamond', serif",
+                          color: "#F4ECDC",
+                          fontWeight: 300,
+                          opacity: 0.92,
+                        }}
                     >
                       {desc}
                     </p>
+                    </div>
                   </div>
                 </div>
               ))}
