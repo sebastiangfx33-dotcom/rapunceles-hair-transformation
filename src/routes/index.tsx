@@ -731,7 +731,7 @@ function ProductRoutineSection() {
         {/* Premium product benefits cards */}
         <div
           className="absolute left-0 right-0 px-4"
-          style={{ bottom: "2.5%" }}
+          style={{ bottom: "12%" }}
         >
           <div className="relative mx-auto w-full max-w-[460px]">
             {/* Soft outer golden glow */}
