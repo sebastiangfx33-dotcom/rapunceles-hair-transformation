@@ -873,6 +873,18 @@ function KitIncludes() {
 
   return (
     <section className="relative w-full overflow-hidden" style={{ background: "#1a0a2e" }}>
+      <img
+        src="/__l5e/assets-v1/b1608d0b-5b7f-49fb-b983-155f592552ee/kit-includes-bg-v2.png"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{ background: "linear-gradient(180deg, rgba(20,8,38,0.55) 0%, rgba(20,8,38,0.45) 50%, rgba(20,8,38,0.65) 100%)" }}
+      />
       <div className="relative z-10 mx-auto max-w-md px-5 py-12">
         {/* Header */}
         <div className="text-center">
