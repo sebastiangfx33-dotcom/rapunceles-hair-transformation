@@ -1710,13 +1710,8 @@ function Testimonials() {
 
                   {/* floating gold particles around card */}
                   <div aria-hidden className="pointer-events-none absolute -inset-6">
-                    {[
-                      { t: "4%", l: "6%", s: 3 },
-                      { t: "18%", l: "92%", s: 2 },
-                      { t: "48%", l: "-2%", s: 2 },
-                      { t: "70%", l: "96%", s: 3 },
-                      { t: "92%", l: "20%", s: 2 },
-                    ].map((p, i) => (
+                    {WHATSAPP_PARTICLES.map((p, i) => (
+
                       <span
                         key={i}
                         className="absolute rounded-full"
