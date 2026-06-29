@@ -113,8 +113,8 @@ function Landing() {
       <AfterBanner />
       <ProductRoutineSection />
       <KitIncludes />
-      <Ingredients />
       <Results />
+      <Ingredients />
       <Testimonials />
       
       <ProductOptions />
