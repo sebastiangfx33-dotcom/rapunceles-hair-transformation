@@ -104,9 +104,25 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: heroKit },
     ],
+    links: [
+      // Preload LCP candidates (hero scene + hero background) so the browser
+      // discovers them before parsing CSS / running JS.
+      {
+        rel: "preload",
+        as: "image",
+        href: "/__l5e/assets-v1/807515e2-1ece-4d20-9b18-d9a0200128c9/hero-scene-new.png",
+        fetchpriority: "high",
+      },
+      {
+        rel: "preload",
+        as: "image",
+        href: "/__l5e/assets-v1/0d07d7de-992a-4d0f-9d74-bb9e5925224b/hero-section-bg.png",
+      },
+    ],
   }),
   component: Landing,
 });
+
 
 const WHATSAPP_URL =
   "https://wa.me/573000000000?text=Hola%20Rapunceles%2C%20quiero%20saber%20m%C3%A1s%20del%20Kit%20de%20Crecimiento%20Capilar";
@@ -1391,6 +1407,138 @@ const customerPhotos = [
   "/__l5e/assets-v1/20cbdce7-4327-46d7-ae0a-5daa2741236a/customer-photo-4.jpg",
 ];
 
+type WhatsAppMsg =
+  | { from: "in" | "out"; kind: "text"; text: string; time: string; read?: boolean }
+  | {
+      from: "in" | "out";
+      kind: "image";
+      src: string;
+      caption?: string;
+      time: string;
+      read?: boolean;
+    }
+  | { kind: "divider"; text: string };
+
+type WhatsAppChat = {
+  name: string;
+  avatar: string;
+  messages: WhatsAppMsg[];
+  caption: string;
+};
+
+const WHATSAPP_CHATS: WhatsAppChat[] = [
+  {
+    name: "María José G.",
+    avatar: avatarMariaJoseAsset.url,
+    messages: [
+      {
+        from: "out",
+        kind: "text",
+        text: "Tranquila mi reina ☺️",
+        time: "3:08 p. m.",
+        read: true,
+      },
+      { kind: "divider", text: "Hoy" },
+      {
+        from: "in",
+        kind: "image",
+        src: "/__l5e/assets-v1/cc894fb6-d127-459c-8718-5e22223885de/customer-whatsapp-product.jpg",
+        caption: "Muchas gracias a 🙏✨",
+        time: "10:17 a. m.",
+      },
+    ],
+    caption: "María José nos escribió apenas recibió su kit.",
+  },
+  {
+    name: "Daniela R.",
+    avatar: avatarDanielaAsset.url,
+    messages: [
+      { kind: "divider", text: "5 mensajes no leídos" },
+      {
+        from: "in",
+        kind: "image",
+        src: "/__l5e/assets-v1/2d16d196-63da-40d3-9c76-8385cc75a97a/customer-chat-p1.jpg",
+        caption:
+          "Hermosa hola cómo estás, qué pena la hora. Acabé de llegar a mi casa y ya me había llegado el pedido",
+        time: "11:27 p. m.",
+      },
+    ],
+    caption: "Daniela recibió su kit completo en casa.",
+  },
+  {
+    name: "Camila S.",
+    avatar: avatarCamilaAsset.url,
+    messages: [
+      {
+        from: "out",
+        kind: "text",
+        text: "Hola hermosa buenos días",
+        time: "10:50 a. m.",
+        read: true,
+      },
+      {
+        from: "out",
+        kind: "text",
+        text: "Mira tu guía 📦",
+        time: "10:50 a. m.",
+        read: true,
+      },
+      {
+        from: "in",
+        kind: "text",
+        text: "Dale reina muchas gracias",
+        time: "11:12 a. m.",
+      },
+      {
+        from: "in",
+        kind: "image",
+        src: "/__l5e/assets-v1/c0aeaea7-0186-43a9-84c6-45e5648b26d3/customer-chat-p2.jpg",
+        caption:
+          "Muchas gracias reina, ya me llegaron los productos, me pondré juiciosa para tener un cabello hermoso 😍 Gracias por el obsequio, todo muy lindo y los productos huelen riquísimo 😍🙏",
+        time: "12:49 p. m.",
+      },
+    ],
+    caption: "Camila estrenó su rutina apenas recibió el pedido.",
+  },
+  {
+    name: "Valentina L.",
+    avatar: avatarValentinaAsset.url,
+    messages: [
+      {
+        from: "out",
+        kind: "text",
+        text: "Hola bella, ¿cómo te va con la rutina? 💜",
+        time: "9:14 a. m.",
+        read: true,
+      },
+      { kind: "divider", text: "Hoy" },
+      {
+        from: "in",
+        kind: "text",
+        text: "Reinaaa increíble 😭 llevo 3 semanas y siento muchísima menos caída",
+        time: "7:42 p. m.",
+      },
+      {
+        from: "in",
+        kind: "text",
+        text: "Mi cabello está brillando como nunca, mil gracias ✨",
+        time: "7:42 p. m.",
+      },
+    ],
+    caption: "Valentina lleva 3 semanas con la rutina Rapunceles.",
+  },
+];
+
+const WHATSAPP_PARTICLES = [
+  { t: "4%", l: "6%", s: 3 },
+  { t: "18%", l: "92%", s: 2 },
+  { t: "48%", l: "-2%", s: 2 },
+  { t: "70%", l: "96%", s: 3 },
+  { t: "92%", l: "20%", s: 2 },
+];
+
+
+
 function Testimonials() {
   const gold = "#D4A85E";
   const goldSoft = "#E8C98A";
@@ -1398,11 +1546,32 @@ function Testimonials() {
   const CHAT_CARDS_COUNT = 4;
   const [chatIndex, setChatIndex] = useState(0);
   useEffect(() => {
-    const id = setInterval(() => {
-      setChatIndex((i) => (i + 1) % CHAT_CARDS_COUNT);
-    }, 5000);
-    return () => clearInterval(id);
+    let id: ReturnType<typeof setInterval> | null = null;
+    const start = () => {
+      if (id) return;
+      id = setInterval(() => {
+        setChatIndex((i) => (i + 1) % CHAT_CARDS_COUNT);
+      }, 5000);
+    };
+    const stop = () => {
+      if (id) {
+        clearInterval(id);
+        id = null;
+      }
+    };
+    const onVisibility = () => {
+      if (document.hidden) stop();
+      else start();
+    };
+    start();
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => {
+      stop();
+      document.removeEventListener("visibilitychange", onVisibility);
+    };
   }, []);
+
+
 
 
   const conversations = [
@@ -1524,125 +1693,9 @@ function Testimonials() {
 
         {/* SECTION 2 — FEATURED WHATSAPP TESTIMONIAL CARDS */}
         {(() => {
-          type Msg =
-            | { from: "in" | "out"; kind: "text"; text: string; time: string; read?: boolean }
-            | {
-                from: "in" | "out";
-                kind: "image";
-                src: string;
-                caption?: string;
-                time: string;
-                read?: boolean;
-              }
-            | { kind: "divider"; text: string };
+          const chats = WHATSAPP_CHATS;
 
-          const chats: {
-            name: string;
-            avatar: string;
-            messages: Msg[];
-            caption: string;
-          }[] = [
-            {
-              name: "María José G.",
-              avatar: avatarMariaJoseAsset.url,
-              messages: [
-                {
-                  from: "out",
-                  kind: "text",
-                  text: "Tranquila mi reina ☺️",
-                  time: "3:08 p. m.",
-                  read: true,
-                },
-                { kind: "divider", text: "Hoy" },
-                {
-                  from: "in",
-                  kind: "image",
-                  src: "/__l5e/assets-v1/cc894fb6-d127-459c-8718-5e22223885de/customer-whatsapp-product.jpg",
-                  caption: "Muchas gracias a 🙏✨",
-                  time: "10:17 a. m.",
-                },
-              ],
-              caption: "María José nos escribió apenas recibió su kit.",
-            },
-            {
-              name: "Daniela R.",
-              avatar: avatarDanielaAsset.url,
-              messages: [
-                { kind: "divider", text: "5 mensajes no leídos" },
-                {
-                  from: "in",
-                  kind: "image",
-                  src: "/__l5e/assets-v1/2d16d196-63da-40d3-9c76-8385cc75a97a/customer-chat-p1.jpg",
-                  caption:
-                    "Hermosa hola cómo estás, qué pena la hora. Acabé de llegar a mi casa y ya me había llegado el pedido",
-                  time: "11:27 p. m.",
-                },
-              ],
-              caption: "Daniela recibió su kit completo en casa.",
-            },
-            {
-              name: "Camila S.",
-              avatar: avatarCamilaAsset.url,
-              messages: [
-                {
-                  from: "out",
-                  kind: "text",
-                  text: "Hola hermosa buenos días",
-                  time: "10:50 a. m.",
-                  read: true,
-                },
-                {
-                  from: "out",
-                  kind: "text",
-                  text: "Mira tu guía 📦",
-                  time: "10:50 a. m.",
-                  read: true,
-                },
-                {
-                  from: "in",
-                  kind: "text",
-                  text: "Dale reina muchas gracias",
-                  time: "11:12 a. m.",
-                },
-                {
-                  from: "in",
-                  kind: "image",
-                  src: "/__l5e/assets-v1/c0aeaea7-0186-43a9-84c6-45e5648b26d3/customer-chat-p2.jpg",
-                  caption:
-                    "Muchas gracias reina, ya me llegaron los productos, me pondré juiciosa para tener un cabello hermoso 😍 Gracias por el obsequio, todo muy lindo y los productos huelen riquísimo 😍🙏",
-                  time: "12:49 p. m.",
-                },
-              ],
-              caption: "Camila estrenó su rutina apenas recibió el pedido.",
-            },
-            {
-              name: "Valentina L.",
-              avatar: avatarValentinaAsset.url,
-              messages: [
-                {
-                  from: "out",
-                  kind: "text",
-                  text: "Hola bella, ¿cómo te va con la rutina? 💜",
-                  time: "9:14 a. m.",
-                  read: true,
-                },
-                { kind: "divider", text: "Hoy" },
-                {
-                  from: "in",
-                  kind: "text",
-                  text: "Reinaaa increíble 😭 llevo 3 semanas y siento muchísima menos caída",
-                  time: "7:42 p. m.",
-                },
-                {
-                  from: "in",
-                  kind: "text",
-                  text: "Mi cabello está brillando como nunca, mil gracias ✨",
-                  time: "7:42 p. m.",
-                },
-              ],
-              caption: "Valentina lleva 3 semanas con la rutina Rapunceles.",
-            },
-          ];
+
 
           return (
             <div className="mt-14">
@@ -1657,13 +1710,8 @@ function Testimonials() {
 
                   {/* floating gold particles around card */}
                   <div aria-hidden className="pointer-events-none absolute -inset-6">
-                    {[
-                      { t: "4%", l: "6%", s: 3 },
-                      { t: "18%", l: "92%", s: 2 },
-                      { t: "48%", l: "-2%", s: 2 },
-                      { t: "70%", l: "96%", s: 3 },
-                      { t: "92%", l: "20%", s: 2 },
-                    ].map((p, i) => (
+                    {WHATSAPP_PARTICLES.map((p, i) => (
+
                       <span
                         key={i}
                         className="absolute rounded-full"
