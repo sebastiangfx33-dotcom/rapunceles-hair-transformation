@@ -436,7 +436,7 @@ function AfterBanner() {
     {
       img: probVolumeAsset.url,
       title: "Cabello sin vida",
-      desc: "Tu cabello pierde volumen, densidad y vitalidad natural.",
+      desc: "Tu cabello pierde fuerza, densidad y vitalidad natural.",
     },
   ];
 
