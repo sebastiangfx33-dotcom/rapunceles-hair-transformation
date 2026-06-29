@@ -1937,7 +1937,7 @@ function TrustBenefits() {
               </div>
               <p
                 className="font-display text-[0.58rem] leading-[1.15]"
-                style={{ color: ink }}
+                style={{ color: "#FFFFFF" }}
               >
                 {text}
               </p>
