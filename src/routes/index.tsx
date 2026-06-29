@@ -1865,7 +1865,7 @@ function Testimonials() {
                                         <img
                                           src={m.src}
                                           alt=""
-                                          loading="lazy"
+                                          decoding="async"
                                           className="block aspect-[4/5] w-full object-cover"
                                         />
                                       </div>
