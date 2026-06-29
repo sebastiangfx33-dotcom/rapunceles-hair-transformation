@@ -1512,44 +1512,6 @@ function Testimonials() {
           </p>
         </div>
 
-        {/* SECTION 1 — CUSTOMER COLLAGE */}
-        <div className="mt-12 grid grid-cols-2 gap-3">
-          {customerPhotos.map((src, i) => (
-            <div
-              key={i}
-              className={`relative overflow-hidden rounded-2xl ${
-                i === 0 ? "row-span-2 aspect-[3/5]" : "aspect-[4/5]"
-              }`}
-              style={{
-                border: `1px solid ${gold}55`,
-                boxShadow: `0 20px 50px -20px rgba(0,0,0,0.6), 0 0 25px -8px ${gold}30`,
-              }}
-            >
-              <img
-                src={src}
-                alt={`Clienta Rapunceles ${i + 1}`}
-                loading="lazy"
-                width={768}
-                height={1024}
-                className="size-full object-cover"
-              />
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-0"
-                style={{
-                  background:
-                    "linear-gradient(180deg, transparent 55%, rgba(26,15,40,0.55) 100%)",
-                }}
-              />
-            </div>
-          ))}
-        </div>
-        <p
-          className="mt-4 text-center text-[0.7rem] uppercase tracking-[0.3em]"
-          style={{ color: gold, opacity: 0.75 }}
-        >
-          Clientas reales · Colombia
-        </p>
 
         {/* SECTION 2 — FEATURED WHATSAPP TESTIMONIAL CARDS */}
         {(() => {
