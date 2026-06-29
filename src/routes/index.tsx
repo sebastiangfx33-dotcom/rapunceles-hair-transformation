@@ -43,7 +43,8 @@ import routineBgV11Asset from "@/assets/routine-bg-v11.png.asset.json";
 const routineBgV3 = { url: routineBgV11Asset.url };
 
 const routineSectionBg = { url: "/routine-section-bg.jpg" };
-const kitBgAsset = { url: "/kit-bg.png" };
+import optionsBgAsset from "@/assets/options-bg.png.asset.json";
+const kitBgAsset = optionsBgAsset;
 const urgencyBgAsset = { url: "/urgency-bg-v4.png" };
 const urgencyBgUrl = urgencyBgAsset.url;
 const prodShampooAsset = { url: "/product-shampoo-v2.png" };
