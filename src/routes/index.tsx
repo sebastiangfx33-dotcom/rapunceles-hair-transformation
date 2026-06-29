@@ -104,9 +104,25 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: heroKit },
     ],
+    links: [
+      // Preload LCP candidates (hero scene + hero background) so the browser
+      // discovers them before parsing CSS / running JS.
+      {
+        rel: "preload",
+        as: "image",
+        href: "/__l5e/assets-v1/807515e2-1ece-4d20-9b18-d9a0200128c9/hero-scene-new.png",
+        fetchpriority: "high",
+      },
+      {
+        rel: "preload",
+        as: "image",
+        href: "/__l5e/assets-v1/0d07d7de-992a-4d0f-9d74-bb9e5925224b/hero-section-bg.png",
+      },
+    ],
   }),
   component: Landing,
 });
+
 
 const WHATSAPP_URL =
   "https://wa.me/573000000000?text=Hola%20Rapunceles%2C%20quiero%20saber%20m%C3%A1s%20del%20Kit%20de%20Crecimiento%20Capilar";
