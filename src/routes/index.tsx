@@ -425,7 +425,7 @@ function AfterBanner() {
   const items = [
     {
       img: probFallAsset.url,
-      title: "Caída excesiva",
+      title: "Caída constante",
       desc: "Cada día pierdes más cabello del que deberías.",
     },
     {
