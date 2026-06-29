@@ -1386,7 +1386,7 @@ function Results() {
 /* ---------------------------- TESTIMONIALS ---------------------------- */
 const customerPhotos = [
   "/__l5e/assets-v1/88be4e57-b291-445c-8c38-367b074415ee/customer-photo-1.jpg",
-  "/__l5e/assets-v1/ae40e3e0-ac11-4c93-91bc-03469ceb4267/customer-photo-2-v4.jpg",
+  "/__l5e/assets-v1/3d849c0b-20d1-4ac7-b9a8-00345015c56f/customer-photo-2-v5.jpg",
   "/__l5e/assets-v1/8ddb7d15-ec33-4e37-923a-8f1e2eaf4102/customer-photo-3.jpg",
   "/__l5e/assets-v1/20cbdce7-4327-46d7-ae0a-5daa2741236a/customer-photo-4.jpg",
 ];
