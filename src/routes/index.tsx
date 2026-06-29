@@ -717,23 +717,34 @@ function ProductRoutineSection() {
           </p>
         </div>
 
-        {/* Premium product benefits cards */}
+        {/* Premium product benefits ribbon */}
         <div
-          className="absolute left-0 right-0 px-4"
+          className="absolute left-0 right-0"
           style={{ bottom: "12%" }}
         >
-          <div className="relative mx-auto w-full max-w-[460px]">
+          <div className="relative w-full">
             {/* Soft outer golden glow */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute -inset-x-4 -inset-y-3 rounded-3xl"
+              className="pointer-events-none absolute inset-x-0 -inset-y-2"
               style={{
                 background:
-                  "radial-gradient(ellipse at center, rgba(212,168,94,0.18), transparent 70%)",
-                filter: "blur(14px)",
+                  "radial-gradient(ellipse at center, rgba(212,168,94,0.22), transparent 70%)",
+                filter: "blur(16px)",
               }}
             />
-            <div className="relative grid grid-cols-3 gap-3">
+            <div
+              className="animate-gold-aura relative grid w-full grid-cols-3"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(20,8,35,0.72), rgba(28,12,45,0.78), rgba(20,8,35,0.72))",
+                borderTop: "1px solid rgba(244,222,165,0.9)",
+                borderBottom: "1px solid rgba(244,222,165,0.9)",
+                backdropFilter: "blur(6px)",
+                boxShadow:
+                  "0 0 14px rgba(244,222,165,0.55), 0 0 36px rgba(232,201,138,0.4), inset 0 0 18px rgba(244,222,165,0.18)",
+              }}
+            >
               {[
                 {
                   Icon: Sprout,
@@ -753,16 +764,14 @@ function ProductRoutineSection() {
               ].map(({ Icon, title, desc }, i) => (
                 <div
                   key={i}
-                  className="animate-gold-aura relative rounded-lg px-2 py-1.5 text-left"
+                  className="relative px-2 py-2 text-left"
                   style={{
-                    background: "rgba(20, 8, 35, 0.55)",
-                    border: "1px solid rgba(244,222,165,0.9)",
-                    backdropFilter: "blur(6px)",
-                    boxShadow:
-                      "0 0 12px rgba(244,222,165,0.7), 0 0 28px rgba(232,201,138,0.55), 0 0 50px rgba(212,168,94,0.4), inset 0 0 14px rgba(244,222,165,0.25)",
+                    borderLeft:
+                      i === 0
+                        ? "none"
+                        : "1px solid rgba(244,222,165,0.35)",
                   }}
                 >
-
                   <div className="flex items-center gap-1.5">
                     <span
                       aria-hidden="true"
@@ -802,9 +811,9 @@ function ProductRoutineSection() {
                           fontWeight: 300,
                           opacity: 0.92,
                         }}
-                    >
-                      {desc}
-                    </p>
+                      >
+                        {desc}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -812,6 +821,7 @@ function ProductRoutineSection() {
             </div>
           </div>
         </div>
+
 
       </div>
     </section>
