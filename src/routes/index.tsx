@@ -447,40 +447,6 @@ function AfterBanner() {
           ))}
         </div>
 
-        {/* Bottom text */}
-        <div className="mt-12 flex flex-col items-center text-center">
-          <p
-            className="text-[20px] leading-relaxed"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              color: IVORY,
-            }}
-          >
-            No ignores las señales.
-          </p>
-          <p
-            className="mt-1 text-[22px] leading-[1.3]"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              color: IVORY,
-            }}
-          >
-            Tu cabello merece{" "}
-            <span style={{ color: GOLD, fontStyle: "italic" }}>
-              recuperarse desde la raíz
-            </span>
-            .
-          </p>
-
-          <div className="mt-5 flex items-center">
-            <span className="h-px w-14" style={{ background: GOLD }} />
-            <span
-              className="mx-2 inline-block rotate-45"
-              style={{ width: 5, height: 5, background: GOLD }}
-            />
-            <span className="h-px w-14" style={{ background: GOLD }} />
-          </div>
-        </div>
       </div>
     </section>
   );
