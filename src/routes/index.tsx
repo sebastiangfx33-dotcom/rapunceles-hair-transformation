@@ -320,42 +320,87 @@ function Hero() {
               filter: "blur(14px)",
             }}
           />
-          <div className="relative grid grid-cols-4 gap-1.5">
+          <div className="relative grid grid-cols-3 gap-3">
             {[
-              "Activa crecimiento",
-              "Reduce caída",
-              "Fortalece raíz",
-              "Mayor densidad",
-            ].map((b) => (
+              {
+                Icon: Sprout,
+                title: "ACTIVA EL CRECIMIENTO",
+                desc: "Estimula la raíz para un cabello más largo.",
+              },
+              {
+                Icon: Shield,
+                title: "REDUCE LA CAÍDA",
+                desc: "Fortalece el folículo y disminuye la caída.",
+              },
+              {
+                Icon: Sparkles,
+                title: "FUERZA Y VOLUMEN",
+                desc: "Nutre cada hebra para un cabello más fuerte.",
+              },
+            ].map(({ Icon, title, desc }, i) => (
               <div
-                key={b}
-                className="rounded-lg text-center flex items-center justify-center"
+                key={i}
+                className="relative rounded-xl px-2 py-2.5 text-center"
                 style={{
-                  background: "rgba(20, 8, 35, 0.55)",
-                  border: "1px solid rgba(217, 184, 106, 0.55)",
-                  boxShadow:
-                    "0 4px 14px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04)",
-                  backdropFilter: "blur(6px)",
-                  padding: "10px 6px",
-                  minHeight: 64,
+                  background: "transparent",
+                  border: "1px solid rgba(212,168,94,0.55)",
                 }}
               >
-                <span
-                  className="text-[#e8d3a0]"
-                  style={{
-                    fontFamily:
-                      '"Cormorant Garamond", "Playfair Display", serif',
-                    fontSize: "clamp(10px, 2.9vw, 14px)",
-                    lineHeight: 1.2,
-                    letterSpacing: "0.02em",
-                  }}
-                >
-                  {b}
+                <span aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-xl overflow-hidden">
+                  <span
+                    className="block h-1.5 w-1.5 rounded-full animate-border-trace"
+                    style={{
+                      background: "#F4DEA5",
+                      boxShadow: "0 0 6px rgba(244,222,165,0.95), 0 0 12px rgba(212,168,94,0.7)",
+                    }}
+                  />
                 </span>
+                <div className="flex flex-col items-center">
+                  <span
+                    aria-hidden="true"
+                    className="relative flex h-7 w-7 items-center justify-center rounded-full"
+                    style={{
+                      border: "1px solid rgba(212,168,94,0.5)",
+                      background:
+                        "radial-gradient(circle at 30% 30%, rgba(244,236,220,0.16), rgba(212,168,94,0.05))",
+                    }}
+                  >
+                    <Icon
+                      className="size-[14px]"
+                      strokeWidth={1}
+                      style={{
+                        color: "#E8C98A",
+                        filter: "drop-shadow(0 0 4px rgba(212,168,94,0.5))",
+                      }}
+                    />
+                  </span>
+                  <h3
+                    className="mt-1.5 text-[9px] leading-tight"
+                    style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      color: "#E8C98A",
+                      letterSpacing: "0.14em",
+                      fontWeight: 600,
+                    }}
+                  >
+                    {title}
+                  </h3>
+                  <p
+                    className="mt-1 text-[10px] leading-snug"
+                    style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      color: IVORY,
+                      fontWeight: 300,
+                      opacity: 0.92,
+                    }}
+                  >
+                    {desc}
+                  </p>
+                </div>
+
               </div>
             ))}
           </div>
-
 
         </div>
 
