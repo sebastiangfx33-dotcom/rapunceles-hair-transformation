@@ -503,7 +503,7 @@ function AfterBanner() {
         </div>
 
         {/* Problem cards — 2 per row, mobile-first luxury grid */}
-        <div className="mt-10 grid w-full max-w-sm grid-cols-2 gap-4">
+        <div className="mt-10 grid w-full max-w-md grid-cols-3 gap-2">
           {items.map((it) => (
             <article
               key={it.title}
