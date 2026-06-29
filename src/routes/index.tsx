@@ -435,7 +435,7 @@ function AfterBanner() {
     },
     {
       img: probVolumeAsset.url,
-      title: "Pérdida de abundancia",
+      title: "Cabello sin vida",
       desc: "Tu cabello pierde volumen, densidad y vitalidad natural.",
     },
   ];
