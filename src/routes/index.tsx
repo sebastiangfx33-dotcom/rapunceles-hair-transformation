@@ -734,7 +734,7 @@ function ProductRoutineSection() {
         {/* Hero product trio */}
         <div className="mt-8 mb-10">
           <img
-            src={routineProducts.url}
+            src="/__l5e/assets-v1/99d0848f-96a4-444d-bac5-af8299629d69/formula-trio.png"
             alt="Shampoo, Tónico y Acondicionador Rapunceles"
             loading="lazy"
             className="block w-full h-auto select-none"
