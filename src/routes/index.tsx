@@ -72,7 +72,7 @@ const beforeThird = beforeThirdAsset.url;
 const afterThirdAsset = { url: "/after-third.jpg" };
 const afterThird = afterThirdAsset.url;
 const avatarMariaJoseAsset = { url: "/avatar-maria-jose.jpg" };
-const avatarDanielaAsset = { url: "/avatar-daniela.jpg" };
+const avatarDanielaAsset = { url: "/__l5e/assets-v1/1b00e3ab-616b-414e-8c2c-88a56a937a14/avatar-daniela-new.jpg" };
 const avatarLauraAsset = { url: "/avatar-laura.jpg" };
 const avatarValentinaAsset = { url: "/__l5e/assets-v1/94f9e274-8ac5-4c59-96df-331d6c58f7ba/avatar-valentina.jpg" };
 
