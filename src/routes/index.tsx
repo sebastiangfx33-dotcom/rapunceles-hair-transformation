@@ -111,7 +111,7 @@ export const Route = createFileRoute("/")({
         rel: "preload",
         as: "image",
         href: "/__l5e/assets-v1/807515e2-1ece-4d20-9b18-d9a0200128c9/hero-scene-new.png",
-        fetchpriority: "high",
+        fetchPriority: "high",
       },
       {
         rel: "preload",
@@ -1865,7 +1865,7 @@ function Testimonials() {
                                         <img
                                           src={m.src}
                                           alt=""
-                                          loading="lazy"
+                                          decoding="async"
                                           className="block aspect-[4/5] w-full object-cover"
                                         />
                                       </div>
