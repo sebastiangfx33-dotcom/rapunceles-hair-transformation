@@ -218,3 +218,10 @@
 }
 @utility animate-gold-aura { animation: gold-aura 2.6s ease-in-out infinite; }
 
+@keyframes orbit-dot {
+  from { transform: rotate(0deg) translateX(var(--orbit-r, 54px)) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(var(--orbit-r, 54px)) rotate(-360deg); }
+}
+@utility animate-orbit-dot { animation: orbit-dot 4s linear infinite; }
+
+
