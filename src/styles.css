@@ -218,10 +218,15 @@
 }
 @utility animate-gold-aura { animation: gold-aura 2.6s ease-in-out infinite; }
 
-@keyframes orbit-dot {
-  from { transform: rotate(0deg) translateX(var(--orbit-r, 54px)) rotate(0deg); }
-  to   { transform: rotate(360deg) translateX(var(--orbit-r, 54px)) rotate(-360deg); }
+@keyframes border-trace {
+  to { offset-distance: 100%; }
 }
-@utility animate-orbit-dot { animation: orbit-dot 4s linear infinite; }
+@utility animate-border-trace {
+  offset-path: rect(0 100% 100% 0 round 12px);
+  offset-distance: 0%;
+  offset-rotate: 0deg;
+  animation: border-trace 4s linear infinite;
+}
+
 
 
