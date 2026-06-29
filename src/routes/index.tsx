@@ -1395,6 +1395,15 @@ function Testimonials() {
   const gold = "#D4A85E";
   const goldSoft = "#E8C98A";
   const ivory = "#F4E9D4";
+  const CHAT_CARDS_COUNT = 4;
+  const [chatIndex, setChatIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => {
+      setChatIndex((i) => (i + 1) % CHAT_CARDS_COUNT);
+    }, 5000);
+    return () => clearInterval(id);
+  }, []);
+
 
   const conversations = [
     {
@@ -1636,9 +1645,16 @@ function Testimonials() {
           ];
 
           return (
-            <div className="mt-14 space-y-10">
-              {chats.map((chat, idx) => (
-                <div key={idx} className="relative">
+            <div className="mt-14">
+              <div className="overflow-hidden">
+                <div
+                  className="flex transition-transform duration-700 ease-out"
+                  style={{ transform: `translateX(-${chatIndex * 100}%)` }}
+                >
+                  {chats.map((chat, idx) => (
+                    <div key={idx} className="w-full shrink-0 px-1">
+                      <div className="relative">
+
                   {/* floating gold particles around card */}
                   <div aria-hidden className="pointer-events-none absolute -inset-6">
                     {[
@@ -1863,8 +1879,28 @@ function Testimonials() {
                       </p>
                     </div>
                   </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              {/* dot indicators */}
+              <div className="mt-6 flex items-center justify-center gap-2">
+                {chats.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    aria-label={`Ver testimonio ${i + 1}`}
+                    onClick={() => setChatIndex(i)}
+                    className="h-1.5 rounded-full transition-all duration-500"
+                    style={{
+                      width: i === chatIndex ? 24 : 8,
+                      background: i === chatIndex ? gold : `${gold}55`,
+                      boxShadow: i === chatIndex ? `0 0 10px ${gold}88` : "none",
+                    }}
+                  />
+                ))}
+              </div>
             </div>
           );
         })()}
