@@ -819,78 +819,214 @@ function ProductRoutineSection() {
 
 /* ---------------------------- KIT INCLUDES ---------------------------- */
 function KitIncludes() {
+  const GOLD = "#C9A24A";
+  const GOLD_SOFT = "#E8C98A";
+  const IVORY = "#F4ECDC";
+  const SERIF = '"Cormorant Garamond", "Playfair Display", serif';
+
+  const LeafIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className="size-6">
+      <path d="M12 4c-4 0-7 3-7 7 0 1 .2 2 .6 2.8C8 13 10 11 12 8c-2 4-4 6-6.4 6.8.8.4 1.8.6 2.8.6 4 0 7-3 7-7 0-1.5-.4-2.8-1-3.8" />
+      <path d="M12 4c1.6 0 3 .6 4 1.6" />
+    </svg>
+  );
+  const DropIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className="size-6">
+      <path d="M12 3s6 7 6 12a6 6 0 1 1-12 0c0-5 6-12 6-12z" />
+      <path d="M10 15c0 1.4 1 2.4 2.4 2.4" />
+    </svg>
+  );
+  const SparkleIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className="size-6">
+      <path d="M12 3l1.3 4.2L17.5 8.5l-4.2 1.3L12 14l-1.3-4.2L6.5 8.5l4.2-1.3z" />
+      <path d="M18 15l.7 1.8 1.8.7-1.8.7L18 20l-.7-1.8-1.8-.7 1.8-.7z" />
+      <path d="M5 15l.6 1.4L7 17l-1.4.6L5 19l-.6-1.4L3 17l1.4-.6z" />
+    </svg>
+  );
+
   const items = [
     {
       img: prodShampoo,
-      name: "Shampoo Nutritivo",
-      tagline: "Limpia sin debilitar.",
-      desc: "Purifica el cuero cabelludo y crea el entorno ideal para que la raíz crezca fuerte desde el primer lavado.",
-    },
-    {
-      img: prodConditioner,
-      name: "Acondicionador Fortalecedor",
-      tagline: "Protege cada hebra.",
-      desc: "Reduce el quiebre, aporta nutrición profunda y da mayor resistencia, suavidad y volumen a tu cabello.",
+      Icon: LeafIcon,
+      step: "01",
+      name: "SHAMPOO",
+      tagline: ["LIMPIA", "Y PREPARA"],
+      desc: "Limpia profundamente el cuero cabelludo y lo prepara para recibir los nutrientes.",
     },
     {
       img: prodTonic,
-      name: "Tónico de Crecimiento",
-      tagline: "El paso más importante de la rutina.",
-      desc: "Una potente mezcla de ingredientes naturales que fortalece la raíz, estimula el crecimiento y ayuda a recuperar una melena más abundante, fuerte y llena de vida.",
+      Icon: DropIcon,
+      step: "02",
+      name: "TÓNICO",
+      tagline: ["ESTIMULA", "Y ACTIVA"],
+      desc: "Actúa directamente sobre la raíz para estimular el crecimiento y fortalecer desde el origen.",
+    },
+    {
+      img: prodConditioner,
+      Icon: SparkleIcon,
+      step: "03",
+      name: "ACONDICIONADOR",
+      tagline: ["NUTRE", "Y FORTALECE"],
+      desc: "Nutre profundamente cada hebra, mejora la resistencia y deja tu cabello más fuerte, suave y saludable.",
     },
   ];
+
   return (
-    <section className="section-pad relative w-full overflow-hidden">
-      {/* Background image — same as "Tu cabello te está enviando señales" */}
-      <img
-        src={kitIncludesBg.url}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover"
-        loading="lazy"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(20,8,38,0.52) 0%, rgba(20,8,38,0.42) 40%, rgba(20,8,38,0.55) 100%)",
-        }}
-      />
+    <section className="relative w-full overflow-hidden" style={{ background: "#1a0a2e" }}>
+      <div className="relative z-10 mx-auto max-w-md px-5 py-12">
+        {/* Header */}
+        <div className="text-center">
+          <h2
+            className="uppercase"
+            style={{
+              fontFamily: SERIF,
+              color: GOLD,
+              fontWeight: 400,
+              fontSize: "clamp(18px, 5.2vw, 26px)",
+              letterSpacing: "0.08em",
+              lineHeight: 1.25,
+            }}
+          >
+            Todo lo que tu cabello necesita
+            <br />
+            <span style={{ letterSpacing: "0.14em" }}>para recuperar su mejor versión</span>
+          </h2>
+          <div className="mt-4 flex items-center justify-center gap-2" aria-hidden="true">
+            <span style={{ height: 1, width: 56, background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
+            <span style={{ color: GOLD, fontSize: 10, transform: "rotate(45deg)", display: "inline-block" }}>◇</span>
+            <span style={{ height: 1, width: 56, background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
+          </div>
+        </div>
 
-      <div className="relative z-10 mx-auto max-w-md px-6">
-        <Header eyebrow="" title="Todo lo que tu cabello necesita para crecer más fuerte, abundante y saludable." titleClassName="text-[var(--gold)]" />
-
-        <div className="mt-8 grid grid-cols-1 gap-5">
-          {items.map((p, idx) => (
-            <article key={p.name} className="luxe-card overflow-hidden">
-              <div className="grid grid-cols-[8rem_minmax(0,1fr)] items-center">
-                <div className="bg-[color-mix(in_oklab,var(--beige)_70%,white)]">
+        {/* Cards */}
+        <div className="mt-8 flex flex-col gap-6">
+          {items.map((p) => (
+            <article
+              key={p.step}
+              className="relative overflow-hidden"
+              style={{
+                borderRadius: 18,
+                border: `1px solid ${GOLD}55`,
+                background:
+                  "linear-gradient(160deg, rgba(58,28,86,0.55) 0%, rgba(30,12,52,0.65) 100%)",
+                boxShadow: "0 10px 40px -20px rgba(0,0,0,0.6), inset 0 0 30px rgba(201,162,74,0.05)",
+              }}
+            >
+              <div className="grid grid-cols-[42%_minmax(0,1fr)] items-stretch">
+                {/* Left — product image */}
+                <div className="relative">
                   <img
                     src={p.img}
                     alt={p.name}
-                    width={400}
-                    height={533}
                     loading="lazy"
-                    className="h-full w-full object-cover"
+                    className="block h-full w-full object-cover"
+                    style={{ minHeight: 180 }}
                   />
                 </div>
-                <div className="min-w-0 p-5">
-                  <span
-                    className="inline-flex items-center rounded-full px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em]"
+
+                {/* Vertical gold divider with diamond */}
+                <div className="relative">
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-y-4 left-0"
                     style={{
-                      background:
-                        "linear-gradient(135deg, color-mix(in oklab, var(--gold) 92%, white), color-mix(in oklab, var(--gold) 70%, var(--lavender)))",
-                      color: "#2a1746",
-                      boxShadow:
-                        "0 1px 0 color-mix(in oklab, white 60%, transparent) inset, 0 4px 12px -6px color-mix(in oklab, var(--gold) 60%, transparent)",
+                      width: 1,
+                      background: `linear-gradient(180deg, transparent, ${GOLD}80, transparent)`,
+                    }}
+                  />
+                  <span
+                    aria-hidden="true"
+                    className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                    style={{
+                      color: GOLD,
+                      fontSize: 10,
+                      background: "#1a0a2e",
+                      padding: "0 4px",
+                      display: "inline-block",
+                      transform: "translate(-50%, -50%) rotate(45deg)",
                     }}
                   >
-                    Paso {idx + 1}
+                    ◇
                   </span>
-                  <h3 className="mt-1 text-xl">{p.name}</h3>
-                  <p className="mt-1.5 text-sm font-medium">{p.tagline}</p>
-                  <p className="mt-1 text-sm text-muted-foreground">{p.desc}</p>
+
+                  {/* Right content */}
+                  <div className="flex flex-col items-start gap-3 px-5 py-5">
+                    {/* Icon + Paso */}
+                    <div className="flex items-center gap-3">
+                      <span
+                        className="flex items-center justify-center rounded-full"
+                        style={{
+                          width: 44,
+                          height: 44,
+                          border: `1px solid ${GOLD}80`,
+                          color: GOLD_SOFT,
+                          background:
+                            "radial-gradient(circle at 30% 30%, rgba(244,236,220,0.08), rgba(201,162,74,0.02))",
+                        }}
+                      >
+                        <p.Icon />
+                      </span>
+                      <div className="leading-tight">
+                        <div
+                          style={{
+                            fontFamily: SERIF,
+                            color: GOLD,
+                            fontSize: 11,
+                            letterSpacing: "0.32em",
+                            textTransform: "uppercase",
+                          }}
+                        >
+                          Paso
+                        </div>
+                        <div
+                          style={{
+                            fontFamily: SERIF,
+                            color: GOLD,
+                            fontSize: 30,
+                            fontWeight: 500,
+                            lineHeight: 1,
+                            letterSpacing: "0.04em",
+                          }}
+                        >
+                          {p.step}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Title */}
+                    <h3
+                      style={{
+                        fontFamily: SERIF,
+                        color: GOLD,
+                        fontSize: 18,
+                        fontWeight: 500,
+                        letterSpacing: "0.14em",
+                        lineHeight: 1.15,
+                        marginTop: 4,
+                      }}
+                    >
+                      {p.name}
+                      <br />
+                      <span style={{ color: IVORY, letterSpacing: "0.12em" }}>
+                        {p.tagline[0]}
+                        <br />
+                        {p.tagline[1]}
+                      </span>
+                    </h3>
+
+                    {/* Desc */}
+                    <p
+                      style={{
+                        fontFamily: '"Inter", system-ui, sans-serif',
+                        color: `${IVORY}cc`,
+                        fontSize: 12,
+                        lineHeight: 1.55,
+                        fontWeight: 300,
+                      }}
+                    >
+                      {p.desc}
+                    </p>
+                  </div>
                 </div>
               </div>
             </article>
