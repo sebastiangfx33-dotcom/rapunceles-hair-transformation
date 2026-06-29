@@ -1374,131 +1374,286 @@ function Results() {
 
 
 /* ---------------------------- TESTIMONIALS ---------------------------- */
+const customerPhotos = [
+  "/__l5e/assets-v1/88be4e57-b291-445c-8c38-367b074415ee/customer-photo-1.jpg",
+  "/__l5e/assets-v1/27fccfe9-89b6-48a4-891f-f965f0968395/customer-photo-2.jpg",
+  "/__l5e/assets-v1/8ddb7d15-ec33-4e37-923a-8f1e2eaf4102/customer-photo-3.jpg",
+  "/__l5e/assets-v1/20cbdce7-4327-46d7-ae0a-5daa2741236a/customer-photo-4.jpg",
+];
+
 function Testimonials() {
   const gold = "#D4A85E";
+  const goldSoft = "#E8C98A";
   const ivory = "#F4E9D4";
-  const trust = [
-    { n: "+10K", t: "Mujeres transformadas" },
-    { n: "4.9/5", t: "Calificación promedio" },
-    { n: "Semanas", t: "Resultados visibles" },
-    { n: "100%", t: "Ingredientes naturales" },
+
+  const conversations = [
+    {
+      name: "Valentina M.",
+      avatar: avatarValentinaAsset.url,
+      time: "10:24",
+      messages: [
+        "Hola, me llegó hoy 😍",
+        "Está hermoso el kit, todo súper bien empacado.",
+      ],
+    },
+    {
+      name: "Daniela P.",
+      avatar: avatarDanielaAsset.url,
+      time: "18:47",
+      messages: [
+        "Llevo unas semanas usándolo y siento muchísimo menos caída ❤️",
+      ],
+    },
+    {
+      name: "Camila S.",
+      avatar: avatarCamilaAsset.url,
+      time: "09:12",
+      messages: [
+        "Lo que más me gustó es que siento mi cabello mucho más fuerte cuando me peino ✨",
+      ],
+    },
   ];
+
   return (
     <section
-      className="section-pad relative bg-cover bg-center"
+      className="section-pad relative overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(20,10,30,0.55), rgba(20,10,30,0.55)), url(${testimonialsBgNew.url})`,
+        background:
+          "radial-gradient(120% 80% at 50% 0%, #3d2552 0%, #271638 45%, #1a0f28 100%)",
       }}
     >
-      <div className="mx-auto max-w-md px-6">
-        <Header
-          eyebrow="Lo que dicen nuestras clientas"
-          title="Testimonios reales"
-          titleClassName="!text-[#D4A85E]"
-        />
-
-
+      {/* botanical blurred corners */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-20 -left-20 size-72 rounded-full opacity-25 blur-3xl"
+        style={{ background: "radial-gradient(circle, #b89ad8 0%, transparent 70%)" }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-24 -right-16 size-80 rounded-full opacity-20 blur-3xl"
+        style={{ background: "radial-gradient(circle, #d4a85e 0%, transparent 70%)" }}
+      />
+      {/* gold particles */}
+      <div aria-hidden className="pointer-events-none absolute inset-0">
         {[
-          {
-            avatar: avatarLauraAsset.url,
-            name: "Juliana R.",
-            city: "Cali",
-            quote:
-              "Este kit cambió por completo mi cabello. Menos caída, más crecimiento y se ve saludable de verdad.",
-          },
-          {
-            avatar: avatarValentinaAsset.url,
-            name: "Valentina M.",
-            city: "Medellín",
-            quote:
-              "Llegó perfectamente empacado, todo de lujo. A las pocas semanas mi cabello se sentía mucho más fuerte.",
-          },
-          {
-            avatar: avatarDanielaAsset.url,
-            name: "Daniela P.",
-            city: "Bogotá",
-            quote:
-              "Apenas abrí el kit me encantó la presentación. Hoy mi cabello tiene un brillo que no recordaba.",
-          },
-          {
-            avatar: avatarCamilaAsset.url,
-            name: "Camila S.",
-            city: "Barranquilla",
-            quote:
-              "Recibí mi kit súper rápido y bien protegido. El resultado en mi cabello habla por sí solo.",
-          },
-        ].map((t, idx) => (
-          <article
-            key={idx}
-            className="mt-8 rounded-3xl bg-white p-6"
+          { t: "8%", l: "12%", s: 3 },
+          { t: "22%", l: "82%", s: 2 },
+          { t: "44%", l: "8%", s: 2 },
+          { t: "58%", l: "90%", s: 3 },
+          { t: "72%", l: "18%", s: 2 },
+          { t: "88%", l: "70%", s: 3 },
+          { t: "32%", l: "55%", s: 2 },
+        ].map((p, i) => (
+          <span
+            key={i}
+            className="absolute rounded-full"
             style={{
-              border: `1px solid ${gold}40`,
-              boxShadow: "0 22px 50px -28px rgba(58,36,24,0.28)",
+              top: p.t,
+              left: p.l,
+              width: p.s,
+              height: p.s,
+              background: goldSoft,
+              boxShadow: `0 0 ${p.s * 4}px ${goldSoft}`,
+              opacity: 0.7,
             }}
-          >
-            <div className="flex items-center gap-3">
-              <img
-                src={t.avatar}
-                alt={t.name}
-                width={56}
-                height={56}
-                loading="lazy"
-                className="size-12 rounded-full object-cover"
-                style={{ border: `1.5px solid ${gold}` }}
-              />
-              <div className="flex flex-col">
-                <span className="font-display text-[1.05rem]" style={{ color: "#3A2418" }}>
-                  {t.name}
-                </span>
-                <span
-                  className="text-[0.72rem] uppercase tracking-[0.18em]"
-                  style={{ color: "#8A6F58" }}
-                >
-                  {t.city}
-                </span>
-                <span className="mt-1 flex items-center gap-1" style={{ color: gold }}>
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="size-[13px] fill-current" strokeWidth={0} />
-                  ))}
-                </span>
-              </div>
-            </div>
+          />
+        ))}
+      </div>
+      {/* gold light streak */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-1/3 h-px opacity-30"
+        style={{
+          background: `linear-gradient(90deg, transparent, ${gold}, transparent)`,
+        }}
+      />
 
-            {/* Espacio para foto del kit recibido por la clienta */}
+      <div className="relative mx-auto max-w-md px-6">
+        {/* HEADER */}
+        <div className="text-center">
+          <span
+            className="block text-[0.65rem] uppercase tracking-[0.4em]"
+            style={{ color: gold }}
+          >
+            · Comunidad Rapunceles ·
+          </span>
+          <h2
+            className="mt-5 font-display text-[1.95rem] leading-[1.15]"
+            style={{ color: gold, letterSpacing: "0.01em" }}
+          >
+            Miles de mujeres
+            <br />
+            <span style={{ color: goldSoft, fontStyle: "italic" }}>
+              ya están empezando
+            </span>
+            <br />
+            su transformación
+          </h2>
+          <div
+            className="mx-auto mt-5 h-px w-16"
+            style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
+          />
+          <p
+            className="mx-auto mt-5 max-w-sm text-[0.92rem] leading-relaxed"
+            style={{ color: ivory, opacity: 0.85 }}
+          >
+            Cada semana más mujeres deciden darle a su cabello el cuidado que realmente
+            necesita.
+          </p>
+        </div>
+
+        {/* SECTION 1 — CUSTOMER COLLAGE */}
+        <div className="mt-12 grid grid-cols-2 gap-3">
+          {customerPhotos.map((src, i) => (
             <div
-              className="mt-5 grid aspect-[4/3] w-full place-items-center overflow-hidden rounded-2xl"
+              key={i}
+              className={`relative overflow-hidden rounded-2xl ${
+                i === 0 ? "row-span-2 aspect-[3/5]" : "aspect-[4/5]"
+              }`}
               style={{
-                border: `1.5px dashed ${gold}80`,
-                background: `linear-gradient(135deg, ${ivory}55, #ffffff)`,
+                border: `1px solid ${gold}55`,
+                boxShadow: `0 20px 50px -20px rgba(0,0,0,0.6), 0 0 25px -8px ${gold}30`,
               }}
             >
-              <div className="px-4 text-center">
-                <span
-                  className="block text-[0.7rem] uppercase tracking-[0.22em]"
-                  style={{ color: gold }}
-                >
-                  Foto del kit recibido
+              <img
+                src={src}
+                alt={`Clienta Rapunceles ${i + 1}`}
+                loading="lazy"
+                width={768}
+                height={1024}
+                className="size-full object-cover"
+              />
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(180deg, transparent 55%, rgba(26,15,40,0.55) 100%)",
+                }}
+              />
+            </div>
+          ))}
+        </div>
+        <p
+          className="mt-4 text-center text-[0.7rem] uppercase tracking-[0.3em]"
+          style={{ color: gold, opacity: 0.75 }}
+        >
+          Clientas reales · Colombia
+        </p>
+
+        {/* SECTION 2 — WHATSAPP CONVERSATIONS */}
+        <div className="mt-14 text-center">
+          <span
+            className="block text-[0.65rem] uppercase tracking-[0.4em]"
+            style={{ color: gold }}
+          >
+            · Conversaciones reales ·
+          </span>
+          <h3
+            className="mt-3 font-display text-[1.5rem]"
+            style={{ color: ivory }}
+          >
+            Lo que nos escriben
+          </h3>
+        </div>
+
+        <div className="mt-8 flex flex-col gap-5">
+          {conversations.map((c, i) => (
+            <div
+              key={i}
+              className="relative rounded-3xl p-4 backdrop-blur-xl"
+              style={{
+                background:
+                  "linear-gradient(160deg, rgba(74,53,99,0.55) 0%, rgba(40,24,60,0.55) 100%)",
+                border: `1px solid ${gold}40`,
+                boxShadow: `0 20px 50px -25px rgba(0,0,0,0.7), inset 0 1px 0 ${gold}25`,
+              }}
+            >
+              {/* header */}
+              <div className="flex items-center gap-3 border-b pb-3" style={{ borderColor: `${gold}25` }}>
+                <img
+                  src={c.avatar}
+                  alt={c.name}
+                  width={40}
+                  height={40}
+                  loading="lazy"
+                  className="size-10 rounded-full object-cover"
+                  style={{ border: `1.5px solid ${gold}` }}
+                />
+                <div className="flex flex-1 flex-col">
+                  <span
+                    className="text-[0.9rem] font-medium"
+                    style={{ color: ivory }}
+                  >
+                    {c.name}
+                  </span>
+                  <span className="text-[0.65rem]" style={{ color: ivory, opacity: 0.55 }}>
+                    en línea
+                  </span>
+                </div>
+                <span className="text-[0.65rem]" style={{ color: gold, opacity: 0.7 }}>
+                  {c.time}
                 </span>
+              </div>
+
+              {/* messages */}
+              <div className="mt-4 flex flex-col gap-2">
+                {c.messages.map((m, mi) => (
+                  <div
+                    key={mi}
+                    className="max-w-[88%] self-start rounded-2xl rounded-bl-sm px-4 py-2.5"
+                    style={{
+                      background: "rgba(255,250,240,0.92)",
+                      color: "#2a1838",
+                      fontSize: "0.88rem",
+                      lineHeight: 1.45,
+                      boxShadow: "0 4px 12px -4px rgba(0,0,0,0.3)",
+                    }}
+                  >
+                    {m}
+                  </div>
+                ))}
                 <span
-                  className="mt-1 block text-[0.78rem] italic"
-                  style={{ color: "#8A6F58" }}
+                  className="mt-1 self-start text-[0.6rem]"
+                  style={{ color: ivory, opacity: 0.45 }}
                 >
-                  (sube aquí la foto de la clienta)
+                  {c.time} ✓✓
                 </span>
               </div>
             </div>
+          ))}
+        </div>
 
-            <p
-              className="mt-5 text-[0.98rem] leading-relaxed italic"
-              style={{ color: "#4A3528" }}
-            >
-              “{t.quote}”
-            </p>
-          </article>
-        ))}
-
-
-
+        {/* SECTION 3 — TRUST COUNTER */}
+        <div className="mt-16 text-center">
+          <div
+            className="mx-auto h-px w-24"
+            style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
+          />
+          <h3
+            className="mt-7 font-display text-[2.1rem] leading-[1.1]"
+            style={{ color: gold }}
+          >
+            +1.500 mujeres
+          </h3>
+          <p
+            className="mt-2 font-display text-[1.1rem] italic"
+            style={{ color: goldSoft, opacity: 0.95 }}
+          >
+            ya han confiado en Rapunceles
+          </p>
+          <div
+            className="mx-auto mt-6 h-px w-24"
+            style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
+          />
+          <p
+            className="mx-auto mt-6 max-w-xs text-[0.85rem] leading-relaxed"
+            style={{ color: ivory, opacity: 0.7 }}
+          >
+            Miles de mujeres ya están iniciando su proceso de recuperación capilar en toda
+            Colombia.
+          </p>
+        </div>
       </div>
     </section>
   );
