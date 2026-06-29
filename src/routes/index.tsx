@@ -1920,10 +1920,10 @@ function TrustBenefits() {
           {benefits.map(({ icon: Icon, text }) => (
             <div
               key={text}
-              className="flex flex-col items-center justify-start gap-1.5 rounded-xl bg-white px-1 py-2.5 text-center"
+              className="flex flex-col items-center justify-start gap-1.5 rounded-xl px-1 py-2.5 text-center backdrop-blur-sm"
               style={{
+                background: "rgba(255,255,255,0.08)",
                 border: `1px solid ${gold}55`,
-                boxShadow: "0 18px 40px -28px rgba(58,36,24,0.25)",
               }}
             >
               <div
