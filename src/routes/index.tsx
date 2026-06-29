@@ -139,7 +139,7 @@ function Hero() {
   const PURPLE_DEEP = "#1A0A2E";
 
   const heroScene = {
-    url: "/__l5e/assets-v1/ff0064b0-9985-4d60-b4be-427469384a2e/hero-scene-v3.jpg",
+    url: "/__l5e/assets-v1/807515e2-1ece-4d20-9b18-d9a0200128c9/hero-scene-new.png",
   };
 
 
