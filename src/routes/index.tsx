@@ -698,11 +698,9 @@ function ProductRoutineSection() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Más que una rutina,
+            Tu cabello ya te mostró las señales…
             <br />
-            una transformación completa
-            <br />
-            para tu cabello
+            ahora dale lo que necesita”
           </h2>
         </div>
 
