@@ -1375,6 +1375,7 @@ function Results() {
 /* ---------------------------- TESTIMONIALS ---------------------------- */
 function Testimonials() {
   const gold = "#D4A85E";
+  const ivory = "#F4E9D4";
   const trust = [
     { n: "+10K", t: "Mujeres transformadas" },
     { n: "4.9/5", t: "Calificación promedio" },
@@ -1396,55 +1397,105 @@ function Testimonials() {
         />
 
 
-        <article
-          className="mt-8 rounded-3xl bg-white p-6"
-          style={{
-            border: `1px solid ${gold}40`,
-            boxShadow: "0 22px 50px -28px rgba(58,36,24,0.28)",
-          }}
-        >
-          <div className="flex items-center gap-3">
-            <img
-              src={avatarDanielaAsset.url}
-              alt="Juliana R."
-              width={56}
-              height={56}
-              loading="lazy"
-              className="size-12 rounded-full object-cover"
-              style={{ border: `1.5px solid ${gold}` }}
-            />
-            <div className="flex flex-col">
-              <span className="font-display text-[1.05rem]" style={{ color: "#3A2418" }}>
-                Juliana R.
-              </span>
-              <span className="mt-0.5 flex items-center gap-1" style={{ color: gold }}>
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="size-[13px] fill-current" strokeWidth={0} />
-                ))}
-              </span>
-            </div>
-          </div>
-          <p
-            className="mt-5 text-[0.98rem] leading-relaxed italic"
-            style={{ color: "#4A3528" }}
+        {[
+          {
+            avatar: avatarLauraAsset.url,
+            name: "Juliana R.",
+            city: "Cali",
+            quote:
+              "Este kit cambió por completo mi cabello. Menos caída, más crecimiento y se ve saludable de verdad.",
+          },
+          {
+            avatar: avatarValentinaAsset.url,
+            name: "Valentina M.",
+            city: "Medellín",
+            quote:
+              "Llegó perfectamente empacado, todo de lujo. A las pocas semanas mi cabello se sentía mucho más fuerte.",
+          },
+          {
+            avatar: avatarDanielaAsset.url,
+            name: "Daniela P.",
+            city: "Bogotá",
+            quote:
+              "Apenas abrí el kit me encantó la presentación. Hoy mi cabello tiene un brillo que no recordaba.",
+          },
+          {
+            avatar: avatarCamilaAsset.url,
+            name: "Camila S.",
+            city: "Barranquilla",
+            quote:
+              "Recibí mi kit súper rápido y bien protegido. El resultado en mi cabello habla por sí solo.",
+          },
+        ].map((t, idx) => (
+          <article
+            key={idx}
+            className="mt-8 rounded-3xl bg-white p-6"
+            style={{
+              border: `1px solid ${gold}40`,
+              boxShadow: "0 22px 50px -28px rgba(58,36,24,0.28)",
+            }}
           >
-            “Este kit cambió por completo mi cabello. Menos caída, más crecimiento y se ve saludable de verdad.”
-          </p>
-        </article>
+            <div className="flex items-center gap-3">
+              <img
+                src={t.avatar}
+                alt={t.name}
+                width={56}
+                height={56}
+                loading="lazy"
+                className="size-12 rounded-full object-cover"
+                style={{ border: `1.5px solid ${gold}` }}
+              />
+              <div className="flex flex-col">
+                <span className="font-display text-[1.05rem]" style={{ color: "#3A2418" }}>
+                  {t.name}
+                </span>
+                <span
+                  className="text-[0.72rem] uppercase tracking-[0.18em]"
+                  style={{ color: "#8A6F58" }}
+                >
+                  {t.city}
+                </span>
+                <span className="mt-1 flex items-center gap-1" style={{ color: gold }}>
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="size-[13px] fill-current" strokeWidth={0} />
+                  ))}
+                </span>
+              </div>
+            </div>
 
-        <div className="mt-5 flex items-center justify-center gap-2">
-          {[0, 1, 2].map((i) => (
-            <span
-              key={i}
-              className="block rounded-full transition-all"
+            {/* Espacio para foto del kit recibido por la clienta */}
+            <div
+              className="mt-5 grid aspect-[4/3] w-full place-items-center overflow-hidden rounded-2xl"
               style={{
-                width: i === 0 ? 18 : 6,
-                height: 6,
-                background: i === 0 ? gold : `${gold}55`,
+                border: `1.5px dashed ${gold}80`,
+                background: `linear-gradient(135deg, ${ivory}55, #ffffff)`,
               }}
-            />
-          ))}
-        </div>
+            >
+              <div className="px-4 text-center">
+                <span
+                  className="block text-[0.7rem] uppercase tracking-[0.22em]"
+                  style={{ color: gold }}
+                >
+                  Foto del kit recibido
+                </span>
+                <span
+                  className="mt-1 block text-[0.78rem] italic"
+                  style={{ color: "#8A6F58" }}
+                >
+                  (sube aquí la foto de la clienta)
+                </span>
+              </div>
+            </div>
+
+            <p
+              className="mt-5 text-[0.98rem] leading-relaxed italic"
+              style={{ color: "#4A3528" }}
+            >
+              “{t.quote}”
+            </p>
+          </article>
+        ))}
+
 
 
       </div>
