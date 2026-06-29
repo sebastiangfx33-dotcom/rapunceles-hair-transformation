@@ -1192,25 +1192,27 @@ function Results() {
                 </div>
               </div>
               <div className="px-6 pt-6 pb-7 text-center">
-                <div
-                  className="mx-auto mb-3 flex size-16 items-center justify-center overflow-hidden rounded-full"
-                  style={{
-                    border: `2px solid ${gold}`,
-                    background: "rgba(255,255,255,0.06)",
-                  }}
-                  aria-label={`Foto de perfil de ${r.name}`}
-                >
-                  {/* Espacio para foto de perfil */}
-                  <span className="font-display text-lg" style={{ color: gold }}>
-                    {r.name.charAt(0)}
-                  </span>
+                <div className="flex items-center justify-center gap-2.5">
+                  <div
+                    className="flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-full"
+                    style={{
+                      border: `1.5px solid ${gold}`,
+                      background: "rgba(255,255,255,0.06)",
+                    }}
+                    aria-label={`Foto de perfil de ${r.name}`}
+                  >
+                    {/* Espacio para foto de perfil */}
+                    <span className="font-display text-xs" style={{ color: gold }}>
+                      {r.name.charAt(0)}
+                    </span>
+                  </div>
+                  <p
+                    className="font-display text-[1.35rem] leading-none tracking-[0.02em]"
+                    style={{ fontWeight: 400, color: gold }}
+                  >
+                    {r.name}
+                  </p>
                 </div>
-                <p
-                  className="font-display text-[1.35rem] leading-none tracking-[0.02em]"
-                  style={{ fontWeight: 400, color: gold }}
-                >
-                  {r.name}
-                </p>
                 <div className="mx-auto mt-3 h-px w-8" style={{ background: gold }} />
                 <div className="mt-4 flex items-center justify-center gap-1.5" style={{ color: gold }}>
                   {Array.from({ length: 5 }).map((_, i) => (
