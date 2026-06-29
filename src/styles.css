@@ -225,15 +225,8 @@
   offset-path: rect(0 100% 100% 0 round 12px);
   offset-distance: 0%;
   offset-rotate: 0deg;
-  animation: border-trace 7s linear infinite;
+  animation: border-trace 4s linear infinite;
 }
-@utility animate-border-trace-slow {
-  offset-path: rect(0 100% 100% 0 round 12px);
-  offset-distance: 0%;
-  offset-rotate: 0deg;
-  animation: border-trace 7s linear infinite;
-}
-
 
 
 

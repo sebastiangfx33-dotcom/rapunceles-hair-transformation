@@ -347,25 +347,13 @@ function Hero() {
                 }}
               >
                 <span aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-xl overflow-hidden">
-                  {[0, -0.5, -1.0, -1.5, -2.0].map((delay, di) => (
-                    <span
-                      key={di}
-                      className="block rounded-full animate-border-trace"
-                      style={{
-                        width: di === 0 ? "7px" : `${6 - di}px`,
-                        height: di === 0 ? "7px" : `${6 - di}px`,
-                        background: di === 0
-                          ? "radial-gradient(circle, #FBE9B8 0%, #D4A85E 55%, rgba(212,168,94,0) 100%)"
-                          : "#D4A85E",
-                        opacity: di === 0 ? 1 : 0.55 - di * 0.1,
-                        filter: di === 0 ? "blur(0.4px)" : "blur(1.2px)",
-                        boxShadow: di === 0
-                          ? "0 0 8px rgba(251,233,184,0.95), 0 0 18px rgba(212,168,94,0.75), 0 0 32px rgba(212,168,94,0.4)"
-                          : "0 0 6px rgba(212,168,94,0.5)",
-                        animationDelay: `${delay}s`,
-                      }}
-                    />
-                  ))}
+                  <span
+                    className="block h-1.5 w-1.5 rounded-full animate-border-trace"
+                    style={{
+                      background: "#F4DEA5",
+                      boxShadow: "0 0 6px rgba(244,222,165,0.95), 0 0 12px rgba(212,168,94,0.7)",
+                    }}
+                  />
                 </span>
                 <div className="flex flex-col items-center">
                   <span
