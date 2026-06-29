@@ -676,7 +676,7 @@ function ProductRoutineSection() {
       className="w-full relative overflow-hidden"
       style={{
         backgroundImage: `url(/__l5e/assets-v1/99d0848f-96a4-444d-bac5-af8299629d69/formula-trio.png)`,
-        backgroundSize: "cover",
+        backgroundSize: "contain",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundColor: "#1a0a2e",
