@@ -478,7 +478,7 @@ function AfterBanner() {
             color: IVORY,
           }}
         >
-          Si tu cabello está pasando por esto… necesita actuar ahora
+          Tu cabello te está enviando señales… y no deberías ignorarlas
         </h2>
 
         {/* Subtitle */}
