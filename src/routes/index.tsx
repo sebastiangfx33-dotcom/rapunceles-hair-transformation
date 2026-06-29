@@ -434,11 +434,6 @@ function AfterBanner() {
       desc: "Tu cabello tarda demasiado en crecer o parece detenido.",
     },
     {
-      img: probRootsAsset.url,
-      title: "Raíces debilitadas",
-      desc: "Cuando la raíz pierde fuerza, el cabello comienza a caer.",
-    },
-    {
       img: probVolumeAsset.url,
       title: "Pérdida de abundancia",
       desc: "Tu cabello pierde volumen, densidad y vitalidad natural.",
