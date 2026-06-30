@@ -409,7 +409,7 @@ function AfterBanner() {
       />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center px-5 py-16 md:py-20">
+      <div className="relative z-10 flex flex-col items-center px-5 pt-8 pb-16 md:pt-10 md:pb-20">
         {/* Crown icon */}
         <Crown
           aria-hidden="true"
