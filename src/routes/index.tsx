@@ -2205,103 +2205,168 @@ function Urgency() {
       <span style={{ width: 28, height: 1, background: `linear-gradient(90deg, ${gold}, transparent)` }} />
     </div>
   );
+  const trust = [
+    { Icon: Truck, title: "ENVÍO GRATIS", sub: "a toda Colombia" },
+    { Icon: HeartHandshake, title: "PAGO CONTRA ENTREGA", sub: "Paga cuando recibas tu pedido" },
+    { Icon: ShieldCheck, title: "COMPRA 100% SEGURA", sub: "Protegemos tu información" },
+  ];
   return (
     <section
       className="relative w-full overflow-hidden"
       style={{
         backgroundColor: "#2A0E3A",
-        backgroundImage: `linear-gradient(180deg, rgba(30,8,45,0.55) 0%, rgba(30,8,45,0.25) 40%, rgba(30,8,45,0.85) 100%), url(${urgencyBgUrl})`,
+        backgroundImage: `linear-gradient(180deg, rgba(30,8,45,0.55) 0%, rgba(30,8,45,0.25) 40%, rgba(30,8,45,0.95) 100%), url(${urgencyBgUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="relative mx-auto max-w-md px-6 pt-0 pb-10 text-center">
-        <Ornament />
-        <h2
-          className="mt-1 text-[2rem] leading-[1.05] uppercase"
-          style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A85E", letterSpacing: "0.02em" }}
-        >
-          Producción
-          <br />
-          exclusiva
-          <br />
-          esta semana
-        </h2>
+      {/* light streaks */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-10 left-1/2 h-[260px] w-[420px] -translate-x-1/2"
+        style={{
+          background:
+            "radial-gradient(ellipse at top, rgba(244,222,165,0.28), rgba(244,222,165,0) 70%)",
+          filter: "blur(6px)",
+        }}
+      />
 
-        <p
-          className="mx-auto mt-5 max-w-[18rem] text-[0.85rem] leading-[1.6]"
-          style={{ color: "#E8DCC8", opacity: 0.85 }}
-        >
-          Cada kit Rapunceles es elaborado en pequeños lotes cuidadosamente
-          formulados para garantizar máxima calidad en cada fórmula.
-        </p>
-
-
-        <div className="mt-8">
+      <div className="relative mx-auto max-w-md px-6 pt-6 pb-12 text-center">
+        {/* Product kit with halo */}
+        <div className="relative mx-auto flex items-center justify-center" style={{ height: 280 }}>
           <div
-            className="text-[0.7rem] uppercase"
-            style={{ color: gold, letterSpacing: "0.4em" }}
-          >
-            Disponibles esta semana
-          </div>
-          <div className="mt-3 flex items-baseline justify-center gap-3">
-            <span
-              className="font-display leading-none"
-              style={{ color: "#F6E9CF", fontSize: "4.2rem" }}
-            >
-              21
-            </span>
-            <span
-              className="font-display"
-              style={{ color: gold, fontSize: "1.5rem", letterSpacing: "0.1em" }}
-            >
-              KITS
-            </span>
-          </div>
-
-          <div
-            className="relative mx-auto mt-5 h-[8px] w-[80%] rounded-full overflow-hidden"
-            style={{ background: "rgba(255,255,255,0.08)", border: `1px solid ${gold}33` }}
-          >
-            <div
-              className="animate-progress-glow h-full rounded-full"
-              style={{
-                width: `${filled}%`,
-                background: `linear-gradient(90deg, ${goldDeep}, ${gold}, ${goldDeep})`,
-              }}
-            />
-            <div
-              aria-hidden="true"
-              className="animate-progress-shine pointer-events-none absolute inset-y-0 left-0 w-1/3"
-              style={{
-                background:
-                  "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.55) 50%, transparent 100%)",
-                mixBlendMode: "screen",
-              }}
-            />
-          </div>
-
-          <p
-            className="mt-4 text-[0.82rem] italic"
-            style={{ color: "#E8DCC8" }}
-          >
-            78% reservado esta semana
-          </p>
-          <p
-            className="mx-auto mt-3 max-w-[20rem] text-[0.82rem] leading-[1.6]"
-            style={{ color: "#D8C9B4", opacity: 0.85 }}
-          >
-            Cuando este lote se agote, cerraremos pedidos temporalmente hasta
-            nuestra próxima producción.
-          </p>
+            aria-hidden="true"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
+            style={{
+              width: 230,
+              height: 230,
+              border: `1px solid ${gold}`,
+              boxShadow: `0 0 28px ${gold}55, inset 0 0 32px ${gold}33`,
+            }}
+          />
+          <img
+            src={heroKitNew.url}
+            alt="Kit Rapunceles: shampoo, acondicionador y tónico"
+            className="relative z-10 h-full w-auto object-contain"
+            style={{ filter: "drop-shadow(0 18px 30px rgba(0,0,0,0.55))" }}
+            loading="lazy"
+          />
         </div>
 
+        {/* Headline */}
+        <h2
+          className="mt-4 text-[1.45rem] leading-[1.15] uppercase"
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            color: "#F4ECDC",
+            letterSpacing: "0.04em",
+            fontWeight: 400,
+          }}
+        >
+          Tu transformación
+          <br />
+          empieza con la
+        </h2>
+        <h3
+          className="mt-2 text-[2.05rem] leading-[1.05] uppercase"
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            color: gold,
+            letterSpacing: "0.02em",
+            fontWeight: 500,
+          }}
+        >
+          Decisión que
+          <br />
+          tomes hoy
+        </h3>
 
+        <div className="mt-5">
+          <Ornament />
+        </div>
+
+        <p
+          className="mx-auto mt-5 max-w-[20rem] text-[0.92rem] leading-[1.6]"
+          style={{ color: "#E8DCC8", fontFamily: "'Cormorant Garamond', serif" }}
+        >
+          Miles de mujeres ya comenzaron a recuperar la fuerza, el crecimiento
+          y la belleza natural de su cabello.
+        </p>
+        <p
+          className="mt-3 text-[0.95rem]"
+          style={{ color: gold, fontWeight: 500, letterSpacing: "0.02em" }}
+        >
+          Hoy puede ser tu momento.
+        </p>
+
+        {/* Trust badges */}
+        <div className="mt-7 space-y-3">
+          {trust.map(({ Icon, title, sub }, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-4 rounded-2xl px-4 py-3 text-left"
+              style={{
+                background: "rgba(20,8,35,0.55)",
+                border: `1px solid ${gold}40`,
+                backdropFilter: "blur(6px)",
+              }}
+            >
+              <span
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
+                style={{
+                  border: `1px solid ${gold}80`,
+                  background:
+                    "radial-gradient(circle at 30% 30%, rgba(244,236,220,0.12), rgba(212,168,94,0.04))",
+                }}
+              >
+                <Icon size={18} strokeWidth={1.25} style={{ color: gold }} />
+              </span>
+              <div className="min-w-0">
+                <div
+                  className="text-[0.8rem] uppercase"
+                  style={{ color: "#F4ECDC", letterSpacing: "0.14em", fontWeight: 500 }}
+                >
+                  {title}
+                </div>
+                <div className="mt-0.5 text-[0.78rem]" style={{ color: "#D8C9B4" }}>
+                  {sub}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Gold CTA */}
+        <a
+          href="#kit"
+          className="mt-8 flex w-full items-center justify-between rounded-full px-7 py-5 text-left"
+          style={{
+            background: `linear-gradient(180deg, #F1D58A 0%, ${gold} 50%, ${goldDeep} 100%)`,
+            color: "#2A0E3A",
+            boxShadow:
+              `0 12px 28px -10px ${goldDeep}, inset 0 1px 0 rgba(255,255,255,0.55), inset 0 -2px 0 rgba(0,0,0,0.18)`,
+            border: `1px solid ${goldDeep}`,
+            fontFamily: "'Cormorant Garamond', serif",
+            letterSpacing: "0.08em",
+          }}
+        >
+          <span className="text-[1rem] uppercase leading-[1.15]" style={{ fontWeight: 600 }}>
+            Quiero empezar
+            <br />
+            mi transformación
+          </span>
+          <ArrowRight size={20} strokeWidth={2} />
+        </a>
+
+        <div className="mt-6">
+          <Ornament />
+        </div>
       </div>
     </section>
   );
 }
+
 
 
 function FinalCTA() {
