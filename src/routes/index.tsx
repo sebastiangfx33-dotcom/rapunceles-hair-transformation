@@ -2270,7 +2270,7 @@ function Urgency() {
       <div className="relative mx-auto max-w-md px-3 pt-6 pb-10">
 
         {/* Split-screen luxury layout */}
-        <div className="grid grid-cols-2 gap-2.5">
+        <div className="grid grid-cols-[40%_minmax(0,1fr)] gap-3">
 
           {/* ============== LEFT: empty luxury showcase ============== */}
           <div className="relative flex flex-col items-center">
