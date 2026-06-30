@@ -2376,12 +2376,12 @@ function Urgency() {
 
         {/* Price block */}
         <div
-          className="relative mt-5 overflow-hidden rounded-2xl px-4 py-3.5 backdrop-blur-md"
+          className="relative mt-4 overflow-hidden rounded-xl px-3 py-2.5 backdrop-blur-md"
           style={{
             background:
               "linear-gradient(180deg, rgba(20,8,35,0.55), rgba(28,12,45,0.65))",
             border: `1px solid ${gold}66`,
-            boxShadow: `0 0 22px ${gold}26, inset 0 0 24px rgba(244,222,165,0.07)`,
+            boxShadow: `0 0 18px ${gold}22, inset 0 0 20px rgba(244,222,165,0.06)`,
           }}
         >
           <span
@@ -2389,16 +2389,16 @@ function Urgency() {
             className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 animate-shine-sweep"
             style={{ background: "linear-gradient(90deg, transparent, rgba(244,222,165,0.18), transparent)" }}
           />
-          <div className="flex items-center justify-between gap-4">
+          <div className="flex items-center justify-between gap-3">
             <div className="flex flex-col items-center flex-1">
               <span
-                className="text-[0.6rem] uppercase"
+                className="text-[0.52rem] uppercase"
                 style={{ color: "#E8DCC8", letterSpacing: "0.22em", fontWeight: 500 }}
               >
                 Valor regular
               </span>
               <span
-                className="mt-1 text-[1.1rem] line-through"
+                className="mt-0.5 text-[0.9rem] line-through"
                 style={{
                   color: "#9A8AA8",
                   fontFamily: "'Cormorant Garamond', serif",
@@ -2408,16 +2408,16 @@ function Urgency() {
                 $200.000
               </span>
             </div>
-            <span aria-hidden className="h-12 w-px" style={{ background: `linear-gradient(180deg, transparent, ${gold}80, transparent)` }} />
+            <span aria-hidden className="h-9 w-px" style={{ background: `linear-gradient(180deg, transparent, ${gold}80, transparent)` }} />
             <div className="flex flex-col items-center flex-1">
               <span
-                className="text-[0.6rem] uppercase"
+                className="text-[0.52rem] uppercase"
                 style={{ color: gold, letterSpacing: "0.22em", fontWeight: 600 }}
               >
                 Hoy
               </span>
               <span
-                className="mt-1 text-[1.65rem] leading-none"
+                className="mt-0.5 text-[1.3rem] leading-none"
                 style={{
                   color: gold,
                   fontFamily: "'Cormorant Garamond', serif",
@@ -2431,16 +2431,16 @@ function Urgency() {
 
           {/* limited time pill */}
           <div
-            className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full px-3 py-2"
+            className="mt-3 inline-flex w-full items-center justify-center gap-1.5 rounded-full px-2.5 py-1.5"
             style={{
               background: "rgba(40,18,60,0.75)",
               border: `1px solid ${gold}66`,
               boxShadow: `0 0 12px ${gold}33`,
             }}
           >
-            <Clock size={13} strokeWidth={1.75} style={{ color: gold }} />
+            <Clock size={11} strokeWidth={1.75} style={{ color: gold }} />
             <span
-              className="text-[0.7rem] uppercase"
+              className="text-[0.58rem] uppercase"
               style={{ color: "#F4ECDC", letterSpacing: "0.18em", fontWeight: 600 }}
             >
               Acceso especial por tiempo limitado
@@ -2450,12 +2450,12 @@ function Urgency() {
 
         {/* Producción limitada card */}
         <div
-          className="relative mt-3 overflow-hidden rounded-2xl px-3 py-3 text-left backdrop-blur-md"
+          className="relative mt-2.5 overflow-hidden rounded-xl px-2.5 py-2.5 text-left backdrop-blur-md"
           style={{
             background:
               "linear-gradient(180deg, rgba(20,8,35,0.55), rgba(28,12,45,0.65))",
             border: `1px solid ${gold}66`,
-            boxShadow: `0 0 18px ${gold}22, inset 0 0 20px rgba(244,222,165,0.06)`,
+            boxShadow: `0 0 14px ${gold}1f, inset 0 0 16px rgba(244,222,165,0.05)`,
           }}
         >
           <span
@@ -2466,22 +2466,22 @@ function Urgency() {
               animationDelay: "1.2s",
             }}
           />
-          <div className="flex items-start gap-3">
+          <div className="flex items-start gap-2">
             <div
-              className="flex size-9 shrink-0 items-center justify-center rounded-full"
+              className="flex size-7 shrink-0 items-center justify-center rounded-full"
               style={{ border: `1px solid ${gold}88`, background: "rgba(40,18,60,0.6)" }}
             >
-              <Leaf size={16} strokeWidth={1.5} style={{ color: gold }} />
+              <Leaf size={12} strokeWidth={1.5} style={{ color: gold }} />
             </div>
             <div className="flex-1">
               <p
-                className="text-[0.68rem] uppercase"
+                className="text-[0.58rem] uppercase"
                 style={{ color: gold, letterSpacing: "0.16em", fontWeight: 600 }}
               >
                 Producción limitada
               </p>
               <p
-                className="mt-1 text-[0.65rem] leading-[1.45]"
+                className="mt-0.5 text-[0.55rem] leading-[1.4]"
                 style={{ color: "#E8DCC8" }}
               >
                 Cada lote es elaborado en pequeñas cantidades utilizando
@@ -2490,14 +2490,14 @@ function Urgency() {
               </p>
             </div>
             <div
-              className="flex shrink-0 flex-col items-center justify-center rounded-full px-2 py-2 text-center"
+              className="flex shrink-0 flex-col items-center justify-center rounded-full px-1.5 py-1.5 text-center"
               style={{
                 border: `1px solid ${gold}88`,
                 background: "rgba(40,18,60,0.6)",
-                minWidth: 64,
+                minWidth: 52,
               }}
             >
-              <span className="text-[0.5rem] uppercase leading-tight" style={{ color: gold, letterSpacing: "0.12em", fontWeight: 700 }}>
+              <span className="text-[0.42rem] uppercase leading-tight" style={{ color: gold, letterSpacing: "0.1em", fontWeight: 700 }}>
                 Solo<br/>unidades<br/>disponibles<br/>esta semana
               </span>
             </div>
@@ -2506,31 +2506,31 @@ function Urgency() {
 
         {/* Trust badges — 3 columns */}
         <div
-          className="mt-3 rounded-2xl px-2.5 py-3"
+          className="mt-2.5 rounded-xl px-2 py-2.5"
           style={{
             background:
               "linear-gradient(180deg, rgba(20,8,35,0.78), rgba(28,12,45,0.85))",
             border: `1px solid ${gold}55`,
-            boxShadow: `0 0 18px ${gold}22, inset 0 0 20px rgba(244,222,165,0.06)`,
+            boxShadow: `0 0 14px ${gold}1f, inset 0 0 16px rgba(244,222,165,0.05)`,
           }}
         >
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-3 gap-1.5">
             {trust.map(({ Icon, title, sub }, i) => (
-              <div key={i} className="flex flex-col items-center text-center px-1">
+              <div key={i} className="flex flex-col items-center text-center px-0.5">
                 <div
-                  className="flex size-9 items-center justify-center rounded-full"
+                  className="flex size-7 items-center justify-center rounded-full"
                   style={{ border: `1px solid ${gold}88`, background: "rgba(40,18,60,0.6)" }}
                 >
-                  <Icon size={15} strokeWidth={1.5} style={{ color: gold }} />
+                  <Icon size={12} strokeWidth={1.5} style={{ color: gold }} />
                 </div>
                 <p
-                  className="mt-2 text-[0.62rem] uppercase leading-tight"
-                  style={{ color: "#F4ECDC", letterSpacing: "0.1em", fontWeight: 700 }}
+                  className="mt-1.5 text-[0.52rem] uppercase leading-tight"
+                  style={{ color: "#F4ECDC", letterSpacing: "0.08em", fontWeight: 700 }}
                 >
                   {title}
                 </p>
                 <p
-                  className="mt-1 text-[0.58rem] leading-[1.35]"
+                  className="mt-0.5 text-[0.48rem] leading-[1.3]"
                   style={{ color: "#C9B8D4" }}
                 >
                   {sub}
@@ -2539,6 +2539,7 @@ function Urgency() {
             ))}
           </div>
         </div>
+
 
         {/* Gold CTA */}
         <a
