@@ -2506,7 +2506,7 @@ function Urgency() {
 
         {/* Trust badges — 3 columns */}
         <div
-          className="mt-4 rounded-2xl px-3 py-4"
+          className="mt-3 rounded-2xl px-2.5 py-3"
           style={{
             background:
               "linear-gradient(180deg, rgba(20,8,35,0.78), rgba(28,12,45,0.85))",
