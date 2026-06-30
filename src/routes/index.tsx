@@ -47,7 +47,7 @@ const routineBgV3 = { url: routineBgV11Asset.url };
 const routineSectionBg = { url: "/routine-section-bg.jpg" };
 import optionsBgAsset from "@/assets/options-bg.png.asset.json";
 const kitBgAsset = optionsBgAsset;
-const urgencyBgAsset = { url: "/urgency-bg-v4.png" };
+import urgencyBgAsset from "@/assets/urgency-bg-new2.png.asset.json";
 const urgencyBgUrl = urgencyBgAsset.url;
 const prodShampooAsset = { url: "/product-shampoo-v2.png" };
 const prodShampoo = prodShampooAsset.url;
