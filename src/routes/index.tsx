@@ -2222,19 +2222,149 @@ function Urgency() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* light streaks */}
+      {/* Cinematic warm light from upper-left */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-24 -top-24 h-[420px] w-[420px]"
+        style={{
+          background:
+            "radial-gradient(circle at 30% 30%, rgba(244,222,165,0.32), rgba(244,222,165,0.08) 45%, rgba(244,222,165,0) 70%)",
+          filter: "blur(8px)",
+        }}
+      />
+      {/* Soft golden streak */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -top-10 left-1/2 h-[260px] w-[420px] -translate-x-1/2"
         style={{
           background:
-            "radial-gradient(ellipse at top, rgba(244,222,165,0.28), rgba(244,222,165,0) 70%)",
+            "radial-gradient(ellipse at top, rgba(244,222,165,0.22), rgba(244,222,165,0) 70%)",
           filter: "blur(6px)",
         }}
       />
+      {/* Floating golden particles */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        {[
+          { l: "8%",  t: "18%", s: 3, d: "0s",   o: 0.85 },
+          { l: "22%", t: "62%", s: 2, d: "1.2s", o: 0.7 },
+          { l: "38%", t: "32%", s: 2, d: "2.4s", o: 0.6 },
+          { l: "55%", t: "78%", s: 3, d: "0.6s", o: 0.9 },
+          { l: "70%", t: "22%", s: 2, d: "3.1s", o: 0.7 },
+          { l: "82%", t: "55%", s: 3, d: "1.8s", o: 0.85 },
+          { l: "14%", t: "88%", s: 2, d: "4.0s", o: 0.6 },
+          { l: "62%", t: "44%", s: 2, d: "2.0s", o: 0.55 },
+          { l: "90%", t: "82%", s: 2, d: "3.6s", o: 0.7 },
+          { l: "30%", t: "12%", s: 2, d: "5.0s", o: 0.55 },
+        ].map((p, i) => (
+          <span
+            key={i}
+            className="absolute rounded-full animate-particle-float"
+            style={{
+              left: p.l,
+              top: p.t,
+              width: p.s,
+              height: p.s,
+              background: "#F4E2A5",
+              boxShadow: "0 0 6px rgba(244,222,165,0.9)",
+              opacity: p.o,
+              animationDelay: p.d,
+            }}
+          />
+        ))}
+      </div>
 
-      <div className="relative mx-auto max-w-md px-6 pt-6 pb-12 text-center">
+      <div className="relative mx-auto max-w-md px-6 pt-8 pb-12 text-center">
 
+        {/* === Empty product showcase === */}
+        <div className="relative mx-auto mb-6 h-[260px] w-full max-w-[320px]">
+          {/* Botanical decor — left lavender */}
+          <svg
+            aria-hidden="true"
+            className="absolute left-0 bottom-6 opacity-80"
+            width="74" height="150" viewBox="0 0 74 150" fill="none"
+          >
+            <path d="M30 150 C 26 110, 22 80, 18 40" stroke="#7C8C6A" strokeWidth="1.2" strokeLinecap="round" />
+            <g fill="#C9A7E6" opacity="0.85">
+              <ellipse cx="18" cy="38" rx="3" ry="5"/>
+              <ellipse cx="22" cy="46" rx="3" ry="5"/>
+              <ellipse cx="14" cy="50" rx="3" ry="5"/>
+              <ellipse cx="20" cy="56" rx="3" ry="5"/>
+              <ellipse cx="16" cy="64" rx="3" ry="5"/>
+              <ellipse cx="22" cy="72" rx="3" ry="5"/>
+              <ellipse cx="14" cy="80" rx="3" ry="5"/>
+            </g>
+            <path d="M30 110 C 38 105, 44 96, 48 84" stroke="#7C8C6A" strokeWidth="1" strokeLinecap="round" />
+            <g stroke="#8DA079" strokeWidth="1" strokeLinecap="round" opacity="0.9">
+              <path d="M44 86 L 50 80"/><path d="M44 86 L 50 92"/>
+              <path d="M42 96 L 48 90"/><path d="M42 96 L 48 102"/>
+              <path d="M40 106 L 46 100"/><path d="M40 106 L 46 112"/>
+            </g>
+          </svg>
+          {/* Botanical decor — right rosemary */}
+          <svg
+            aria-hidden="true"
+            className="absolute right-0 bottom-6 opacity-80"
+            width="74" height="150" viewBox="0 0 74 150" fill="none"
+          >
+            <path d="M44 150 C 48 110, 52 80, 56 40" stroke="#7C8C6A" strokeWidth="1.2" strokeLinecap="round" />
+            <g stroke="#8DA079" strokeWidth="1" strokeLinecap="round" opacity="0.95">
+              <path d="M56 44 L 64 38"/><path d="M56 44 L 64 50"/>
+              <path d="M54 56 L 62 50"/><path d="M54 56 L 62 62"/>
+              <path d="M52 68 L 60 62"/><path d="M52 68 L 60 74"/>
+              <path d="M50 80 L 58 74"/><path d="M50 80 L 58 86"/>
+              <path d="M48 92 L 56 86"/><path d="M48 92 L 56 98"/>
+              <path d="M46 104 L 54 98"/><path d="M46 104 L 54 110"/>
+            </g>
+          </svg>
+
+          {/* Golden halo */}
+          <div
+            aria-hidden="true"
+            className="absolute left-1/2 top-1/2 h-[210px] w-[210px] -translate-x-1/2 -translate-y-1/2 rounded-full animate-halo-breathe"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(244,222,165,0.55) 0%, rgba(232,201,138,0.32) 35%, rgba(232,201,138,0.08) 60%, rgba(232,201,138,0) 75%)",
+              filter: "blur(2px)",
+            }}
+          />
+          {/* Thin gold ring */}
+          <div
+            aria-hidden="true"
+            className="absolute left-1/2 top-[46%] h-[180px] w-[180px] -translate-x-1/2 -translate-y-1/2 rounded-full"
+            style={{
+              border: `1px solid ${gold}55`,
+              boxShadow: `inset 0 0 22px ${gold}22, 0 0 18px ${gold}22`,
+            }}
+          />
+
+          {/* EMPTY product placeholder slot (do not fill) */}
+          <div
+            data-product-placeholder
+            aria-label="Product image placeholder"
+            className="absolute left-1/2 top-[46%] h-[170px] w-[150px] -translate-x-1/2 -translate-y-1/2"
+          />
+
+          {/* Premium podium */}
+          <div
+            aria-hidden="true"
+            className="absolute bottom-0 left-1/2 h-[26px] w-[230px] -translate-x-1/2 rounded-[50%]"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, rgba(244,222,165,0.55), rgba(232,201,138,0.18) 55%, rgba(232,201,138,0) 75%)",
+              filter: "blur(1px)",
+            }}
+          />
+          <div
+            aria-hidden="true"
+            className="absolute bottom-2 left-1/2 h-[10px] w-[180px] -translate-x-1/2 rounded-full"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(244,222,165,0.55), rgba(120,80,40,0.35))",
+              border: `1px solid ${gold}66`,
+              boxShadow: `0 6px 14px -4px ${goldDeep}, inset 0 1px 0 rgba(255,255,255,0.35)`,
+            }}
+          />
+        </div>
 
 
         {/* Headline */}
