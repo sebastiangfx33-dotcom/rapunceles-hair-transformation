@@ -2415,14 +2415,19 @@ function Urgency() {
 
         {/* Price block */}
         <div
-          className="mt-7 rounded-2xl px-5 py-5"
+          className="relative mt-7 overflow-hidden rounded-2xl px-5 py-5 backdrop-blur-md"
           style={{
             background:
-              "linear-gradient(180deg, rgba(20,8,35,0.78), rgba(28,12,45,0.85))",
-            border: `1px solid ${gold}55`,
+              "linear-gradient(180deg, rgba(20,8,35,0.55), rgba(28,12,45,0.65))",
+            border: `1px solid ${gold}66`,
             boxShadow: `0 0 22px ${gold}26, inset 0 0 24px rgba(244,222,165,0.07)`,
           }}
         >
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 animate-shine-sweep"
+            style={{ background: "linear-gradient(90deg, transparent, rgba(244,222,165,0.18), transparent)" }}
+          />
           <div className="flex items-center justify-between gap-4">
             <div className="flex flex-col items-center flex-1">
               <span
