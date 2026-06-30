@@ -2405,7 +2405,7 @@ function Urgency() {
           <div className="flex flex-col text-center">
             {/* Eyebrow */}
             <span
-              className="text-[0.6rem] uppercase"
+              className="text-[0.78rem] uppercase"
               style={{ color: gold, letterSpacing: "0.28em", fontWeight: 600 }}
             >
               Rapunceles · Édition
@@ -2413,7 +2413,7 @@ function Urgency() {
 
             {/* Headline */}
             <h2
-              className="mt-1.5 text-[1.1rem] leading-[1.12] uppercase"
+              className="mt-1.5 text-[1.45rem] leading-[1.12] uppercase"
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
                 color: "#F4ECDC",
@@ -2426,7 +2426,7 @@ function Urgency() {
               empieza con la
             </h2>
             <h3
-              className="mt-1 text-[1.45rem] leading-[1.02] uppercase"
+              className="mt-1 text-[1.9rem] leading-[1.02] uppercase"
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
                 color: gold,
@@ -2442,14 +2442,14 @@ function Urgency() {
             <div className="mt-2"><Ornament /></div>
 
             <p
-              className="mx-auto mt-2 text-[0.8rem] leading-[1.5]"
+              className="mx-auto mt-2 text-[1rem] leading-[1.5]"
               style={{ color: "#E8DCC8", fontFamily: "'Cormorant Garamond', serif" }}
             >
               Miles de mujeres ya comenzaron a recuperar la fuerza, el
               crecimiento y la belleza natural de su cabello.
             </p>
             <p
-              className="mt-1 text-[0.85rem]"
+              className="mt-1 text-[1.05rem]"
               style={{ color: gold, fontWeight: 500, letterSpacing: "0.04em" }}
             >
               Hoy puede ser tu momento.
@@ -2473,13 +2473,13 @@ function Urgency() {
               <div className="flex items-center justify-between gap-1.5">
                 <div className="flex flex-col items-center flex-1">
                   <span
-                    className="text-[0.55rem] uppercase"
+                    className="text-[0.72rem] uppercase"
                     style={{ color: "#E8DCC8", letterSpacing: "0.18em", fontWeight: 500 }}
                   >
                     Valor regular
                   </span>
                   <span
-                    className="mt-0.5 text-[0.9rem] line-through"
+                    className="mt-0.5 text-[1.15rem] line-through"
                     style={{ color: "#9A8AA8", fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
                   >
                     $200.000
@@ -2488,13 +2488,13 @@ function Urgency() {
                 <span aria-hidden className="h-7 w-px" style={{ background: `linear-gradient(180deg, transparent, ${gold}80, transparent)` }} />
                 <div className="flex flex-col items-center flex-1">
                   <span
-                    className="text-[0.6rem] uppercase"
+                    className="text-[0.78rem] uppercase"
                     style={{ color: gold, letterSpacing: "0.2em", fontWeight: 700 }}
                   >
                     Hoy
                   </span>
                   <span
-                    className="mt-0.5 text-[1.3rem] leading-none"
+                    className="mt-0.5 text-[1.7rem] leading-none"
                     style={{ color: gold, fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
                   >
                     $179.900
@@ -2511,7 +2511,7 @@ function Urgency() {
               >
                 <Clock size={8} strokeWidth={1.75} style={{ color: gold }} />
                 <span
-                  className="text-[0.58rem] uppercase"
+                  className="text-[0.75rem] uppercase"
                   style={{ color: "#F4ECDC", letterSpacing: "0.14em", fontWeight: 600 }}
                 >
                   Acceso limitado
@@ -2546,13 +2546,13 @@ function Urgency() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <p
-                    className="text-[0.6rem] uppercase"
+                    className="text-[0.78rem] uppercase"
                     style={{ color: gold, letterSpacing: "0.12em", fontWeight: 700 }}
                   >
                     Producción limitada
                   </p>
                   <p
-                    className="mt-0.5 text-[0.6rem] leading-[1.35]"
+                    className="mt-0.5 text-[0.78rem] leading-[1.35]"
                     style={{ color: "#E8DCC8" }}
                   >
                     Lotes pequeños con ingredientes botánicos seleccionados.
@@ -2566,7 +2566,7 @@ function Urgency() {
                   background: "rgba(40,18,60,0.6)",
                 }}
               >
-                <span className="text-[0.55rem] uppercase" style={{ color: gold, letterSpacing: "0.1em", fontWeight: 700 }}>
+                <span className="text-[0.72rem] uppercase" style={{ color: gold, letterSpacing: "0.1em", fontWeight: 700 }}>
                   Solo unidades · esta semana
                 </span>
               </div>
@@ -2591,7 +2591,7 @@ function Urgency() {
                       <Icon size={9} strokeWidth={1.5} style={{ color: gold }} />
                     </div>
                     <p
-                      className="mt-0.5 text-[0.5rem] uppercase leading-tight"
+                      className="mt-0.5 text-[0.65rem] uppercase leading-tight"
                       style={{ color: "#F4ECDC", letterSpacing: "0.06em", fontWeight: 700 }}
                     >
                       {title}
