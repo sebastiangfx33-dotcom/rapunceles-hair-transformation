@@ -2398,7 +2398,7 @@ function Urgency() {
                 Valor regular
               </span>
               <span
-                className="mt-1 text-[1.35rem] line-through"
+                className="mt-1 text-[1.1rem] line-through"
                 style={{
                   color: "#9A8AA8",
                   fontFamily: "'Cormorant Garamond', serif",
