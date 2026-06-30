@@ -746,7 +746,7 @@ function ProductRoutineSection() {
         {/* Premium product benefits ribbon */}
         <div
           className="absolute left-0 right-0"
-          style={{ bottom: "12%" }}
+          style={{ bottom: "2%" }}
         >
           <div className="relative w-full">
             {/* Soft outer golden glow */}
