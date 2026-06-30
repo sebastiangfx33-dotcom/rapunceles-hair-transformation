@@ -2431,7 +2431,7 @@ function Urgency() {
 
           {/* limited time pill */}
           <div
-            className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full px-4 py-2.5"
+            className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full px-3 py-2"
             style={{
               background: "rgba(40,18,60,0.75)",
               border: `1px solid ${gold}66`,
