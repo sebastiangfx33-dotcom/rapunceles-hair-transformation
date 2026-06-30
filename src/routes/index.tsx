@@ -1954,13 +1954,57 @@ function Testimonials() {
 
 
         {/* SECTION 3 — TRUST COUNTER */}
-        <div className="mt-16 text-center">
+        <div className="mt-6 text-center">
           <div
             className="mx-auto h-px w-24"
             style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
           />
+
+          {/* Stacked avatars */}
+          <div className="mt-6 flex items-center justify-center">
+            <div className="flex -space-x-2.5">
+              {[
+                "https://i.pravatar.cc/64?img=47",
+                "https://i.pravatar.cc/64?img=45",
+                "https://i.pravatar.cc/64?img=49",
+                "https://i.pravatar.cc/64?img=32",
+                "https://i.pravatar.cc/64?img=44",
+              ].map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt=""
+                  className="h-7 w-7 rounded-full object-cover"
+                  style={{
+                    border: `1.5px solid ${gold}`,
+                    boxShadow: "0 0 10px rgba(201,168,76,0.35)",
+                  }}
+                  loading="lazy"
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Stars + rating */}
+          <div className="mt-3 flex items-center justify-center gap-1.5">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <Star
+                key={i}
+                className="h-3.5 w-3.5"
+                style={{ color: gold, fill: gold, filter: "drop-shadow(0 0 4px rgba(201,168,76,0.5))" }}
+                strokeWidth={1}
+              />
+            ))}
+            <span
+              className="ml-1.5 text-[0.78rem] tracking-wide"
+              style={{ color: goldSoft, fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              4.9/5
+            </span>
+          </div>
+
           <h3
-            className="mt-7 font-display text-[2.1rem] leading-[1.1]"
+            className="mt-4 font-display text-[2.1rem] leading-[1.1]"
             style={{ color: gold }}
           >
             +1.500 mujeres
@@ -1971,11 +2015,33 @@ function Testimonials() {
           >
             ya han confiado en Rapunceles
           </p>
+
+          {/* Verified badge */}
+          <div className="mt-4 flex items-center justify-center gap-1.5">
+            <span
+              aria-hidden="true"
+              className="flex h-4 w-4 items-center justify-center rounded-full"
+              style={{
+                background: `linear-gradient(135deg, ${gold}, #E8C98A)`,
+                boxShadow: "0 0 8px rgba(201,168,76,0.55)",
+              }}
+            >
+              <Check className="h-2.5 w-2.5" strokeWidth={3} style={{ color: "#1a0a2e" }} />
+            </span>
+            <span
+              className="text-[0.7rem] uppercase tracking-[0.18em]"
+              style={{ color: ivory, opacity: 0.85, fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Reseñas verificadas
+            </span>
+          </div>
+
           <div
             className="mx-auto mt-6 h-px w-24"
             style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
           />
         </div>
+
       </div>
     </section>
   );
