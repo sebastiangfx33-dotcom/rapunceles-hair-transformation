@@ -244,7 +244,7 @@ function Hero() {
       {/* Editorial copy block */}
       <div className="relative z-10 -mt-2 flex flex-col items-center px-5 text-center">
         <h2
-          className="text-[14px]"
+          className="text-[13px]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 400,
@@ -301,7 +301,7 @@ function Hero() {
             ))}
           </div>
           <span
-            className="text-[14px]"
+            className="text-[11px]"
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               color: IVORY,
@@ -490,7 +490,7 @@ function AfterBanner() {
                   {it.title}
                 </h3>
                 <p
-                  className="mt-1 text-[14px] leading-relaxed"
+                  className="mt-1 text-[11px] leading-relaxed"
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
                     color: IVORY,
@@ -557,7 +557,7 @@ function Solution() {
           {benefits.slice(0, 2).map(({ icon: Icon, text }) => (
             <li
               key={text}
-              className="group relative flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[1rem] tracking-wide text-white/95"
+              className="group relative flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[0.72rem] tracking-wide text-white/95"
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
                 background:
@@ -590,7 +590,7 @@ function Solution() {
           {benefits.slice(2).map(({ icon: Icon, text }) => (
             <li
               key={text}
-              className="group relative flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[1rem] tracking-wide text-white/95"
+              className="group relative flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[0.72rem] tracking-wide text-white/95"
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
                 background:
@@ -819,7 +819,7 @@ function ProductRoutineSection() {
                     </span>
                     <div className="min-w-0 flex-1">
                       <h3
-                        className="text-[12px] leading-tight"
+                        className="text-[10px] leading-tight"
                         style={{
                           fontFamily: "'Cormorant Garamond', serif",
                           color: "#E8C98A",
@@ -830,7 +830,7 @@ function ProductRoutineSection() {
                         {title}
                       </h3>
                       <p
-                        className="mt-1 text-[14px] leading-snug"
+                        className="mt-1 text-[11px] leading-snug"
                         style={{
                           fontFamily: "'Cormorant Garamond', serif",
                           color: "#F4ECDC",
@@ -1288,7 +1288,7 @@ function Results() {
                     className="h-full w-full object-cover"
                   />
                   <span
-                    className="absolute left-3 top-3 rounded-full bg-black/55 px-3 py-1 text-[12px] font-light uppercase tracking-[0.25em] backdrop-blur-sm"
+                    className="absolute left-3 top-3 rounded-full bg-black/55 px-3 py-1 text-[10px] font-light uppercase tracking-[0.25em] backdrop-blur-sm"
                     style={{ color: gold, border: `1px solid ${gold}55` }}
                   >
                     Antes
@@ -1304,7 +1304,7 @@ function Results() {
                     className="h-full w-full object-cover"
                   />
                   <span
-                    className="absolute right-3 top-3 rounded-full px-3 py-1 text-[12px] font-light uppercase tracking-[0.25em]"
+                    className="absolute right-3 top-3 rounded-full px-3 py-1 text-[10px] font-light uppercase tracking-[0.25em]"
                     style={{ background: gold, color: "#1a0a2e" }}
                   >
                     Después
@@ -1369,7 +1369,7 @@ function Results() {
                       {r.name}
                     </p>
                     <p
-                      className="font-display text-[1rem] tracking-[0.18em] uppercase"
+                      className="font-display text-[0.72rem] tracking-[0.18em] uppercase"
                       style={{ color: `${ivory}cc`, fontWeight: 300 }}
                     >
                       {r.city}
@@ -1399,7 +1399,7 @@ function Results() {
             style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
           />
           <p
-            className="mx-auto mt-5 max-w-[20rem] font-display text-[1rem] leading-relaxed tracking-[0.02em]"
+            className="mx-auto mt-5 max-w-[20rem] font-display text-[0.72rem] leading-relaxed tracking-[0.02em]"
             style={{ color: `${ivory}99`, fontWeight: 300 }}
           >
             Los resultados pueden variar según cada tipo de cabello y constancia en el uso.
@@ -1672,7 +1672,7 @@ function Testimonials() {
         {/* HEADER */}
         <div className="text-center">
           <span
-            className="block text-[0.95rem] uppercase tracking-[0.4em]"
+            className="block text-[0.65rem] uppercase tracking-[0.4em]"
             style={{ color: gold }}
           >
             · Comunidad Rapunceles ·
@@ -1759,7 +1759,7 @@ function Testimonials() {
                         style={{ background: `linear-gradient(90deg, transparent, ${gold})` }}
                       />
                       <span
-                        className="text-[0.92rem] uppercase tracking-[0.35em]"
+                        className="text-[0.6rem] uppercase tracking-[0.35em]"
                         style={{ color: gold }}
                       >
                         Testimonio verificado
@@ -1820,7 +1820,7 @@ function Testimonials() {
                                 {chat.name}
                             </div>
                             <div
-                              className="text-[0.98rem] leading-tight"
+                              className="text-[0.7rem] leading-tight"
                               style={{ color: "#8696A0" }}
                             >
                               en línea
@@ -1843,7 +1843,7 @@ function Testimonials() {
                               return (
                                 <div key={mi} className="flex justify-center py-1">
                                   <span
-                                    className="rounded-md px-2.5 py-1 text-[0.95rem]"
+                                    className="rounded-md px-2.5 py-1 text-[0.65rem]"
                                     style={{ background: "#1F2C33", color: "#AEBAC1" }}
                                   >
                                     {m.text}
@@ -1884,7 +1884,7 @@ function Testimonials() {
                                   >
                                     {(m.kind === "text" || (m.kind === "image" && m.caption)) && (
                                       <p
-                                        className="text-[1rem] leading-snug"
+                                        className="text-[0.88rem] leading-snug"
                                         style={{
                                           color: "#E9EDEF",
                                           fontFamily: "system-ui, -apple-system, sans-serif",
@@ -1894,7 +1894,7 @@ function Testimonials() {
                                       </p>
                                     )}
                                     <div className="mt-0.5 flex items-center justify-end gap-1">
-                                      <span className="text-[0.92rem]" style={{ color: timeColor }}>
+                                      <span className="text-[0.62rem]" style={{ color: timeColor }}>
                                         {m.time}
                                       </span>
                                       {isOut && m.read && (
@@ -1922,7 +1922,7 @@ function Testimonials() {
 
                       {/* caption under chat */}
                       <p
-                        className="mt-4 text-center text-[0.92rem] leading-relaxed"
+                        className="mt-4 text-center text-[0.78rem] leading-relaxed"
                         style={{ color: ivory, opacity: 0.75 }}
                       >
                         {chat.caption}
@@ -2024,7 +2024,7 @@ function Scarcity() {
       >
         {String(value).padStart(2, "0")}
       </div>
-      <span className="mt-2 text-[0.95rem] uppercase tracking-[0.2em] text-muted-foreground">
+      <span className="mt-2 text-[0.65rem] uppercase tracking-[0.2em] text-muted-foreground">
         {label}
       </span>
     </div>
@@ -2035,7 +2035,7 @@ function Scarcity() {
       <div className="mx-auto max-w-md px-6 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-[var(--gold)]/40 px-4 py-1.5">
           <Clock className="size-3.5 text-[var(--gold)]" />
-          <span className="text-[0.98rem] uppercase tracking-[0.3em] text-[var(--gold)]">
+          <span className="text-[0.7rem] uppercase tracking-[0.3em] text-[var(--gold)]">
             Producción limitada
           </span>
         </div>
@@ -2158,7 +2158,7 @@ function ProductOptions() {
                 </span>
 
                 {v.badge && (
-                  <span className="absolute -top-2 right-5 rounded-full bg-[var(--gold)] px-3 py-1 text-[0.95rem] font-medium uppercase tracking-[0.18em] text-[var(--ivory)]">
+                  <span className="absolute -top-2 right-5 rounded-full bg-[var(--gold)] px-3 py-1 text-[0.65rem] font-medium uppercase tracking-[0.18em] text-[var(--ivory)]">
                     {v.badge}
                   </span>
                 )}
@@ -2177,7 +2177,7 @@ function ProductOptions() {
                     target="_blank"
                     rel="noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="btn-primary mt-5 w-full uppercase tracking-[0.18em] text-[0.92rem]"
+                    className="btn-primary mt-5 w-full uppercase tracking-[0.18em] text-[0.78rem]"
                   >
                     {v.cta}
                   </a>
@@ -2405,7 +2405,7 @@ function Urgency() {
           <div className="flex flex-col text-center">
             {/* Eyebrow */}
             <span
-              className="text-[1rem] uppercase"
+              className="text-[0.42rem] uppercase"
               style={{ color: gold, letterSpacing: "0.28em", fontWeight: 600 }}
             >
               Rapunceles · Édition
@@ -2413,7 +2413,7 @@ function Urgency() {
 
             {/* Headline */}
             <h2
-              className="mt-1.5 text-[0.92rem] leading-[1.12] uppercase"
+              className="mt-1.5 text-[0.78rem] leading-[1.12] uppercase"
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
                 color: "#F4ECDC",
@@ -2442,14 +2442,14 @@ function Urgency() {
             <div className="mt-2"><Ornament /></div>
 
             <p
-              className="mx-auto mt-2 text-[0.92rem] leading-[1.5]"
+              className="mx-auto mt-2 text-[0.56rem] leading-[1.5]"
               style={{ color: "#E8DCC8", fontFamily: "'Cormorant Garamond', serif" }}
             >
               Miles de mujeres ya comenzaron a recuperar la fuerza, el
               crecimiento y la belleza natural de su cabello.
             </p>
             <p
-              className="mt-1 text-[0.92rem]"
+              className="mt-1 text-[0.6rem]"
               style={{ color: gold, fontWeight: 500, letterSpacing: "0.04em" }}
             >
               Hoy puede ser tu momento.
@@ -2473,13 +2473,13 @@ function Urgency() {
               <div className="flex items-center justify-between gap-1.5">
                 <div className="flex flex-col items-center flex-1">
                   <span
-                    className="text-[0.98rem] uppercase"
+                    className="text-[0.38rem] uppercase"
                     style={{ color: "#E8DCC8", letterSpacing: "0.18em", fontWeight: 500 }}
                   >
                     Valor regular
                   </span>
                   <span
-                    className="mt-0.5 text-[0.92rem] line-through"
+                    className="mt-0.5 text-[0.62rem] line-through"
                     style={{ color: "#9A8AA8", fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
                   >
                     $200.000
@@ -2488,7 +2488,7 @@ function Urgency() {
                 <span aria-hidden className="h-7 w-px" style={{ background: `linear-gradient(180deg, transparent, ${gold}80, transparent)` }} />
                 <div className="flex flex-col items-center flex-1">
                   <span
-                    className="text-[1rem] uppercase"
+                    className="text-[0.42rem] uppercase"
                     style={{ color: gold, letterSpacing: "0.2em", fontWeight: 700 }}
                   >
                     Hoy
@@ -2511,7 +2511,7 @@ function Urgency() {
               >
                 <Clock size={8} strokeWidth={1.75} style={{ color: gold }} />
                 <span
-                  className="text-[1rem] uppercase"
+                  className="text-[0.4rem] uppercase"
                   style={{ color: "#F4ECDC", letterSpacing: "0.14em", fontWeight: 600 }}
                 >
                   Acceso limitado
@@ -2546,13 +2546,13 @@ function Urgency() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <p
-                    className="text-[1rem] uppercase"
+                    className="text-[0.42rem] uppercase"
                     style={{ color: gold, letterSpacing: "0.12em", fontWeight: 700 }}
                   >
                     Producción limitada
                   </p>
                   <p
-                    className="mt-0.5 text-[1rem] leading-[1.35]"
+                    className="mt-0.5 text-[0.42rem] leading-[1.35]"
                     style={{ color: "#E8DCC8" }}
                   >
                     Lotes pequeños con ingredientes botánicos seleccionados.
@@ -2566,7 +2566,7 @@ function Urgency() {
                   background: "rgba(40,18,60,0.6)",
                 }}
               >
-                <span className="text-[0.98rem] uppercase" style={{ color: gold, letterSpacing: "0.1em", fontWeight: 700 }}>
+                <span className="text-[0.38rem] uppercase" style={{ color: gold, letterSpacing: "0.1em", fontWeight: 700 }}>
                   Solo unidades · esta semana
                 </span>
               </div>
@@ -2591,7 +2591,7 @@ function Urgency() {
                       <Icon size={9} strokeWidth={1.5} style={{ color: gold }} />
                     </div>
                     <p
-                      className="mt-0.5 text-[0.98rem] uppercase leading-tight"
+                      className="mt-0.5 text-[0.36rem] uppercase leading-tight"
                       style={{ color: "#F4ECDC", letterSpacing: "0.06em", fontWeight: 700 }}
                     >
                       {title}
@@ -2628,10 +2628,10 @@ function Urgency() {
           >
             <Lock size={12} strokeWidth={2} style={{ color: gold }} />
           </span>
-          <span className="relative flex-1 text-center text-[0.98rem] uppercase leading-[1.15]" style={{ fontWeight: 700 }}>
+          <span className="relative flex-1 text-center text-[0.85rem] uppercase leading-[1.15]" style={{ fontWeight: 700 }}>
             Quiero empezar
             <br />
-            <span className="text-[0.98rem]" style={{ fontWeight: 500 }}>mi transformación</span>
+            <span className="text-[0.7rem]" style={{ fontWeight: 500 }}>mi transformación</span>
           </span>
           <ArrowRight size={18} strokeWidth={2.25} className="relative" />
         </a>
@@ -2639,7 +2639,7 @@ function Urgency() {
         <div className="mt-3 flex items-center justify-center gap-2">
           <ShieldCheck size={11} strokeWidth={1.75} style={{ color: gold }} />
           <span
-            className="text-[0.75rem] uppercase"
+            className="text-[0.55rem] uppercase"
             style={{ color: "#E8DCC8", letterSpacing: "0.22em", fontWeight: 600 }}
           >
             Compra segura y garantizada
@@ -2668,7 +2668,7 @@ function FinalCTA() {
       />
       <div className="relative mx-auto max-w-md px-6 text-center">
         <span
-          className="text-[0.75rem] uppercase tracking-[0.32em]"
+          className="text-[0.5rem] uppercase tracking-[0.32em]"
           style={{ color: gold }}
         >
           Tu momento es ahora
@@ -2686,7 +2686,7 @@ function FinalCTA() {
           style={{ background: gold }}
         />
         <p
-          className="mx-auto mt-5 max-w-[20rem] text-[0.95rem] leading-relaxed"
+          className="mx-auto mt-5 max-w-[20rem] text-[0.82rem] leading-relaxed"
           style={{ color: "#E8DCC8", opacity: 0.85 }}
         >
           Miles de mujeres están recuperando fuerza, crecimiento y abundancia con Rapunceles.
@@ -2700,7 +2700,7 @@ function FinalCTA() {
 
         <a
           href="#options"
-          className="mt-9 inline-flex w-full items-center justify-center rounded-full px-6 py-4 text-[1rem] font-semibold uppercase tracking-[0.18em] transition-transform active:scale-[0.98]"
+          className="mt-9 inline-flex w-full items-center justify-center rounded-full px-6 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.18em] transition-transform active:scale-[0.98]"
           style={{
             background: `linear-gradient(180deg, ${gold}, #B8893F)`,
             color: "#2A1237",
@@ -2769,7 +2769,7 @@ function TrustBenefits() {
                 <Icon className="size-[0.8rem]" style={{ color: gold }} strokeWidth={1.4} />
               </div>
               <p
-                className="font-display text-[0.92rem] leading-[1.15]"
+                className="font-display text-[0.58rem] leading-[1.15]"
                 style={{ color: "#FFFFFF" }}
               >
                 {text}
@@ -2828,10 +2828,10 @@ function FinalTransformation() {
 
         {/* Body copy */}
         <div className="px-7 pt-5 text-center">
-          <p className="text-[0.95rem] leading-[1.55] text-white/85">
+          <p className="text-[0.82rem] leading-[1.55] text-white/85">
             No se trata solamente de crecer cabello.
           </p>
-          <p className="mt-3 text-[0.95rem] leading-[1.55] text-white/85">
+          <p className="mt-3 text-[0.82rem] leading-[1.55] text-white/85">
             Se trata de volver a sentirte{" "}
             <span style={{ color: gold, fontWeight: 500 }}>segura</span>, verte al espejo con{" "}
             <span style={{ color: gold, fontWeight: 500 }}>orgullo</span> y disfrutar nuevamente tu{" "}
@@ -2844,7 +2844,7 @@ function FinalTransformation() {
         <div className="flex justify-center px-5 pb-14 pt-6">
           <button
             type="button"
-            className="flex w-1/2 items-center justify-center gap-2 rounded-full px-3 py-3 font-display text-[0.92rem] tracking-[0.12em]"
+            className="flex w-1/2 items-center justify-center gap-2 rounded-full px-3 py-3 font-display text-[0.62rem] tracking-[0.12em]"
             style={{
               background:
                 "linear-gradient(180deg, #E5C079 0%, #C9A35A 50%, #A87E33 100%)",
@@ -2946,7 +2946,7 @@ function FAQ() {
         {/* Header */}
         <div className="text-center">
           <span
-            className="text-[0.75rem] uppercase tracking-[0.36em]"
+            className="text-[0.55rem] uppercase tracking-[0.36em]"
             style={{ color: gold }}
           >
             Preguntas frecuentes
@@ -2965,7 +2965,7 @@ function FAQ() {
             <Leaf className="size-3 rotate-45" style={{ color: gold }} strokeWidth={1.3} />
             <span className="h-px w-12" style={{ background: gold, opacity: 0.6 }} />
           </div>
-          <p className="mx-auto mt-4 max-w-[22rem] text-[0.92rem] leading-[1.55] text-white/75">
+          <p className="mx-auto mt-4 max-w-[22rem] text-[0.78rem] leading-[1.55] text-white/75">
             Queremos que tomes la mejor decisión para empezar a recuperar tu cabello con seguridad y confianza.
           </p>
         </div>
@@ -3031,7 +3031,7 @@ function FAQ() {
                 >
                   <div className="min-h-0">
                     <div
-                      className="mx-5 border-t pt-3 pb-5 text-[0.92rem] leading-[1.6] text-white/80"
+                      className="mx-5 border-t pt-3 pb-5 text-[0.8rem] leading-[1.6] text-white/80"
                       style={{ borderColor: `${gold}33` }}
                     >
                       {item.a}
