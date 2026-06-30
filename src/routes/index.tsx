@@ -2717,26 +2717,6 @@ function FAQ() {
           })}
         </div>
 
-        {/* Trust icons */}
-        <div className="mt-10 flex items-start justify-between gap-2 px-2">
-          {trust.map(({ icon: Icon, label }) => (
-            <div key={label} className="flex flex-1 flex-col items-center gap-2 text-center">
-              <div
-                className="flex h-11 w-11 items-center justify-center rounded-full"
-                style={{
-                  border: `1px solid ${gold}77`,
-                  background:
-                    "radial-gradient(circle at 50% 40%, rgba(212,168,94,0.14) 0%, transparent 70%)",
-                }}
-              >
-                <Icon className="size-4" style={{ color: gold }} strokeWidth={1.3} />
-              </div>
-              <p className="text-[0.62rem] leading-[1.3] tracking-[0.08em] text-white/85">
-                {label}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
