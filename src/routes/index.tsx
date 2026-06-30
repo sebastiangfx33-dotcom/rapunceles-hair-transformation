@@ -2233,26 +2233,8 @@ function Urgency() {
       />
 
       <div className="relative mx-auto max-w-md px-6 pt-6 pb-12 text-center">
-        {/* Product kit with halo */}
-        <div className="relative mx-auto flex items-center justify-center" style={{ height: 280 }}>
-          <div
-            aria-hidden="true"
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
-            style={{
-              width: 230,
-              height: 230,
-              border: `1px solid ${gold}`,
-              boxShadow: `0 0 28px ${gold}55, inset 0 0 32px ${gold}33`,
-            }}
-          />
-          <img
-            src={heroKitNew.url}
-            alt="Kit Rapunceles: shampoo, acondicionador y tónico"
-            className="relative z-10 h-full w-auto object-contain"
-            style={{ filter: "drop-shadow(0 18px 30px rgba(0,0,0,0.55))" }}
-            loading="lazy"
-          />
-        </div>
+
+
 
         {/* Headline */}
         <h2
