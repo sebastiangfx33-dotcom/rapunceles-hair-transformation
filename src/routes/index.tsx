@@ -2452,34 +2452,6 @@ function FinalTransformation() {
       }}
     >
       <div className="mx-auto flex max-w-md flex-col">
-        {/* Top: brand */}
-        <div className="relative flex flex-col items-center px-6 pt-10 text-center">
-          <div className="flex flex-col items-center pt-2 text-center">
-            <Crown className="size-5" style={{ color: gold }} strokeWidth={1.3} />
-            <div
-              className="mt-1 flex h-12 w-12 items-center justify-center rounded-full"
-              style={{ border: `1px solid ${gold}` }}
-            >
-              <span
-                className="font-display text-[1.6rem] leading-none"
-                style={{ color: gold }}
-              >
-                R
-              </span>
-            </div>
-            <p
-              className="mt-2 font-display text-[1.35rem] leading-none tracking-[0.04em] text-white"
-            >
-              Rapunceles
-            </p>
-            <p
-              className="mt-1.5 text-[0.55rem] tracking-[0.32em]"
-              style={{ color: gold }}
-            >
-              HAIR TRANSFORMATION
-            </p>
-          </div>
-        </div>
 
         {/* Headline */}
         <div className="px-6 pt-4 text-center">
