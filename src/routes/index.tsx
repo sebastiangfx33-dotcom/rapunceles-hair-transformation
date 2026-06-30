@@ -151,7 +151,7 @@ function Landing() {
 
       <LuxuryCampaign />
 
-      <FinalTransformation />
+      
 
       <FAQ />
 
