@@ -2487,32 +2487,6 @@ function FinalTransformation() {
           </p>
         </div>
 
-        {/* Benefits row */}
-        <div className="grid grid-cols-3 gap-3 px-5 pb-2 pt-8">
-          {[
-            { icon: Sparkles, l1: "MÁS SEGURIDAD", l2: "EN TI MISMA" },
-            { icon: Heart, l1: "MÁS CONFIANZA", l2: "CADA DÍA" },
-            { icon: Flower2, l1: "MÁS FEMINIDAD", l2: "Y BIENESTAR" },
-          ].map(({ icon: Icon, l1, l2 }) => (
-            <div key={l1} className="flex flex-col items-center gap-2 text-center">
-              <div
-                className="flex h-14 w-14 items-center justify-center rounded-full"
-                style={{
-                  border: `1px solid ${gold}`,
-                  background:
-                    "radial-gradient(circle at 50% 40%, rgba(212,168,94,0.12) 0%, transparent 70%)",
-                }}
-              >
-                <Icon className="size-6" style={{ color: gold }} strokeWidth={1.2} />
-              </div>
-              <p className="text-[0.6rem] leading-[1.3] tracking-[0.12em] text-white/90">
-                {l1}
-                <br />
-                {l2}
-              </p>
-            </div>
-          ))}
-        </div>
 
         {/* CTA */}
         <div className="flex justify-center px-5 pb-14 pt-6">
