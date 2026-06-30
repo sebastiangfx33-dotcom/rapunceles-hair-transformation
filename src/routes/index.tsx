@@ -2267,7 +2267,7 @@ function Urgency() {
         ))}
       </div>
 
-      <div className="relative mx-auto max-w-2xl px-3 pt-6 pb-10">
+      <div className="relative mx-auto w-full max-w-[min(100%,1400px)] px-2 pt-6 pb-10">
 
         {/* Split-screen luxury layout */}
         <div className="grid grid-cols-[40%_minmax(0,1fr)] gap-3">
