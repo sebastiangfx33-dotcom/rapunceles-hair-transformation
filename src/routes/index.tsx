@@ -829,7 +829,7 @@ function ProductRoutineSection() {
                         {title}
                       </h3>
                       <p
-                        className="mt-1 text-[14px] leading-snug"
+                        className="mt-1 text-[11px] leading-snug"
                         style={{
                           fontFamily: "'Cormorant Garamond', serif",
                           color: "#F4ECDC",
