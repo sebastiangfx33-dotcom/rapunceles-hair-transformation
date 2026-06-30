@@ -2376,7 +2376,7 @@ function Urgency() {
 
         {/* Price block */}
         <div
-          className="relative mt-7 overflow-hidden rounded-2xl px-5 py-5 backdrop-blur-md"
+          className="relative mt-5 overflow-hidden rounded-2xl px-4 py-3.5 backdrop-blur-md"
           style={{
             background:
               "linear-gradient(180deg, rgba(20,8,35,0.55), rgba(28,12,45,0.65))",
