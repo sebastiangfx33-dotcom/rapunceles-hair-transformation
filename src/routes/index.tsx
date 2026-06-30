@@ -2273,239 +2273,334 @@ function Urgency() {
         ))}
       </div>
 
-      <div className="relative mx-auto max-w-md px-6 pt-2 pb-12 text-center">
+      <div className="relative mx-auto max-w-md px-3 pt-6 pb-10">
 
-        {/* Kit image */}
-        <div className="relative mx-auto mb-2 flex h-[120px] w-full max-w-[320px] items-center justify-center">
-          <div
-            aria-hidden="true"
-            className="absolute left-1/2 top-1/2 h-[180px] w-[180px] -translate-x-1/2 -translate-y-1/2 rounded-full animate-halo-breathe"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(244,222,165,0.55) 0%, rgba(232,201,138,0.3) 35%, rgba(232,201,138,0.08) 60%, rgba(232,201,138,0) 75%)",
-              filter: "blur(2px)",
-            }}
-          />
-        </div>
+        {/* Split-screen luxury layout */}
+        <div className="grid grid-cols-2 gap-2.5">
 
-        {/* Headline */}
-
-        <h2
-          className="mt-4 text-[1.45rem] leading-[1.15] uppercase"
-          style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            color: "#F4ECDC",
-            letterSpacing: "0.04em",
-            fontWeight: 400,
-          }}
-        >
-          Tu transformación
-          <br />
-          empieza con la
-        </h2>
-        <h3
-          className="mt-2 text-[2.05rem] leading-[1.05] uppercase"
-          style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            color: gold,
-            letterSpacing: "0.02em",
-            fontWeight: 500,
-          }}
-        >
-          Decisión que
-          <br />
-          tomes hoy
-        </h3>
-
-        <div className="mt-5">
-          <Ornament />
-        </div>
-
-        <p
-          className="mx-auto mt-5 max-w-[20rem] text-[0.92rem] leading-[1.6]"
-          style={{ color: "#E8DCC8", fontFamily: "'Cormorant Garamond', serif" }}
-        >
-          Miles de mujeres ya comenzaron a recuperar la fuerza, el crecimiento
-          y la belleza natural de su cabello.
-        </p>
-        <p
-          className="mt-3 text-[0.95rem]"
-          style={{ color: gold, fontWeight: 500, letterSpacing: "0.02em" }}
-        >
-          Hoy puede ser tu momento.
-        </p>
-
-        {/* Price block */}
-        <div
-          className="relative mt-10 overflow-hidden rounded-xl px-3 py-2.5 backdrop-blur-md"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(20,8,35,0.55), rgba(28,12,45,0.65))",
-            border: `1px solid ${gold}66`,
-            boxShadow: `0 0 18px ${gold}22, inset 0 0 20px rgba(244,222,165,0.06)`,
-          }}
-        >
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 animate-shine-sweep"
-            style={{ background: "linear-gradient(90deg, transparent, rgba(244,222,165,0.18), transparent)" }}
-          />
-          <div className="flex items-center justify-between gap-3">
-            <div className="flex flex-col items-center flex-1">
-              <span
-                className="text-[0.52rem] uppercase"
-                style={{ color: "#E8DCC8", letterSpacing: "0.22em", fontWeight: 500 }}
-              >
-                Valor regular
-              </span>
-              <span
-                className="mt-0.5 text-[0.9rem] line-through"
-                style={{
-                  color: "#9A8AA8",
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontWeight: 500,
-                }}
-              >
-                $200.000
-              </span>
-            </div>
-            <span aria-hidden className="h-9 w-px" style={{ background: `linear-gradient(180deg, transparent, ${gold}80, transparent)` }} />
-            <div className="flex flex-col items-center flex-1">
-              <span
-                className="text-[0.52rem] uppercase"
-                style={{ color: gold, letterSpacing: "0.22em", fontWeight: 600 }}
-              >
-                Hoy
-              </span>
-              <span
-                className="mt-0.5 text-[1.3rem] leading-none"
-                style={{
-                  color: gold,
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontWeight: 600,
-                }}
-              >
-                $179.900
-              </span>
-            </div>
-          </div>
-
-          {/* limited time pill */}
-          <div
-            className="mt-3 inline-flex w-full items-center justify-center gap-1.5 rounded-full px-2.5 py-1.5"
-            style={{
-              background: "rgba(40,18,60,0.75)",
-              border: `1px solid ${gold}66`,
-              boxShadow: `0 0 12px ${gold}33`,
-            }}
-          >
-            <Clock size={11} strokeWidth={1.75} style={{ color: gold }} />
-            <span
-              className="text-[0.58rem] uppercase"
-              style={{ color: "#F4ECDC", letterSpacing: "0.18em", fontWeight: 600 }}
-            >
-              Acceso especial por tiempo limitado
-            </span>
-          </div>
-        </div>
-
-        {/* Producción limitada card */}
-        <div
-          className="relative mt-2.5 overflow-hidden rounded-xl px-2.5 py-2.5 text-left backdrop-blur-md"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(20,8,35,0.55), rgba(28,12,45,0.65))",
-            border: `1px solid ${gold}66`,
-            boxShadow: `0 0 14px ${gold}1f, inset 0 0 16px rgba(244,222,165,0.05)`,
-          }}
-        >
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 animate-shine-sweep"
-            style={{
-              background: "linear-gradient(90deg, transparent, rgba(244,222,165,0.14), transparent)",
-              animationDelay: "1.2s",
-            }}
-          />
-          <div className="flex items-start gap-2">
+          {/* ============== LEFT: empty luxury showcase ============== */}
+          <div className="relative flex flex-col items-center">
+            {/* Tall arched frame */}
             <div
-              className="flex size-7 shrink-0 items-center justify-center rounded-full"
-              style={{ border: `1px solid ${gold}88`, background: "rgba(40,18,60,0.6)" }}
-            >
-              <Leaf size={12} strokeWidth={1.5} style={{ color: gold }} />
-            </div>
-            <div className="flex-1">
-              <p
-                className="text-[0.58rem] uppercase"
-                style={{ color: gold, letterSpacing: "0.16em", fontWeight: 600 }}
-              >
-                Producción limitada
-              </p>
-              <p
-                className="mt-0.5 text-[0.55rem] leading-[1.4]"
-                style={{ color: "#E8DCC8" }}
-              >
-                Cada lote es elaborado en pequeñas cantidades utilizando
-                ingredientes botánicos cuidadosamente seleccionados para
-                garantizar máxima calidad.
-              </p>
-            </div>
-            <div
-              className="flex shrink-0 flex-col items-center justify-center rounded-full px-1.5 py-1.5 text-center"
+              className="relative w-full overflow-hidden"
               style={{
+                height: 380,
+                borderTopLeftRadius: "9999px",
+                borderTopRightRadius: "9999px",
+                borderBottomLeftRadius: "14px",
+                borderBottomRightRadius: "14px",
                 border: `1px solid ${gold}88`,
-                background: "rgba(40,18,60,0.6)",
-                minWidth: 52,
+                background:
+                  "linear-gradient(180deg, rgba(40,18,62,0.55) 0%, rgba(28,10,46,0.85) 100%)",
+                boxShadow:
+                  `0 0 24px ${gold}33, inset 0 0 30px rgba(244,222,165,0.08)`,
               }}
             >
-              <span className="text-[0.42rem] uppercase leading-tight" style={{ color: gold, letterSpacing: "0.1em", fontWeight: 700 }}>
-                Solo<br/>unidades<br/>disponibles<br/>esta semana
-              </span>
+              {/* Inner halo light */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute left-1/2 top-[42%] h-[180px] w-[180px] -translate-x-1/2 -translate-y-1/2 rounded-full animate-halo-breathe"
+                style={{
+                  background:
+                    "radial-gradient(circle, rgba(244,222,165,0.45) 0%, rgba(232,201,138,0.18) 40%, rgba(232,201,138,0) 75%)",
+                  filter: "blur(2px)",
+                }}
+              />
+              {/* Diagonal golden light reflection */}
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 animate-shine-sweep"
+                style={{
+                  background:
+                    "linear-gradient(115deg, transparent 30%, rgba(244,222,165,0.22) 50%, transparent 70%)",
+                }}
+              />
+              {/* Inner thin gold trace */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-[6px]"
+                style={{
+                  borderTopLeftRadius: "9999px",
+                  borderTopRightRadius: "9999px",
+                  borderBottomLeftRadius: "10px",
+                  borderBottomRightRadius: "10px",
+                  border: `1px solid ${gold}40`,
+                }}
+              />
+
+              {/* Botanical decorations (lavender + rosemary, CSS only) */}
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 60 200"
+                className="pointer-events-none absolute -left-2 top-6 h-[150px] w-[44px] opacity-80"
+                fill="none"
+              >
+                <path d="M30 10 C 22 50 18 110 26 190" stroke="#A8B89A" strokeWidth="1.2" strokeLinecap="round" />
+                {[30, 55, 80, 105, 130, 155].map((y, i) => (
+                  <g key={i}>
+                    <path d={`M${26 - i % 2 * 2} ${y} q -10 -6 -14 -14`} stroke="#A8B89A" strokeWidth="1" />
+                    <path d={`M${28 + i % 2 * 2} ${y + 8} q 10 -6 14 -14`} stroke="#A8B89A" strokeWidth="1" />
+                  </g>
+                ))}
+                {[40, 70, 100].map((y, i) => (
+                  <circle key={i} cx={20 + (i % 2) * 8} cy={y} r="2.2" fill="#C9B5E0" opacity="0.85" />
+                ))}
+              </svg>
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 60 200"
+                className="pointer-events-none absolute -right-2 top-10 h-[140px] w-[42px] opacity-80"
+                fill="none"
+              >
+                <path d="M30 10 C 38 50 42 110 34 190" stroke="#A8B89A" strokeWidth="1.2" strokeLinecap="round" />
+                {[40, 70, 100, 130].map((y, i) => (
+                  <circle key={i} cx={36 - (i % 2) * 6} cy={y} r="2.4" fill="#C9B5E0" opacity="0.9" />
+                ))}
+              </svg>
+
+              {/* INTENTIONALLY EMPTY — reserved for product image */}
+            </div>
+
+            {/* Marble podium */}
+            <div
+              className="relative -mt-2 w-[112%] overflow-hidden rounded-md"
+              style={{
+                height: 28,
+                background:
+                  "linear-gradient(180deg, #2E1A3F 0%, #1B0E2A 100%), repeating-linear-gradient(115deg, rgba(244,222,165,0.06) 0 6px, transparent 6px 14px)",
+                backgroundBlendMode: "overlay",
+                border: `1px solid ${gold}55`,
+                boxShadow: `0 10px 22px -8px ${goldDeep}80, inset 0 1px 0 rgba(244,222,165,0.25)`,
+              }}
+            >
+              {/* marble veins */}
+              <span
+                aria-hidden
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(110deg, transparent 20%, rgba(244,222,165,0.18) 32%, transparent 45%, rgba(244,222,165,0.10) 60%, transparent 78%)",
+                }}
+              />
+              {/* reflection */}
+              <span
+                aria-hidden
+                className="absolute inset-x-2 top-0 h-[40%] rounded-full"
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0))",
+                  filter: "blur(2px)",
+                }}
+              />
+            </div>
+          </div>
+
+          {/* ============== RIGHT: conversion content ============== */}
+          <div className="flex flex-col text-center">
+            {/* Eyebrow */}
+            <span
+              className="text-[0.42rem] uppercase"
+              style={{ color: gold, letterSpacing: "0.28em", fontWeight: 600 }}
+            >
+              Rapunceles · Édition
+            </span>
+
+            {/* Headline */}
+            <h2
+              className="mt-1.5 text-[0.78rem] leading-[1.12] uppercase"
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                color: "#F4ECDC",
+                letterSpacing: "0.04em",
+                fontWeight: 400,
+              }}
+            >
+              Tu transformación
+              <br />
+              empieza con la
+            </h2>
+            <h3
+              className="mt-1 text-[1.05rem] leading-[1.02] uppercase"
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                color: gold,
+                letterSpacing: "0.02em",
+                fontWeight: 500,
+              }}
+            >
+              Decisión que
+              <br />
+              tomes hoy
+            </h3>
+
+            <div className="mt-2"><Ornament /></div>
+
+            <p
+              className="mx-auto mt-2 text-[0.56rem] leading-[1.5]"
+              style={{ color: "#E8DCC8", fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Miles de mujeres ya comenzaron a recuperar la fuerza, el
+              crecimiento y la belleza natural de su cabello.
+            </p>
+            <p
+              className="mt-1 text-[0.6rem]"
+              style={{ color: gold, fontWeight: 500, letterSpacing: "0.04em" }}
+            >
+              Hoy puede ser tu momento.
+            </p>
+
+            {/* Price glass card */}
+            <div
+              className="relative mt-3 overflow-hidden rounded-lg px-2 py-2 backdrop-blur-md"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(20,8,35,0.55), rgba(28,12,45,0.7))",
+                border: `1px solid ${gold}66`,
+                boxShadow: `0 0 14px ${gold}22, inset 0 0 14px rgba(244,222,165,0.06)`,
+              }}
+            >
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 animate-shine-sweep"
+                style={{ background: "linear-gradient(90deg, transparent, rgba(244,222,165,0.18), transparent)" }}
+              />
+              <div className="flex items-center justify-between gap-1.5">
+                <div className="flex flex-col items-center flex-1">
+                  <span
+                    className="text-[0.38rem] uppercase"
+                    style={{ color: "#E8DCC8", letterSpacing: "0.18em", fontWeight: 500 }}
+                  >
+                    Valor regular
+                  </span>
+                  <span
+                    className="mt-0.5 text-[0.62rem] line-through"
+                    style={{ color: "#9A8AA8", fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
+                  >
+                    $200.000
+                  </span>
+                </div>
+                <span aria-hidden className="h-7 w-px" style={{ background: `linear-gradient(180deg, transparent, ${gold}80, transparent)` }} />
+                <div className="flex flex-col items-center flex-1">
+                  <span
+                    className="text-[0.42rem] uppercase"
+                    style={{ color: gold, letterSpacing: "0.2em", fontWeight: 700 }}
+                  >
+                    Hoy
+                  </span>
+                  <span
+                    className="mt-0.5 text-[0.92rem] leading-none"
+                    style={{ color: gold, fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+                  >
+                    $179.900
+                  </span>
+                </div>
+              </div>
+              <div
+                className="mt-1.5 flex w-full items-center justify-center gap-1 rounded-full px-1.5 py-1"
+                style={{
+                  background: "rgba(40,18,60,0.75)",
+                  border: `1px solid ${gold}66`,
+                  boxShadow: `0 0 8px ${gold}33`,
+                }}
+              >
+                <Clock size={8} strokeWidth={1.75} style={{ color: gold }} />
+                <span
+                  className="text-[0.4rem] uppercase"
+                  style={{ color: "#F4ECDC", letterSpacing: "0.14em", fontWeight: 600 }}
+                >
+                  Acceso limitado
+                </span>
+              </div>
+            </div>
+
+            {/* Producción limitada */}
+            <div
+              className="relative mt-2 overflow-hidden rounded-lg px-2 py-2 text-left backdrop-blur-md"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(20,8,35,0.55), rgba(28,12,45,0.7))",
+                border: `1px solid ${gold}66`,
+                boxShadow: `0 0 10px ${gold}1f, inset 0 0 12px rgba(244,222,165,0.05)`,
+              }}
+            >
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 animate-shine-sweep"
+                style={{
+                  background: "linear-gradient(90deg, transparent, rgba(244,222,165,0.14), transparent)",
+                  animationDelay: "1.2s",
+                }}
+              />
+              <div className="flex items-start gap-1.5">
+                <div
+                  className="flex size-5 shrink-0 items-center justify-center rounded-full"
+                  style={{ border: `1px solid ${gold}88`, background: "rgba(40,18,60,0.6)" }}
+                >
+                  <Leaf size={9} strokeWidth={1.5} style={{ color: gold }} />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p
+                    className="text-[0.42rem] uppercase"
+                    style={{ color: gold, letterSpacing: "0.12em", fontWeight: 700 }}
+                  >
+                    Producción limitada
+                  </p>
+                  <p
+                    className="mt-0.5 text-[0.42rem] leading-[1.35]"
+                    style={{ color: "#E8DCC8" }}
+                  >
+                    Lotes pequeños con ingredientes botánicos seleccionados.
+                  </p>
+                </div>
+              </div>
+              <div
+                className="mt-1.5 mx-auto flex w-full items-center justify-center rounded-full px-1.5 py-1 text-center"
+                style={{
+                  border: `1px solid ${gold}88`,
+                  background: "rgba(40,18,60,0.6)",
+                }}
+              >
+                <span className="text-[0.38rem] uppercase" style={{ color: gold, letterSpacing: "0.1em", fontWeight: 700 }}>
+                  Solo unidades · esta semana
+                </span>
+              </div>
+            </div>
+
+            {/* Trust row */}
+            <div
+              className="mt-2 rounded-lg px-1 py-1.5"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(20,8,35,0.78), rgba(28,12,45,0.85))",
+                border: `1px solid ${gold}55`,
+              }}
+            >
+              <div className="grid grid-cols-3 gap-0.5">
+                {trust.map(({ Icon, title }, i) => (
+                  <div key={i} className="flex flex-col items-center text-center">
+                    <div
+                      className="flex size-5 items-center justify-center rounded-full"
+                      style={{ border: `1px solid ${gold}88`, background: "rgba(40,18,60,0.6)" }}
+                    >
+                      <Icon size={9} strokeWidth={1.5} style={{ color: gold }} />
+                    </div>
+                    <p
+                      className="mt-0.5 text-[0.36rem] uppercase leading-tight"
+                      style={{ color: "#F4ECDC", letterSpacing: "0.06em", fontWeight: 700 }}
+                    >
+                      {title}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Trust badges — 3 columns */}
-        <div
-          className="mt-2.5 rounded-xl px-2 py-2.5"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(20,8,35,0.78), rgba(28,12,45,0.85))",
-            border: `1px solid ${gold}55`,
-            boxShadow: `0 0 14px ${gold}1f, inset 0 0 16px rgba(244,222,165,0.05)`,
-          }}
-        >
-          <div className="grid grid-cols-3 gap-1.5">
-            {trust.map(({ Icon, title, sub }, i) => (
-              <div key={i} className="flex flex-col items-center text-center px-0.5">
-                <div
-                  className="flex size-7 items-center justify-center rounded-full"
-                  style={{ border: `1px solid ${gold}88`, background: "rgba(40,18,60,0.6)" }}
-                >
-                  <Icon size={12} strokeWidth={1.5} style={{ color: gold }} />
-                </div>
-                <p
-                  className="mt-1.5 text-[0.52rem] uppercase leading-tight"
-                  style={{ color: "#F4ECDC", letterSpacing: "0.08em", fontWeight: 700 }}
-                >
-                  {title}
-                </p>
-                <p
-                  className="mt-0.5 text-[0.48rem] leading-[1.3]"
-                  style={{ color: "#C9B8D4" }}
-                >
-                  {sub}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-
-        {/* Gold CTA */}
+        {/* ============== FULL-WIDTH CTA ============== */}
         <a
           href="#kit"
-          className="relative mt-10 flex w-full items-center justify-between gap-3 overflow-hidden rounded-full pl-4 pr-3 py-3.5 animate-progress-glow"
+          className="relative mt-5 flex w-full items-center justify-between gap-2 overflow-hidden rounded-full pl-3 pr-2 py-3 animate-progress-glow"
           style={{
             background: `linear-gradient(180deg, #F1D58A 0%, ${gold} 50%, ${goldDeep} 100%)`,
             color: "#2A0E3A",
@@ -2522,33 +2617,30 @@ function Urgency() {
             style={{ background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent)" }}
           />
           <span
-            className="relative flex size-8 items-center justify-center rounded-full"
+            className="relative flex size-7 items-center justify-center rounded-full"
             style={{ background: "rgba(42,14,58,0.92)" }}
           >
-            <Lock size={14} strokeWidth={2} style={{ color: gold }} />
+            <Lock size={12} strokeWidth={2} style={{ color: gold }} />
           </span>
-          <span className="relative flex-1 text-center text-[0.95rem] uppercase leading-[1.15]" style={{ fontWeight: 700 }}>
+          <span className="relative flex-1 text-center text-[0.85rem] uppercase leading-[1.15]" style={{ fontWeight: 700 }}>
             Quiero empezar
             <br />
-            <span className="text-[0.78rem]" style={{ fontWeight: 500 }}>mi transformación</span>
+            <span className="text-[0.7rem]" style={{ fontWeight: 500 }}>mi transformación</span>
           </span>
-          <ArrowRight size={20} strokeWidth={2.25} className="relative" />
+          <ArrowRight size={18} strokeWidth={2.25} className="relative" />
         </a>
 
-        {/* Footer trust line */}
-        <div className="mt-4 flex items-center justify-center gap-2">
-          <ShieldCheck size={12} strokeWidth={1.75} style={{ color: gold }} />
+        <div className="mt-3 flex items-center justify-center gap-2">
+          <ShieldCheck size={11} strokeWidth={1.75} style={{ color: gold }} />
           <span
-            className="text-[0.6rem] uppercase"
+            className="text-[0.55rem] uppercase"
             style={{ color: "#E8DCC8", letterSpacing: "0.22em", fontWeight: 600 }}
           >
             Compra segura y garantizada
           </span>
         </div>
 
-        <div className="mt-5">
-          <Ornament />
-        </div>
+        <div className="mt-4"><Ornament /></div>
       </div>
     </section>
   );
