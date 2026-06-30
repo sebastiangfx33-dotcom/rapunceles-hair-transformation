@@ -1671,12 +1671,6 @@ function Testimonials() {
       <div className="relative mx-auto max-w-md px-6">
         {/* HEADER */}
         <div className="text-center">
-          <span
-            className="block text-[0.65rem] uppercase tracking-[0.4em]"
-            style={{ color: gold }}
-          >
-            · Comunidad Rapunceles ·
-          </span>
           <h2
             className="mt-5 font-display text-[1.95rem] leading-[1.15]"
             style={{ color: gold, letterSpacing: "0.01em" }}
