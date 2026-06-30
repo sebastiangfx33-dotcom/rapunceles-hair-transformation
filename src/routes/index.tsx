@@ -2443,122 +2443,143 @@ function FinalTransformation() {
       className="relative w-full overflow-hidden"
       style={{
         background:
-          "radial-gradient(120% 80% at 20% 30%, #3B1A4D 0%, #2A1237 55%, #1B0A26 100%)",
+          "radial-gradient(120% 80% at 30% 25%, #4A2563 0%, #3B1A4D 45%, #2A1237 100%)",
       }}
     >
       <div className="mx-auto flex max-w-md flex-col">
-        {/* Top split: image + text */}
-        <div className="grid grid-cols-[42%_58%] items-stretch">
+        {/* Top: image + brand */}
+        <div className="relative grid grid-cols-[48%_52%] items-start gap-2 px-3 pt-6">
           <div className="relative">
             <img
               src={finalCtaModel.url}
-              alt="Mujer con cabello largo y saludable"
+              alt="Mujer reflejándose en el espejo con cabello largo y saludable"
               loading="lazy"
               width={768}
               height={1280}
-              className="h-full w-full object-cover object-left"
+              className="h-auto w-full object-cover"
               style={{
                 maskImage:
-                  "linear-gradient(to right, #000 78%, transparent 100%)",
+                  "radial-gradient(ellipse 100% 90% at 50% 50%, #000 70%, transparent 100%)",
                 WebkitMaskImage:
-                  "linear-gradient(to right, #000 78%, transparent 100%)",
+                  "radial-gradient(ellipse 100% 90% at 50% 50%, #000 70%, transparent 100%)",
               }}
             />
           </div>
-          <div className="flex flex-col justify-center px-4 py-10 text-center">
-            <h2
-              className="text-[1.55rem] leading-[1.1]"
-              style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A85E", letterSpacing: "0.01em" }}
-            >
-              TU CABELLO
-              <br />
-              TODAVÍA PUEDE
-              <br />
-              <span
-                className="italic"
-                style={{ color: gold, fontWeight: 500 }}
-              >
-                CAMBIAR
-              </span>
-            </h2>
+          <div className="flex flex-col items-center pt-4 text-center">
+            <Crown className="size-5" style={{ color: gold }} strokeWidth={1.3} />
             <div
-              className="mx-auto mt-3 h-px w-10"
-              style={{ background: gold, opacity: 0.8 }}
-            />
+              className="mt-1 flex h-12 w-12 items-center justify-center rounded-full"
+              style={{ border: `1px solid ${gold}` }}
+            >
+              <span
+                className="font-display text-[1.6rem] leading-none"
+                style={{ color: gold }}
+              >
+                R
+              </span>
+            </div>
             <p
-              className="mt-4 text-[0.78rem] leading-[1.45] text-white/85"
+              className="mt-2 font-display text-[1.35rem] leading-none tracking-[0.04em] text-white"
             >
-              Miles de mujeres están recuperando fuerza, crecimiento y abundancia con Rapunceles.
+              Rapunceles
             </p>
-            <p className="mt-3 text-[0.78rem] leading-[1.45] text-white/85">
-              No sigas viendo cómo tu cabello pierde vida cada día.
-            </p>
-
-            <button
-              type="button"
-              className="mt-5 rounded-xl px-4 py-3.5 font-display text-[0.78rem] leading-tight tracking-wide"
-              style={{
-                background:
-                  "linear-gradient(180deg, #DDB46A 0%, #B88A3F 100%)",
-                color: "#2A1237",
-                boxShadow:
-                  "0 18px 40px -16px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.35)",
-              }}
+            <p
+              className="mt-1.5 text-[0.55rem] tracking-[0.32em]"
+              style={{ color: gold }}
             >
-              QUIERO EMPEZAR MI
-              <br />
-              TRANSFORMACIÓN
-            </button>
+              HAIR TRANSFORMATION
+            </p>
           </div>
         </div>
 
-        {/* Benefits row */}
-        <div className="grid grid-cols-3 gap-2 px-5 pb-10 pt-4">
-          {benefits.map(({ icon: Icon, line1, line2 }, i) => (
-            <div
-              key={line1}
-              className="relative flex flex-col items-center gap-2 px-1 text-center"
+        {/* Headline */}
+        <div className="px-6 pt-4 text-center">
+          <h2
+            className="text-[1.55rem] leading-[1.15] text-white"
+            style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
+          >
+            Recuperar tu cabello también es{" "}
+            <span
+              className="italic"
+              style={{ color: gold, fontWeight: 500 }}
             >
-              <Icon className="size-7" style={{ color: gold }} strokeWidth={1.3} />
-              <p className="text-[0.7rem] leading-[1.25] text-white">
-                {line1}
+              recuperar tu confianza.
+            </span>
+          </h2>
+          <div className="mt-4 flex items-center justify-center gap-2">
+            <span className="h-px w-12" style={{ background: gold, opacity: 0.7 }} />
+            <Leaf className="size-3 rotate-45" style={{ color: gold }} strokeWidth={1.3} />
+            <span className="h-px w-12" style={{ background: gold, opacity: 0.7 }} />
+          </div>
+        </div>
+
+        {/* Body copy */}
+        <div className="px-7 pt-5 text-center">
+          <p className="text-[0.82rem] leading-[1.55] text-white/85">
+            No se trata solamente de crecer cabello.
+          </p>
+          <p className="mt-3 text-[0.82rem] leading-[1.55] text-white/85">
+            Se trata de volver a sentirte{" "}
+            <span style={{ color: gold, fontWeight: 500 }}>segura</span>, verte al espejo con{" "}
+            <span style={{ color: gold, fontWeight: 500 }}>orgullo</span> y disfrutar nuevamente tu{" "}
+            <span style={{ color: gold, fontWeight: 500 }}>belleza natural</span>.
+          </p>
+        </div>
+
+        {/* Benefits row */}
+        <div className="grid grid-cols-3 gap-3 px-5 pb-2 pt-8">
+          {[
+            { icon: Sparkles, l1: "MÁS SEGURIDAD", l2: "EN TI MISMA" },
+            { icon: Heart, l1: "MÁS CONFIANZA", l2: "CADA DÍA" },
+            { icon: Flower2, l1: "MÁS FEMINIDAD", l2: "Y BIENESTAR" },
+          ].map(({ icon: Icon, l1, l2 }) => (
+            <div key={l1} className="flex flex-col items-center gap-2 text-center">
+              <div
+                className="flex h-14 w-14 items-center justify-center rounded-full"
+                style={{
+                  border: `1px solid ${gold}`,
+                  background:
+                    "radial-gradient(circle at 50% 40%, rgba(212,168,94,0.12) 0%, transparent 70%)",
+                }}
+              >
+                <Icon className="size-6" style={{ color: gold }} strokeWidth={1.2} />
+              </div>
+              <p className="text-[0.6rem] leading-[1.3] tracking-[0.12em] text-white/90">
+                {l1}
                 <br />
-                {line2}
+                {l2}
               </p>
-              {i < benefits.length - 1 && (
-                <span
-                  className="pointer-events-none absolute right-0 top-1 h-12 w-px"
-                  style={{ background: "rgba(212,168,94,0.25)" }}
-                />
-              )}
             </div>
           ))}
         </div>
 
-        {/* Brand footer */}
-        <div className="flex flex-col items-center px-5 pb-12 pt-2 text-center">
-          <Crown className="size-5" style={{ color: gold }} strokeWidth={1.2} />
-          <div
-            className="mt-1 flex h-10 w-10 items-center justify-center rounded-full"
-            style={{ border: `1px solid ${gold}` }}
+        {/* CTA */}
+        <div className="px-5 pb-14 pt-6">
+          <button
+            type="button"
+            className="flex w-full items-center justify-center gap-2 rounded-full px-5 py-4 font-display text-[0.82rem] tracking-[0.14em]"
+            style={{
+              background:
+                "linear-gradient(180deg, #E5C079 0%, #C9A35A 50%, #A87E33 100%)",
+              color: purple,
+              boxShadow:
+                "0 0 0 1px rgba(232,201,138,0.55), 0 18px 40px -16px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.4)",
+            }}
           >
-            <span
-              className="font-display text-[1.35rem] leading-none"
-              style={{ color: gold }}
-            >
-              R
-            </span>
-          </div>
-          <p
-            className="mt-3 font-display text-[1.15rem] tracking-[0.32em] text-white"
-          >
-            RAPUNCELES
-          </p>
-          <p className="mt-2 text-[0.7rem] tracking-wide text-white/70">
-            Naturaleza. Ciencia. Transformación.
-          </p>
+            QUIERO EMPEZAR MI TRANSFORMACIÓN
+            <ArrowRight className="size-4" strokeWidth={1.8} />
+          </button>
         </div>
       </div>
+
+      {/* Bottom wave transition */}
+      <svg
+        viewBox="0 0 390 40"
+        preserveAspectRatio="none"
+        className="block h-8 w-full"
+      >
+        <path d="M0,0 Q97.5,40 195,20 T390,0 L390,40 L0,40 Z" fill="#F8F1E4" />
+      </svg>
     </section>
   );
 }
