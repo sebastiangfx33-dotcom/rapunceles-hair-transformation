@@ -2301,41 +2301,36 @@ function Urgency() {
         </p>
 
         {/* Trust badges */}
-        <div className="mt-7 space-y-3">
-          {trust.map(({ Icon, title, sub }, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-4 rounded-2xl px-4 py-3 text-left"
-              style={{
-                background: "rgba(20,8,35,0.55)",
-                border: `1px solid ${gold}40`,
-                backdropFilter: "blur(6px)",
-              }}
-            >
+        <div
+          className="mt-7 flex w-full items-center justify-between gap-2 rounded-full px-3 py-2.5"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(20,8,35,0.72), rgba(28,12,45,0.78), rgba(20,8,35,0.72))",
+            border: `1px solid ${gold}55`,
+            backdropFilter: "blur(6px)",
+            boxShadow: `0 0 14px ${gold}33, inset 0 0 18px rgba(244,222,165,0.08)`,
+          }}
+        >
+          {trust.map(({ Icon, title }, i) => (
+            <div key={i} className="flex flex-1 items-center justify-center gap-2 px-1">
+              {i > 0 && (
+                <span
+                  aria-hidden="true"
+                  className="mr-1 h-5 w-px"
+                  style={{ background: `linear-gradient(180deg, transparent, ${gold}80, transparent)` }}
+                />
+              )}
+              <Icon size={12} strokeWidth={1.25} style={{ color: gold }} />
               <span
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
-                style={{
-                  border: `1px solid ${gold}80`,
-                  background:
-                    "radial-gradient(circle at 30% 30%, rgba(244,236,220,0.12), rgba(212,168,94,0.04))",
-                }}
+                className="text-[0.52rem] uppercase whitespace-nowrap"
+                style={{ color: "#F4ECDC", letterSpacing: "0.14em", fontWeight: 500 }}
               >
-                <Icon size={18} strokeWidth={1.25} style={{ color: gold }} />
+                {title}
               </span>
-              <div className="min-w-0">
-                <div
-                  className="text-[0.8rem] uppercase"
-                  style={{ color: "#F4ECDC", letterSpacing: "0.14em", fontWeight: 500 }}
-                >
-                  {title}
-                </div>
-                <div className="mt-0.5 text-[0.78rem]" style={{ color: "#D8C9B4" }}>
-                  {sub}
-                </div>
-              </div>
             </div>
           ))}
         </div>
+
 
         {/* Gold CTA */}
         <a
