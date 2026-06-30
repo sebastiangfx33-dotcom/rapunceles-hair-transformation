@@ -2489,14 +2489,22 @@ function Urgency() {
 
         {/* Producción limitada card */}
         <div
-          className="mt-4 rounded-2xl px-4 py-4 text-left"
+          className="relative mt-4 overflow-hidden rounded-2xl px-4 py-4 text-left backdrop-blur-md"
           style={{
             background:
-              "linear-gradient(180deg, rgba(20,8,35,0.78), rgba(28,12,45,0.85))",
-            border: `1px solid ${gold}55`,
+              "linear-gradient(180deg, rgba(20,8,35,0.55), rgba(28,12,45,0.65))",
+            border: `1px solid ${gold}66`,
             boxShadow: `0 0 18px ${gold}22, inset 0 0 20px rgba(244,222,165,0.06)`,
           }}
         >
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 animate-shine-sweep"
+            style={{
+              background: "linear-gradient(90deg, transparent, rgba(244,222,165,0.14), transparent)",
+              animationDelay: "1.2s",
+            }}
+          />
           <div className="flex items-start gap-3">
             <div
               className="flex size-9 shrink-0 items-center justify-center rounded-full"
