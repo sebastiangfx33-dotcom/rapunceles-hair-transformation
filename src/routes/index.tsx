@@ -818,7 +818,7 @@ function ProductRoutineSection() {
                     </span>
                     <div className="min-w-0 flex-1">
                       <h3
-                        className="text-[13px] leading-tight"
+                        className="text-[10px] leading-tight"
                         style={{
                           fontFamily: "'Cormorant Garamond', serif",
                           color: "#E8C98A",
@@ -829,7 +829,7 @@ function ProductRoutineSection() {
                         {title}
                       </h3>
                       <p
-                        className="mt-1 text-[14px] leading-snug"
+                        className="mt-1 text-[11px] leading-snug"
                         style={{
                           fontFamily: "'Cormorant Garamond', serif",
                           color: "#F4ECDC",
