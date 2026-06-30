@@ -2515,10 +2515,10 @@ function FinalTransformation() {
         </div>
 
         {/* CTA */}
-        <div className="px-5 pb-14 pt-6">
+        <div className="flex justify-center px-5 pb-14 pt-6">
           <button
             type="button"
-            className="flex w-full items-center justify-center gap-2 rounded-full px-5 py-4 font-display text-[0.82rem] tracking-[0.14em]"
+            className="flex w-1/2 items-center justify-center gap-2 rounded-full px-3 py-3 font-display text-[0.62rem] tracking-[0.12em]"
             style={{
               background:
                 "linear-gradient(180deg, #E5C079 0%, #C9A35A 50%, #A87E33 100%)",
