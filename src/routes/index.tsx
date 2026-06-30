@@ -1974,7 +1974,7 @@ function Testimonials() {
                   key={i}
                   src={src}
                   alt=""
-                  className="h-5 w-5 rounded-full object-cover"
+                  className="h-9 w-9 rounded-full object-cover"
                   style={{
                     border: `1.5px solid ${gold}`,
                     boxShadow: "0 0 10px rgba(201,168,76,0.35)",
