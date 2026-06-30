@@ -2358,7 +2358,13 @@ function Urgency() {
                 ))}
               </svg>
 
-              {/* INTENTIONALLY EMPTY — reserved for product image */}
+              {/* Product image — reemplázame seleccionándome en el preview */}
+              <img
+                src={heroKitNew.url}
+                alt="Producto Rapunceles"
+                className="absolute inset-0 z-10 h-full w-full object-contain p-3"
+              />
+
             </div>
 
             {/* Marble podium */}
