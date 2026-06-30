@@ -2195,7 +2195,7 @@ function ProductOptions() {
 function Urgency() {
   const gold = "#E8C98A";
   const goldDeep = "#C9A35A";
-  const filled = 78;
+
   const Ornament = () => (
     <div className="flex items-center justify-center gap-2" aria-hidden>
       <span style={{ width: 28, height: 1, background: `linear-gradient(90deg, transparent, ${gold})` }} />
