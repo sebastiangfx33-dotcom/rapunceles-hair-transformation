@@ -2275,42 +2275,6 @@ function Urgency() {
 
       <div className="relative mx-auto max-w-md px-6 pt-8 pb-12 text-center">
 
-        {/* === Empty product showcase === */}
-        <div className="relative mx-auto mb-6 h-[260px] w-full max-w-[320px]">
-
-          {/* Golden halo */}
-          <div
-            aria-hidden="true"
-            className="absolute left-1/2 top-1/2 h-[210px] w-[210px] -translate-x-1/2 -translate-y-1/2 rounded-full animate-halo-breathe"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(244,222,165,0.55) 0%, rgba(232,201,138,0.32) 35%, rgba(232,201,138,0.08) 60%, rgba(232,201,138,0) 75%)",
-              filter: "blur(2px)",
-            }}
-          />
-
-
-          {/* Premium podium */}
-          <div
-            aria-hidden="true"
-            className="absolute bottom-0 left-1/2 h-[26px] w-[230px] -translate-x-1/2 rounded-[50%]"
-            style={{
-              background:
-                "radial-gradient(ellipse at center, rgba(244,222,165,0.55), rgba(232,201,138,0.18) 55%, rgba(232,201,138,0) 75%)",
-              filter: "blur(1px)",
-            }}
-          />
-          <div
-            aria-hidden="true"
-            className="absolute bottom-2 left-1/2 h-[10px] w-[180px] -translate-x-1/2 rounded-full"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(244,222,165,0.55), rgba(120,80,40,0.35))",
-              border: `1px solid ${gold}66`,
-              boxShadow: `0 6px 14px -4px ${goldDeep}, inset 0 1px 0 rgba(255,255,255,0.35)`,
-            }}
-          />
-        </div>
 
 
         {/* Headline */}
