@@ -586,7 +586,7 @@ function Solution() {
         <div className="flex-1" />
 
         {/* Bottom chips - below products */}
-        <ul className="mb-2 flex flex-wrap justify-center gap-2.5">
+        <ul className="mt-10 mb-2 flex flex-wrap justify-center gap-2.5">
           {benefits.slice(2).map(({ icon: Icon, text }) => (
             <li
               key={text}
