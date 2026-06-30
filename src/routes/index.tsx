@@ -2496,8 +2496,33 @@ function Urgency() {
               Miles de mujeres ya confiaron en Rapunceles
             </p>
 
+            {/* Editorial headline with flanking gold lines */}
+            <div className="mt-5 flex items-center justify-center gap-4">
+              <span
+                aria-hidden
+                className="h-px w-10"
+                style={{ background: `linear-gradient(90deg, transparent, ${gold})` }}
+              />
+              <h2
+                className="text-[1.55rem] leading-[1.18] whitespace-nowrap"
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  color: "#F4ECDC",
+                  fontStyle: "italic",
+                  fontWeight: 300,
+                  letterSpacing: "-0.005em",
+                }}
+              >
+                Hoy puede ser
+              </h2>
+              <span
+                aria-hidden
+                className="h-px w-10"
+                style={{ background: `linear-gradient(90deg, ${gold}, transparent)` }}
+              />
+            </div>
             <h2
-              className="mt-5 text-[1.55rem] leading-[1.18]"
+              className="mt-1 text-[1.55rem] leading-[1.18]"
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
                 color: "#F4ECDC",
@@ -2506,15 +2531,8 @@ function Urgency() {
                 letterSpacing: "-0.005em",
               }}
             >
-              Hoy queremos<br />acompañarte a ti.
+              tu momento.
             </h2>
-
-            {/* Small luxury decorative golden line */}
-            <span
-              aria-hidden
-              className="mt-7 block h-px w-14"
-              style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
-            />
 
             <p
               className="mx-auto mt-7 max-w-[18rem] text-[0.74rem] leading-[1.8]"
@@ -2522,82 +2540,7 @@ function Urgency() {
             >
               Una rutina pensada para devolverle a tu cabello la fuerza, el crecimiento y la belleza que siempre fue tuya.
             </p>
-
-            {/* Price — quiet luxury */}
-            <div className="mt-10 flex flex-col items-center">
-              <span
-                className="text-[0.5rem] uppercase"
-                style={{ color: "#9A8AA8", letterSpacing: "0.46em", fontWeight: 500 }}
-              >
-                Édition limitée
-              </span>
-              <div className="mt-4 flex items-baseline gap-3.5">
-                <span
-                  className="text-[0.78rem] line-through"
-                  style={{ color: "#7A6A88", fontFamily: "'Cormorant Garamond', serif", fontWeight: 300 }}
-                >
-                  $200.000
-                </span>
-                <span
-                  className="text-[2rem] leading-none"
-                  style={{
-                    color: gold,
-                    fontFamily: "'Cormorant Garamond', serif",
-                    fontWeight: 300,
-                    letterSpacing: "0.02em",
-                  }}
-                >
-                  $179.900
-                </span>
-              </div>
-            </div>
           </div>
-        </div>
-
-
-
-
-        {/* ============== FULL-WIDTH CTA ============== */}
-        <a
-          href="#kit"
-          className="relative mt-5 flex w-full items-center justify-between gap-2 overflow-hidden rounded-full pl-3 pr-2 py-3 animate-progress-glow"
-          style={{
-            background: `linear-gradient(180deg, #F1D58A 0%, ${gold} 50%, ${goldDeep} 100%)`,
-            color: "#2A0E3A",
-            boxShadow:
-              `0 12px 28px -10px ${goldDeep}, inset 0 1px 0 rgba(255,255,255,0.55), inset 0 -1px 0 rgba(0,0,0,0.18)`,
-            border: `1px solid ${goldDeep}`,
-            fontFamily: "'Cormorant Garamond', serif",
-            letterSpacing: "0.08em",
-          }}
-        >
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 animate-shine-sweep"
-            style={{ background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent)" }}
-          />
-          <span
-            className="relative flex size-7 items-center justify-center rounded-full"
-            style={{ background: "rgba(42,14,58,0.92)" }}
-          >
-            <Lock size={12} strokeWidth={2} style={{ color: gold }} />
-          </span>
-          <span className="relative flex-1 text-center text-[0.85rem] uppercase leading-[1.15]" style={{ fontWeight: 700 }}>
-            Quiero empezar
-            <br />
-            <span className="text-[0.7rem]" style={{ fontWeight: 500 }}>mi transformación</span>
-          </span>
-          <ArrowRight size={18} strokeWidth={2.25} className="relative" />
-        </a>
-
-        <div className="mt-3 flex items-center justify-center gap-2">
-          <ShieldCheck size={11} strokeWidth={1.75} style={{ color: gold }} />
-          <span
-            className="text-[0.55rem] uppercase"
-            style={{ color: "#E8DCC8", letterSpacing: "0.22em", fontWeight: 600 }}
-          >
-            Compra segura y garantizada
-          </span>
         </div>
 
         <div className="mt-4"><Ornament /></div>
