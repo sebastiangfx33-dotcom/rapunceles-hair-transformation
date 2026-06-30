@@ -2360,7 +2360,7 @@ function Urgency() {
 
               {/* Product image — reemplázame seleccionándome en el preview */}
               <img
-                src={heroKitNew.url}
+                src="/__l5e/assets-v1/2b72b0c3-9306-47ae-a6f8-5807e25ab7e4/cta-left-product.png"
                 alt="Producto Rapunceles"
                 className="absolute inset-0 z-10 h-full w-full object-contain p-3"
               />
