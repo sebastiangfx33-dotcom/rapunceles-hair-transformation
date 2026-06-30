@@ -2273,13 +2273,13 @@ function Urgency() {
         ))}
       </div>
 
-      <div className="relative mx-auto max-w-md px-6 pt-8 pb-12 text-center">
+      <div className="relative mx-auto max-w-md px-6 pt-2 pb-12 text-center">
 
         {/* Kit image */}
-        <div className="relative mx-auto mb-6 flex h-[260px] w-full max-w-[320px] items-center justify-center">
+        <div className="relative mx-auto mb-2 flex h-[120px] w-full max-w-[320px] items-center justify-center">
           <div
             aria-hidden="true"
-            className="absolute left-1/2 top-1/2 h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full animate-halo-breathe"
+            className="absolute left-1/2 top-1/2 h-[180px] w-[180px] -translate-x-1/2 -translate-y-1/2 rounded-full animate-halo-breathe"
             style={{
               background:
                 "radial-gradient(circle, rgba(244,222,165,0.55) 0%, rgba(232,201,138,0.3) 35%, rgba(232,201,138,0.08) 60%, rgba(232,201,138,0) 75%)",
