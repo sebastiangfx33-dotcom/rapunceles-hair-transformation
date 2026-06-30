@@ -2417,7 +2417,7 @@ function Urgency() {
                 Hoy
               </span>
               <span
-                className="mt-1 text-[2rem] leading-none"
+                className="mt-1 text-[1.65rem] leading-none"
                 style={{
                   color: gold,
                   fontFamily: "'Cormorant Garamond', serif",
