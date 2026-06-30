@@ -2493,7 +2493,7 @@ function Urgency() {
         {/* Gold CTA */}
         <a
           href="#kit"
-          className="relative mt-6 flex w-full items-center justify-between gap-3 overflow-hidden rounded-full pl-4 pr-3 py-3.5 animate-progress-glow"
+          className="relative mt-10 flex w-full items-center justify-between gap-3 overflow-hidden rounded-full pl-4 pr-3 py-3.5 animate-progress-glow"
           style={{
             background: `linear-gradient(180deg, #F1D58A 0%, ${gold} 50%, ${goldDeep} 100%)`,
             color: "#2A0E3A",
