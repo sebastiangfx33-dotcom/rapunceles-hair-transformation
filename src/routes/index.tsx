@@ -25,10 +25,10 @@ const finalCtaModel = { url: "/final-cta-model-v2.jpg" };
 const trustBgAsset = { url: "/trust-bg-v2.png" };
 import luxuryBgScene from "@/assets/luxury-bg-scene.jpg";
 const testimonialsBgNew = { url: "/testimonials-bg-new.png" };
-const probFallAsset = { url: "/card1.png" };
-const probSlowGrowthAsset = { url: "/card2.png" };
+const probFallAsset = { url: "/__l5e/assets-v1/39cbb5a3-cd84-4cfe-8d34-3aca011a3bca/problem-fall-new.jpg" };
+const probSlowGrowthAsset = { url: "/__l5e/assets-v1/a87e988a-704c-4668-a3d7-84e7d0e76a27/problem-slow-new.jpg" };
 const probRootsAsset = { url: "/card3.png" };
-const probVolumeAsset = { url: "/card4.png" };
+const probVolumeAsset = { url: "/__l5e/assets-v1/d7a60bbe-6ddf-4487-97d2-5b707f3e88d0/problem-volume-new.jpg" };
 
 const heroBanner = { url: "/hero-banner.png" };
 const afterBannerBg = { url: "/after-banner-bg.png" };
