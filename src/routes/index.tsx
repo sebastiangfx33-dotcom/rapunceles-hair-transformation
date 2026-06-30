@@ -3039,52 +3039,6 @@ function LuxuryCampaign() {
         }}
       />
 
-
-      {/* Content */}
-      <div className="relative z-10 flex min-h-[570px] flex-col items-center px-7 pb-8 pt-2 text-center sm:min-h-[620px]">
-        {/* Headline */}
-        <h2
-          className="mb-3 max-w-[292px] text-[22px] leading-[1.13]"
-          style={{
-            fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
-            fontWeight: 400,
-            color: "#D4A85E",
-            letterSpacing: "0.01em",
-          }}
-        >
-          Tu cabello puede
-          <br />
-          empezar a{" "}
-          <span
-            style={{
-              fontStyle: "italic",
-              background:
-                "linear-gradient(180deg, #f4d98a 0%, #c79a4a 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            cambiar
-          </span>
-          <br />
-          desde hoy
-        </h2>
-
-        {/* Body */}
-        <p
-          className="mb-2 max-w-[270px] text-[11px] leading-[1.5]"
-          style={{ color: "#ffffff", fontFamily: "'Inter', sans-serif" }}
-        >
-          Miles de mujeres ya están recuperando crecimiento, fuerza y abundancia con Rapunceles.
-        </p>
-
-
-        {/* Spacer where scene shows through */}
-        <div className="min-h-[140px] flex-1" />
-
-
-      </div>
     </section>
   );
 }
