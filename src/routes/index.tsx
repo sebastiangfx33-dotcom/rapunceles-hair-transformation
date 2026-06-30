@@ -1699,20 +1699,14 @@ function Testimonials() {
 
         {/* SECTION 2 — FEATURED WHATSAPP TESTIMONIAL CARDS */}
         {(() => {
-          const chats = WHATSAPP_CHATS;
+          const chat = WHATSAPP_CHATS[chatIndex];
 
 
 
           return (
             <div className="mt-14">
-              <div className="overflow-hidden">
-                <div
-                  className="flex transition-transform duration-700 ease-out"
-                  style={{ transform: `translateX(-${chatIndex * 100}%)` }}
-                >
-                  {chats.map((chat, idx) => (
-                    <div key={idx} className="w-full shrink-0 px-1">
-                      <div className="relative">
+              <div className="px-1">
+                <div key={chatIndex} className="relative animate-in fade-in slide-in-from-right-3 duration-500">
 
                   {/* floating gold particles around card */}
                   <div aria-hidden className="pointer-events-none absolute -inset-6">
@@ -1817,7 +1811,7 @@ function Testimonials() {
                                 fontFamily: "system-ui, -apple-system, sans-serif",
                               }}
                             >
-                              {chat.name}
+                                {chat.name}
                             </div>
                             <div
                               className="text-[0.7rem] leading-tight"
