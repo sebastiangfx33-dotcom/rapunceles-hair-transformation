@@ -303,14 +303,17 @@ function Hero() {
           <span
             className="text-[11px]"
             style={{
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Inter', sans-serif",
               color: IVORY,
-              letterSpacing: "0.14em",
-              opacity: 0.85,
+              letterSpacing: "0.18em",
+              opacity: 0.9,
+              fontWeight: 500,
+              fontSize: "11px",
             }}
           >
-            +10.000 MUJERES
+            +1.500 MUJERES
           </span>
+
         </div>
 
         <p
