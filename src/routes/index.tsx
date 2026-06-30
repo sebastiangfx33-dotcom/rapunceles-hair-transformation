@@ -207,7 +207,7 @@ function Hero() {
           aria-hidden="true"
           viewBox="0 0 100 14"
           preserveAspectRatio="none"
-          className="pointer-events-none absolute inset-x-0 bottom-0 z-[6] h-[12%] w-full"
+          className="pointer-events-none absolute inset-x-0 bottom-0 z-[6] h-[6%] w-full"
         >
           <defs>
             <linearGradient id="archGold" x1="0" x2="1" y1="0" y2="0">
