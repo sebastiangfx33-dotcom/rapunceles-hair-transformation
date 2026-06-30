@@ -13,6 +13,7 @@ import {
   Shield,
   Flower2,
   Clock,
+  Lock,
   ArrowRight,
   Crown,
   Truck,
@@ -2282,62 +2283,199 @@ function Urgency() {
           Hoy puede ser tu momento.
         </p>
 
-        {/* Trust badges */}
+        {/* Price block */}
         <div
-          className="mt-7 flex w-full items-center justify-between gap-2 rounded-full px-3 py-2.5"
+          className="mt-7 rounded-2xl px-5 py-5"
           style={{
             background:
-              "linear-gradient(90deg, rgba(20,8,35,0.72), rgba(28,12,45,0.78), rgba(20,8,35,0.72))",
+              "linear-gradient(180deg, rgba(20,8,35,0.78), rgba(28,12,45,0.85))",
             border: `1px solid ${gold}55`,
-            backdropFilter: "blur(6px)",
-            boxShadow: `0 0 14px ${gold}33, inset 0 0 18px rgba(244,222,165,0.08)`,
+            boxShadow: `0 0 22px ${gold}26, inset 0 0 24px rgba(244,222,165,0.07)`,
           }}
         >
-          {trust.map(({ Icon, title }, i) => (
-            <div key={i} className="flex flex-1 items-center justify-center gap-2 px-1">
-              {i > 0 && (
-                <span
-                  aria-hidden="true"
-                  className="mr-1 h-5 w-px"
-                  style={{ background: `linear-gradient(180deg, transparent, ${gold}80, transparent)` }}
-                />
-              )}
-              <Icon size={12} strokeWidth={1.25} style={{ color: gold }} />
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex flex-col items-center flex-1">
               <span
-                className="text-[0.52rem] uppercase whitespace-nowrap"
-                style={{ color: "#F4ECDC", letterSpacing: "0.14em", fontWeight: 500 }}
+                className="text-[0.6rem] uppercase"
+                style={{ color: "#E8DCC8", letterSpacing: "0.22em", fontWeight: 500 }}
               >
-                {title}
+                Valor regular
+              </span>
+              <span
+                className="mt-1 text-[1.35rem] line-through"
+                style={{
+                  color: "#9A8AA8",
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontWeight: 500,
+                }}
+              >
+                $200.000
               </span>
             </div>
-          ))}
+            <span aria-hidden className="h-12 w-px" style={{ background: `linear-gradient(180deg, transparent, ${gold}80, transparent)` }} />
+            <div className="flex flex-col items-center flex-1">
+              <span
+                className="text-[0.6rem] uppercase"
+                style={{ color: gold, letterSpacing: "0.22em", fontWeight: 600 }}
+              >
+                Hoy
+              </span>
+              <span
+                className="mt-1 text-[2rem] leading-none"
+                style={{
+                  color: gold,
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontWeight: 600,
+                }}
+              >
+                $179.900
+              </span>
+            </div>
+          </div>
+
+          {/* limited time pill */}
+          <div
+            className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full px-4 py-2.5"
+            style={{
+              background: "rgba(40,18,60,0.75)",
+              border: `1px solid ${gold}66`,
+              boxShadow: `0 0 12px ${gold}33`,
+            }}
+          >
+            <Clock size={13} strokeWidth={1.75} style={{ color: gold }} />
+            <span
+              className="text-[0.7rem] uppercase"
+              style={{ color: "#F4ECDC", letterSpacing: "0.18em", fontWeight: 600 }}
+            >
+              Acceso especial por tiempo limitado
+            </span>
+          </div>
         </div>
 
+        {/* Producción limitada card */}
+        <div
+          className="mt-4 rounded-2xl px-4 py-4 text-left"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(20,8,35,0.78), rgba(28,12,45,0.85))",
+            border: `1px solid ${gold}55`,
+            boxShadow: `0 0 18px ${gold}22, inset 0 0 20px rgba(244,222,165,0.06)`,
+          }}
+        >
+          <div className="flex items-start gap-3">
+            <div
+              className="flex size-9 shrink-0 items-center justify-center rounded-full"
+              style={{ border: `1px solid ${gold}88`, background: "rgba(40,18,60,0.6)" }}
+            >
+              <Leaf size={16} strokeWidth={1.5} style={{ color: gold }} />
+            </div>
+            <div className="flex-1">
+              <p
+                className="text-[0.78rem] uppercase"
+                style={{ color: gold, letterSpacing: "0.16em", fontWeight: 600 }}
+              >
+                Producción limitada
+              </p>
+              <p
+                className="mt-1 text-[0.72rem] leading-[1.5]"
+                style={{ color: "#E8DCC8" }}
+              >
+                Cada lote es elaborado en pequeñas cantidades utilizando
+                ingredientes botánicos cuidadosamente seleccionados para
+                garantizar máxima calidad.
+              </p>
+            </div>
+            <div
+              className="flex shrink-0 flex-col items-center justify-center rounded-full px-2 py-2 text-center"
+              style={{
+                border: `1px solid ${gold}88`,
+                background: "rgba(40,18,60,0.6)",
+                minWidth: 64,
+              }}
+            >
+              <span className="text-[0.5rem] uppercase leading-tight" style={{ color: gold, letterSpacing: "0.12em", fontWeight: 700 }}>
+                Solo<br/>unidades<br/>disponibles<br/>esta semana
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Trust badges — 3 columns */}
+        <div
+          className="mt-4 rounded-2xl px-3 py-4"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(20,8,35,0.78), rgba(28,12,45,0.85))",
+            border: `1px solid ${gold}55`,
+            boxShadow: `0 0 18px ${gold}22, inset 0 0 20px rgba(244,222,165,0.06)`,
+          }}
+        >
+          <div className="grid grid-cols-3 gap-2">
+            {trust.map(({ Icon, title, sub }, i) => (
+              <div key={i} className="flex flex-col items-center text-center px-1">
+                <div
+                  className="flex size-9 items-center justify-center rounded-full"
+                  style={{ border: `1px solid ${gold}88`, background: "rgba(40,18,60,0.6)" }}
+                >
+                  <Icon size={15} strokeWidth={1.5} style={{ color: gold }} />
+                </div>
+                <p
+                  className="mt-2 text-[0.62rem] uppercase leading-tight"
+                  style={{ color: "#F4ECDC", letterSpacing: "0.1em", fontWeight: 700 }}
+                >
+                  {title}
+                </p>
+                <p
+                  className="mt-1 text-[0.58rem] leading-[1.35]"
+                  style={{ color: "#C9B8D4" }}
+                >
+                  {sub}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* Gold CTA */}
         <a
           href="#kit"
-          className="mx-auto mt-8 inline-flex w-[40%] items-center justify-center gap-2 rounded-full px-3 py-2 text-center"
+          className="mt-6 flex w-full items-center justify-between gap-3 rounded-full pl-4 pr-3 py-3.5"
           style={{
             background: `linear-gradient(180deg, #F1D58A 0%, ${gold} 50%, ${goldDeep} 100%)`,
             color: "#2A0E3A",
             boxShadow:
-              `0 5px 12px -4px ${goldDeep}, inset 0 1px 0 rgba(255,255,255,0.55), inset 0 -1px 0 rgba(0,0,0,0.18)`,
+              `0 12px 28px -10px ${goldDeep}, inset 0 1px 0 rgba(255,255,255,0.55), inset 0 -1px 0 rgba(0,0,0,0.18)`,
             border: `1px solid ${goldDeep}`,
             fontFamily: "'Cormorant Garamond', serif",
             letterSpacing: "0.08em",
           }}
         >
-          <span className="text-[0.4rem] uppercase leading-[1.15]" style={{ fontWeight: 600 }}>
+          <span
+            className="flex size-8 items-center justify-center rounded-full"
+            style={{ background: "rgba(42,14,58,0.92)" }}
+          >
+            <Lock size={14} strokeWidth={2} style={{ color: gold }} />
+          </span>
+          <span className="flex-1 text-center text-[0.95rem] uppercase leading-[1.15]" style={{ fontWeight: 700 }}>
             Quiero empezar
             <br />
-            mi transformación
+            <span className="text-[0.78rem]" style={{ fontWeight: 500 }}>mi transformación</span>
           </span>
-          <ArrowRight size={8} strokeWidth={2} />
+          <ArrowRight size={20} strokeWidth={2.25} />
         </a>
 
+        {/* Footer trust line */}
+        <div className="mt-4 flex items-center justify-center gap-2">
+          <ShieldCheck size={12} strokeWidth={1.75} style={{ color: gold }} />
+          <span
+            className="text-[0.6rem] uppercase"
+            style={{ color: "#E8DCC8", letterSpacing: "0.22em", fontWeight: 600 }}
+          >
+            Compra segura y garantizada
+          </span>
+        </div>
 
-        <div className="mt-6">
+        <div className="mt-5">
           <Ornament />
         </div>
       </div>
