@@ -2464,92 +2464,84 @@ function Urgency() {
 
           {/* ============== RIGHT: conversion content ============== */}
           <div className="flex flex-col items-center text-center">
-            {/* Eyebrow */}
+            {/* Maison mark */}
             <span
-              className="text-[0.58rem] uppercase"
-              style={{ color: gold, letterSpacing: "0.46em", fontWeight: 500 }}
+              className="text-[0.55rem] uppercase"
+              style={{ color: gold, letterSpacing: "0.58em", fontWeight: 500 }}
             >
-              Rapunceles · Maison
+              Rapunceles
+            </span>
+            <span
+              className="mt-2 text-[0.48rem] uppercase"
+              style={{ color: "#9A8AA8", letterSpacing: "0.42em", fontWeight: 400 }}
+            >
+              Maison · Paris
             </span>
 
-            {/* Pre-line — Miles de mujeres */}
-            <p
-              className="mt-6 text-[0.78rem] leading-[1.55]"
-              style={{ color: "#E8DCC8", opacity: 0.82, letterSpacing: "0.015em", fontWeight: 300 }}
-            >
-              Miles de mujeres ya confiaron en Rapunceles.
-            </p>
-
-            {/* Headline — single line italic, editorial */}
-            <div className="mt-3 flex items-center justify-center gap-3">
-              {/* tiny heart */}
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path
-                  d="M12 21s-7-4.35-9.5-9.05C.9 8.6 2.6 5 6 5c2 0 3.2 1 4 2.3.8-1.3 2-2.3 4-2.3 3.4 0 5.1 3.6 3.5 6.95C19 16.65 12 21 12 21z"
-                  stroke={gold}
-                  strokeWidth="1"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <h2
-                className="text-[1.05rem] leading-[1.15]"
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  color: "#F4ECDC",
-                  fontStyle: "italic",
-                  fontWeight: 400,
-                  letterSpacing: "0.005em",
-                }}
-              >
-                Hoy queremos acompañarte a ti.
-              </h2>
-              {/* tiny laurel branch */}
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M5 20c4-1 8-5 10-12" stroke={gold} strokeWidth="1" strokeLinecap="round" />
-                <path d="M9 14c1 .5 2 .3 3-.3" stroke={gold} strokeWidth="0.9" strokeLinecap="round" />
-                <path d="M11 11c1 .4 2 .2 3-.4" stroke={gold} strokeWidth="0.9" strokeLinecap="round" />
-                <path d="M13 8c1 .4 2 .2 3-.4" stroke={gold} strokeWidth="0.9" strokeLinecap="round" />
-                <path d="M7 17c1 .5 2 .3 3-.3" stroke={gold} strokeWidth="0.9" strokeLinecap="round" />
-              </svg>
-            </div>
-
-            {/* Decorative gold hairline */}
+            {/* Top hairline */}
             <span
               aria-hidden
-              className="mt-6 block h-px w-10"
+              className="mt-8 block h-px w-8"
+              style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
+            />
+
+            {/* Editorial headline — two-line, generous, no icons */}
+            <p
+              className="mt-8 text-[0.7rem] leading-[1.6]"
+              style={{ color: "#C9B89E", opacity: 0.85, letterSpacing: "0.22em", fontWeight: 400, textTransform: "uppercase" }}
+            >
+              Miles de mujeres ya confiaron en Rapunceles
+            </p>
+
+            <h2
+              className="mt-5 text-[1.55rem] leading-[1.18]"
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                color: "#F4ECDC",
+                fontStyle: "italic",
+                fontWeight: 300,
+                letterSpacing: "-0.005em",
+              }}
+            >
+              Hoy queremos<br />acompañarte a ti.
+            </h2>
+
+            {/* Small luxury decorative golden line */}
+            <span
+              aria-hidden
+              className="mt-7 block h-px w-14"
               style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
             />
 
             <p
-              className="mx-auto mt-6 max-w-[19rem] text-[0.78rem] leading-[1.75]"
-              style={{ color: "#E8DCC8", opacity: 0.72, letterSpacing: "0.02em", fontWeight: 300 }}
+              className="mx-auto mt-7 max-w-[18rem] text-[0.74rem] leading-[1.8]"
+              style={{ color: "#E8DCC8", opacity: 0.7, letterSpacing: "0.025em", fontWeight: 300 }}
             >
-              Una rutina pensada para devolverle a tu cabello la fuerza,
-              el crecimiento y la belleza que siempre fue tuya.
+              Una rutina pensada para devolverle a tu cabello la fuerza, el crecimiento y la belleza que siempre fue tuya.
             </p>
 
             {/* Price — quiet luxury */}
-            <div className="mt-9 flex flex-col items-center">
+            <div className="mt-10 flex flex-col items-center">
               <span
-                className="text-[0.52rem] uppercase"
-                style={{ color: "#9A8AA8", letterSpacing: "0.38em", fontWeight: 500 }}
+                className="text-[0.5rem] uppercase"
+                style={{ color: "#9A8AA8", letterSpacing: "0.46em", fontWeight: 500 }}
               >
                 Édition limitée
               </span>
-              <div className="mt-3 flex items-baseline gap-3">
+              <div className="mt-4 flex items-baseline gap-3.5">
                 <span
-                  className="text-[0.85rem] line-through"
-                  style={{ color: "#7A6A88", fontFamily: "'Cormorant Garamond', serif" }}
+                  className="text-[0.78rem] line-through"
+                  style={{ color: "#7A6A88", fontFamily: "'Cormorant Garamond', serif", fontWeight: 300 }}
                 >
                   $200.000
                 </span>
                 <span
-                  className="text-[2.1rem] leading-none"
+                  className="text-[2rem] leading-none"
                   style={{
                     color: gold,
                     fontFamily: "'Cormorant Garamond', serif",
-                    fontWeight: 400,
-                    letterSpacing: "0.015em",
+                    fontWeight: 300,
+                    letterSpacing: "0.02em",
                   }}
                 >
                   $179.900
@@ -2558,6 +2550,7 @@ function Urgency() {
             </div>
           </div>
         </div>
+
 
 
 
