@@ -37,6 +37,7 @@ const routineBg = { url: "/routine-bg.png" };
 
 
 import heroKit from "@/assets/hero-kit.jpg";
+import finalTransformationBg from "@/assets/final-transformation-bg.jpg";
 const heroKitNew = { url: "/hero-kit-new.png" };
 const routineProducts = { url: "/routine-products.png" };
 import routineBgV11Asset from "@/assets/routine-bg-v11.png.asset.json";
@@ -2444,30 +2445,16 @@ function FinalTransformation() {
     <section
       className="relative w-full overflow-hidden"
       style={{
-        background:
-          "radial-gradient(120% 80% at 30% 25%, #4A2563 0%, #3B1A4D 45%, #2A1237 100%)",
+        backgroundImage: `linear-gradient(180deg, rgba(42,18,55,0.55) 0%, rgba(42,18,55,0.75) 55%, rgba(27,10,38,0.95) 100%), url(${finalTransformationBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center top",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="mx-auto flex max-w-md flex-col">
-        {/* Top: image + brand */}
-        <div className="relative grid grid-cols-[48%_52%] items-start gap-2 px-3 pt-6">
-          <div className="relative">
-            <img
-              src={finalCtaModel.url}
-              alt="Mujer reflejándose en el espejo con cabello largo y saludable"
-              loading="lazy"
-              width={768}
-              height={1280}
-              className="h-auto w-full object-cover"
-              style={{
-                maskImage:
-                  "radial-gradient(ellipse 100% 90% at 50% 50%, #000 70%, transparent 100%)",
-                WebkitMaskImage:
-                  "radial-gradient(ellipse 100% 90% at 50% 50%, #000 70%, transparent 100%)",
-              }}
-            />
-          </div>
-          <div className="flex flex-col items-center pt-4 text-center">
+        {/* Top: brand */}
+        <div className="relative flex flex-col items-center px-6 pt-10 text-center">
+          <div className="flex flex-col items-center pt-2 text-center">
             <Crown className="size-5" style={{ color: gold }} strokeWidth={1.3} />
             <div
               className="mt-1 flex h-12 w-12 items-center justify-center rounded-full"
