@@ -2340,24 +2340,25 @@ function Urgency() {
         {/* Gold CTA */}
         <a
           href="#kit"
-          className="mt-8 flex w-full items-center justify-between rounded-full px-7 py-5 text-left"
+          className="mx-auto mt-8 inline-flex w-[40%] items-center justify-center gap-2 rounded-full px-3 py-2 text-center"
           style={{
             background: `linear-gradient(180deg, #F1D58A 0%, ${gold} 50%, ${goldDeep} 100%)`,
             color: "#2A0E3A",
             boxShadow:
-              `0 12px 28px -10px ${goldDeep}, inset 0 1px 0 rgba(255,255,255,0.55), inset 0 -2px 0 rgba(0,0,0,0.18)`,
+              `0 5px 12px -4px ${goldDeep}, inset 0 1px 0 rgba(255,255,255,0.55), inset 0 -1px 0 rgba(0,0,0,0.18)`,
             border: `1px solid ${goldDeep}`,
             fontFamily: "'Cormorant Garamond', serif",
             letterSpacing: "0.08em",
           }}
         >
-          <span className="text-[1rem] uppercase leading-[1.15]" style={{ fontWeight: 600 }}>
+          <span className="text-[0.4rem] uppercase leading-[1.15]" style={{ fontWeight: 600 }}>
             Quiero empezar
             <br />
             mi transformación
           </span>
-          <ArrowRight size={20} strokeWidth={2} />
+          <ArrowRight size={8} strokeWidth={2} />
         </a>
+
 
         <div className="mt-6">
           <Ornament />
