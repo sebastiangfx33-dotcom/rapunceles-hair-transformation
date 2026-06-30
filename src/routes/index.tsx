@@ -2582,7 +2582,7 @@ function Urgency() {
         {/* Gold CTA */}
         <a
           href="#kit"
-          className="mt-6 flex w-full items-center justify-between gap-3 rounded-full pl-4 pr-3 py-3.5"
+          className="relative mt-6 flex w-full items-center justify-between gap-3 overflow-hidden rounded-full pl-4 pr-3 py-3.5 animate-progress-glow"
           style={{
             background: `linear-gradient(180deg, #F1D58A 0%, ${gold} 50%, ${goldDeep} 100%)`,
             color: "#2A0E3A",
@@ -2594,17 +2594,22 @@ function Urgency() {
           }}
         >
           <span
-            className="flex size-8 items-center justify-center rounded-full"
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 animate-shine-sweep"
+            style={{ background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent)" }}
+          />
+          <span
+            className="relative flex size-8 items-center justify-center rounded-full"
             style={{ background: "rgba(42,14,58,0.92)" }}
           >
             <Lock size={14} strokeWidth={2} style={{ color: gold }} />
           </span>
-          <span className="flex-1 text-center text-[0.95rem] uppercase leading-[1.15]" style={{ fontWeight: 700 }}>
+          <span className="relative flex-1 text-center text-[0.95rem] uppercase leading-[1.15]" style={{ fontWeight: 700 }}>
             Quiero empezar
             <br />
             <span className="text-[0.78rem]" style={{ fontWeight: 500 }}>mi transformación</span>
           </span>
-          <ArrowRight size={20} strokeWidth={2.25} />
+          <ArrowRight size={20} strokeWidth={2.25} className="relative" />
         </a>
 
         {/* Footer trust line */}
