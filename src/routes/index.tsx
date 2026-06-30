@@ -1929,12 +1929,9 @@ function Testimonials() {
                   </div>
                       </div>
                     </div>
-                  ))}
-                </div>
-              </div>
               {/* dot indicators */}
               <div className="mt-6 flex items-center justify-center gap-2">
-                {chats.map((_, i) => (
+                {WHATSAPP_CHATS.map((_, i) => (
                   <button
                     key={i}
                     type="button"
