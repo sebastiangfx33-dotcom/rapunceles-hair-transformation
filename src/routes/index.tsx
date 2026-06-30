@@ -79,6 +79,9 @@ const avatarValentinaAsset = { url: "/__l5e/assets-v1/94f9e274-8ac5-4c59-96df-33
 const avatarCamilaAsset = { url: "/__l5e/assets-v1/2939f1e5-b934-4572-a5aa-df1e85c7dcb4/avatar-camila-v2.jpg" };
 const beforeValentina = "/__l5e/assets-v1/33558e6c-b493-403b-83da-3b400df64d3c/before-valentina.jpg";
 const afterValentina = "/__l5e/assets-v1/be842d5f-3f53-4cfd-947a-989f5a950059/after-valentina.jpg";
+const customerWhatsappProduct = "/__l5e/assets-v1/cc894fb6-d127-459c-8718-5e22223885de/customer-whatsapp-product.jpg";
+const customerChatP1 = "/__l5e/assets-v1/2d16d196-63da-40d3-9c76-8385cc75a97a/customer-chat-p1.jpg";
+const customerChatP2 = "/__l5e/assets-v1/c0aeaea7-0186-43a9-84c6-45e5648b26d3/customer-chat-p2.jpg";
 
 
 
@@ -118,6 +121,9 @@ export const Route = createFileRoute("/")({
         as: "image",
         href: "/__l5e/assets-v1/0d07d7de-992a-4d0f-9d74-bb9e5925224b/hero-section-bg.png",
       },
+      { rel: "preload", as: "image", href: customerWhatsappProduct },
+      { rel: "preload", as: "image", href: customerChatP1 },
+      { rel: "preload", as: "image", href: customerChatP2 },
     ],
   }),
   component: Landing,
@@ -1693,20 +1699,14 @@ function Testimonials() {
 
         {/* SECTION 2 — FEATURED WHATSAPP TESTIMONIAL CARDS */}
         {(() => {
-          const chats = WHATSAPP_CHATS;
+          const chat = WHATSAPP_CHATS[chatIndex];
 
 
 
           return (
             <div className="mt-14">
-              <div className="overflow-hidden">
-                <div
-                  className="flex transition-transform duration-700 ease-out"
-                  style={{ transform: `translateX(-${chatIndex * 100}%)` }}
-                >
-                  {chats.map((chat, idx) => (
-                    <div key={idx} className="w-full shrink-0 px-1">
-                      <div className="relative">
+              <div className="px-1">
+                <div key={chatIndex} className="relative animate-in fade-in slide-in-from-right-3 duration-500">
 
                   {/* floating gold particles around card */}
                   <div aria-hidden className="pointer-events-none absolute -inset-6">
@@ -1811,7 +1811,7 @@ function Testimonials() {
                                 fontFamily: "system-ui, -apple-system, sans-serif",
                               }}
                             >
-                              {chat.name}
+                                {chat.name}
                             </div>
                             <div
                               className="text-[0.7rem] leading-tight"
@@ -1929,12 +1929,9 @@ function Testimonials() {
                   </div>
                       </div>
                     </div>
-                  ))}
-                </div>
-              </div>
               {/* dot indicators */}
               <div className="mt-6 flex items-center justify-center gap-2">
-                {chats.map((_, i) => (
+                {WHATSAPP_CHATS.map((_, i) => (
                   <button
                     key={i}
                     type="button"
