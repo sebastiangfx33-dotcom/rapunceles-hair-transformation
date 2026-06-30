@@ -2546,46 +2546,132 @@ function FinalTransformation() {
 }
 
 function FAQ() {
-  const gold = "#C9A961";
+  const gold = "#D4A85E";
+  const goldSoft = "#E8C98A";
   const faqs = [
-    { q: "¿En cuánto tiempo comenzaré a notar cambios?", a: "Las primeras usuarias notan menos caída desde la segunda semana y crecimiento visible entre la cuarta y sexta semana de uso constante." },
-    { q: "¿Debo usar los tres productos juntos?", a: "Sí. El shampoo, el acondicionador y el tónico están formulados para trabajar en conjunto y potenciar los resultados de tu rutina." },
-    { q: "¿Sirve si mi cabello no crece hace mucho tiempo?", a: "Por supuesto. Su fórmula activa el folículo capilar incluso en cabellos con crecimiento estancado, devolviendo fuerza y densidad." },
-    { q: "¿Hacen envíos a todo Colombia?", a: "Sí. Realizamos envíos seguros a todo el país con opción de pago contra entrega para tu total tranquilidad." },
+    { q: "¿En cuánto tiempo veré resultados?", a: "Muchas mujeres comienzan a notar cambios progresivos en las primeras semanas de uso constante." },
+    { q: "¿Funciona para cualquier tipo de cabello?", a: "Sí. Nuestra fórmula está diseñada para adaptarse a diferentes tipos de cabello y necesidades capilares." },
+    { q: "¿Debo usar los tres productos juntos?", a: "Sí. El sistema completo fue diseñado para trabajar en conjunto y potenciar mejores resultados." },
+    { q: "¿Hacen envíos a toda Colombia?", a: "Sí. Realizamos envíos nacionales con cobertura en todo el país." },
+    { q: "¿Puedo pagar contra entrega?", a: "Sí. Puedes recibir tu pedido y pagar al momento de recibirlo." },
+    { q: "¿Está elaborado con ingredientes naturales?", a: "Sí. Nuestra fórmula combina ingredientes botánicos cuidadosamente seleccionados." },
   ];
   const [open, setOpen] = useState<number | null>(0);
+  const trust = [
+    { icon: Truck, label: "Envío gratis" },
+    { icon: Package, label: "Pago contra entrega" },
+    { icon: ShieldCheck, label: "Compra 100% segura" },
+  ];
   return (
-    <section className="relative w-full pt-4 pb-12" style={{ background: "#F8F1E4" }}>
-      <div className="mx-auto max-w-md px-5">
+    <section
+      className="relative w-full overflow-hidden pb-16 pt-14"
+      style={{
+        background:
+          "radial-gradient(140% 90% at 50% 0%, #3B1A4D 0%, #2A1237 55%, #1B0A26 100%)",
+      }}
+    >
+      {/* Soft golden light streaks */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-60"
+        style={{
+          background:
+            "radial-gradient(60% 30% at 20% 15%, rgba(232,201,138,0.18) 0%, transparent 70%), radial-gradient(50% 25% at 85% 70%, rgba(212,168,94,0.14) 0%, transparent 70%)",
+        }}
+      />
+      {/* Floating particles */}
+      <div className="pointer-events-none absolute inset-0">
+        {[
+          { l: "12%", t: "18%", s: 3, d: "0s" },
+          { l: "78%", t: "12%", s: 2, d: "1.2s" },
+          { l: "30%", t: "62%", s: 2, d: "2.4s" },
+          { l: "65%", t: "48%", s: 3, d: "0.8s" },
+          { l: "88%", t: "82%", s: 2, d: "1.8s" },
+          { l: "18%", t: "88%", s: 2, d: "3.2s" },
+        ].map((p, i) => (
+          <span
+            key={i}
+            className="absolute rounded-full"
+            style={{
+              left: p.l,
+              top: p.t,
+              width: p.s,
+              height: p.s,
+              background: goldSoft,
+              boxShadow: `0 0 ${p.s * 3}px ${goldSoft}`,
+              opacity: 0.55,
+              animation: `faq-float 6s ease-in-out ${p.d} infinite`,
+            }}
+          />
+        ))}
+      </div>
+
+      <style>{`
+        @keyframes faq-float {
+          0%,100% { transform: translateY(0); opacity: 0.35; }
+          50% { transform: translateY(-10px); opacity: 0.75; }
+        }
+        @keyframes faq-shimmer {
+          0% { background-position: -200% 0; }
+          100% { background-position: 200% 0; }
+        }
+      `}</style>
+
+      <div className="relative mx-auto max-w-md px-5">
+        {/* Header */}
         <div className="text-center">
           <span
-            className="text-[0.55rem] uppercase tracking-[0.32em]"
+            className="text-[0.55rem] uppercase tracking-[0.36em]"
             style={{ color: gold }}
           >
             Preguntas frecuentes
           </span>
           <h2
-            className="mt-2 text-[1.5rem] leading-tight"
-            style={{ fontFamily: "'Cormorant Garamond', serif", color: "#D4A85E" }}
+            className="mx-auto mt-3 max-w-[20rem] text-[1.45rem] leading-[1.2] text-white"
+            style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
           >
-            Resolvemos tus dudas
+            Resuelve tus dudas antes de empezar tu{" "}
+            <span className="italic" style={{ color: gold, fontWeight: 500 }}>
+              transformación
+            </span>
           </h2>
+          <div className="mt-4 flex items-center justify-center gap-2">
+            <span className="h-px w-12" style={{ background: gold, opacity: 0.6 }} />
+            <Leaf className="size-3 rotate-45" style={{ color: gold }} strokeWidth={1.3} />
+            <span className="h-px w-12" style={{ background: gold, opacity: 0.6 }} />
+          </div>
+          <p className="mx-auto mt-4 max-w-[22rem] text-[0.78rem] leading-[1.55] text-white/75">
+            Queremos que tomes la mejor decisión para empezar a recuperar tu cabello con seguridad y confianza.
+          </p>
         </div>
 
-        <div className="mt-8 flex flex-col gap-4">
+        {/* FAQ list */}
+        <div className="mt-9 flex flex-col gap-3">
           {faqs.map((item, i) => {
             const isOpen = open === i;
             return (
               <div
                 key={item.q}
-                className="rounded-2xl bg-white transition-all"
+                className="relative overflow-hidden rounded-2xl transition-all duration-300"
                 style={{
-                  border: `1px solid ${gold}55`,
+                  background:
+                    "linear-gradient(180deg, rgba(74,37,99,0.55) 0%, rgba(42,18,55,0.55) 100%)",
+                  backdropFilter: "blur(14px)",
+                  border: `1px solid ${isOpen ? gold : `${gold}40`}`,
                   boxShadow: isOpen
-                    ? "0 18px 40px -28px rgba(58,36,24,0.32)"
-                    : "0 10px 28px -24px rgba(58,36,24,0.22)",
+                    ? `0 0 0 1px ${gold}55, 0 18px 40px -22px rgba(0,0,0,0.6), 0 0 28px -8px ${gold}55`
+                    : "0 12px 30px -20px rgba(0,0,0,0.55)",
                 }}
               >
+                {/* Shimmer top edge */}
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-x-0 top-0 h-px"
+                  style={{
+                    background: `linear-gradient(90deg, transparent, ${goldSoft}, transparent)`,
+                    backgroundSize: "200% 100%",
+                    animation: "faq-shimmer 4s linear infinite",
+                  }}
+                />
                 <button
                   type="button"
                   onClick={() => setOpen(isOpen ? null : i)}
@@ -2593,16 +2679,15 @@ function FAQ() {
                   aria-expanded={isOpen}
                 >
                   <span
-                    className="font-display text-[0.95rem] leading-snug"
-                    style={{ color: "#3A2418" }}
+                    className="font-display text-[0.95rem] leading-snug text-white"
                   >
                     {item.q}
                   </span>
                   <span
-                    className="flex size-7 shrink-0 items-center justify-center rounded-full transition-transform"
+                    className="flex size-7 shrink-0 items-center justify-center rounded-full transition-transform duration-300"
                     style={{
-                      background: "#FBF6EC",
-                      border: `1px solid ${gold}66`,
+                      background: "rgba(212,168,94,0.12)",
+                      border: `1px solid ${gold}88`,
                       transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
                     }}
                   >
@@ -2620,11 +2705,8 @@ function FAQ() {
                 >
                   <div className="min-h-0">
                     <div
-                      className="mx-5 border-t pt-3 pb-5 text-[0.8rem] leading-relaxed"
-                      style={{
-                        borderColor: `${gold}33`,
-                        color: "#6B5544",
-                      }}
+                      className="mx-5 border-t pt-3 pb-5 text-[0.8rem] leading-[1.6] text-white/80"
+                      style={{ borderColor: `${gold}33` }}
                     >
                       {item.a}
                     </div>
@@ -2633,6 +2715,27 @@ function FAQ() {
               </div>
             );
           })}
+        </div>
+
+        {/* Trust icons */}
+        <div className="mt-10 flex items-start justify-between gap-2 px-2">
+          {trust.map(({ icon: Icon, label }) => (
+            <div key={label} className="flex flex-1 flex-col items-center gap-2 text-center">
+              <div
+                className="flex h-11 w-11 items-center justify-center rounded-full"
+                style={{
+                  border: `1px solid ${gold}77`,
+                  background:
+                    "radial-gradient(circle at 50% 40%, rgba(212,168,94,0.14) 0%, transparent 70%)",
+                }}
+              >
+                <Icon className="size-4" style={{ color: gold }} strokeWidth={1.3} />
+              </div>
+              <p className="text-[0.62rem] leading-[1.3] tracking-[0.08em] text-white/85">
+                {label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
