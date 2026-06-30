@@ -2288,15 +2288,6 @@ function Urgency() {
               filter: "blur(2px)",
             }}
           />
-          {/* Thin gold ring */}
-          <div
-            aria-hidden="true"
-            className="absolute left-1/2 top-[46%] h-[180px] w-[180px] -translate-x-1/2 -translate-y-1/2 rounded-full"
-            style={{
-              border: `1px solid ${gold}55`,
-              boxShadow: `inset 0 0 22px ${gold}22, 0 0 18px ${gold}22`,
-            }}
-          />
 
 
           {/* Premium podium */}
