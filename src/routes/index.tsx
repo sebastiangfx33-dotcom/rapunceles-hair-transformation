@@ -2376,7 +2376,7 @@ function Urgency() {
 
         {/* Price block */}
         <div
-          className="relative mt-7 overflow-hidden rounded-2xl px-5 py-5 backdrop-blur-md"
+          className="relative mt-5 overflow-hidden rounded-2xl px-4 py-3.5 backdrop-blur-md"
           style={{
             background:
               "linear-gradient(180deg, rgba(20,8,35,0.55), rgba(28,12,45,0.65))",
@@ -2398,7 +2398,7 @@ function Urgency() {
                 Valor regular
               </span>
               <span
-                className="mt-1 text-[1.35rem] line-through"
+                className="mt-1 text-[1.1rem] line-through"
                 style={{
                   color: "#9A8AA8",
                   fontFamily: "'Cormorant Garamond', serif",
@@ -2417,7 +2417,7 @@ function Urgency() {
                 Hoy
               </span>
               <span
-                className="mt-1 text-[2rem] leading-none"
+                className="mt-1 text-[1.65rem] leading-none"
                 style={{
                   color: gold,
                   fontFamily: "'Cormorant Garamond', serif",
@@ -2431,7 +2431,7 @@ function Urgency() {
 
           {/* limited time pill */}
           <div
-            className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full px-4 py-2.5"
+            className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full px-3 py-2"
             style={{
               background: "rgba(40,18,60,0.75)",
               border: `1px solid ${gold}66`,
@@ -2450,7 +2450,7 @@ function Urgency() {
 
         {/* Producción limitada card */}
         <div
-          className="relative mt-4 overflow-hidden rounded-2xl px-4 py-4 text-left backdrop-blur-md"
+          className="relative mt-3 overflow-hidden rounded-2xl px-3 py-3 text-left backdrop-blur-md"
           style={{
             background:
               "linear-gradient(180deg, rgba(20,8,35,0.55), rgba(28,12,45,0.65))",
@@ -2475,13 +2475,13 @@ function Urgency() {
             </div>
             <div className="flex-1">
               <p
-                className="text-[0.78rem] uppercase"
+                className="text-[0.68rem] uppercase"
                 style={{ color: gold, letterSpacing: "0.16em", fontWeight: 600 }}
               >
                 Producción limitada
               </p>
               <p
-                className="mt-1 text-[0.72rem] leading-[1.5]"
+                className="mt-1 text-[0.65rem] leading-[1.45]"
                 style={{ color: "#E8DCC8" }}
               >
                 Cada lote es elaborado en pequeñas cantidades utilizando
@@ -2506,7 +2506,7 @@ function Urgency() {
 
         {/* Trust badges — 3 columns */}
         <div
-          className="mt-4 rounded-2xl px-3 py-4"
+          className="mt-3 rounded-2xl px-2.5 py-3"
           style={{
             background:
               "linear-gradient(180deg, rgba(20,8,35,0.78), rgba(28,12,45,0.85))",
