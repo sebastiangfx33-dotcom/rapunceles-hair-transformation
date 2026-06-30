@@ -2298,12 +2298,6 @@ function Urgency() {
             }}
           />
 
-          {/* EMPTY product placeholder slot (do not fill) */}
-          <div
-            data-product-placeholder
-            aria-label="Product image placeholder"
-            className="absolute left-1/2 top-[46%] h-[170px] w-[150px] -translate-x-1/2 -translate-y-1/2"
-          />
 
           {/* Premium podium */}
           <div
