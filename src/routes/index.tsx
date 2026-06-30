@@ -2481,7 +2481,7 @@ function Urgency() {
                 Producción limitada
               </p>
               <p
-                className="mt-1 text-[0.72rem] leading-[1.5]"
+                className="mt-1 text-[0.65rem] leading-[1.45]"
                 style={{ color: "#E8DCC8" }}
               >
                 Cada lote es elaborado en pequeñas cantidades utilizando
