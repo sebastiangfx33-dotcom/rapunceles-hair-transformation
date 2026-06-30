@@ -2475,7 +2475,7 @@ function Urgency() {
             </div>
             <div className="flex-1">
               <p
-                className="text-[0.78rem] uppercase"
+                className="text-[0.68rem] uppercase"
                 style={{ color: gold, letterSpacing: "0.16em", fontWeight: 600 }}
               >
                 Producción limitada
