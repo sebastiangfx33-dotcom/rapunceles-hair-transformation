@@ -2277,29 +2277,6 @@ function Urgency() {
 
         {/* === Empty product showcase === */}
         <div className="relative mx-auto mb-6 h-[260px] w-full max-w-[320px]">
-          {/* Botanical decor — left lavender */}
-          <svg
-            aria-hidden="true"
-            className="absolute left-0 bottom-6 opacity-80"
-            width="74" height="150" viewBox="0 0 74 150" fill="none"
-          >
-            <path d="M30 150 C 26 110, 22 80, 18 40" stroke="#7C8C6A" strokeWidth="1.2" strokeLinecap="round" />
-            <g fill="#C9A7E6" opacity="0.85">
-              <ellipse cx="18" cy="38" rx="3" ry="5"/>
-              <ellipse cx="22" cy="46" rx="3" ry="5"/>
-              <ellipse cx="14" cy="50" rx="3" ry="5"/>
-              <ellipse cx="20" cy="56" rx="3" ry="5"/>
-              <ellipse cx="16" cy="64" rx="3" ry="5"/>
-              <ellipse cx="22" cy="72" rx="3" ry="5"/>
-              <ellipse cx="14" cy="80" rx="3" ry="5"/>
-            </g>
-            <path d="M30 110 C 38 105, 44 96, 48 84" stroke="#7C8C6A" strokeWidth="1" strokeLinecap="round" />
-            <g stroke="#8DA079" strokeWidth="1" strokeLinecap="round" opacity="0.9">
-              <path d="M44 86 L 50 80"/><path d="M44 86 L 50 92"/>
-              <path d="M42 96 L 48 90"/><path d="M42 96 L 48 102"/>
-              <path d="M40 106 L 46 100"/><path d="M40 106 L 46 112"/>
-            </g>
-          </svg>
 
           {/* Golden halo */}
           <div
