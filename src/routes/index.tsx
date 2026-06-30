@@ -144,7 +144,7 @@ function Landing() {
       <Ingredients />
       <Testimonials />
       
-      <ProductOptions />
+      
       <TrustBenefits />
 
       <LuxuryCampaign />
