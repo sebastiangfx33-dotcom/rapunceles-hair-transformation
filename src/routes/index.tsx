@@ -2450,7 +2450,7 @@ function Urgency() {
 
         {/* Producción limitada card */}
         <div
-          className="relative mt-4 overflow-hidden rounded-2xl px-4 py-4 text-left backdrop-blur-md"
+          className="relative mt-3 overflow-hidden rounded-2xl px-3 py-3 text-left backdrop-blur-md"
           style={{
             background:
               "linear-gradient(180deg, rgba(20,8,35,0.55), rgba(28,12,45,0.65))",
