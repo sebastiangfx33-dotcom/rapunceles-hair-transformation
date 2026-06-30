@@ -1974,7 +1974,7 @@ function Testimonials() {
                   key={i}
                   src={src}
                   alt=""
-                  className="h-7 w-7 rounded-full object-cover"
+                  className="h-5 w-5 rounded-full object-cover"
                   style={{
                     border: `1.5px solid ${gold}`,
                     boxShadow: "0 0 10px rgba(201,168,76,0.35)",
@@ -1986,17 +1986,17 @@ function Testimonials() {
           </div>
 
           {/* Stars + rating */}
-          <div className="mt-3 flex items-center justify-center gap-1.5">
+          <div className="mt-2 flex items-center justify-center gap-1">
             {[0, 1, 2, 3, 4].map((i) => (
               <Star
                 key={i}
-                className="h-3.5 w-3.5"
+                className="h-3 w-3"
                 style={{ color: gold, fill: gold, filter: "drop-shadow(0 0 4px rgba(201,168,76,0.5))" }}
                 strokeWidth={1}
               />
             ))}
             <span
-              className="ml-1.5 text-[0.78rem] tracking-wide"
+              className="ml-1.5 text-[0.7rem] tracking-wide"
               style={{ color: goldSoft, fontFamily: "'Cormorant Garamond', serif" }}
             >
               4.9/5
@@ -2004,17 +2004,18 @@ function Testimonials() {
           </div>
 
           <h3
-            className="mt-4 font-display text-[2.1rem] leading-[1.1]"
+            className="mt-3 font-display text-[1.5rem] leading-[1.1]"
             style={{ color: gold }}
           >
             +1.500 mujeres
           </h3>
           <p
-            className="mt-2 font-display text-[1.1rem] italic"
+            className="mt-1 font-display text-[0.9rem] italic"
             style={{ color: goldSoft, opacity: 0.95 }}
           >
             ya han confiado en Rapunceles
           </p>
+
 
           {/* Verified badge */}
           <div className="mt-4 flex items-center justify-center gap-1.5">
