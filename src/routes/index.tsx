@@ -2286,12 +2286,6 @@ function Urgency() {
               filter: "blur(2px)",
             }}
           />
-          <img
-            src={heroKitNew.url}
-            alt="Kit Rapunceles"
-            className="relative z-10 max-h-[250px] w-auto object-contain"
-            style={{ filter: `drop-shadow(0 14px 22px ${goldDeep}55)` }}
-          />
         </div>
 
         {/* Headline */}
