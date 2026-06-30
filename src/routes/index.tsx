@@ -2463,202 +2463,75 @@ function Urgency() {
           </div>
 
           {/* ============== RIGHT: conversion content ============== */}
-          <div className="flex flex-col text-center">
+          <div className="flex flex-col items-center text-center">
             {/* Eyebrow */}
             <span
-              className="text-[0.78rem] uppercase"
-              style={{ color: gold, letterSpacing: "0.28em", fontWeight: 600 }}
+              className="text-[0.6rem] uppercase"
+              style={{ color: gold, letterSpacing: "0.42em", fontWeight: 500 }}
             >
-              Rapunceles · Édition
+              Rapunceles · Maison
             </span>
 
-            {/* Headline */}
+            {/* Headline — Apple/Dior minimal */}
             <h2
-              className="mt-1.5 text-[1.45rem] leading-[1.12] uppercase"
+              className="mt-5 text-[1.75rem] leading-[1.08]"
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
                 color: "#F4ECDC",
-                letterSpacing: "0.04em",
-                fontWeight: 400,
+                letterSpacing: "0.005em",
+                fontWeight: 300,
               }}
             >
-              Tu transformación
+              Hoy queremos
               <br />
-              empieza con la
+              <span style={{ color: gold, fontStyle: "italic", fontWeight: 400 }}>
+                acompañarte
+              </span>
+              <br />
+              a ti.
             </h2>
-            <h3
-              className="mt-1 text-[1.9rem] leading-[1.02] uppercase"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                color: gold,
-                letterSpacing: "0.02em",
-                fontWeight: 500,
-              }}
-            >
-              Decisión que
-              <br />
-              tomes hoy
-            </h3>
 
-            <div className="mt-2"><Ornament /></div>
+            {/* Decorative gold hairline */}
+            <span
+              aria-hidden
+              className="mt-5 block h-px w-12"
+              style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
+            />
 
             <p
-              className="mx-auto mt-2 text-[1rem] leading-[1.5]"
-              style={{ color: "#E8DCC8", fontFamily: "'Cormorant Garamond', serif" }}
+              className="mx-auto mt-5 max-w-[18rem] text-[0.82rem] leading-[1.7]"
+              style={{ color: "#E8DCC8", opacity: 0.78, letterSpacing: "0.02em", fontWeight: 300 }}
             >
-              Miles de mujeres ya comenzaron a recuperar la fuerza, el
-              crecimiento y la belleza natural de su cabello.
-            </p>
-            <p
-              className="mt-1 text-[1.05rem]"
-              style={{ color: gold, fontWeight: 500, letterSpacing: "0.04em" }}
-            >
-              Hoy puede ser tu momento.
+              Una rutina pensada para devolverle a tu cabello la fuerza,
+              el crecimiento y la belleza que siempre fue tuya.
             </p>
 
-            {/* Price glass card */}
-            <div
-              className="relative mt-3 overflow-hidden rounded-lg px-2 py-2 backdrop-blur-md"
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(20,8,35,0.55), rgba(28,12,45,0.7))",
-                border: `1px solid ${gold}66`,
-                boxShadow: `0 0 14px ${gold}22, inset 0 0 14px rgba(244,222,165,0.06)`,
-              }}
-            >
+            {/* Price — quiet luxury */}
+            <div className="mt-8 flex flex-col items-center">
               <span
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 animate-shine-sweep"
-                style={{ background: "linear-gradient(90deg, transparent, rgba(244,222,165,0.18), transparent)" }}
-              />
-              <div className="flex items-center justify-between gap-1.5">
-                <div className="flex flex-col items-center flex-1">
-                  <span
-                    className="text-[0.72rem] uppercase"
-                    style={{ color: "#E8DCC8", letterSpacing: "0.18em", fontWeight: 500 }}
-                  >
-                    Valor regular
-                  </span>
-                  <span
-                    className="mt-0.5 text-[1.15rem] line-through"
-                    style={{ color: "#9A8AA8", fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
-                  >
-                    $200.000
-                  </span>
-                </div>
-                <span aria-hidden className="h-7 w-px" style={{ background: `linear-gradient(180deg, transparent, ${gold}80, transparent)` }} />
-                <div className="flex flex-col items-center flex-1">
-                  <span
-                    className="text-[0.78rem] uppercase"
-                    style={{ color: gold, letterSpacing: "0.2em", fontWeight: 700 }}
-                  >
-                    Hoy
-                  </span>
-                  <span
-                    className="mt-0.5 text-[1.7rem] leading-none"
-                    style={{ color: gold, fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
-                  >
-                    $179.900
-                  </span>
-                </div>
-              </div>
-              <div
-                className="mt-1.5 flex w-full items-center justify-center gap-1 rounded-full px-1.5 py-1"
-                style={{
-                  background: "rgba(40,18,60,0.75)",
-                  border: `1px solid ${gold}66`,
-                  boxShadow: `0 0 8px ${gold}33`,
-                }}
+                className="text-[0.55rem] uppercase"
+                style={{ color: "#9A8AA8", letterSpacing: "0.32em", fontWeight: 500 }}
               >
-                <Clock size={8} strokeWidth={1.75} style={{ color: gold }} />
+                Édition limitée
+              </span>
+              <div className="mt-3 flex items-baseline gap-3">
                 <span
-                  className="text-[0.75rem] uppercase"
-                  style={{ color: "#F4ECDC", letterSpacing: "0.14em", fontWeight: 600 }}
+                  className="text-[0.85rem] line-through"
+                  style={{ color: "#7A6A88", fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  Acceso limitado
+                  $200.000
                 </span>
-              </div>
-            </div>
-
-            {/* Producción limitada */}
-            <div
-              className="relative mt-2 overflow-hidden rounded-lg px-2 py-2 text-left backdrop-blur-md"
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(20,8,35,0.55), rgba(28,12,45,0.7))",
-                border: `1px solid ${gold}66`,
-                boxShadow: `0 0 10px ${gold}1f, inset 0 0 12px rgba(244,222,165,0.05)`,
-              }}
-            >
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 animate-shine-sweep"
-                style={{
-                  background: "linear-gradient(90deg, transparent, rgba(244,222,165,0.14), transparent)",
-                  animationDelay: "1.2s",
-                }}
-              />
-              <div className="flex items-start gap-1.5">
-                <div
-                  className="flex size-5 shrink-0 items-center justify-center rounded-full"
-                  style={{ border: `1px solid ${gold}88`, background: "rgba(40,18,60,0.6)" }}
+                <span
+                  className="text-[2rem] leading-none"
+                  style={{
+                    color: gold,
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontWeight: 400,
+                    letterSpacing: "0.01em",
+                  }}
                 >
-                  <Leaf size={9} strokeWidth={1.5} style={{ color: gold }} />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p
-                    className="text-[0.78rem] uppercase"
-                    style={{ color: gold, letterSpacing: "0.12em", fontWeight: 700 }}
-                  >
-                    Producción limitada
-                  </p>
-                  <p
-                    className="mt-0.5 text-[0.78rem] leading-[1.35]"
-                    style={{ color: "#E8DCC8" }}
-                  >
-                    Lotes pequeños con ingredientes botánicos seleccionados.
-                  </p>
-                </div>
-              </div>
-              <div
-                className="mt-1.5 mx-auto flex w-full items-center justify-center rounded-full px-1.5 py-1 text-center"
-                style={{
-                  border: `1px solid ${gold}88`,
-                  background: "rgba(40,18,60,0.6)",
-                }}
-              >
-                <span className="text-[0.72rem] uppercase" style={{ color: gold, letterSpacing: "0.1em", fontWeight: 700 }}>
-                  Solo unidades · esta semana
+                  $179.900
                 </span>
-              </div>
-            </div>
-
-            {/* Trust row */}
-            <div
-              className="mt-2 rounded-lg px-1 py-1.5"
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(20,8,35,0.78), rgba(28,12,45,0.85))",
-                border: `1px solid ${gold}55`,
-              }}
-            >
-              <div className="grid grid-cols-3 gap-0.5">
-                {trust.map(({ Icon, title }, i) => (
-                  <div key={i} className="flex flex-col items-center text-center">
-                    <div
-                      className="flex size-5 items-center justify-center rounded-full"
-                      style={{ border: `1px solid ${gold}88`, background: "rgba(40,18,60,0.6)" }}
-                    >
-                      <Icon size={9} strokeWidth={1.5} style={{ color: gold }} />
-                    </div>
-                    <p
-                      className="mt-0.5 text-[0.65rem] uppercase leading-tight"
-                      style={{ color: "#F4ECDC", letterSpacing: "0.06em", fontWeight: 700 }}
-                    >
-                      {title}
-                    </p>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
