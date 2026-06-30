@@ -1975,13 +1975,6 @@ function Testimonials() {
             className="mx-auto mt-6 h-px w-24"
             style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
           />
-          <p
-            className="mx-auto mt-6 max-w-xs text-[0.85rem] leading-relaxed"
-            style={{ color: ivory, opacity: 0.7 }}
-          >
-            Miles de mujeres ya están iniciando su proceso de recuperación capilar en toda
-            Colombia.
-          </p>
         </div>
       </div>
     </section>
