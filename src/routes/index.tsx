@@ -2300,22 +2300,6 @@ function Urgency() {
               <path d="M40 106 L 46 100"/><path d="M40 106 L 46 112"/>
             </g>
           </svg>
-          {/* Botanical decor — right rosemary */}
-          <svg
-            aria-hidden="true"
-            className="absolute right-0 bottom-6 opacity-80"
-            width="74" height="150" viewBox="0 0 74 150" fill="none"
-          >
-            <path d="M44 150 C 48 110, 52 80, 56 40" stroke="#7C8C6A" strokeWidth="1.2" strokeLinecap="round" />
-            <g stroke="#8DA079" strokeWidth="1" strokeLinecap="round" opacity="0.95">
-              <path d="M56 44 L 64 38"/><path d="M56 44 L 64 50"/>
-              <path d="M54 56 L 62 50"/><path d="M54 56 L 62 62"/>
-              <path d="M52 68 L 60 62"/><path d="M52 68 L 60 74"/>
-              <path d="M50 80 L 58 74"/><path d="M50 80 L 58 86"/>
-              <path d="M48 92 L 56 86"/><path d="M48 92 L 56 98"/>
-              <path d="M46 104 L 54 98"/><path d="M46 104 L 54 110"/>
-            </g>
-          </svg>
 
           {/* Golden halo */}
           <div
