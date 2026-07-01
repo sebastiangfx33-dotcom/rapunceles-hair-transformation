@@ -2915,44 +2915,22 @@ function LuxuryCampaign() {
     {
       title: ["AYUDA A REDUCIR", "LA CAÍDA"],
       text: "Fortalece la raíz y reduce el quiebre.",
-      icon: (
-        <svg viewBox="0 0 48 48" fill="none" className="h-7 w-7">
-          <path d="M24 8c-4 6-8 11-8 17a8 8 0 0 0 16 0c0-6-4-11-8-17z" stroke={GOLD_SOFT} strokeWidth="1.1"/>
-          <path d="M24 20v10" stroke={GOLD_SOFT} strokeWidth="1" strokeLinecap="round"/>
-          <path d="M20 40h8M22 44h4" stroke={GOLD_SOFT} strokeWidth="1" strokeLinecap="round"/>
-          <circle cx="38" cy="14" r="1" fill={GOLD_SOFT}/>
-          <circle cx="10" cy="16" r="0.8" fill={GOLD_SOFT}/>
-        </svg>
-      ),
+      img: campaignIconFall,
     },
     {
       title: ["ESTIMULA", "EL CRECIMIENTO"],
       text: "Activa la raíz para un cabello más fuerte y abundante.",
-      icon: (
-        <svg viewBox="0 0 48 48" fill="none" className="h-7 w-7">
-          <path d="M24 40V16c0-4 3-8 8-8-1 8-4 12-8 12M24 24c-3 0-6-2-8-6 5 0 8 2 8 6" stroke={GOLD_SOFT} strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
+      img: campaignIconGrowth,
     },
     {
       title: ["FORTALECE", "DESDE LA RAÍZ"],
       text: "Refuerza la fibra capilar para un cabello más resistente.",
-      icon: (
-        <svg viewBox="0 0 48 48" fill="none" className="h-7 w-7">
-          <path d="M24 6v10M18 12l6 4 6-4M14 20h20l-2 20H16z" stroke={GOLD_SOFT} strokeWidth="1.1" strokeLinejoin="round"/>
-          <path d="M20 26v8M24 26v8M28 26v8" stroke={GOLD_SOFT} strokeWidth="1"/>
-        </svg>
-      ),
+      img: campaignIconRoots,
     },
     {
       title: ["DEVUELVE", "BRILLO NATURAL"],
       text: "Hidrata profundamente para un cabello suave, sedoso y saludable.",
-      icon: (
-        <svg viewBox="0 0 48 48" fill="none" className="h-7 w-7">
-          <path d="M24 8c-4 8-10 12-10 20a10 10 0 0 0 20 0c0-8-6-12-10-20z" stroke={GOLD_SOFT} strokeWidth="1.1"/>
-          <path d="M40 10l1 3 3 1-3 1-1 3-1-3-3-1 3-1zM8 18l0.7 2 2 0.7-2 0.7L8 23l-0.7-2-2-0.7 2-0.7z" fill={GOLD_SOFT}/>
-        </svg>
-      ),
+      img: campaignIconShine,
     },
   ];
 
