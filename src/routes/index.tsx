@@ -80,6 +80,7 @@ const avatarDanielaAsset = { url: "/__l5e/assets-v1/1b00e3ab-616b-414e-8c2c-88a5
 const avatarLauraAsset = { url: "/__l5e/assets-v1/29c76f46-2d56-4ecc-b2c7-8549af83ee12/avatar-juliana.jpg" };
 const avatarValentinaAsset = { url: "/__l5e/assets-v1/94f9e274-8ac5-4c59-96df-331d6c58f7ba/avatar-valentina.jpg" };
 const avatarCamilaAsset = { url: "/__l5e/assets-v1/2939f1e5-b934-4572-a5aa-df1e85c7dcb4/avatar-camila-v2.jpg" };
+const andreaValdiriAsset = { url: "/__l5e/assets-v1/754a2d3e-bb89-4279-a08b-c55c20587743/andrea-valdiri.jpg" };
 const beforeValentina = "/__l5e/assets-v1/33558e6c-b493-403b-83da-3b400df64d3c/before-valentina.jpg";
 const afterValentina = "/__l5e/assets-v1/be842d5f-3f53-4cfd-947a-989f5a950059/after-valentina.jpg";
 const customerWhatsappProduct = "/__l5e/assets-v1/cc894fb6-d127-459c-8718-5e22223885de/customer-whatsapp-product.jpg";
