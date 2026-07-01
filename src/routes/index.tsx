@@ -25,10 +25,6 @@ const finalCtaModel = { url: "/final-cta-model-v2.jpg" };
 const trustBgAsset = { url: "/trust-bg-v2.png" };
 import luxuryBgScene from "@/assets/luxury-bg-scene.jpg";
 import campaignTrioScene from "@/assets/campaign-trio-scene.jpg";
-import campaignIconFall from "@/assets/campaign-icon-fall.png";
-import campaignIconGrowth from "@/assets/campaign-icon-growth.png";
-import campaignIconRoots from "@/assets/campaign-icon-roots.png";
-import campaignIconShine from "@/assets/campaign-icon-shine.png";
 const testimonialsBgNew = { url: "/testimonials-bg-new.png" };
 const probFallAsset = { url: "/__l5e/assets-v1/39cbb5a3-cd84-4cfe-8d34-3aca011a3bca/problem-fall-new.jpg" };
 const probSlowGrowthAsset = { url: "/__l5e/assets-v1/a87e988a-704c-4668-a3d7-84e7d0e76a27/problem-slow-new.jpg" };
@@ -2911,26 +2907,50 @@ function LuxuryCampaign() {
   const GOLD_SOFT = "#E8C98A";
   const IVORY = "#F4ECDC";
 
+  const strokeGold = "#D4A85E";
   const features = [
     {
       title: ["AYUDA A REDUCIR", "LA CAÍDA"],
       text: "Fortalece la raíz y reduce el quiebre.",
-      img: campaignIconFall,
+      icon: (
+        <svg viewBox="0 0 32 32" fill="none" className="h-6 w-6">
+          <path d="M16 5c-3 4-6 7.5-6 12a6 6 0 0 0 12 0c0-4.5-3-8-6-12z" stroke={strokeGold} strokeWidth="1" strokeLinejoin="round"/>
+          <path d="M16 13v6" stroke={strokeGold} strokeWidth="0.9" strokeLinecap="round"/>
+        </svg>
+      ),
     },
     {
       title: ["ESTIMULA", "EL CRECIMIENTO"],
       text: "Activa la raíz para un cabello más fuerte y abundante.",
-      img: campaignIconGrowth,
+      icon: (
+        <svg viewBox="0 0 32 32" fill="none" className="h-6 w-6">
+          <path d="M16 26V13" stroke={strokeGold} strokeWidth="1" strokeLinecap="round"/>
+          <path d="M16 13c0-4 3-6 6-6 0 4-2 7-6 7z" stroke={strokeGold} strokeWidth="1" strokeLinejoin="round"/>
+          <path d="M16 18c0-3-2-5-5-5 0 3 2 5 5 5z" stroke={strokeGold} strokeWidth="1" strokeLinejoin="round"/>
+        </svg>
+      ),
     },
     {
       title: ["FORTALECE", "DESDE LA RAÍZ"],
       text: "Refuerza la fibra capilar para un cabello más resistente.",
-      img: campaignIconRoots,
+      icon: (
+        <svg viewBox="0 0 32 32" fill="none" className="h-6 w-6">
+          <path d="M16 5v10" stroke={strokeGold} strokeWidth="1" strokeLinecap="round"/>
+          <path d="M11 15h10" stroke={strokeGold} strokeWidth="1" strokeLinecap="round"/>
+          <path d="M16 15c-2 3-5 5-5 9M16 15c2 3 5 5 5 9M16 15v11" stroke={strokeGold} strokeWidth="1" strokeLinecap="round"/>
+        </svg>
+      ),
     },
     {
       title: ["DEVUELVE", "BRILLO NATURAL"],
       text: "Hidrata profundamente para un cabello suave, sedoso y saludable.",
-      img: campaignIconShine,
+      icon: (
+        <svg viewBox="0 0 32 32" fill="none" className="h-6 w-6">
+          <path d="M16 6l2.2 5.8L24 14l-5.8 2.2L16 22l-2.2-5.8L8 14l5.8-2.2z" stroke={strokeGold} strokeWidth="1" strokeLinejoin="round"/>
+          <circle cx="24.5" cy="7.5" r="0.8" fill={strokeGold}/>
+          <circle cx="7.5" cy="24.5" r="0.6" fill={strokeGold}/>
+        </svg>
+      ),
     },
   ];
 
@@ -3079,24 +3099,20 @@ function LuxuryCampaign() {
           <div className="grid grid-cols-2 gap-x-3 gap-y-6">
             {features.map((f, i) => (
               <div key={i} className="flex flex-col items-center text-center">
-                <div className="relative flex h-16 w-16 items-center justify-center">
+                <div
+                  className="relative flex h-14 w-14 items-center justify-center rounded-full"
+                  style={{
+                    border: `1px solid ${strokeGold}55`,
+                    background:
+                      "radial-gradient(circle at 50% 40%, rgba(232,201,138,0.10) 0%, rgba(232,201,138,0) 70%)",
+                  }}
+                >
                   <span
                     aria-hidden
-                    className="absolute inset-0 rounded-full"
-                    style={{
-                      background:
-                        "radial-gradient(circle, rgba(232,201,138,0.28) 0%, rgba(232,201,138,0) 70%)",
-                    }}
+                    className="absolute inset-[3px] rounded-full"
+                    style={{ border: `1px solid ${strokeGold}22` }}
                   />
-                  <img
-                    src={f.img}
-                    alt=""
-                    width={512}
-                    height={512}
-                    loading="lazy"
-                    className="relative h-14 w-14 object-contain"
-                    style={{ filter: "drop-shadow(0 6px 10px rgba(0,0,0,0.35))" }}
-                  />
+                  {f.icon}
                 </div>
                 <div
                   className="mt-3 text-[9px] font-medium tracking-[0.14em]"
