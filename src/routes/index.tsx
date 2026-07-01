@@ -3096,7 +3096,7 @@ function LuxuryCampaign() {
             <span className="h-px w-6" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
           </div>
 
-          <div className="grid grid-cols-2 gap-x-3 gap-y-6">
+          <div className="grid grid-cols-4 gap-x-1.5 gap-y-4">
             {features.map((f, i) => (
               <div key={i} className="flex flex-col items-center text-center">
                 <div
