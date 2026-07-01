@@ -3083,7 +3083,7 @@ function LuxuryCampaign() {
               fontWeight: 300,
             }}
           >
-            Despacho premium nacional{" "}
+            envios a todo colombina{" "}
             <span style={{ color: GOLD }}>·</span> Pago al recibir
           </p>
         </div>
