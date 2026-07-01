@@ -3093,9 +3093,7 @@ function LuxuryCampaign() {
 
         {/* CTA */}
         <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/checkout"
           className="mt-5 flex items-center justify-center gap-2 rounded-full"
           style={{
             width: "100%",
