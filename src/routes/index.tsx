@@ -3029,36 +3029,94 @@ function LuxuryCampaign() {
           />
         </div>
 
-        {/* Feature grid */}
-        <div className="mt-4 grid grid-cols-4 gap-2">
-          {features.map((f, i) => (
-            <div key={i} className="flex flex-col items-center text-center">
-              <div
-                className="flex h-11 w-11 items-center justify-center rounded-full border"
-                style={{
-                  borderColor: `${GOLD}55`,
-                  background: "rgba(212,168,94,0.05)",
-                }}
-              >
-                {f.icon}
-              </div>
-              <div
-                className="mt-3 text-[8.5px] font-medium tracking-[0.12em]"
-                style={{ color: GOLD }}
-              >
-                {f.title[0]}
-                <br />
-                {f.title[1]}
-              </div>
-              <p
-                className="mt-2 text-[9.5px] font-light"
-                style={{ color: `${IVORY}B3`, lineHeight: 1.5 }}
-              >
-                {f.text}
-              </p>
-            </div>
+        {/* Feature grid — luxury gold-bordered frame */}
+        <div
+          className="relative mt-8 rounded-[14px] px-4 pt-6 pb-5"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(255,240,210,0.06) 0%, rgba(212,168,94,0.03) 100%)",
+            border: `1px solid ${GOLD}66`,
+            boxShadow: `0 0 0 1px rgba(232,201,138,0.12) inset, 0 20px 50px -25px rgba(212,168,94,0.35)`,
+          }}
+        >
+          {/* Corner ornaments */}
+          {[
+            { top: -6, left: -6, rot: 0 },
+            { top: -6, right: -6, rot: 90 },
+            { bottom: -6, right: -6, rot: 180 },
+            { bottom: -6, left: -6, rot: 270 },
+          ].map((c, i) => (
+            <span
+              key={i}
+              aria-hidden
+              className="absolute"
+              style={{
+                width: 14,
+                height: 14,
+                top: c.top,
+                left: c.left,
+                right: c.right,
+                bottom: c.bottom,
+                borderTop: `1px solid ${GOLD}`,
+                borderLeft: `1px solid ${GOLD}`,
+                transform: `rotate(${c.rot}deg)`,
+              }}
+            />
           ))}
+
+          {/* Eyebrow inside frame */}
+          <div className="mb-4 flex items-center justify-center gap-2" aria-hidden>
+            <span className="h-px w-6" style={{ background: `linear-gradient(90deg, transparent, ${GOLD})` }} />
+            <span
+              className="text-[8.5px] tracking-[0.32em]"
+              style={{ color: GOLD }}
+            >
+              BENEFICIOS
+            </span>
+            <span className="h-px w-6" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
+          </div>
+
+          <div className="grid grid-cols-2 gap-x-3 gap-y-6">
+            {features.map((f, i) => (
+              <div key={i} className="flex flex-col items-center text-center">
+                <div className="relative flex h-16 w-16 items-center justify-center">
+                  <span
+                    aria-hidden
+                    className="absolute inset-0 rounded-full"
+                    style={{
+                      background:
+                        "radial-gradient(circle, rgba(232,201,138,0.28) 0%, rgba(232,201,138,0) 70%)",
+                    }}
+                  />
+                  <img
+                    src={f.img}
+                    alt=""
+                    width={512}
+                    height={512}
+                    loading="lazy"
+                    className="relative h-14 w-14 object-contain"
+                    style={{ filter: "drop-shadow(0 6px 10px rgba(0,0,0,0.35))" }}
+                  />
+                </div>
+                <div
+                  className="mt-3 text-[9px] font-medium tracking-[0.14em]"
+                  style={{ color: GOLD }}
+                >
+                  {f.title[0]}
+                  <br />
+                  {f.title[1]}
+                </div>
+                <p
+                  className="mt-2 max-w-[140px] text-[10px] font-light"
+                  style={{ color: `${IVORY}CC`, lineHeight: 1.55 }}
+                >
+                  {f.text}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
+
 
         {/* Botanica premium box */}
         <div
