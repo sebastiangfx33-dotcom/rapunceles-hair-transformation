@@ -253,7 +253,7 @@ function Hero() {
       {/* Editorial copy block */}
       <div className="relative z-10 -mt-2 flex flex-col items-center px-5 text-center">
         <h2
-          className="text-[13px]"
+          className="text-[15px]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 400,
@@ -271,7 +271,7 @@ function Hero() {
             fontWeight: 500,
             color: GOLD,
             letterSpacing: "0em",
-            fontSize: "clamp(17px, 5.2vw, 28px)",
+            fontSize: "clamp(20px, 6vw, 32px)",
           }}
         >
           FUERTE <span style={{ color: GOLD_SOFT }}>·</span> ABUNDANTE{" "}
@@ -310,14 +310,14 @@ function Hero() {
             ))}
           </div>
           <span
-            className="text-[11px]"
+            className="text-[13px]"
             style={{
               fontFamily: "'Inter', sans-serif",
               color: IVORY,
               letterSpacing: "0.18em",
               opacity: 0.9,
               fontWeight: 500,
-              fontSize: "11px",
+              fontSize: "13px",
             }}
           >
             +1.500 MUJERES
@@ -326,7 +326,7 @@ function Hero() {
         </div>
 
         <p
-          className="mt-3 max-w-[320px] text-[14px] leading-[1.5]"
+          className="mt-3 max-w-[320px] text-[16px] leading-[1.5]"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             color: IVORY,
@@ -347,7 +347,7 @@ function Hero() {
               color: "#1A0F2E",
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 600,
-              fontSize: 13,
+              fontSize: 15,
               letterSpacing: "0.14em",
               whiteSpace: "nowrap",
               textTransform: "uppercase",
