@@ -158,6 +158,7 @@ function Landing() {
       
       
 
+      <LuxuryCampaign />
 
       
 
@@ -2917,6 +2918,275 @@ function Header({ eyebrow, title, titleClassName }: { eyebrow: string; title: st
 }
 
 /* ------------------------------ LUXURY CAMPAIGN ------------------------------ */
+function LuxuryCampaign() {
+  const GOLD = "#D4A85E";
+  const GOLD_SOFT = "#E8C98A";
+  const GOLD_DEEP = "#B98A45";
+  const IVORY = "#F4ECDC";
+  const PURPLE_DEEP = "#1A0A2E";
+
+  const modelImg = {
+    url: "/__l5e/assets-v1/2645b730-8bd4-4d1f-9742-492e8b03e02b/final-cta-model.jpg",
+  };
+  const trioImg = {
+    url: "/__l5e/assets-v1/500b2369-804d-48c8-9bb8-2d0873b0465b/product-trio-marble.png",
+  };
+
+  return (
+    <section
+      className="relative w-full overflow-hidden"
+      style={{
+        background:
+          "radial-gradient(80% 55% at 20% 15%, rgba(232,201,138,0.28) 0%, rgba(232,201,138,0) 55%), radial-gradient(70% 55% at 95% 30%, rgba(120,70,150,0.35) 0%, rgba(120,70,150,0) 60%), linear-gradient(180deg, #22102f 0%, #180826 55%, #0e0520 100%)",
+        color: IVORY,
+      }}
+    >
+      <div className="mx-auto w-full max-w-[520px] px-5 pt-6 pb-8">
+        {/* Model portrait */}
+        <div className="relative mx-auto w-full">
+          <img
+            src={modelImg.url}
+            alt="Modelo con cabello largo y saludable"
+            className="block w-full h-auto"
+            style={{
+              maskImage:
+                "radial-gradient(120% 100% at 50% 40%, black 55%, transparent 92%)",
+              WebkitMaskImage:
+                "radial-gradient(120% 100% at 50% 40%, black 55%, transparent 92%)",
+            }}
+          />
+        </div>
+
+        {/* Eyebrow */}
+        <div className="mt-2 text-center">
+          <span
+            style={{
+              fontSize: "0.68rem",
+              letterSpacing: "0.34em",
+              color: GOLD,
+              fontWeight: 500,
+            }}
+          >
+            TU TRANSFORMACIÓN EMPIEZA HOY
+          </span>
+        </div>
+
+        {/* Headline */}
+        <h2
+          className="font-display mt-3 text-center"
+          style={{
+            color: IVORY,
+            fontWeight: 400,
+            fontSize: "clamp(22px, 6.2vw, 30px)",
+            lineHeight: 1.18,
+            letterSpacing: "-0.005em",
+          }}
+        >
+          Tu cabello puede volver a
+          <br />
+          ser fuerte, abundante y saludable{" "}
+          <span style={{ color: GOLD_SOFT }}>—</span>
+          <br />
+          <em style={{ fontStyle: "italic", color: GOLD_SOFT }}>
+            la decisión es tuya.
+          </em>
+        </h2>
+
+        <p
+          className="mt-3 text-center"
+          style={{
+            color: "#E4D6E8",
+            fontSize: "0.82rem",
+            lineHeight: 1.5,
+            fontWeight: 300,
+          }}
+        >
+          Miles de mujeres ya recuperaron su cabello con Rapunceles.
+          <br />
+          Hoy es tu turno de empezar.
+        </p>
+
+        {/* Product trio */}
+        <div className="relative mx-auto mt-5 w-full max-w-[420px]">
+          <img
+            src={trioImg.url}
+            alt="Shampoo, Acondicionador y Tónico Rapunceles"
+            className="block w-full h-auto"
+            style={{
+              filter:
+                "drop-shadow(0 22px 30px rgba(0,0,0,0.55)) drop-shadow(0 0 24px rgba(232,201,138,0.18))",
+            }}
+          />
+        </div>
+
+        {/* Formulación exclusiva card */}
+        <div
+          className="mt-5 rounded-2xl px-4 py-4 flex items-start gap-3"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(30,15,45,0.85), rgba(15,6,25,0.9))",
+            border: `1px solid ${GOLD}55`,
+            boxShadow: `inset 0 0 0 1px ${GOLD}18, 0 12px 30px rgba(0,0,0,0.35)`,
+          }}
+        >
+          <span
+            className="inline-flex items-center justify-center rounded-lg shrink-0"
+            style={{
+              width: 44,
+              height: 44,
+              border: `1px solid ${GOLD}66`,
+              background: "rgba(212,168,94,0.08)",
+            }}
+          >
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+              <path
+                d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z"
+                fill={GOLD_SOFT}
+              />
+            </svg>
+          </span>
+          <div>
+            <div
+              style={{
+                color: GOLD_SOFT,
+                fontWeight: 600,
+                letterSpacing: "0.16em",
+                fontSize: "0.78rem",
+              }}
+            >
+              FORMULACIÓN EXCLUSIVA
+            </div>
+            <p
+              style={{
+                marginTop: 4,
+                color: "#DCCFE0",
+                fontSize: "0.76rem",
+                lineHeight: 1.5,
+                fontWeight: 300,
+              }}
+            >
+              Desarrollamos cada lote en producción limitada utilizando
+              ingredientes botánicos cuidadosamente seleccionados para
+              garantizar máxima calidad y pureza.
+            </p>
+          </div>
+        </div>
+
+        {/* Price */}
+        <div className="mt-6 text-center">
+          <div
+            style={{
+              fontSize: "0.95rem",
+              color: "#9B8AA8",
+              textDecoration: "line-through",
+              fontWeight: 300,
+            }}
+          >
+            $200.000
+          </div>
+          <div
+            className="font-display"
+            style={{
+              fontSize: "clamp(38px, 11vw, 56px)",
+              lineHeight: 1,
+              marginTop: 4,
+              color: GOLD_SOFT,
+              fontWeight: 500,
+              letterSpacing: "-0.01em",
+              textShadow: "0 2px 20px rgba(232,201,138,0.25)",
+            }}
+          >
+            $170.000
+          </div>
+          <p
+            style={{
+              marginTop: 8,
+              fontSize: "0.78rem",
+              color: "#D8CADC",
+              fontWeight: 300,
+            }}
+          >
+            Despacho premium nacional{" "}
+            <span style={{ color: GOLD }}>·</span> Pago al recibir
+          </p>
+        </div>
+
+        {/* CTA */}
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-5 flex items-center justify-center gap-2 rounded-full"
+          style={{
+            width: "100%",
+            padding: "16px 20px",
+            background: `linear-gradient(180deg, ${GOLD_SOFT}, ${GOLD_DEEP})`,
+            color: PURPLE_DEEP,
+            border: `1px solid ${GOLD}`,
+            boxShadow:
+              "inset 0 1px 0 rgba(255,255,255,0.45), 0 14px 30px rgba(212,168,94,0.28)",
+            fontWeight: 700,
+            letterSpacing: "0.09em",
+            fontSize: "1rem",
+            textDecoration: "none",
+          }}
+        >
+          QUIERO ASEGURAR MI KIT
+          <span style={{ fontSize: "1.1rem" }}>→</span>
+        </a>
+
+        {/* Trust row */}
+        <div
+          className="mt-5 flex items-center justify-between gap-2"
+          style={{ fontSize: "0.62rem", letterSpacing: "0.16em", color: "#C9BAD1" }}
+        >
+          <TrustPillar
+            icon={
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke={GOLD} strokeWidth="1.4">
+                <path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6l8-3z" />
+              </svg>
+            }
+            text={<>COMPRA<br/>PROTEGIDA</>}
+          />
+          <PillarDivider />
+          <TrustPillar
+            icon={
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke={GOLD} strokeWidth="1.4">
+                <path d="M1 7h13v9H1zM14 10h5l3 3v3h-8z" />
+                <circle cx="6" cy="18" r="1.5" />
+                <circle cx="18" cy="18" r="1.5" />
+              </svg>
+            }
+            text={<>ENVÍO<br/>PREMIUM</>}
+          />
+          <PillarDivider />
+          <TrustPillar
+            icon={
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke={GOLD} strokeWidth="1.4">
+                <path d="M4 12c0-3 3-5 6-5s6 2 6 5" />
+                <path d="M8 12v6l4 2 4-2v-6" />
+              </svg>
+            }
+            text={<>PAGO AL<br/>RECIBIR</>}
+          />
+        </div>
+
+        <div className="mt-4 flex justify-center">
+          <span
+            aria-hidden
+            style={{
+              display: "inline-block",
+              width: 80,
+              height: 1,
+              background:
+                "linear-gradient(90deg, transparent, #D4A85E, transparent)",
+            }}
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function TrustPillar({ icon, text }: { icon: React.ReactNode; text: React.ReactNode }) {
   return (
