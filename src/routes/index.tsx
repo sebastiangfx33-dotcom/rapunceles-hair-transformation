@@ -1196,7 +1196,7 @@ function Results() {
       after: afterThird,
       avatar: avatarLauraAsset.url,
       quote:
-        "Lo que más me sorprendió fue recuperar voly sentir mi cabello con más vida.",
+        "Lo que más me sorprendió fue recuperar mi cabello y tenerlo más grueso.",
       name: "Juliana",
       city: "Cali",
     },
