@@ -379,7 +379,7 @@ function AfterBanner() {
 
   const items = [
     {
-      img: probFallAsset.url,
+      img: probVolumeAsset.url,
       title: "Caída constante",
       desc: "Cada día pierdes más cabello del que deberías.",
     },
@@ -389,7 +389,7 @@ function AfterBanner() {
       desc: "Tu cabello tarda demasiado en crecer o parece detenido.",
     },
     {
-      img: probVolumeAsset.url,
+      img: probFallAsset.url,
       title: "Cabello sin vida",
       desc: "Tu cabello pierde fuerza, densidad y vitalidad natural.",
     },
