@@ -86,11 +86,12 @@ const afterValentina = "/__l5e/assets-v1/be842d5f-3f53-4cfd-947a-989f5a950059/af
 const customerWhatsappProduct = "/__l5e/assets-v1/cc894fb6-d127-459c-8718-5e22223885de/customer-whatsapp-product.jpg";
 const customerChatP1 = "/__l5e/assets-v1/2d16d196-63da-40d3-9c76-8385cc75a97a/customer-chat-p1.jpg";
 const customerChatP2 = "/__l5e/assets-v1/c0aeaea7-0186-43a9-84c6-45e5648b26d3/customer-chat-p2.jpg";
-import trustAvatar1 from "@/assets/trust-avatar-1.jpg";
-import trustAvatar2 from "@/assets/trust-avatar-2.jpg";
-import trustAvatar3 from "@/assets/trust-avatar-3.jpg";
-import trustAvatar4 from "@/assets/trust-avatar-4.jpg";
-import trustAvatar5 from "@/assets/trust-avatar-5.jpg";
+import trustNew1Asset from "@/assets/trust-new-1.jpg.asset.json";
+import trustNew2Asset from "@/assets/trust-new-2.jpg.asset.json";
+import trustNew3Asset from "@/assets/trust-new-3.jpg.asset.json";
+const trustAvatar1 = trustNew1Asset.url;
+const trustAvatar2 = trustNew2Asset.url;
+const trustAvatar3 = trustNew3Asset.url;
 
 
 
@@ -1986,7 +1987,7 @@ function Testimonials() {
                 }}
                 loading="lazy"
               />
-              {[trustAvatar1, trustAvatar2, trustAvatar3, trustAvatar4, trustAvatar5].map((src, i) => (
+              {[trustAvatar1, trustAvatar2, trustAvatar3].map((src, i) => (
                 <img
                   key={i}
                   src={src}
