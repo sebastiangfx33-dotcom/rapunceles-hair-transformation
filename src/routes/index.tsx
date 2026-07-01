@@ -3188,3 +3188,119 @@ function LuxuryCampaign() {
   );
 }
 
+
+/* ------------------------ PRODUCT TRIO SHOWCASE ------------------------ */
+
+function ProductTrioShowcase() {
+  const trioImg = {
+    url: "/__l5e/assets-v1/500b2369-804d-48c8-9bb8-2d0873b0465b/product-trio-marble.png",
+  };
+  const GOLD = "#D4A85E";
+  const GOLD_SOFT = "#E8C98A";
+  const IVORY = "#F4ECDC";
+
+  return (
+    <section
+      className="relative w-full overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(180deg, #efeae4 0%, #e6ded4 55%, #d9cfc2 100%)",
+      }}
+    >
+      <div className="mx-auto max-w-[520px] px-5 pt-10 pb-6 text-center">
+        <span
+          className="inline-block"
+          style={{
+            fontFamily: "Inter, sans-serif",
+            fontSize: "0.68rem",
+            letterSpacing: "0.32em",
+            textTransform: "uppercase",
+            color: GOLD,
+            fontWeight: 500,
+          }}
+        >
+          El ritual completo
+        </span>
+        <div
+          style={{
+            width: 56,
+            height: 1,
+            margin: "12px auto 16px",
+            background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)`,
+          }}
+        />
+        <h2
+          className="font-display"
+          style={{
+            color: "#3a2540",
+            fontWeight: 400,
+            fontSize: "clamp(24px, 6.4vw, 34px)",
+            lineHeight: 1.15,
+            letterSpacing: "-0.01em",
+          }}
+        >
+          Tres piezas.
+          <br />
+          <em style={{ fontStyle: "italic", color: GOLD }}>Una transformación.</em>
+        </h2>
+        <p
+          style={{
+            marginTop: 12,
+            color: "#5a4560",
+            fontSize: "0.92rem",
+            lineHeight: 1.55,
+            fontWeight: 300,
+          }}
+        >
+          Shampoo, acondicionador y tónico formulados para nutrir, fortalecer y
+          despertar el crecimiento desde la raíz.
+        </p>
+      </div>
+
+      <div className="relative mx-auto w-full max-w-[520px] px-4 pb-8">
+        <img
+          src={trioImg.url}
+          alt="Rapunceles — Shampoo, Acondicionador y Tónico"
+          className="block w-full h-auto"
+          style={{
+            filter: "drop-shadow(0 30px 40px rgba(60,30,70,0.18))",
+          }}
+        />
+      </div>
+
+      <div className="mx-auto max-w-[520px] px-5 pb-12">
+        <div
+          className="flex items-center justify-center gap-6 flex-wrap"
+          style={{
+            fontFamily: "Inter, sans-serif",
+            fontSize: "0.7rem",
+            letterSpacing: "0.22em",
+            textTransform: "uppercase",
+            color: "#6b4f72",
+            fontWeight: 500,
+          }}
+        >
+          <span>100% Natural</span>
+          <span style={{ color: GOLD }}>·</span>
+          <span>Sin sal</span>
+          <span style={{ color: GOLD }}>·</span>
+          <span>Sin parabenos</span>
+        </div>
+
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary mt-6"
+          style={{
+            background: "linear-gradient(135deg, #3a2540, #2a1830)",
+            color: IVORY,
+            border: `1px solid ${GOLD_SOFT}55`,
+          }}
+        >
+          Quiero mi kit completo
+        </a>
+      </div>
+    </section>
+  );
+}
