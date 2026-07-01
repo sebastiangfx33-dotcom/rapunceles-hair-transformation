@@ -271,7 +271,7 @@ function Hero() {
             fontWeight: 500,
             color: GOLD,
             letterSpacing: "0em",
-            fontSize: "clamp(20px, 6vw, 32px)",
+            fontSize: "clamp(19.8px, 5.94vw, 31.7px)",
           }}
         >
           FUERTE <span style={{ color: GOLD_SOFT }}>·</span> ABUNDANTE{" "}
