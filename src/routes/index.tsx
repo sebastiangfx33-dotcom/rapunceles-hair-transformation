@@ -3173,7 +3173,16 @@ function LuxuryCampaign() {
         </div>
 
         <div className="mt-4 flex justify-center">
-          <Ornament />
+          <span
+            aria-hidden
+            style={{
+              display: "inline-block",
+              width: 80,
+              height: 1,
+              background:
+                "linear-gradient(90deg, transparent, #D4A85E, transparent)",
+            }}
+          />
         </div>
       </div>
     </section>
