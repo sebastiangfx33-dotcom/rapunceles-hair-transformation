@@ -2936,8 +2936,11 @@ function LuxuryCampaign() {
     <section
       className="relative w-full overflow-hidden"
       style={{
-        background:
-          "radial-gradient(80% 55% at 20% 15%, rgba(232,201,138,0.28) 0%, rgba(232,201,138,0) 55%), radial-gradient(70% 55% at 95% 30%, rgba(120,70,150,0.35) 0%, rgba(120,70,150,0) 60%), linear-gradient(180deg, #22102f 0%, #180826 55%, #0e0520 100%)",
+        backgroundImage:
+          "linear-gradient(180deg, rgba(20,8,38,0.72) 0%, rgba(20,8,38,0.78) 50%, rgba(14,5,32,0.88) 100%), url('/__l5e/assets-v1/aaeea33b-52c6-474c-b732-49c5518d689d/luxury-campaign-bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         color: IVORY,
       }}
     >
