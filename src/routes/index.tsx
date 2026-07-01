@@ -2922,272 +2922,295 @@ function Header({ eyebrow, title, titleClassName }: { eyebrow: string; title: st
 function LuxuryCampaign() {
   const GOLD = "#D4A85E";
   const GOLD_SOFT = "#E8C98A";
+  const GOLD_DEEP = "#B98A45";
   const IVORY = "#F4ECDC";
+  const PURPLE_DEEP = "#1A0A2E";
 
-  const strokeGold = "#D4A85E";
-  const features = [
-    {
-      title: ["AYUDA A REDUCIR", "LA CAÍDA"],
-      text: "Fortalece la raíz y reduce el quiebre.",
-      icon: (
-        <svg viewBox="0 0 32 32" fill="none" className="h-6 w-6">
-          <path d="M16 5c-3 4-6 7.5-6 12a6 6 0 0 0 12 0c0-4.5-3-8-6-12z" stroke={strokeGold} strokeWidth="1" strokeLinejoin="round"/>
-          <path d="M16 13v6" stroke={strokeGold} strokeWidth="0.9" strokeLinecap="round"/>
-        </svg>
-      ),
-    },
-    {
-      title: ["ESTIMULA", "EL CRECIMIENTO"],
-      text: "Activa la raíz para un cabello más fuerte y abundante.",
-      icon: (
-        <svg viewBox="0 0 32 32" fill="none" className="h-6 w-6">
-          <path d="M16 26V13" stroke={strokeGold} strokeWidth="1" strokeLinecap="round"/>
-          <path d="M16 13c0-4 3-6 6-6 0 4-2 7-6 7z" stroke={strokeGold} strokeWidth="1" strokeLinejoin="round"/>
-          <path d="M16 18c0-3-2-5-5-5 0 3 2 5 5 5z" stroke={strokeGold} strokeWidth="1" strokeLinejoin="round"/>
-        </svg>
-      ),
-    },
-    {
-      title: ["FORTALECE", "DESDE LA RAÍZ"],
-      text: "Refuerza la fibra capilar para un cabello más resistente.",
-      icon: (
-        <svg viewBox="0 0 32 32" fill="none" className="h-6 w-6">
-          <path d="M16 5v10" stroke={strokeGold} strokeWidth="1" strokeLinecap="round"/>
-          <path d="M11 15h10" stroke={strokeGold} strokeWidth="1" strokeLinecap="round"/>
-          <path d="M16 15c-2 3-5 5-5 9M16 15c2 3 5 5 5 9M16 15v11" stroke={strokeGold} strokeWidth="1" strokeLinecap="round"/>
-        </svg>
-      ),
-    },
-    {
-      title: ["DEVUELVE", "BRILLO NATURAL"],
-      text: "Hidrata profundamente para un cabello suave, sedoso y saludable.",
-      icon: (
-        <svg viewBox="0 0 32 32" fill="none" className="h-6 w-6">
-          <path d="M16 6l2.2 5.8L24 14l-5.8 2.2L16 22l-2.2-5.8L8 14l5.8-2.2z" stroke={strokeGold} strokeWidth="1" strokeLinejoin="round"/>
-          <circle cx="24.5" cy="7.5" r="0.8" fill={strokeGold}/>
-          <circle cx="7.5" cy="24.5" r="0.6" fill={strokeGold}/>
-        </svg>
-      ),
-    },
-  ];
+  const modelImg = {
+    url: "/__l5e/assets-v1/2645b730-8bd4-4d1f-9742-492e8b03e02b/final-cta-model.jpg",
+  };
+  const trioImg = {
+    url: "/__l5e/assets-v1/500b2369-804d-48c8-9bb8-2d0873b0465b/product-trio-marble.png",
+  };
 
   return (
     <section
       className="relative w-full overflow-hidden"
       style={{
         background:
-          "radial-gradient(120% 80% at 50% 0%, #2a1440 0%, #1a0a2e 55%, #120722 100%)",
+          "radial-gradient(80% 55% at 20% 15%, rgba(232,201,138,0.28) 0%, rgba(232,201,138,0) 55%), radial-gradient(70% 55% at 95% 30%, rgba(120,70,150,0.35) 0%, rgba(120,70,150,0) 60%), linear-gradient(180deg, #22102f 0%, #180826 55%, #0e0520 100%)",
+        color: IVORY,
       }}
     >
-      {/* subtle top light rays */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-56"
-        style={{
-          background:
-            "radial-gradient(60% 100% at 50% 0%, rgba(232,201,138,0.18) 0%, rgba(232,201,138,0) 70%)",
-        }}
-      />
-
-      <div className="relative mx-auto max-w-[420px] px-6 pt-14 pb-10">
-
-        {/* Headline */}
-        <h2
-          className="mt-8 text-center font-display"
-          style={{
-            color: GOLD_SOFT,
-            fontSize: "22px",
-            lineHeight: 1.2,
-            letterSpacing: "0.005em",
-            textShadow: "0 1px 20px rgba(212,168,94,0.15)",
-          }}
-        >
-          TU CABELLO YA TE MOSTRÓ
-          <br />
-          LAS SEÑALES.
-          <br />
-          <span style={{ color: GOLD }}>AHORA DALE LO QUE NECESITA.</span>
-        </h2>
-
-        {/* Ornament divider */}
-        <div className="mt-4 flex items-center justify-center gap-2" aria-hidden>
-          <span className="h-px w-10" style={{ background: `linear-gradient(90deg, transparent, ${GOLD})` }} />
-          <svg viewBox="0 0 24 12" className="h-3 w-6">
-            <path d="M2 6 L10 6 M14 6 L22 6" stroke={GOLD} strokeWidth="0.6"/>
-            <path d="M12 2 L14 6 L12 10 L10 6 Z" fill={GOLD}/>
-          </svg>
-          <span className="h-px w-10" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
-        </div>
-
-        {/* Description */}
-        <p
-          className="mx-auto mt-5 max-w-[320px] text-center text-[12.5px] font-light"
-          style={{ color: `${IVORY}CC`, lineHeight: 1.7 }}
-        >
-          Creamos un sistema capilar diseñado para ayudar a fortalecer desde la raíz, estimular el crecimiento y devolver la vitalidad natural que tu cabello necesita para verse abundante y saludable.
-        </p>
-
-        {/* Hero product scene */}
-        <div className="relative mt-8">
+      <div className="mx-auto w-full max-w-[520px] px-5 pt-6 pb-8">
+        {/* Model portrait */}
+        <div className="relative mx-auto w-full">
           <img
-            src={campaignTrioScene}
-            alt="Trio de productos Rapunceles sobre pedestal con anillo dorado y lavanda"
-            width={1024}
-            height={1216}
-            loading="lazy"
-            className="mx-auto block w-full max-w-[360px]"
+            src={modelImg.url}
+            alt="Modelo con cabello largo y saludable"
+            className="block w-full h-auto"
             style={{
-              filter: "drop-shadow(0 30px 40px rgba(0,0,0,0.55))",
+              maskImage:
+                "radial-gradient(120% 100% at 50% 40%, black 55%, transparent 92%)",
+              WebkitMaskImage:
+                "radial-gradient(120% 100% at 50% 40%, black 55%, transparent 92%)",
             }}
           />
         </div>
 
-        {/* Feature grid — luxury gold-bordered frame */}
-        <div
-          className="relative mt-8 rounded-[14px] px-4 pt-6 pb-5"
+        {/* Eyebrow */}
+        <div className="mt-2 text-center">
+          <span
+            style={{
+              fontSize: "0.68rem",
+              letterSpacing: "0.34em",
+              color: GOLD,
+              fontWeight: 500,
+            }}
+          >
+            TU TRANSFORMACIÓN EMPIEZA HOY
+          </span>
+        </div>
+
+        {/* Headline */}
+        <h2
+          className="font-display mt-3 text-center"
           style={{
-            background:
-              "linear-gradient(180deg, rgba(255,240,210,0.06) 0%, rgba(212,168,94,0.03) 100%)",
-            border: `1px solid ${GOLD}66`,
-            boxShadow: `0 0 0 1px rgba(232,201,138,0.12) inset, 0 20px 50px -25px rgba(212,168,94,0.35)`,
+            color: IVORY,
+            fontWeight: 400,
+            fontSize: "clamp(22px, 6.2vw, 30px)",
+            lineHeight: 1.18,
+            letterSpacing: "-0.005em",
           }}
         >
-          {/* Corner ornaments */}
-          {[
-            { top: -6, left: -6, rot: 0 },
-            { top: -6, right: -6, rot: 90 },
-            { bottom: -6, right: -6, rot: 180 },
-            { bottom: -6, left: -6, rot: 270 },
-          ].map((c, i) => (
-            <span
-              key={i}
-              aria-hidden
-              className="absolute"
-              style={{
-                width: 14,
-                height: 14,
-                top: c.top,
-                left: c.left,
-                right: c.right,
-                bottom: c.bottom,
-                borderTop: `1px solid ${GOLD}`,
-                borderLeft: `1px solid ${GOLD}`,
-                transform: `rotate(${c.rot}deg)`,
-              }}
-            />
-          ))}
-
-          {/* Eyebrow inside frame */}
-          <div className="mb-4 flex items-center justify-center gap-2" aria-hidden>
-            <span className="h-px w-6" style={{ background: `linear-gradient(90deg, transparent, ${GOLD})` }} />
-            <span
-              className="text-[8.5px] tracking-[0.32em]"
-              style={{ color: GOLD }}
-            >
-              BENEFICIOS
-            </span>
-            <span className="h-px w-6" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
-          </div>
-
-          <div className="grid grid-cols-4 gap-x-1.5 gap-y-4">
-            {features.map((f, i) => (
-              <div key={i} className="flex flex-col items-center text-center">
-                <div
-                  className="relative flex h-11 w-11 items-center justify-center rounded-full"
-                  style={{
-                    border: `1px solid ${strokeGold}55`,
-                    background:
-                      "radial-gradient(circle at 50% 40%, rgba(232,201,138,0.10) 0%, rgba(232,201,138,0) 70%)",
-                  }}
-                >
-                  <span
-                    aria-hidden
-                    className="absolute inset-[2px] rounded-full"
-                    style={{ border: `1px solid ${strokeGold}22` }}
-                  />
-                  <span className="[&>svg]:h-[18px] [&>svg]:w-[18px]">{f.icon}</span>
-                </div>
-                <div
-                  className="mt-2.5 text-[7.5px] font-medium tracking-[0.1em]"
-                  style={{ color: GOLD }}
-                >
-                  {f.title[0]}
-                  <br />
-                  {f.title[1]}
-                </div>
-                <p
-                  className="mt-1.5 text-[8px] font-light"
-                  style={{ color: `${IVORY}CC`, lineHeight: 1.4 }}
-                >
-                  {f.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-
-        {/* Botanica premium box */}
-        <div
-          className="mt-8 rounded-md border px-4 py-4"
-          style={{
-            borderColor: `${GOLD}44`,
-            background:
-              "linear-gradient(180deg, rgba(212,168,94,0.06), rgba(212,168,94,0.02))",
-          }}
-        >
-          <div className="flex items-start gap-3">
-            <div
-              className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border"
-              style={{ borderColor: `${GOLD}66` }}
-            >
-              <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
-                <path d="M12 3c4 4 6 7 6 11a6 6 0 0 1-12 0c0-4 2-7 6-11z" stroke={GOLD} strokeWidth="0.9"/>
-                <path d="M12 8v11" stroke={GOLD} strokeWidth="0.7"/>
-              </svg>
-            </div>
-            <div>
-              <div
-                className="text-[11px] tracking-[0.28em]"
-                style={{ color: GOLD }}
-              >
-                FÓRMULA BOTÁNICA PREMIUM
-              </div>
-              <p
-                className="mt-1.5 text-[10.5px] font-light"
-                style={{ color: `${IVORY}B3`, lineHeight: 1.6 }}
-              >
-                Ingredientes cuidadosamente seleccionados para acompañar el proceso natural de recuperación capilar.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Closing tagline */}
-        <div className="mt-8 flex items-center justify-center gap-3" aria-hidden>
-          <svg viewBox="0 0 24 24" className="h-3 w-3">
-            <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.7A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" fill="none" stroke={GOLD} strokeWidth="0.8"/>
-          </svg>
-          <span className="h-px w-8" style={{ background: `${GOLD}66` }} />
-          <span className="h-px w-8" style={{ background: `${GOLD}66` }} />
-          <svg viewBox="0 0 24 24" className="h-3 w-3">
-            <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.7A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" fill="none" stroke={GOLD} strokeWidth="0.8"/>
-          </svg>
-        </div>
-        <p
-          className="mt-3 text-center font-display text-[13px]"
-          style={{ color: `${IVORY}CC`, lineHeight: 1.7 }}
-        >
-          Miles de mujeres ya comenzaron este proceso.
+          Tu cabello puede volver a
           <br />
-          <em style={{ color: GOLD_SOFT, fontStyle: "italic" }}>
-            Tu transformación también puede comenzar hoy.
+          ser fuerte, abundante y saludable{" "}
+          <span style={{ color: GOLD_SOFT }}>—</span>
+          <br />
+          <em style={{ fontStyle: "italic", color: GOLD_SOFT }}>
+            la decisión es tuya.
           </em>
+        </h2>
+
+        <p
+          className="mt-3 text-center"
+          style={{
+            color: "#E4D6E8",
+            fontSize: "0.82rem",
+            lineHeight: 1.5,
+            fontWeight: 300,
+          }}
+        >
+          Miles de mujeres ya recuperaron su cabello con Rapunceles.
+          <br />
+          Hoy es tu turno de empezar.
         </p>
+
+        {/* Product trio */}
+        <div className="relative mx-auto mt-5 w-full max-w-[420px]">
+          <img
+            src={trioImg.url}
+            alt="Shampoo, Acondicionador y Tónico Rapunceles"
+            className="block w-full h-auto"
+            style={{
+              filter:
+                "drop-shadow(0 22px 30px rgba(0,0,0,0.55)) drop-shadow(0 0 24px rgba(232,201,138,0.18))",
+            }}
+          />
+        </div>
+
+        {/* Formulación exclusiva card */}
+        <div
+          className="mt-5 rounded-2xl px-4 py-4 flex items-start gap-3"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(30,15,45,0.85), rgba(15,6,25,0.9))",
+            border: `1px solid ${GOLD}55`,
+            boxShadow: `inset 0 0 0 1px ${GOLD}18, 0 12px 30px rgba(0,0,0,0.35)`,
+          }}
+        >
+          <span
+            className="inline-flex items-center justify-center rounded-lg shrink-0"
+            style={{
+              width: 44,
+              height: 44,
+              border: `1px solid ${GOLD}66`,
+              background: "rgba(212,168,94,0.08)",
+            }}
+          >
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+              <path
+                d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z"
+                fill={GOLD_SOFT}
+              />
+            </svg>
+          </span>
+          <div>
+            <div
+              style={{
+                color: GOLD_SOFT,
+                fontWeight: 600,
+                letterSpacing: "0.16em",
+                fontSize: "0.78rem",
+              }}
+            >
+              FORMULACIÓN EXCLUSIVA
+            </div>
+            <p
+              style={{
+                marginTop: 4,
+                color: "#DCCFE0",
+                fontSize: "0.76rem",
+                lineHeight: 1.5,
+                fontWeight: 300,
+              }}
+            >
+              Desarrollamos cada lote en producción limitada utilizando
+              ingredientes botánicos cuidadosamente seleccionados para
+              garantizar máxima calidad y pureza.
+            </p>
+          </div>
+        </div>
+
+        {/* Price */}
+        <div className="mt-6 text-center">
+          <div
+            style={{
+              fontSize: "0.95rem",
+              color: "#9B8AA8",
+              textDecoration: "line-through",
+              fontWeight: 300,
+            }}
+          >
+            $200.000
+          </div>
+          <div
+            className="font-display"
+            style={{
+              fontSize: "clamp(38px, 11vw, 56px)",
+              lineHeight: 1,
+              marginTop: 4,
+              color: GOLD_SOFT,
+              fontWeight: 500,
+              letterSpacing: "-0.01em",
+              textShadow: "0 2px 20px rgba(232,201,138,0.25)",
+            }}
+          >
+            $170.000
+          </div>
+          <p
+            style={{
+              marginTop: 8,
+              fontSize: "0.78rem",
+              color: "#D8CADC",
+              fontWeight: 300,
+            }}
+          >
+            Despacho premium nacional{" "}
+            <span style={{ color: GOLD }}>·</span> Pago al recibir
+          </p>
+        </div>
+
+        {/* CTA */}
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-5 flex items-center justify-center gap-2 rounded-full"
+          style={{
+            width: "100%",
+            padding: "16px 20px",
+            background: `linear-gradient(180deg, ${GOLD_SOFT}, ${GOLD_DEEP})`,
+            color: PURPLE_DEEP,
+            border: `1px solid ${GOLD}`,
+            boxShadow:
+              "inset 0 1px 0 rgba(255,255,255,0.45), 0 14px 30px rgba(212,168,94,0.28)",
+            fontWeight: 700,
+            letterSpacing: "0.09em",
+            fontSize: "1rem",
+            textDecoration: "none",
+          }}
+        >
+          QUIERO ASEGURAR MI KIT
+          <span style={{ fontSize: "1.1rem" }}>→</span>
+        </a>
+
+        {/* Trust row */}
+        <div
+          className="mt-5 flex items-center justify-between gap-2"
+          style={{ fontSize: "0.62rem", letterSpacing: "0.16em", color: "#C9BAD1" }}
+        >
+          <TrustPillar
+            icon={
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke={GOLD} strokeWidth="1.4">
+                <path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6l8-3z" />
+              </svg>
+            }
+            text={<>COMPRA<br/>PROTEGIDA</>}
+          />
+          <PillarDivider />
+          <TrustPillar
+            icon={
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke={GOLD} strokeWidth="1.4">
+                <path d="M1 7h13v9H1zM14 10h5l3 3v3h-8z" />
+                <circle cx="6" cy="18" r="1.5" />
+                <circle cx="18" cy="18" r="1.5" />
+              </svg>
+            }
+            text={<>ENVÍO<br/>PREMIUM</>}
+          />
+          <PillarDivider />
+          <TrustPillar
+            icon={
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke={GOLD} strokeWidth="1.4">
+                <path d="M4 12c0-3 3-5 6-5s6 2 6 5" />
+                <path d="M8 12v6l4 2 4-2v-6" />
+              </svg>
+            }
+            text={<>PAGO AL<br/>RECIBIR</>}
+          />
+        </div>
+
+        <div className="mt-4 flex justify-center">
+          <span
+            aria-hidden
+            style={{
+              display: "inline-block",
+              width: 80,
+              height: 1,
+              background:
+                "linear-gradient(90deg, transparent, #D4A85E, transparent)",
+            }}
+          />
+        </div>
       </div>
     </section>
   );
 }
+
+function TrustPillar({ icon, text }: { icon: React.ReactNode; text: React.ReactNode }) {
+  return (
+    <div className="flex items-center gap-2 flex-1 justify-center text-center">
+      {icon}
+      <span style={{ fontWeight: 500, lineHeight: 1.25 }}>{text}</span>
+    </div>
+  );
+}
+
+function PillarDivider() {
+  return (
+    <span
+      aria-hidden
+      style={{
+        width: 1,
+        alignSelf: "stretch",
+        background: "linear-gradient(180deg, transparent, #D4A85E55, transparent)",
+      }}
+    />
+  );
+}
+
 
 
 /* ------------------------ PRODUCT TRIO SHOWCASE ------------------------ */
