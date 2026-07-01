@@ -3096,11 +3096,11 @@ function LuxuryCampaign() {
             <span className="h-px w-6" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
           </div>
 
-          <div className="grid grid-cols-2 gap-x-3 gap-y-6">
+          <div className="grid grid-cols-4 gap-x-1.5 gap-y-4">
             {features.map((f, i) => (
               <div key={i} className="flex flex-col items-center text-center">
                 <div
-                  className="relative flex h-14 w-14 items-center justify-center rounded-full"
+                  className="relative flex h-11 w-11 items-center justify-center rounded-full"
                   style={{
                     border: `1px solid ${strokeGold}55`,
                     background:
@@ -3109,13 +3109,13 @@ function LuxuryCampaign() {
                 >
                   <span
                     aria-hidden
-                    className="absolute inset-[3px] rounded-full"
+                    className="absolute inset-[2px] rounded-full"
                     style={{ border: `1px solid ${strokeGold}22` }}
                   />
-                  {f.icon}
+                  <span className="[&>svg]:h-[18px] [&>svg]:w-[18px]">{f.icon}</span>
                 </div>
                 <div
-                  className="mt-3 text-[9px] font-medium tracking-[0.14em]"
+                  className="mt-2.5 text-[7.5px] font-medium tracking-[0.1em]"
                   style={{ color: GOLD }}
                 >
                   {f.title[0]}
@@ -3123,8 +3123,8 @@ function LuxuryCampaign() {
                   {f.title[1]}
                 </div>
                 <p
-                  className="mt-2 max-w-[140px] text-[10px] font-light"
-                  style={{ color: `${IVORY}CC`, lineHeight: 1.55 }}
+                  className="mt-1.5 text-[8px] font-light"
+                  style={{ color: `${IVORY}CC`, lineHeight: 1.4 }}
                 >
                   {f.text}
                 </p>
