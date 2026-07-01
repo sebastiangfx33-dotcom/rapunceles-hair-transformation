@@ -2497,15 +2497,15 @@ function Urgency() {
               Miles de mujeres ya confiaron en Rapunceles
             </p>
 
-            {/* Editorial headline with flanking gold lines */}
-            <div className="mt-5 flex items-center justify-center gap-4">
+            {/* Editorial headline with flanking gold lines — single line */}
+            <div className="mt-5 flex items-center justify-center gap-3">
               <span
                 aria-hidden
-                className="h-px w-10"
+                className="h-px w-6"
                 style={{ background: `linear-gradient(90deg, transparent, ${gold})` }}
               />
               <h2
-                className="text-[1.55rem] leading-[1.18] whitespace-nowrap"
+                className="text-[1.35rem] leading-[1.18] whitespace-nowrap"
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   color: "#F4ECDC",
@@ -2514,26 +2514,15 @@ function Urgency() {
                   letterSpacing: "-0.005em",
                 }}
               >
-                Hoy puede ser
+                Hoy puede ser tu momento.
               </h2>
               <span
                 aria-hidden
-                className="h-px w-10"
+                className="h-px w-6"
                 style={{ background: `linear-gradient(90deg, ${gold}, transparent)` }}
               />
             </div>
-            <h2
-              className="mt-1 text-[1.55rem] leading-[1.18]"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                color: "#F4ECDC",
-                fontStyle: "italic",
-                fontWeight: 300,
-                letterSpacing: "-0.005em",
-              }}
-            >
-              tu momento.
-            </h2>
+
 
             <p
               className="mx-auto mt-7 max-w-[18rem] text-[0.74rem] leading-[1.8]"
