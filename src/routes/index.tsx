@@ -2004,18 +2004,8 @@ function Testimonials() {
             </div>
           </div>
 
-          {/* Andrea name tag */}
-          <div className="mt-2 flex items-center justify-center gap-1.5">
-            <span
-              className="text-[0.6rem] uppercase tracking-[0.24em]"
-              style={{ color: goldSoft, fontFamily: "'Cormorant Garamond', serif" }}
-            >
-              con Andrea Valdiri
-            </span>
-          </div>
-
           {/* Stars + rating */}
-          <div className="mt-2 flex items-center justify-center gap-1">
+          <div className="mt-3 flex items-center justify-center gap-1">
             {[0, 1, 2, 3, 4].map((i) => (
               <Star
                 key={i}
@@ -2034,16 +2024,16 @@ function Testimonials() {
 
 
           <h3
-            className="mt-3 font-display text-[1.5rem] leading-[1.1]"
+            className="mt-3 font-display text-[1.35rem] leading-[1.15]"
             style={{ color: gold }}
           >
-            +1.500 mujeres
+            Andrea Valdiri y +1.500 mujeres
           </h3>
           <p
             className="mt-1 font-display text-[0.9rem] italic"
             style={{ color: goldSoft, opacity: 0.95 }}
           >
-            ya han confiado en Rapunceles
+            ya confían en Rapunceles
           </p>
 
 
