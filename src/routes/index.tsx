@@ -204,9 +204,9 @@ function Hero() {
           width={608}
           height={1280}
           fetchPriority="high"
-          className="mx-auto block h-auto object-contain object-center"
-          style={{ width: "58%", maxWidth: 230 }}
+          className="mx-auto block h-auto w-full object-contain object-center"
         />
+
 
 
 
