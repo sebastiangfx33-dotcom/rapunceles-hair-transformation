@@ -2945,19 +2945,8 @@ function LuxuryCampaign() {
 
 
 
-        {/* Eyebrow */}
-        <div className="mt-2 text-center">
-          <span
-            style={{
-              fontSize: "0.68rem",
-              letterSpacing: "0.34em",
-              color: GOLD,
-              fontWeight: 500,
-            }}
-          >
-            TU TRANSFORMACIÓN EMPIEZA HOY
-          </span>
-        </div>
+
+
 
         {/* Headline */}
         <h2
