@@ -2942,20 +2942,8 @@ function LuxuryCampaign() {
       }}
     >
       <div className="mx-auto w-full max-w-[520px] px-5 pt-6 pb-8">
-        {/* Model portrait */}
-        <div className="relative mx-auto w-full">
-          <img
-            src={modelImg.url}
-            alt="Modelo con cabello largo y saludable"
-            className="block w-full h-auto"
-            style={{
-              maskImage:
-                "radial-gradient(120% 100% at 50% 40%, black 55%, transparent 92%)",
-              WebkitMaskImage:
-                "radial-gradient(120% 100% at 50% 40%, black 55%, transparent 92%)",
-            }}
-          />
-        </div>
+
+
 
         {/* Eyebrow */}
         <div className="mt-2 text-center">
