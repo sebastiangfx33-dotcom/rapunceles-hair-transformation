@@ -3134,22 +3134,6 @@ function LuxuryCampaign() {
                 </p>
               </div>
             ))}
-                <div
-                  className="mt-3 text-[9px] font-medium tracking-[0.14em]"
-                  style={{ color: GOLD }}
-                >
-                  {f.title[0]}
-                  <br />
-                  {f.title[1]}
-                </div>
-                <p
-                  className="mt-2 max-w-[140px] text-[10px] font-light"
-                  style={{ color: `${IVORY}CC`, lineHeight: 1.55 }}
-                >
-                  {f.text}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
 
