@@ -2010,6 +2010,31 @@ function Testimonials() {
             </span>
           </div>
 
+          {/* Andrea Valdiri endorsement */}
+          <div className="mt-4 flex flex-col items-center">
+            <div
+              className="relative h-16 w-16 rounded-full p-[2px]"
+              style={{
+                background: `linear-gradient(135deg, ${gold}, #E8C98A, ${gold})`,
+                boxShadow: "0 0 18px rgba(201,168,76,0.55), 0 0 40px rgba(201,168,76,0.25)",
+              }}
+            >
+              <img
+                src={andreaValdiriAsset.url}
+                alt="Andrea Valdiri"
+                className="h-full w-full rounded-full object-cover"
+                style={{ border: "2px solid #1a0a2e" }}
+                loading="lazy"
+              />
+            </div>
+            <span
+              className="mt-1.5 text-[0.65rem] uppercase tracking-[0.22em]"
+              style={{ color: goldSoft, fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Andrea Valdiri
+            </span>
+          </div>
+
           <h3
             className="mt-3 font-display text-[1.5rem] leading-[1.1]"
             style={{ color: gold }}
