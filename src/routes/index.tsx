@@ -3103,25 +3103,37 @@ function LuxuryCampaign() {
           <div className="grid grid-cols-2 gap-x-3 gap-y-6">
             {features.map((f, i) => (
               <div key={i} className="flex flex-col items-center text-center">
-                <div className="relative flex h-16 w-16 items-center justify-center">
+                <div
+                  className="relative flex h-14 w-14 items-center justify-center rounded-full"
+                  style={{
+                    border: `1px solid ${strokeGold}55`,
+                    background:
+                      "radial-gradient(circle at 50% 40%, rgba(232,201,138,0.10) 0%, rgba(232,201,138,0) 70%)",
+                  }}
+                >
                   <span
                     aria-hidden
-                    className="absolute inset-0 rounded-full"
-                    style={{
-                      background:
-                        "radial-gradient(circle, rgba(232,201,138,0.28) 0%, rgba(232,201,138,0) 70%)",
-                    }}
+                    className="absolute inset-[3px] rounded-full"
+                    style={{ border: `1px solid ${strokeGold}22` }}
                   />
-                  <img
-                    src={f.img}
-                    alt=""
-                    width={512}
-                    height={512}
-                    loading="lazy"
-                    className="relative h-14 w-14 object-contain"
-                    style={{ filter: "drop-shadow(0 6px 10px rgba(0,0,0,0.35))" }}
-                  />
+                  {f.icon}
                 </div>
+                <div
+                  className="mt-3 text-[9px] font-medium tracking-[0.14em]"
+                  style={{ color: GOLD }}
+                >
+                  {f.title[0]}
+                  <br />
+                  {f.title[1]}
+                </div>
+                <p
+                  className="mt-2 max-w-[140px] text-[10px] font-light"
+                  style={{ color: `${IVORY}CC`, lineHeight: 1.55 }}
+                >
+                  {f.text}
+                </p>
+              </div>
+            ))}
                 <div
                   className="mt-3 text-[9px] font-medium tracking-[0.14em]"
                   style={{ color: GOLD }}
