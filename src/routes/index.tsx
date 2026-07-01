@@ -84,6 +84,11 @@ const afterValentina = "/__l5e/assets-v1/be842d5f-3f53-4cfd-947a-989f5a950059/af
 const customerWhatsappProduct = "/__l5e/assets-v1/cc894fb6-d127-459c-8718-5e22223885de/customer-whatsapp-product.jpg";
 const customerChatP1 = "/__l5e/assets-v1/2d16d196-63da-40d3-9c76-8385cc75a97a/customer-chat-p1.jpg";
 const customerChatP2 = "/__l5e/assets-v1/c0aeaea7-0186-43a9-84c6-45e5648b26d3/customer-chat-p2.jpg";
+import trustAvatar1 from "@/assets/trust-avatar-1.jpg";
+import trustAvatar2 from "@/assets/trust-avatar-2.jpg";
+import trustAvatar3 from "@/assets/trust-avatar-3.jpg";
+import trustAvatar4 from "@/assets/trust-avatar-4.jpg";
+import trustAvatar5 from "@/assets/trust-avatar-5.jpg";
 
 
 
@@ -1965,19 +1970,15 @@ function Testimonials() {
 
           {/* Stacked avatars */}
           <div className="mt-6 flex items-center justify-center">
-            <div className="flex -space-x-2.5">
-              {[
-                "https://i.pravatar.cc/64?img=47",
-                "https://i.pravatar.cc/64?img=45",
-                "https://i.pravatar.cc/64?img=49",
-                "https://i.pravatar.cc/64?img=32",
-                "https://i.pravatar.cc/64?img=44",
-              ].map((src, i) => (
+            <div className="flex -space-x-2">
+              {[trustAvatar1, trustAvatar2, trustAvatar3, trustAvatar4, trustAvatar5].map((src, i) => (
                 <img
                   key={i}
                   src={src}
                   alt=""
-                  className="h-9 w-9 rounded-full object-cover"
+                  width={64}
+                  height={64}
+                  className="h-7 w-7 rounded-full object-cover"
                   style={{
                     border: `1.5px solid ${gold}`,
                     boxShadow: "0 0 10px rgba(201,168,76,0.35)",
