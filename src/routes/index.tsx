@@ -1257,8 +1257,8 @@ function Results() {
             style={{ background: `linear-gradient(90deg, transparent, ${gold}, transparent)` }}
           />
           <h2
-            className="font-display tracking-[0.22em] text-[1.05rem] uppercase"
-            style={{ color: gold, fontWeight: 400 }}
+            className="font-display uppercase"
+            style={{ color: gold, fontWeight: 400, fontSize: "clamp(18px, 5.2vw, 26px)", letterSpacing: "0.14em", lineHeight: 1.2 }}
           >
             Transformaciones reales
           </h2>
