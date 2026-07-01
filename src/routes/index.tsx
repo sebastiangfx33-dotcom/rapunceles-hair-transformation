@@ -25,6 +25,10 @@ const finalCtaModel = { url: "/final-cta-model-v2.jpg" };
 const trustBgAsset = { url: "/trust-bg-v2.png" };
 import luxuryBgScene from "@/assets/luxury-bg-scene.jpg";
 import campaignTrioScene from "@/assets/campaign-trio-scene.jpg";
+import campaignIconFall from "@/assets/campaign-icon-fall.png";
+import campaignIconGrowth from "@/assets/campaign-icon-growth.png";
+import campaignIconRoots from "@/assets/campaign-icon-roots.png";
+import campaignIconShine from "@/assets/campaign-icon-shine.png";
 const testimonialsBgNew = { url: "/testimonials-bg-new.png" };
 const probFallAsset = { url: "/__l5e/assets-v1/39cbb5a3-cd84-4cfe-8d34-3aca011a3bca/problem-fall-new.jpg" };
 const probSlowGrowthAsset = { url: "/__l5e/assets-v1/a87e988a-704c-4668-a3d7-84e7d0e76a27/problem-slow-new.jpg" };
@@ -2911,44 +2915,22 @@ function LuxuryCampaign() {
     {
       title: ["AYUDA A REDUCIR", "LA CAÍDA"],
       text: "Fortalece la raíz y reduce el quiebre.",
-      icon: (
-        <svg viewBox="0 0 48 48" fill="none" className="h-7 w-7">
-          <path d="M24 8c-4 6-8 11-8 17a8 8 0 0 0 16 0c0-6-4-11-8-17z" stroke={GOLD_SOFT} strokeWidth="1.1"/>
-          <path d="M24 20v10" stroke={GOLD_SOFT} strokeWidth="1" strokeLinecap="round"/>
-          <path d="M20 40h8M22 44h4" stroke={GOLD_SOFT} strokeWidth="1" strokeLinecap="round"/>
-          <circle cx="38" cy="14" r="1" fill={GOLD_SOFT}/>
-          <circle cx="10" cy="16" r="0.8" fill={GOLD_SOFT}/>
-        </svg>
-      ),
+      img: campaignIconFall,
     },
     {
       title: ["ESTIMULA", "EL CRECIMIENTO"],
       text: "Activa la raíz para un cabello más fuerte y abundante.",
-      icon: (
-        <svg viewBox="0 0 48 48" fill="none" className="h-7 w-7">
-          <path d="M24 40V16c0-4 3-8 8-8-1 8-4 12-8 12M24 24c-3 0-6-2-8-6 5 0 8 2 8 6" stroke={GOLD_SOFT} strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
+      img: campaignIconGrowth,
     },
     {
       title: ["FORTALECE", "DESDE LA RAÍZ"],
       text: "Refuerza la fibra capilar para un cabello más resistente.",
-      icon: (
-        <svg viewBox="0 0 48 48" fill="none" className="h-7 w-7">
-          <path d="M24 6v10M18 12l6 4 6-4M14 20h20l-2 20H16z" stroke={GOLD_SOFT} strokeWidth="1.1" strokeLinejoin="round"/>
-          <path d="M20 26v8M24 26v8M28 26v8" stroke={GOLD_SOFT} strokeWidth="1"/>
-        </svg>
-      ),
+      img: campaignIconRoots,
     },
     {
       title: ["DEVUELVE", "BRILLO NATURAL"],
       text: "Hidrata profundamente para un cabello suave, sedoso y saludable.",
-      icon: (
-        <svg viewBox="0 0 48 48" fill="none" className="h-7 w-7">
-          <path d="M24 8c-4 8-10 12-10 20a10 10 0 0 0 20 0c0-8-6-12-10-20z" stroke={GOLD_SOFT} strokeWidth="1.1"/>
-          <path d="M40 10l1 3 3 1-3 1-1 3-1-3-3-1 3-1zM8 18l0.7 2 2 0.7-2 0.7L8 23l-0.7-2-2-0.7 2-0.7z" fill={GOLD_SOFT}/>
-        </svg>
-      ),
+      img: campaignIconShine,
     },
   ];
 
@@ -3047,36 +3029,94 @@ function LuxuryCampaign() {
           />
         </div>
 
-        {/* Feature grid */}
-        <div className="mt-4 grid grid-cols-4 gap-2">
-          {features.map((f, i) => (
-            <div key={i} className="flex flex-col items-center text-center">
-              <div
-                className="flex h-11 w-11 items-center justify-center rounded-full border"
-                style={{
-                  borderColor: `${GOLD}55`,
-                  background: "rgba(212,168,94,0.05)",
-                }}
-              >
-                {f.icon}
-              </div>
-              <div
-                className="mt-3 text-[8.5px] font-medium tracking-[0.12em]"
-                style={{ color: GOLD }}
-              >
-                {f.title[0]}
-                <br />
-                {f.title[1]}
-              </div>
-              <p
-                className="mt-2 text-[9.5px] font-light"
-                style={{ color: `${IVORY}B3`, lineHeight: 1.5 }}
-              >
-                {f.text}
-              </p>
-            </div>
+        {/* Feature grid — luxury gold-bordered frame */}
+        <div
+          className="relative mt-8 rounded-[14px] px-4 pt-6 pb-5"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(255,240,210,0.06) 0%, rgba(212,168,94,0.03) 100%)",
+            border: `1px solid ${GOLD}66`,
+            boxShadow: `0 0 0 1px rgba(232,201,138,0.12) inset, 0 20px 50px -25px rgba(212,168,94,0.35)`,
+          }}
+        >
+          {/* Corner ornaments */}
+          {[
+            { top: -6, left: -6, rot: 0 },
+            { top: -6, right: -6, rot: 90 },
+            { bottom: -6, right: -6, rot: 180 },
+            { bottom: -6, left: -6, rot: 270 },
+          ].map((c, i) => (
+            <span
+              key={i}
+              aria-hidden
+              className="absolute"
+              style={{
+                width: 14,
+                height: 14,
+                top: c.top,
+                left: c.left,
+                right: c.right,
+                bottom: c.bottom,
+                borderTop: `1px solid ${GOLD}`,
+                borderLeft: `1px solid ${GOLD}`,
+                transform: `rotate(${c.rot}deg)`,
+              }}
+            />
           ))}
+
+          {/* Eyebrow inside frame */}
+          <div className="mb-4 flex items-center justify-center gap-2" aria-hidden>
+            <span className="h-px w-6" style={{ background: `linear-gradient(90deg, transparent, ${GOLD})` }} />
+            <span
+              className="text-[8.5px] tracking-[0.32em]"
+              style={{ color: GOLD }}
+            >
+              BENEFICIOS
+            </span>
+            <span className="h-px w-6" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
+          </div>
+
+          <div className="grid grid-cols-2 gap-x-3 gap-y-6">
+            {features.map((f, i) => (
+              <div key={i} className="flex flex-col items-center text-center">
+                <div className="relative flex h-16 w-16 items-center justify-center">
+                  <span
+                    aria-hidden
+                    className="absolute inset-0 rounded-full"
+                    style={{
+                      background:
+                        "radial-gradient(circle, rgba(232,201,138,0.28) 0%, rgba(232,201,138,0) 70%)",
+                    }}
+                  />
+                  <img
+                    src={f.img}
+                    alt=""
+                    width={512}
+                    height={512}
+                    loading="lazy"
+                    className="relative h-14 w-14 object-contain"
+                    style={{ filter: "drop-shadow(0 6px 10px rgba(0,0,0,0.35))" }}
+                  />
+                </div>
+                <div
+                  className="mt-3 text-[9px] font-medium tracking-[0.14em]"
+                  style={{ color: GOLD }}
+                >
+                  {f.title[0]}
+                  <br />
+                  {f.title[1]}
+                </div>
+                <p
+                  className="mt-2 max-w-[140px] text-[10px] font-light"
+                  style={{ color: `${IVORY}CC`, lineHeight: 1.55 }}
+                >
+                  {f.text}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
+
 
         {/* Botanica premium box */}
         <div
