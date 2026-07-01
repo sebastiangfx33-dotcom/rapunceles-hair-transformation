@@ -2973,30 +2973,6 @@ function LuxuryCampaign() {
       />
 
       <div className="relative mx-auto max-w-[420px] px-6 pt-14 pb-10">
-        {/* Brand mark */}
-        <div className="flex flex-col items-center">
-          <div
-            className="flex h-9 w-9 items-center justify-center rounded-full border"
-            style={{ borderColor: `${GOLD}66`, background: "rgba(212,168,94,0.06)" }}
-          >
-            <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-              <path d="M12 4l1.2 1.6L15 5l-.4 1.9L16 8l-1.4 1.4.4 1.9-1.8-.6L12 12l-1.2-1.3-1.8.6.4-1.9L8 8l1.4-1.1L9 5l1.8.6z" stroke={GOLD} strokeWidth="0.8"/>
-              <path d="M8 13c1 3 3 4 4 4s3-1 4-4c-2 1-3 1-4 1s-3 0-4-1z" stroke={GOLD} strokeWidth="0.8"/>
-            </svg>
-          </div>
-          <div
-            className="mt-3 font-display text-[26px] leading-none"
-            style={{ color: GOLD, letterSpacing: "0.01em" }}
-          >
-            Rapunceles
-          </div>
-          <div
-            className="mt-1.5 text-[8.5px] tracking-[0.35em]"
-            style={{ color: `${IVORY}99` }}
-          >
-            HAIR TRANSFORMATION
-          </div>
-        </div>
 
         {/* Headline */}
         <h2
