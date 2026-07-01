@@ -1987,7 +1987,7 @@ function Testimonials() {
                 }}
                 loading="lazy"
               />
-              {[trustAvatar1, trustAvatar2, trustAvatar3, trustAvatar4, trustAvatar5].map((src, i) => (
+              {[trustAvatar1, trustAvatar2, trustAvatar3].map((src, i) => (
                 <img
                   key={i}
                   src={src}
