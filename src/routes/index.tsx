@@ -148,6 +148,7 @@ function Landing() {
     <main className="overflow-x-hidden text-foreground" style={{ background: "#1a0a2e" }}>
       <Hero />
       <AfterBanner />
+      <ProductTrioShowcase />
       <ProductRoutineSection />
       <KitIncludes />
       <Results />
