@@ -24,6 +24,7 @@ import {
 const finalCtaModel = { url: "/final-cta-model-v2.jpg" };
 const trustBgAsset = { url: "/trust-bg-v2.png" };
 import luxuryBgScene from "@/assets/luxury-bg-scene.jpg";
+import campaignTrioScene from "@/assets/campaign-trio-scene.jpg";
 const testimonialsBgNew = { url: "/testimonials-bg-new.png" };
 const probFallAsset = { url: "/__l5e/assets-v1/39cbb5a3-cd84-4cfe-8d34-3aca011a3bca/problem-fall-new.jpg" };
 const probSlowGrowthAsset = { url: "/__l5e/assets-v1/a87e988a-704c-4668-a3d7-84e7d0e76a27/problem-slow-new.jpg" };
@@ -2902,31 +2903,240 @@ function Header({ eyebrow, title, titleClassName }: { eyebrow: string; title: st
 
 /* ------------------------------ LUXURY CAMPAIGN ------------------------------ */
 function LuxuryCampaign() {
+  const GOLD = "#D4A85E";
+  const GOLD_SOFT = "#E8C98A";
+  const IVORY = "#F4ECDC";
+
+  const features = [
+    {
+      title: ["AYUDA A REDUCIR", "LA CAÍDA"],
+      text: "Fortalece la raíz y reduce el quiebre.",
+      icon: (
+        <svg viewBox="0 0 48 48" fill="none" className="h-7 w-7">
+          <path d="M24 8c-4 6-8 11-8 17a8 8 0 0 0 16 0c0-6-4-11-8-17z" stroke={GOLD_SOFT} strokeWidth="1.1"/>
+          <path d="M24 20v10" stroke={GOLD_SOFT} strokeWidth="1" strokeLinecap="round"/>
+          <path d="M20 40h8M22 44h4" stroke={GOLD_SOFT} strokeWidth="1" strokeLinecap="round"/>
+          <circle cx="38" cy="14" r="1" fill={GOLD_SOFT}/>
+          <circle cx="10" cy="16" r="0.8" fill={GOLD_SOFT}/>
+        </svg>
+      ),
+    },
+    {
+      title: ["ESTIMULA", "EL CRECIMIENTO"],
+      text: "Activa la raíz para un cabello más fuerte y abundante.",
+      icon: (
+        <svg viewBox="0 0 48 48" fill="none" className="h-7 w-7">
+          <path d="M24 40V16c0-4 3-8 8-8-1 8-4 12-8 12M24 24c-3 0-6-2-8-6 5 0 8 2 8 6" stroke={GOLD_SOFT} strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      ),
+    },
+    {
+      title: ["FORTALECE", "DESDE LA RAÍZ"],
+      text: "Refuerza la fibra capilar para un cabello más resistente.",
+      icon: (
+        <svg viewBox="0 0 48 48" fill="none" className="h-7 w-7">
+          <path d="M24 6v10M18 12l6 4 6-4M14 20h20l-2 20H16z" stroke={GOLD_SOFT} strokeWidth="1.1" strokeLinejoin="round"/>
+          <path d="M20 26v8M24 26v8M28 26v8" stroke={GOLD_SOFT} strokeWidth="1"/>
+        </svg>
+      ),
+    },
+    {
+      title: ["DEVUELVE", "BRILLO NATURAL"],
+      text: "Hidrata profundamente para un cabello suave, sedoso y saludable.",
+      icon: (
+        <svg viewBox="0 0 48 48" fill="none" className="h-7 w-7">
+          <path d="M24 8c-4 8-10 12-10 20a10 10 0 0 0 20 0c0-8-6-12-10-20z" stroke={GOLD_SOFT} strokeWidth="1.1"/>
+          <path d="M40 10l1 3 3 1-3 1-1 3-1-3-3-1 3-1zM8 18l0.7 2 2 0.7-2 0.7L8 23l-0.7-2-2-0.7 2-0.7z" fill={GOLD_SOFT}/>
+        </svg>
+      ),
+    },
+  ];
+
   return (
     <section
       className="relative w-full overflow-hidden"
-      style={{ background: "#1a0a1e" }}
+      style={{
+        background:
+          "radial-gradient(120% 80% at 50% 0%, #2a1440 0%, #1a0a2e 55%, #120722 100%)",
+      }}
     >
-      {/* Background scene */}
-      <img
-        src={luxuryBgScene}
-        alt=""
-        aria-hidden="true"
-        width={832}
-        height={1472}
-        loading="lazy"
-        className="absolute inset-0 h-full w-full object-cover"
-        style={{ objectPosition: "center center", transform: "scale(0.96)" }}
-      />
-      {/* Cinematic gradient overlay for legibility */}
+      {/* subtle top light rays */}
       <div
-        className="absolute inset-0"
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-56"
         style={{
           background:
-            "linear-gradient(180deg, rgba(26,10,30,0.55) 0%, rgba(26,10,30,0.05) 30%, rgba(26,10,30,0.05) 65%, rgba(26,10,30,0.75) 100%)",
+            "radial-gradient(60% 100% at 50% 0%, rgba(232,201,138,0.18) 0%, rgba(232,201,138,0) 70%)",
         }}
       />
 
+      <div className="relative mx-auto max-w-[420px] px-6 pt-14 pb-10">
+        {/* Brand mark */}
+        <div className="flex flex-col items-center">
+          <div
+            className="flex h-9 w-9 items-center justify-center rounded-full border"
+            style={{ borderColor: `${GOLD}66`, background: "rgba(212,168,94,0.06)" }}
+          >
+            <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
+              <path d="M12 4l1.2 1.6L15 5l-.4 1.9L16 8l-1.4 1.4.4 1.9-1.8-.6L12 12l-1.2-1.3-1.8.6.4-1.9L8 8l1.4-1.1L9 5l1.8.6z" stroke={GOLD} strokeWidth="0.8"/>
+              <path d="M8 13c1 3 3 4 4 4s3-1 4-4c-2 1-3 1-4 1s-3 0-4-1z" stroke={GOLD} strokeWidth="0.8"/>
+            </svg>
+          </div>
+          <div
+            className="mt-3 font-display text-[26px] leading-none"
+            style={{ color: GOLD, letterSpacing: "0.01em" }}
+          >
+            Rapunceles
+          </div>
+          <div
+            className="mt-1.5 text-[8.5px] tracking-[0.35em]"
+            style={{ color: `${IVORY}99` }}
+          >
+            HAIR TRANSFORMATION
+          </div>
+        </div>
+
+        {/* Headline */}
+        <h2
+          className="mt-8 text-center font-display"
+          style={{
+            color: GOLD_SOFT,
+            fontSize: "22px",
+            lineHeight: 1.2,
+            letterSpacing: "0.005em",
+            textShadow: "0 1px 20px rgba(212,168,94,0.15)",
+          }}
+        >
+          TU CABELLO YA TE MOSTRÓ
+          <br />
+          LAS SEÑALES.
+          <br />
+          <span style={{ color: GOLD }}>AHORA DALE LO QUE NECESITA.</span>
+        </h2>
+
+        {/* Ornament divider */}
+        <div className="mt-4 flex items-center justify-center gap-2" aria-hidden>
+          <span className="h-px w-10" style={{ background: `linear-gradient(90deg, transparent, ${GOLD})` }} />
+          <svg viewBox="0 0 24 12" className="h-3 w-6">
+            <path d="M2 6 L10 6 M14 6 L22 6" stroke={GOLD} strokeWidth="0.6"/>
+            <path d="M12 2 L14 6 L12 10 L10 6 Z" fill={GOLD}/>
+          </svg>
+          <span className="h-px w-10" style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
+        </div>
+
+        {/* Description */}
+        <p
+          className="mx-auto mt-5 max-w-[320px] text-center text-[12.5px] font-light"
+          style={{ color: `${IVORY}CC`, lineHeight: 1.7 }}
+        >
+          Creamos un sistema capilar diseñado para ayudar a fortalecer desde la raíz, estimular el crecimiento y devolver la vitalidad natural que tu cabello necesita para verse abundante y saludable.
+        </p>
+
+        {/* Hero product scene */}
+        <div className="relative mt-8">
+          <img
+            src={campaignTrioScene}
+            alt="Trio de productos Rapunceles sobre pedestal con anillo dorado y lavanda"
+            width={1024}
+            height={1216}
+            loading="lazy"
+            className="mx-auto block w-full max-w-[360px]"
+            style={{
+              filter: "drop-shadow(0 30px 40px rgba(0,0,0,0.55))",
+            }}
+          />
+        </div>
+
+        {/* Feature grid */}
+        <div className="mt-4 grid grid-cols-4 gap-2">
+          {features.map((f, i) => (
+            <div key={i} className="flex flex-col items-center text-center">
+              <div
+                className="flex h-11 w-11 items-center justify-center rounded-full border"
+                style={{
+                  borderColor: `${GOLD}55`,
+                  background: "rgba(212,168,94,0.05)",
+                }}
+              >
+                {f.icon}
+              </div>
+              <div
+                className="mt-3 text-[8.5px] font-medium tracking-[0.12em]"
+                style={{ color: GOLD }}
+              >
+                {f.title[0]}
+                <br />
+                {f.title[1]}
+              </div>
+              <p
+                className="mt-2 text-[9.5px] font-light"
+                style={{ color: `${IVORY}B3`, lineHeight: 1.5 }}
+              >
+                {f.text}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Botanica premium box */}
+        <div
+          className="mt-8 rounded-md border px-4 py-4"
+          style={{
+            borderColor: `${GOLD}44`,
+            background:
+              "linear-gradient(180deg, rgba(212,168,94,0.06), rgba(212,168,94,0.02))",
+          }}
+        >
+          <div className="flex items-start gap-3">
+            <div
+              className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border"
+              style={{ borderColor: `${GOLD}66` }}
+            >
+              <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
+                <path d="M12 3c4 4 6 7 6 11a6 6 0 0 1-12 0c0-4 2-7 6-11z" stroke={GOLD} strokeWidth="0.9"/>
+                <path d="M12 8v11" stroke={GOLD} strokeWidth="0.7"/>
+              </svg>
+            </div>
+            <div>
+              <div
+                className="text-[11px] tracking-[0.28em]"
+                style={{ color: GOLD }}
+              >
+                FÓRMULA BOTÁNICA PREMIUM
+              </div>
+              <p
+                className="mt-1.5 text-[10.5px] font-light"
+                style={{ color: `${IVORY}B3`, lineHeight: 1.6 }}
+              >
+                Ingredientes cuidadosamente seleccionados para acompañar el proceso natural de recuperación capilar.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Closing tagline */}
+        <div className="mt-8 flex items-center justify-center gap-3" aria-hidden>
+          <svg viewBox="0 0 24 24" className="h-3 w-3">
+            <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.7A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" fill="none" stroke={GOLD} strokeWidth="0.8"/>
+          </svg>
+          <span className="h-px w-8" style={{ background: `${GOLD}66` }} />
+          <span className="h-px w-8" style={{ background: `${GOLD}66` }} />
+          <svg viewBox="0 0 24 24" className="h-3 w-3">
+            <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.7A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" fill="none" stroke={GOLD} strokeWidth="0.8"/>
+          </svg>
+        </div>
+        <p
+          className="mt-3 text-center font-display text-[13px]"
+          style={{ color: `${IVORY}CC`, lineHeight: 1.7 }}
+        >
+          Miles de mujeres ya comenzaron este proceso.
+          <br />
+          <em style={{ color: GOLD_SOFT, fontStyle: "italic" }}>
+            Tu transformación también puede comenzar hoy.
+          </em>
+        </p>
+      </div>
     </section>
   );
 }
+
