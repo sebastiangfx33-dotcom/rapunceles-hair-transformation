@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import productImg from "@/assets/product-trio-marble.png";
+const productImg = "/__l5e/assets-v1/500b2369-804d-48c8-9bb8-2d0873b0465b/product-trio-marble.png";
 
 export const Route = createFileRoute("/checkout")({
   head: () => ({
