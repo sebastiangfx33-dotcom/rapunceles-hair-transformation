@@ -30,7 +30,7 @@ function CheckoutPage() {
     direccion: "",
     cantidad: "1",
   });
-  const [nequi, setNequi] = useState("");
+  const [nequi, setNequi] = useState("+57 323 385 4869");
   const [btnText, setBtnText] = useState("YA REALICÉ MI PAGO");
 
   const update = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement>) =>
