@@ -24,6 +24,7 @@ import {
 const finalCtaModel = { url: "/final-cta-model-v2.jpg" };
 const trustBgAsset = { url: "/trust-bg-v2.png" };
 import luxuryBgScene from "@/assets/luxury-bg-scene.jpg";
+import campaignTrioScene from "@/assets/campaign-trio-scene.jpg";
 const testimonialsBgNew = { url: "/testimonials-bg-new.png" };
 const probFallAsset = { url: "/__l5e/assets-v1/39cbb5a3-cd84-4cfe-8d34-3aca011a3bca/problem-fall-new.jpg" };
 const probSlowGrowthAsset = { url: "/__l5e/assets-v1/a87e988a-704c-4668-a3d7-84e7d0e76a27/problem-slow-new.jpg" };
