@@ -160,7 +160,7 @@ function Landing() {
 
       <FAQ />
 
-      <Urgency />
+      
 
 
       
