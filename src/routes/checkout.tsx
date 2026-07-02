@@ -476,7 +476,7 @@ function CheckoutPage() {
         </section>
 
         {/* WhatsApp CTA */}
-        
+        <a
           href="https://wa.me/573105986057"
           target="_blank"
           rel="noopener noreferrer"
