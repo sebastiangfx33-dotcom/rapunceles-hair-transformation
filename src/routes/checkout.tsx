@@ -1,5 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
 const productImg = "/__l5e/assets-v1/500b2369-804d-48c8-9bb8-2d0873b0465b/product-trio-marble.png";
 
 export const Route = createFileRoute("/checkout")({
@@ -32,6 +38,47 @@ function CheckoutPage() {
   });
   const [nequi, setNequi] = useState("+57 323 385 4869");
   const [btnText, setBtnText] = useState("YA REALICÉ MI PAGO");
+  const [formError, setFormError] = useState("");
+
+  useEffect(() => {
+    window.fbq?.("track", "InitiateCheckout");
+  }, []);
+
+  const PRICE_UNIT = 179900;
+
+  const handleSubmit = () => {
+    const { nombre, celular, ciudad, direccion, cantidad } = form;
+
+    if (!nombre.trim() || !celular.trim() || !ciudad.trim() || !direccion.trim()) {
+      setFormError("Por favor completa nombre, celular, ciudad y dirección antes de continuar.");
+      return;
+    }
+
+    const qty = parseInt(cantidad, 10) || 1;
+    const total = PRICE_UNIT * qty;
+    setFormError("");
+
+    // Meta Pixel: Purchase event
+    window.fbq?.("track", "Purchase", {
+      value: total,
+      currency: "COP",
+      content_name: "Kit Crecimiento Capilar Rapuncelés",
+      num_items: qty,
+    });
+
+    const mensaje =
+      `¡Hola! Acabo de realizar mi pago por Nequi ✅%0A%0A` +
+      `*Pedido Rapuncelés*%0A` +
+      `Nombre: ${nombre}%0A` +
+      `Celular: ${celular}%0A` +
+      `Ciudad: ${ciudad}%0A` +
+      `Dirección: ${direccion}%0A` +
+      `Cantidad: ${qty}%0A` +
+      `Total: $${total.toLocaleString("es-CO")}%0A%0A` +
+      `Adjunto mi comprobante de pago.`;
+
+    window.open(`https://wa.me/573105986057?text=${mensaje}`, "_blank", "noopener,noreferrer");
+  };
 
   const update = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
@@ -383,6 +430,19 @@ function CheckoutPage() {
 
         {/* SECTION 6: BUTTON */}
         <section style={{ marginBottom: 32, position: "relative" }}>
+          {formError && (
+            <p
+              style={{
+                color: "#F4A6A6",
+                fontSize: 13,
+                textAlign: "center",
+                marginBottom: 12,
+                lineHeight: 1.4,
+              }}
+            >
+              {formError}
+            </p>
+          )}
           <div
             aria-hidden
             style={{
@@ -394,10 +454,7 @@ function CheckoutPage() {
             }}
           />
           <button
-            onClick={() => {}}
-            contentEditable
-            suppressContentEditableWarning
-            onInput={(e) => setBtnText((e.target as HTMLElement).innerText)}
+            onClick={handleSubmit}
             style={{
               position: "relative",
               width: "100%",
@@ -419,7 +476,7 @@ function CheckoutPage() {
         </section>
 
         {/* WhatsApp CTA */}
-        <a
+        
           href="https://wa.me/573105986057"
           target="_blank"
           rel="noopener noreferrer"
