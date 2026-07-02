@@ -476,10 +476,9 @@ function CheckoutPage() {
         </section>
 
         {/* WhatsApp CTA */}
-        <a
-          href="https://wa.me/573105986057"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
+          onClick={() => window.open("https://wa.me/573105986057", "_blank", "noopener,noreferrer")}
+          role="button"
           style={{
             display: "flex",
             alignItems: "center",
@@ -496,11 +495,12 @@ function CheckoutPage() {
             fontWeight: 500,
             textDecoration: "none",
             marginBottom: 28,
+            cursor: "pointer",
           }}
         >
           <span style={{ fontSize: 16 }}>💬</span>
           ENVIAR COMPROBANTE · +57 310 598 6057
-        </a>
+        </div>
 
         {/* SECTION 7: TRUST BADGES */}
         <section
